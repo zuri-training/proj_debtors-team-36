@@ -23,6 +23,7 @@ This is a platform that allows schools in a certain locality to list the directo
 * This project is solely aimed at schools to help keep the aformentioned problem in check and also allows the students that have posted as debtors to challenge and contend the post.
 
 ## Technologies Used
+This project was created with ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white) and the following technologies were used: <br/>
 * __Design__<br/>
         ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
 
@@ -47,12 +48,12 @@ This is a platform that allows schools in a certain locality to list the directo
 ## Features
 
 __Unauthenticated users__ - An individual that has not registered to the website
- * The website Home page (Landing page). This page will contain: 
-        A Hero section with a CTA to Login or Create Account
-        About Us section
-        FAQs section
-        Contact Us section
-        Footer section 
+ * The website Home page (Landing page). This page will contain: <br/>
+       - A Hero section with a CTA to Login or Create Account
+       - About Us section
+       - FAQs section
+       - Contact Us section
+       - Footer section 
 *
 __Authenticated Users__ - A user that has fully registered and has completed all the verification processes in the website
  * Login to the website
@@ -106,11 +107,11 @@ For team_36 members, follow the following steps to collaborate:
 5. Pull upstream to get up to date with the original repo:<br/>
     `git pull upstream main`
 6. Create a new branch for the task you are working on :<br/>
-    `git checkout -b branchName`
+    `git checkout -b branchName`<br/>
     *(Make sure your branchName is descriptive in context to the feature you are working on. Also be sure to check which branch you are on using `git status` before you begin working)*
 7. When you're done with your task, do:<br/>
-    `git add`
-   Commit your work with a message:<br/>
+    `git add`<br/>
+   - Commit your work with a message:<br/>
    `git commit -m "message"`
 8. To avoid conflicts:<br/>
     `git pull upstream main`
@@ -119,6 +120,7 @@ For team_36 members, follow the following steps to collaborate:
 10. Go to Github and create a new pull request to the main branch. It will then be reviewed and merged into the master.
 
 ## Contributors
+
  __Molokwu Chibuzor__(Team Lead)
 * Github- https://github.com/Jaycarlx
 * Track - Fullstack
@@ -200,5 +202,6 @@ __Rita Sylvia__
 A more detailed documentation on the updates and details of this project can be found here - "documentationLinkWhenReady"
 
 ## Acknowledgements
+
 This project is acknowlegded to Zuri Team for creating this organization and bringing about this project.
 Special thanks to the sponsors too.
