@@ -179,12 +179,12 @@ __Taiwo Odeyemi__
 * Track - Product design
 
 __Princess Salami__
-* Github- https://github.com/Durodola
+* Github- https://github.com/DURDOLA
 * Track - Product Design
 
 __Samuel Ogusanya__
 * Github- https://github.com/PsalmogunsGRT
-* Track - Product design
+* Track - Fullstack
 
 __Bilewu Iyinoluwa__
 * Github- https://github.com/iyin0
@@ -197,6 +197,23 @@ __Umeh Valentine__
 __Rita Sylvia__
 * Github- https://github.com/ritasylvia
 * Track - Backend
+
+__Taiwo Laskai__
+* Github- https://github.com/Tamazing
+* Track - FullStack
+
+__Henry Udeani__
+* Github- https://github.com/Udeani
+* Track- Backend
+
+__Jeremiah Nosakhare__
+* Github- https://github.com/Jeremiahnosakhare
+* Track- Product Design
+
+__Osadere Gideon__
+* Github- https://github.com/OGidos
+* Track- Product Design
+
 
 ## Documentation
 A more detailed documentation on the updates and details of this project can be found here - "documentationLinkWhenReady"
