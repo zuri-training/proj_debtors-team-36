@@ -214,6 +214,10 @@ __Osadere Gideon__
 * Github- https://github.com/OGidos
 * Track- Product Design
 
+__John Amakoh__
+* Github- https://github.com/OGidos
+* Track- Fullstack
+
 
 ## Documentation
 A more detailed documentation on the updates and details of this project can be found here - "documentationLinkWhenReady"
