@@ -1,0 +1,573 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #FEFEFE;
+    color: #3D3D3D;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 43px;
+    padding: 13px 72px 0px 72px;
+}
+
+nav .left-nav {
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    font-weight: 600;
+    color: #292929;
+}
+
+nav .middle-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    width: 421px;
+    height: 30px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+nav .middle-nav a {
+    text-decoration: none;
+    color: #292929;
+}
+
+nav .middle-nav a:hover {
+    border-bottom: 4px solid #292929;
+    border-radius: 6px;
+}
+
+nav .right-nav {
+    width: 201px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.welcome-login-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    padding: 8px 16px;
+    color: #3D3D3D;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.welcome-signup-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    padding: 8px 16px;
+    border: 1.5px solid #7E7E7E;
+    border-radius: 8px;
+    color: #3D3D3D;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: #FFFFFF;
+}
+
+/* Welcome Page */
+.welcome {
+    height: calc(100vh - 60px);
+    padding: 0px 72px 0px 72px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.welcome-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+}
+
+.welcome-top article {
+    width: 50%;
+    padding-right: 20px;
+}
+
+.welcome-top h2 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.welcome-top h3 {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.welcome-top button {
+    width: 289px;
+    height: 56px;
+    background-color: #808080;
+    border-radius: 8px;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+.welcome-top-right {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.welcome-top-right-pics {
+    width: 644px;
+    height: 511px;
+    background-color: #EEF1F4;
+    border: 3px solid #667080;
+}
+
+.welcome-bottom {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.welcome-bottom-icons {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.welcome-bottom-icon {
+    width: 100px;
+    height: 100px;
+    background-color: #D9D9D9;
+    border: none;
+}
+
+.after-welcome {
+    margin: 10px 72px 0px 72px;
+    border-bottom: 1px solid #5D5D5D;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    transform: rotate(-0.35deg);
+}
+
+/* Welcome Continued */
+.welcome-contd {
+    padding: 104px 72px 100px 72px;
+}
+
+.welcome-section {
+    width: 100%;
+    height: 380px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 104px;
+}
+
+.welcome-section h2 {
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.welcome-section h3 {
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.welcome-contd-pic {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    margin-left: 30px;
+}
+
+.welcome-contd-pic div {
+    width: 412px;
+    height: 380px;
+    background-color: #EEF1F4;
+}
+
+/* What schools using the plaform are saying */
+/* Review this */
+.schools {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 100px 72px 100px 72px;
+}
+
+.schools h2 {
+    width: 32%;
+    font-size: 24px;
+    font-weight: 500;
+    color: #292929;
+}
+
+.school-say {
+    display: flex;
+    width: 68%;
+}
+
+.school-card-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.school-card-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.card-container {
+    width: 450px;
+    height: 250px;
+    margin: 15px 30px 15px 0px;
+}
+
+.left-bottom {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.right-top {
+    display: flex;
+    align-items: flex-end;
+}
+
+.card1 {
+    width: 450px;
+    height: 250px;
+    background-color: #F8F8F8;
+}
+
+.card2 {
+    width: 360px;
+    height: 190px;
+    background-color: #ECEBEB;
+}
+
+.card1,
+.card2 {
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-header {
+    height: 55px;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.school-pic {
+    width: 45px;
+    height: 45px;
+    margin-right: 10px;
+    background-color: #D9D9D9;
+    border: 1.5px solid #696969;
+    border-radius: 50%;
+}
+
+.school-person {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.card-body h4 {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* Try my debtor for free */
+.try-debtor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 312px;
+    width: 100%;
+    background-color: #F8F8F8;
+    text-align: center;
+    color: #292D32;
+}
+
+.try-debtor h2 {
+    font-size: 34px;
+    font-weight: 500;
+    line-height: 51px;
+    margin-top: 0;
+}
+
+.try-debtor h4 {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    margin-top: 0;
+}
+
+.try-debtor button {
+    width: 180px;
+    height: 56px;
+    background-color: #808080;
+    padding: 16px 32px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.before-faq {
+    border-bottom: 1px solid #5D5D5D;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    transform: rotate(-0.16deg);
+}
+
+/* FAQ */
+.faq {
+    padding: 20px 80px 100px 79px;
+    color: #292D32;
+}
+
+.faq-top {
+    width: 100%;
+    height: 96px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.faq-header h2 {
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 60px;
+    margin: 0;
+}
+
+.faq-header h3 {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    margin: 0;
+}
+
+.faq-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.faq-contact a {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 0;
+    text-decoration: none;
+    color: #292929;
+}
+
+.faq-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 78px 208px;
+}
+
+.faq-left,
+.faq-right {
+    height: 294px;
+}
+
+.faq-bottom .faq-closed {
+    width: 445px;
+    height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 32px;
+    margin: 0px 0px 10px 0px;
+    background-color: white;
+    border: 1px solid #696969;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.faq-opened {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 216px;
+    width: 445px;
+    padding: 16px 32px;
+    margin: 0px 0px 10px 0px;
+    background-color: white;
+    border: 1px solid #696969;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.faq-bottom h3 {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    color: #292929;
+    margin: 0;
+    margin-right: 20px;
+}
+
+.faq-bottom h4 {
+    font-size: 18px;
+    font-weight: 400;
+    color: #333333;
+    line-height: 27px;
+    margin: 0;
+    margin-top: 19px;
+    text-align: start;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    height: 359px;
+    border-radius: 8px;
+    background-color: #F8F8F8;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 57px 126px 10px 126px;
+    color: #292D32;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footer-top-header {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-top-header h3 {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 42px;
+    color: #292929;
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.footer-top-header h4 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 36px;
+    margin: 0;
+    margin-bottom: 25px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #292D32;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    margin: 0;
+    margin-bottom: 8px;
+}
+
+.footer-bottom {
+    display: flex;
+    height: 40px;
+}
+
+.copyright {
+    display: flex;
+    align-items: center;
+}
+
+.copyright h5 {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    margin: 0;
+    margin-left: 6.5px;
+}
+
+.footer-line {
+    margin: 0;
+    margin: 0px 36px 0px 32px;
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+}
+
+.socials h5 {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    margin: 0;
+    margin-right: 14.6px;
+}
+
+.socials svg {
+    margin-right: 18.67px;
+}

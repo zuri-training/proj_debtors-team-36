@@ -19,7 +19,7 @@ This is a platform that allows schools in a certain locality to list the directo
 ## About the Project
 
 * My_debtors is a website that allows schools in a certain locality to list the directory of people owing them so as to avoid debtors applying to other schools with pending debts. 
-* This project was created to solve/avoid the problem of students applying to another school in the locality while still having pending or uncleared debts from thier previous school.
+* This project was created to solve/avoid the problem of students applying to another school in the locality while still having pending or uncleared debts from their previous school.
 * This project is solely aimed at schools to help keep the aformentioned problem in check and also allows the students that have posted as debtors to challenge and contend the post.
 
 ## Technologies Used
@@ -119,6 +119,8 @@ For team_36 members, follow the following steps to collaborate:
     `git push origin branchName` - This creates the branch remotely and pushes to that branch on the Github
 10. Go to Github and create a new pull request to the main branch. It will then be reviewed and merged into the master.
 
+*If you need to make an update, repeat from no 4*
+
 ## Contributors
 
  __Molokwu Chibuzor__(Team Lead)
@@ -213,6 +215,10 @@ __Jeremiah Nosakhare__
 __Osadere Gideon__
 * Github- https://github.com/OGidos
 * Track- Product Design
+
+__John Amakoh__
+* Github- https://github.com/OGidos
+* Track- Fullstack
 
 
 ## Documentation
