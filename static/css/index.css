@@ -76,7 +76,7 @@ nav .right-nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 107px;
+    width: 100px;
     font-size: 18px;
     font-weight: 400;
     line-height: 27px;
@@ -86,6 +86,7 @@ nav .right-nav {
     color: #3D3D3D;
     cursor: pointer;
     text-decoration: none;
+    background-color: #FFFFFF;
 }
 
 /* Welcome Page */
