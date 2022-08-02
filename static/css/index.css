@@ -10,6 +10,7 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: #FEFEFE;
     color: #3D3D3D;
+    user-select: none;
 }
 
 /* Navbar */
@@ -18,7 +19,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     height: 43px;
-    padding: 13px 72px 0px 72px;
+    padding: 48px 72px 0px 72px;
 }
 
 nav .left-nav {
@@ -91,7 +92,7 @@ nav .right-nav {
 
 /* Welcome Page */
 .welcome {
-    height: calc(100vh - 60px);
+    height: calc(100vh - 70px);
     padding: 0px 72px 0px 72px;
     display: flex;
     flex-direction: column;
@@ -112,12 +113,12 @@ nav .right-nav {
     padding-right: 20px;
 }
 
-.welcome-top h2 {
+.welcome-top .tired {
     font-size: 24px;
     font-weight: 500;
 }
 
-.welcome-top h3 {
+.welcome-top .tired2 {
     font-size: 18px;
     font-weight: 400;
 }
@@ -196,13 +197,13 @@ nav .right-nav {
     margin-bottom: 104px;
 }
 
-.welcome-section h2 {
+.welcome-sect-head {
     font-size: 24px;
     font-weight: 500;
     text-align: center;
 }
 
-.welcome-section h3 {
+.welcome-sect-body {
     font-size: 20px;
     font-weight: 400;
     text-align: center;
@@ -338,7 +339,7 @@ nav .right-nav {
     margin-top: 0;
 }
 
-.try-debtor h4 {
+.try-debtor p {
     font-size: 20px;
     font-weight: 400;
     line-height: 30px;
@@ -387,7 +388,7 @@ nav .right-nav {
     margin: 0;
 }
 
-.faq-header h3 {
+.faq-header p {
     font-size: 20px;
     font-weight: 400;
     line-height: 30px;
@@ -457,7 +458,7 @@ nav .right-nav {
     align-items: center;
 }
 
-.faq-bottom h3 {
+.faq-question-head {
     font-size: 20px;
     font-weight: 400;
     line-height: 30px;
@@ -466,7 +467,7 @@ nav .right-nav {
     margin-right: 20px;
 }
 
-.faq-bottom h4 {
+.faq-answer-body {
     font-size: 18px;
     font-weight: 400;
     color: #333333;
@@ -542,7 +543,7 @@ footer {
     align-items: center;
 }
 
-.copyright h5 {
+.copyright .footer-small-text {
     font-size: 14px;
     font-weight: 400;
     line-height: 21px;
@@ -560,7 +561,7 @@ footer {
     align-items: center;
 }
 
-.socials h5 {
+.socials .footer-small-text {
     font-size: 14px;
     font-weight: 400;
     line-height: 21px;
