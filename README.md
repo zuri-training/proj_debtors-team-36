@@ -220,6 +220,12 @@ __John Amakoh__
 * Github- https://github.com/OGidos
 * Track- Fullstack
 
+__Iniubong Abasi__
+* Github- https://github.com/IniubongJ
+* Track- Product Design
+
+
+
 
 ## Documentation
 A more detailed documentation on the updates and details of this project can be found here - "documentationLinkWhenReady"
