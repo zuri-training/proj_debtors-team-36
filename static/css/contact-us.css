@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-decoration: none;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #FEFEFE;
+    color: #3D3D3D;
+    padding: 13px 72px 132px;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 43px;
+    padding: 13px 72px 0px 72px;
+}
+
+nav .left-nav {
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    font-weight: 600;
+    color: #292929;
+}
+
+nav .middle-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    width: 421px;
+    height: 30px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+nav .middle-nav a {
+    text-decoration: none;
+    color: #292929;
+}
+
+nav .middle-nav a:hover {
+    border-bottom: 4px solid #292929;
+    border-radius: 6px;
+}
+
+nav .right-nav {
+    width: 201px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.welcome-login-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    padding: 8px 16px;
+    color: #3D3D3D;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.welcome-signup-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    padding: 8px 16px;
+    border: 1.5px solid #0000D4;
+    border-radius: 8px;
+    color: #0000D4;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: #FFFFFF;
+}
+/*End of Nav Bar*/
+
+main{
+    display: flex;
+    padding-top: 115.5px;
+
+}
+.socials{
+    flex : 1 1 182px;
+    height: auto;
+width: 36px;
+left: 72px;
+top: 386px;
+border-radius: 0px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+padding-right: 0;
+margin-right: 74px;
+}
+.socials svg{
+    margin-top: 40px;
+    width: 32px;
+    height: 32px;
+}
+.contact{
+    flex: 1 1 526px;
+    margin-right: 89px;
+}
+.contact form{
+    height: 660px;
+width: 526px;
+left: 0px;
+top: 0px;
+border-radius: 16px;
+background: #F8F8F8;
+padding-left: 40px;
+padding-top: 26px;
+margin-top: 32px;
+box-shadow: 0px 8px 12px 0px #778BA533;
+}
+.contact form input{
+    height: 48px;
+width: 446px;
+left: 0px;
+top: 0px;
+border-radius: 8px;
+padding: 10px, 8px, 10px, 8px;
+margin-top: 16px;
+border: 2px solid transparent;
+}
+.contact form input:focus{
+    outline:none;
+    border: 1px solid blue;
+}
+form textarea:focus{
+    outline: 1px solid blue;
+}
+::placeholder { /* Chrome, Firefox, Opera, safari */
+    height: 24px;
+width: 77px;
+left: 8px;
+top: 12px;
+color: #BEBEBE;
+font-family: Poppins;
+font-size: 16px;
+font-weight: 400;
+line-height: 24px;
+letter-spacing: -0.02em;
+text-align: left;
+padding-top: 12px;
+padding-left: 8px;
+opacity: 1;
+}
+
+.contact form #message{
+    height: 160px;
+width: 446px;
+left: 0px;
+top: 256px;
+border-radius: 8px;
+padding: 10px, 8px, 10px, 8px;
+margin-top: 16px;
+border: 2px solid transparent;
+}
+.contact form #message::placeholder{
+    margin-top: 10px;
+}
+.contact h2{
+    height: 24px;
+width: 305px;
+left: 40px;
+top: 26px;
+font-family: Poppins;
+font-size: 16px;
+font-weight: 400;
+line-height: 24px;
+letter-spacing: -0.02em;
+text-align: left;
+}
+.contact form button{
+    height: 56px;
+width: 446px;
+left: 0px;
+top: 456px;
+border-radius: 8px;
+padding: 16px, 32px, 16px, 32px;
+background: #5D5D5D;
+margin-top: 40px;
+border: 2px transparent solid;
+font-family: Poppins;
+font-size: 16px;
+font-weight: 500;
+line-height: 24px;
+letter-spacing: 0em;
+text-align: center;
+color: #FFFFFF;
+margin-bottom: 64px;
+}
+.image{
+    flex: 1 1 732px;
+    display: flex;
+    flex-direction: column;
+    right: 72px;
+    padding-right: 72px;
+}
+.image .img{ /* Image placeholder styling*/
+    height: 515px;
+width: 547px;
+left: 821px;
+border-radius: 0px;
+margin-top: 118px;
+margin-bottom: 68px;
+}
+.image .location{
+    margin-bottom: 25.24px;
+}
