@@ -44,6 +44,7 @@ select{
     
 }
 
+input[type="email"],
 input[type="submit"],
 input[type="password"],
 input[type="text"]{
