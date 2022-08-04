@@ -15,6 +15,7 @@ body {
     user-select: none;
 }
 
+/* SIDE NAVIGATION BAR STARTS HERE */
 /* Side nav */
 /* Copy this code to implement the side nav styling */
 
@@ -22,7 +23,7 @@ aside {
     height: 100vh;
     width: 332px;
     min-width: 332px;
-    background-color: #d2d2d2;
+    background-color: #0A66C2;
     color: #242433;
     display: flex;
     flex-direction: column;
@@ -44,13 +45,6 @@ aside {
     padding-left: 48px;
 }
 
-.icon {
-    width: 160px;
-    height: 48px;
-    background-color: #eef1f4;
-    border: 3px solid #667080;
-}
-
 .top-links {
     display: flex;
     flex-direction: column;
@@ -58,19 +52,25 @@ aside {
 
 .top-links a {
     text-decoration: none;
-    color: #242433;
+    color: #fefefe;
     width: 100%;
     height: 56px;
     display: flex;
     align-items: center;
     font-size: 16px;
     font-weight: 400;
-    line-height: 24px;
+    line-height: 22px;
     padding: 16px 48px;
 }
 
 .top-links a.active {
     background-color: #ffffff;
+    color: #0c0c0c;
+}
+
+/* Changes the color of the active svg */
+.top-links a.active svg {
+    filter: invert(100%) sepia(100%) saturate(8%) hue-rotate(118deg) brightness(101%) contrast(104%);
 }
 
 .top-links a svg {
@@ -84,7 +84,7 @@ aside {
 
 .aside-bottom a {
     text-decoration: none;
-    color: #242433;
+    color: #fefefe;
     width: 100%;
     height: 56px;
     display: flex;
@@ -99,6 +99,8 @@ aside {
     margin-right: 34px;
 }
 
+/* SIDE NAVIGATION BAR ENDS HERE */
+
 
 /* Edit page */
 main {
@@ -109,6 +111,7 @@ main {
     /* notify if changes are made */
 }
 
+/* SEARCH BAR STARTS HERE */
 /* Search bar */
 .search {
     display: flex;
@@ -123,7 +126,7 @@ main {
     width: 80%;
     height: 100%;
     padding: 16px;
-    border: 2px solid #d2d2d2;
+    border: 2px solid #85b3e1;
     border-radius: 8px;
     margin-right: 41.25px;
 }
@@ -145,6 +148,8 @@ main {
 .search-icons svg {
     margin-right: 20.48px;
 }
+
+/* SEARCH BAR STARTS HERE */
 
 /* Page content */
 
