@@ -4,9 +4,12 @@ const importFile = () => {      // imports the file
     let input = document.createElement('input');
     input.type = 'file';
     input.onchange = _this => {
-        files = Array.from(input.files);    // to get the file from local storage
+        // files = Array.from(input.files);    // to get the file from local storage
+        files.push(Array.from(input.files));    // to get the file from local storage
         console.log(files)
-        document.getElementById('file').innerHTML = files[0].name;  // to print to file name to the screen
+        files.map((file) => {           // to print to file name to the screen
+            document.getElementById('file').innerHTML = file[0].name;
+        })
     };
     input.click();
 
@@ -68,7 +71,6 @@ const uploadFile = () => {      //  uploads the file to the database
         document.body.appendChild(backDiv);
     }
     else {  // if upload is successful
-        console.log(files[0].name)
         let backDiv = document.createElement('div');
         backDiv.className = 'cover';
         let popup = document.createElement('div');

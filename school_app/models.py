@@ -60,7 +60,7 @@ class Debtor_list(models.Model):
     name = models.TextField()
     description = models.TextField(null=True, blank=True)
     participants = models.ManyToManyField(
-        School, related_name='debtor_list', blank=True)
+        School, related_name='participants', blank=True)
     updated = models.DateTimeField(auto_now=True)
     created = models.DateTimeField(auto_now_add=True)
 
