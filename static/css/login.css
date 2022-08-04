@@ -1,0 +1,206 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    user-select: none;
+}
+.row {
+    width: auto;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.left {
+    width: 636px;
+    height: 1024px;
+    flex: 60%;
+    flex-wrap: wrap;
+    background: rgba(0, 0, 212, 1);
+}
+.right {
+    width: 100%;
+    height: 100vh;
+    flex: 40%;
+    flex-wrap: wrap;
+    background: white;
+    padding: 100px 50px 100px 50px;
+}
+h1 {
+    color: rgba(0, 0, 212, 1);
+    margin-top: 200px;
+    margin-bottom: 5px;
+    font-family: poppins;
+    font-weight: 700;
+    font-size: 28px;
+    text-align: center;
+}
+.welcome {
+    color: rgba(41, 41, 41, 1);
+    margin-bottom: 30px;
+    font-family: poppins;
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+}
+.email-psw{
+    font-family: poppins;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+#email{
+   display: inline-block;
+   width: 100%;
+   height: 40px;
+   font-family: poppins;
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 24px;
+   margin-bottom: 20px;
+   padding-left: 5px;
+   border-radius: 8px;
+   border: 1px solid rgba(158, 158, 158, 1)
+}
+#password{
+    display: inline-block;
+    width: 100%;
+    font-family: poppins;
+    height: 40px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    padding-left: 5px;
+    padding-top: 10px;
+    border: none;
+    outline: none;
+ }
+ .visibility{
+    border: 1px solid rgba(158, 158, 158, 1);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+ }
+ i{
+    margin: 0 10px;
+    cursor: default;
+ }
+ a{
+    display: inline;
+    width: 100%;
+    font-family: poppins;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(41, 41, 41, 1);
+ }
+ .forgot{
+    text-align: right;
+ }
+
+ .rem{
+    text-align: center;
+ }
+ a:link {
+    text-decoration: none;
+  }
+
+  .login-btn {
+    color: white;
+    padding: 16px 32px 16px 32px;
+    margin: 20px;
+    cursor: pointer; 
+    border: none; 
+    width: 210px;
+    border-radius: 8px;
+    font-family: poppins;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    background: rgba(0, 0, 212, 1);
+  }
+  a.login-tag{
+    color: rgba(0, 0, 212, 1);
+  }
+  #login-tag{
+    font-size: 24px;
+  }
+  @media only screen and (max-width: 375px) {
+    .left{
+      display: none;
+    }
+   
+    h1 {
+        margin-top: 100px;
+    }
+    .welcome {
+        margin-bottom: 40px;
+        font-size: 20px;
+    }
+
+     .right {
+        width: 100%;
+        padding: 20px;
+    }
+    .login-btn {
+        margin-top: 80px;
+        line-height: 5px;
+  }
+  #login-tag{
+    font-size: 18px;
+  }
+  
+  }
+
+  @media only screen and (max-width: 897px) {
+   
+    h1 {
+        margin-top: 100px;
+    }
+    .welcome {
+        margin-bottom: 40px;
+        font-size: 20px;
+    }
+
+     .right {
+        width: 100%;
+        padding: 20px;
+    }
+    .login-btn {
+        margin-top: 80px;
+        line-height: 5px;
+  }
+  #login-tag{
+    font-size: 18px;
+  }
+  
+  }
+  @media only screen and (max-width: 748px) {
+    .left{
+      display: none;
+    }
+   
+    h1 {
+        margin-top: 100px;
+    }
+    .welcome {
+        margin-bottom: 40px;
+        font-size: 20px;
+    }
+
+     .right {
+        width: 100%;
+        padding: 20px;
+    }
+    .login-btn {
+        margin-top: 80px;
+        line-height: 5px;
+  }
+  #login-tag{
+    font-size: 18px;
+  }
+  
+  }
