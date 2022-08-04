@@ -22,15 +22,15 @@
                 <h2>Sign Up for Free</h2>
                 <p>Please fill this form to create an account</p>
                 
-                <form action="">
+                <form action="./verify1.html">
                    <label for="name">Name of School</label><br>
-                   <input type="text" name="" id=""><br><br>
+                   <input type="text" name="" id="" required><br><br>
      
                    <label for="email">School Email Address</label><br>
-                   <input type="email" name="" id=""><br><br>
+                   <input type="email" name="" id="" required><br><br><br>
      
                    <label for="state">State</label>
-                   <select onchange="toggleLGA(this);" name="state" id="states" class="form-control">
+                   <select onchange="toggleLGA(this);" name="state" id="states" class="form-control" required>
                       <option value="">Select...</option>
                       <option value="Abuja FCT">Abuja FCT</option>
                       <option value="Abia">Abia</option>
@@ -73,29 +73,31 @@
                    </select>&nbsp;&nbsp;&nbsp;
      
                    <label for="LGA">Local Government Area</label>
-                   <select name="lga" id="lga" class="form-control select-lga" required>
+                   <select name="lga" id="lga" class="form-control select-lga" >
                       <option value="">Select...</option>
      
-                   </select><br><br>
+     
+                   </select><br><br><br>
      
                    <label for="level">Level of Instituion</label>
-                   <select name="" id="">
+                   <select name="level" id="level" required>
                        <option value="">Select...</option>
+                       
      
                    </select><br><br>
      
                    <label for="password">Password</label><br>
-                   <input type="password" name="" id=""><br><br>
+                   <input type="password" name="" id="" required><br><br>
      
                    <label for="confirm password">Confirm Password</label><br>
-                   <input type="password" name="" id=""><br><br>
+                   <input type="password" name="" id="" required><br><br>
      
-                   <input type="checkbox" name="checkbox" id="">
+                   <input type="checkbox" name="checkbox" id="" required>
                    <label for="checkbox">I accept terms and condition</label>
                    <br><br><br>
      
-                   <input type="submit" value="Sign Up"><br>
-                   <p>Already have an account,Sign in</p>
+                   <input type="submit" value="Sign Up"><br><br>
+                   <p>Already have an account?<a href="./login.html"> Sign in</a></p>
      
                 </form>
      
@@ -108,3 +110,5 @@
     </footer>
 </body>
 </html>
+
+<!--Adjust the width and the height-->
