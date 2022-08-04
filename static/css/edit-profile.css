@@ -9,6 +9,9 @@ body {
     padding: 0;
     display: flex;
     font-family: 'Poppins', sans-serif;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     user-select: none;
 }
 
@@ -103,6 +106,7 @@ main {
     padding: 80px 120px 148px 48px;
     overflow-y: auto;
     margin-left: 332px;
+    /* notify if changes are made */
 }
 
 /* Search bar */

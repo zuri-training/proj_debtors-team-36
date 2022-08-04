@@ -9,6 +9,9 @@ body {
     padding: 0;
     display: flex;
     font-family: 'Poppins', sans-serif;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     user-select: none;
 }
 
@@ -97,7 +100,7 @@ aside {
 }
 
 
-/* Edit page */
+/* Current Debtor page */
 main {
     width: 100%;
     padding: 80px 120px 148px 48px;
@@ -230,13 +233,16 @@ h1 {
 .description {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     margin-top: 16px;
+    width: 100%;
 }
 
 .view {
     display: flex;
     height: 21px;
-    justify-content: flex-end;
+    width: 100px;
+    align-items: flex-end;
     text-decoration: none;
     color: #242433;
     font-size: 14px;
@@ -245,7 +251,7 @@ h1 {
 }
 
 .debtor-description {
-    width: 85%;
+    width: 65%;
     margin: 0;
     font-size: 14px;
     font-weight: 400;
@@ -253,9 +259,36 @@ h1 {
     color: #000000;
     height: 21px;
     overflow: hidden;
-    /* text-overflow: ellipsis; */
+    text-overflow: ellipsis;
 }
 
 .debtor-desc {
     color: #808080;
+}
+
+/* Floating Add new debtor button */
+.add-debtor {
+    width: 192px;
+    height: 56px;
+    background-color: #ffffff;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.16);
+    position: fixed;
+    bottom: 66px;
+    right: 121px;
+    cursor: pointer;
+}
+
+.new-debtor {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #242433;
+    margin-left: 8px;
 }
