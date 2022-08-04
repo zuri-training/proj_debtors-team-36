@@ -12,6 +12,9 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     user-select: none;
 }
 
@@ -29,6 +32,7 @@ main {
 }
 
 h1 {
+    margin: 0;
     font-size: 24px;
     font-weight: 500;
     line-height: 36px;
@@ -48,12 +52,12 @@ h1 {
 }
 
 p {
-    font-size: 40px;
-    font-weight: 600;
-    line-height: 60px;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 36px;
     color: #a8a8a8;
     text-align: center;
-    margin: 30.1px 0px 44px 0px;
+    margin: 15px 0px 86px 0px;
 }
 
 .browse {
@@ -123,7 +127,7 @@ p {
 
 .popup {
     width: 30%;
-    height: 45%;
+    height: 50%;
     text-align: center;
     background-color: #fefefe;
     border-radius: 20px;
