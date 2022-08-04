@@ -1,0 +1,85 @@
+/* help and support */
+.side-note{
+ display: flex;   
+ justify-content: center;
+ align-items: center;
+ margin-top: -1000px;
+ margin-left: 100px;
+
+}
+/* search bar */
+.form1 {
+  display: flex;
+  margin: 0 0 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+input[type="search"] {
+  border: none;
+  background: transparent;
+  margin: 0px;
+  padding: 7px 8px;
+  font-size: 14px;
+  border: 1px solid transparent;
+  border-radius: 0px 5px 5px 0px;
+  border-left: none;
+  outline: none;
+}
+
+input[type="search"]::placeholder {
+  color: gray;
+  
+}
+
+form.nosubmit {
+ border: none;
+ padding: 0;
+}
+
+input.nosubmit {
+  border: 3px solid #AAAAFF;
+  width: 590px;
+  height: 56px;
+  padding: 9px 4px 9px 40px;
+  border-left: none;
+}
+
+.content-inside{
+    display:flex;   
+}
+.inner-content{
+    display: flex;
+}
+.res{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    
+    
+}
+
+.descr1{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.descr{
+margin-left:  130px;
+margin-top: -135px;
+}
+.btn-back{
+    margin-left: 90rem;
+    border: 1px solid blue;
+    border-radius: 5px;
+    width: 60px;
+    height: 30px;
+    cursor: pointer;
+}
+.svg-image{
+  margin-top: -100px;
+  margin-left: -8PX;
+}
