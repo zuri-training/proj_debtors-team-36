@@ -119,7 +119,7 @@ For team_36 members, follow the following steps to collaborate:
     `git push origin branchName` - This creates the branch remotely and pushes to that branch on the Github
 10. Go to Github and create a new pull request to the main branch. It will then be reviewed and merged into the master.
 
-*If you need to make an update, repeat from no 4*
+*If you need to make an update, repeat from no 4 (Skip no 6)*
 
 ## Contributors
 
@@ -146,10 +146,6 @@ __Aduragbemi Oroja__
 
 __Adelakin Isreal__
 * Github- https://github.com/Ezrahel
-* Track - Backend(Python)
-
-__Lana Alahmar__
-* Github- https://github.com/Lana-Alahmar
 * Track - Backend(Python)
 
 __Omolade Temitope__
@@ -200,7 +196,7 @@ __Rita Sylvia__
 * Github- https://github.com/ritasylvia
 * Track - Backend
 
-__Taiwo Laskai__
+__Lasaki Taiwo__
 * Github- https://github.com/Tamazing
 * Track - FullStack
 
@@ -225,10 +221,12 @@ __Iniubong Abasi__
 * Track- Product Design
 
 
+## Design
+The design for this project was done by the product design team on figma. Check out the design [here](https://www.figma.com/file/OnOlNH07Q0By2YOEDJIhi4?node-id=417:2)
 
 
 ## Documentation
-A more detailed documentation on the updates and details of this project can be found here - "documentationLinkWhenReady"
+A more detailed documentation on the updates and details of this project can be found [here](https://docs.google.com/document/d/16CPt2fXZ0yxgzU6eVFkCaoYp0vyjdBYsWjMzPmxbdeQ/edit)
 
 ## Acknowledgements
 
