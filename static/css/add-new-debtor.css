@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  top: 0;
+  display: flex;
+  font-family: "manrope", sans-serif;
+  user-select: none;
+  display: grid;
+  align-items: center;
+  justify-content: space-around;
+  visibility: visible;
+
+}
+
+.open-popup {
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.heading-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.heading-text button {
+  width: 40px;
+  height: 20px;
+  border: 1px solid black;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+.heading-text button a:hover {
+  background-color: #000000;
+}
+
+/* ACTUAL DETAILS PART */
+
+.actual-details {
+  margin-top: 35px;
+  width: 100%;
+  height: 100%;
+}
+
+.actual-details button {
+  width: 100%;
+  height: 56px;
+  border: 2px solid #667080;
+  border-radius: 8px;
+  font-family: "manrope", sans-serif;
+  color: #000000;
+  background-color: #ffffff;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: left;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.actual-details p {
+  color: #667080;
+}
+
+.Debt-description button {
+  height: 100px;
+}
+
+.save-btn button {
+  background-color: #0a66c2;
+  color: white;
+  margin-top: 40px;
+  font-family: "manrope", sans-serif;
+  text-align: center;
+  border: 2px solid #0a66c2;
+}
