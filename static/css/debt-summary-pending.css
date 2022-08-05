@@ -281,7 +281,7 @@ background:white;
 
 .button {
     border-radius: 12px;
-    background-color: blue;
+    background-color:white;
     border: none;
     color: #ababfe;
     padding: 10px;
@@ -293,11 +293,11 @@ background:white;
     cursor: pointer;
     width:120px;
     height:42px ;
-    border-color: #ababfe;
+    border:1px solid #ababfe;
 }
 .button1{
     margin-left: -33px;
-    color:white;
+   
     
 }
 .button1:hover{
@@ -306,7 +306,7 @@ background:white;
   
 }
 .button2{
-    background-color: white;
+    background-color: blue;
     border: 1px solid #ababfe;
 
     
@@ -364,14 +364,14 @@ background:white;
   /* buttons in table */
 
   .button5 {
-    background-color:  #ECEBEB;
+    background-color:  #fbf8e7;
     border: none;
-    color: #c7c6c6;
+    color: #edd554;
     padding: 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 13px;
+    font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
     
@@ -383,7 +383,7 @@ background:white;
     color: #6f6f6f;
     border-radius: 15px;
     width: 80px;
-    background-color: #c0c0c0;
+    background-color: #ecebeb;
   }
 
   /* table two */
@@ -451,7 +451,6 @@ background:white;
       text-align: right;
     }
   }
-
 
   /* pop */
   .collapsible {
