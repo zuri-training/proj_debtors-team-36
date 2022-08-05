@@ -1,15 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
 
 * {
     box-sizing: border-box;
 }
 
+:root {
+    --main_color: #0A66C2;
+    --text_color: #292929;
+    --white_text: #fefefe;
+    /* Text color is for text on the background with the --main_color */
+}
+
 body {
     margin: 0px;
     padding: 0px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Manrope', sans-serif;
     background-color: #FEFEFE;
-    color: #3D3D3D;
+    color: var(--text_color);
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -44,12 +51,12 @@ nav .middle-nav {
 
 nav .middle-nav a {
     text-decoration: none;
-    color: #292929;
+    color: var(--text_color);
     margin-right: 32px;
 }
 
 nav a.active {
-    border-bottom: 4px solid #0000d4;
+    border-bottom: 4px solid var(--main_color);
     border-radius: 6px;
 }
 
@@ -71,9 +78,9 @@ nav .right-nav {
     font-weight: 400;
     line-height: 22px;
     padding: 8px 16px;
-    border: 1.5px solid #0A66C2;
+    border: 1.5px solid var(--main_color);
     border-radius: 8px;
-    color: #0A66C2;
+    color: var(--main_color);
     cursor: pointer;
     text-decoration: none;
     background-color: #ffffff;
@@ -89,12 +96,12 @@ nav .right-nav {
     font-weight: 400;
     line-height: 22px;
     padding: 8px 16px;
-    border: 1.5px solid #0A66C2;
+    border: 1.5px solid var(--main_color);
     border-radius: 8px;
     color: #ffffff;
     cursor: pointer;
     text-decoration: none;
-    background-color: #0A66C2;
+    background-color: var(--main_color);
 }
 
 /* TOP NAVIGATION BAR ENDS HERE */
@@ -104,7 +111,7 @@ nav .right-nav {
 /* Welcome Page */
 .welcome {
     height: calc(100vh - 70px);
-    padding: 0px 72px 0px 72px;
+    padding: 0px 81px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -120,18 +127,21 @@ nav .right-nav {
 }
 
 .welcome-top article {
-    width: 50%;
+    width: 80%;
     padding-right: 20px;
 }
 
 .welcome-top .tired {
-    font-size: 24px;
-    font-weight: 500;
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 66px;
 }
 
 .welcome-top .tired2 {
-    font-size: 18px;
-    font-weight: 400;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 33px;
+    color: #333333;
 }
 
 .welcome-top button {
@@ -147,14 +157,13 @@ nav .right-nav {
     cursor: pointer;
 }
 
-.welcome-top-right {
+/* .welcome-top-right {
     width: 50%;
     height: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding-left: 20px;
-    /* background-color: aqua; */
 }
 
 .welcome-top-right-pics {
@@ -162,7 +171,7 @@ nav .right-nav {
     height: 80%;
     background-color: #EEF1F4;
     border: 3px solid #667080;
-}
+} */
 
 .welcome-bottom {
     width: 100%;
@@ -655,12 +664,12 @@ nav .right-nav {
 footer {
     width: 100%;
     height: 350px;
-    background-color: #0a66c2;
+    background-color: var(--main_color);
     display: flex;
     flex-direction: column;
     /* justify-content: space-between; */
     padding: 57px 124px 10px 124px;
-    color: #fefefe;
+    color: var(--white_text);
 }
 
 .footer-top {
@@ -693,7 +702,7 @@ footer {
 
 .footer-links a {
     text-decoration: none;
-    color: #fefefe;
+    color: var(--white_text);
     font-size: 18px;
     font-weight: 400;
     line-height: 25px;
