@@ -213,7 +213,7 @@ __Osadere Gideon__
 * Track- Product Design
 
 __John Amakoh__
-* Github- https://github.com/OGidos
+* Github- https://github.com/JohnChizzy
 * Track- Fullstack
 
 __Iniubong Abasi__
