@@ -1,18 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
 
 * {
     box-sizing: border-box;
 }
 
+:root {
+    --main_color: #0A66C2;
+    --text_color: #292929;
+    --white_color: #ffffff;
+    --hover_color: #3380cc;
+    --clicked_color: #074481;
+    --disabled_color: #a8a8a8;
+    --side_navbar_width: 332px;
+}
+
 body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    font-family: 'Poppins', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Manrope', sans-serif;
+    background-color: var(--white_color);
+    color: var(--text_color);
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    overflow-x: hidden;
 }
 
 /* SIDE NAVIGATION BAR STARTS HERE */
@@ -21,10 +33,10 @@ body {
 
 aside {
     height: 100vh;
-    width: 332px;
-    min-width: 332px;
-    background-color: #0A66C2;
-    color: #242433;
+    width: var(--side_navbar_width);
+    min-width: var(--side_navbar_width);
+    background-color: var(--main_color);
+    color: var(--white_color);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -52,7 +64,7 @@ aside {
 
 .top-links a {
     text-decoration: none;
-    color: #fefefe;
+    color: var(--white_color);
     width: 100%;
     height: 56px;
     display: flex;
@@ -64,8 +76,8 @@ aside {
 }
 
 .top-links a.active {
-    background-color: #ffffff;
-    color: #0c0c0c;
+    background-color: var(--white_color);
+    color: var(--text_color);
 }
 
 /* Changes the color of the active svg */
@@ -84,7 +96,7 @@ aside {
 
 .aside-bottom a {
     text-decoration: none;
-    color: #fefefe;
+    color: var(--white_color);
     width: 100%;
     height: 56px;
     display: flex;
@@ -104,7 +116,7 @@ aside {
 
 /* Edit page */
 main {
-    width: 100%;
+    width: calc(100vw - 332px);
     padding: 80px 120px 148px 48px;
     overflow-y: auto;
     margin-left: 332px;
@@ -113,6 +125,7 @@ main {
 
 /* SEARCH BAR STARTS HERE */
 /* Search bar */
+/* Set the width of your main content to calc(100vw - 332px) to prevent overflow. Refer to my code for main tag above */
 .search {
     display: flex;
     width: 100%;
@@ -123,12 +136,12 @@ main {
 .search-bar {
     display: flex;
     align-items: center;
-    width: 80%;
+    width: 88%;
     height: 100%;
     padding: 16px;
-    border: 2px solid #85b3e1;
+    border: 2px solid var(--main_color);
     border-radius: 8px;
-    margin-right: 41.25px;
+    margin-right: 20px;
 }
 
 .search-text {
@@ -145,18 +158,25 @@ main {
     outline: none;
 }
 
-.search-icons svg {
-    margin-right: 20.48px;
+.search-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: var(--white_color);
+    cursor: pointer;
 }
 
-/* SEARCH BAR STARTS HERE */
+
+/* SEARCH BAR ENDS HERE */
 
 /* Page content */
 
 h1 {
     margin: 32px 0px;
     font-size: 24px;
-    font-weight: 500;
+    line-height: 33px;
+    font-weight: 600;
 }
 
 .user-detail {
@@ -200,29 +220,47 @@ h1 {
     width: 158px;
     height: 100%;
     padding: 8px 16px;
-    background-color: #808080;
+    background-color: var(--main_color);
     border-radius: 8px;
     border: none;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
-    color: #ffffff;
+    color: var(--white_color);
     cursor: pointer;
+}
+
+.change-pic:hover {
+    background-color: var(--hover_color);
+}
+
+.change-pic:active {
+    background-color: var(--clicked_color);
 }
 
 .delete-pic {
     width: 158px;
     height: 100%;
     padding: 8px 16px;
-    color: #808080;
+    color: var(--main_color);
     border-radius: 8px;
-    border: 1px solid #808080;
+    border: 1px solid var(--main_color);
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
-    background-color: #ffffff;
+    background-color: var(--white_color);
     margin-left: 8px;
     cursor: pointer;
+}
+
+.delete-pic:hover {
+    border: 1px solid var(--hover_color);
+    color: var(--hover_color);
+}
+
+.delete-pic:hover {
+    border: 1px solid var(--clicked_color);
+    color: var(--clicked_color);
 }
 
 h2 {
@@ -304,13 +342,21 @@ h2 {
 .submit {
     width: 569px;
     height: 56px;
-    background-color: #242433;
+    background-color: var(--main_color);
     border: none;
     border-radius: 8px;
     padding: 16px;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
-    color: #ffffff;
+    color: var(--white_color);
     cursor: pointer;
+}
+
+.submit:hover {
+    background-color: var(--hover_color);
+}
+
+.submit:active {
+    background-color: var(--clicked_color);
 }

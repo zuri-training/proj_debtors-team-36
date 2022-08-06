@@ -1,0 +1,16 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+python = "==3"
+autopep8 = "==1.6.0"
+pipenv = "==20.14.1"
+django = "==4.0"
+python-decouple = "==3.6"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"

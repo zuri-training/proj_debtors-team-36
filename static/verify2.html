@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="./js/verify2.js"></script>
     <link rel="stylesheet" href="./css/verify2.css">
     <title>Verification</title>
 </head>
@@ -29,24 +30,25 @@
                 account creation.</p>
             <!-- This is the OTP code the user inputs. Must change from div -->
             <div class="code">
-                <div>0</div>
-                <div>0</div>
-                <div>0</div>
-                <div>0</div>
-                <div>0</div>
-                <div>0</div>
+                <input type="text" name="otp" id="otp" class="otp" maxlength="1">
+                <input type="text" name="otp" id="otp" class="otp" maxlength="1">
+                <input type="text" name="otp" id="otp" class="otp" maxlength="1">
+                <input type="text" name="otp" id="otp" class="otp" maxlength="1">
+                <input type="text" name="otp" id="otp" class="otp" maxlength="1">
+                <input type="text" name="otp" id="otp" class="otp" maxlength="1">
             </div>
             <div class="timer">
                 <p class="time-text">Code expires in <span>: 00:59</span></p>
             </div>
-            <div class="btns">
-                <button class="cancel" onclick="location.href='index.html'">Cancel</button>
-                <!-- Change destination of verify button -->
-                <button class="verify-btn" onclick="location.href='verification-sucess.html'">Verify</button>
-            </div>
+            <!-- Change destination of verify button -->
+            <button id="verify-btn" class="verify-btn" onclick="submit()">Verify</button>
             <p class="resend">Didn't get the code? <a href="#">Resend Code</a></p>
         </div>
     </main>
 </body>
 
 </html>
+
+<!-- 
+    onclick="location.href='verification-sucess.html'">Verify</button>
+ -->
