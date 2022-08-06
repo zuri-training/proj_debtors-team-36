@@ -15,18 +15,11 @@
     <input type="email" name="email" placeholder="{{ page_contents.student_email }}">
 
     <label for="subject">Message</label>
-    <textarea id="subject" name="subject" placeholder="Dear {{ page_contents.sponsor_name }};
-
-<<<<<<< HEAD
-This is to notify you that Chrisland school has just published  your child’s name “Alex Sonia” on the
-“My DEBTOR website” due to non-payment for two terms (Second and Third term respectively).
-If this doesn’t apply to you, Kindly click on this link (insert link) to view details of your wards debt witj an option to 'contend debt'
-if you are not a debtor" style="height:221px"></textarea>
-=======
+    <textarea id="subject" name="subject" placeholder="Dear {{ page_contents.sponsor_name }}
 This is to inform you that {{ page_contents.school_name }} has just posted the your child’s name “{{ page_contents.student_name }}” on the
 “My DEBTOR website” due to non-payment for {{ page_contents.duration_owned }} terms (Second and Third term respectively).
 If this doesn’t apply to you, Kindly click on “{{ page_contents.contend_link }}”" style="height:221px"></textarea>
->>>>>>> a1c5bb45fa61b981b2c218d1f8b08c9c8bc3b425
+
 
     <input type="submit" value="Submit">
   </form>
