@@ -2,21 +2,10 @@ from unicodedata import name
 from django.db import models
 from django.contrib.auth import get_user_model
 from django.utils import timezone
-
-
-class Debtors(models.Model):
-    GENDER_CHOICES = ("Male", "Female", "Other")
-    id = models.ForeignKey(primary_key=True, blank=False)
-    name = models.CharField(max_length=50)
-    gender = models.CharField(choices=GENDER_CHOICES.choices, max_length=10, null=False)
-    amount_owed = models.IntegerField(default=0)
-    amount_cleared = models.IntegerField(default=0)
-
-    class Meta:
-        ordering = ['name']
+import uuid
+import random
 
         
-
  
 from django.contrib.auth.models import AbstractUser
 
@@ -69,6 +58,26 @@ class Debtor_list(models.Model):
 
     def __str__(self):
         return self.name
+
+class Debtors(models.Model):
+    # GENDER_CHOICES = ("Male", "Female", "Other")
+
+    class GENDER_CHOICES(models.TextChoices):
+        male = "Male"
+        female = "Female"
+        others = "Others"
+
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    # id = models.ForeignKey(primary_key=True, blank=False)
+    name = models.CharField(max_length=50)
+    gender = models.CharField(choices=GENDER_CHOICES.choices, max_length=10, null=False)
+    schools = models.ManyToManyField(School, blank=False)
+    amount_owed = models.IntegerField(default=0)
+    amount_cleared = models.IntegerField(default=0)
+
+    class Meta:
+        ordering = ['name']
+
 
 class Comment(models.Model):
     user = models.ForeignKey(School, on_delete=models.CASCADE)
