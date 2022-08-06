@@ -7,14 +7,17 @@
 :root {
     --main_color: #0A66C2;
     --text_color: #292929;
-    --white_text: #fefefe;
+    --white_color: #ffffff;
+    --hover_color: #3380cc;
+    --clicked_color: #074481;
+    --disabled_color: #a8a8a8;
 }
 
 body {
     margin: 0px;
     padding: 0px;
     font-family: 'Manrope', sans-serif;
-    background-color: #FEFEFE;
+    background-color: var(--white_color);
     color: var(--text_color);
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -28,7 +31,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     height: 48px;
-    padding: 24px 72px 0px 72px;
+    padding: 40px 72px 0px 72px;
     margin-bottom: 20px;
 }
 
@@ -52,6 +55,10 @@ nav .middle-nav a {
     text-decoration: none;
     color: var(--text_color);
     margin-right: 32px;
+}
+
+nav .middle-nav a:active {
+    color: var(--main_color);
 }
 
 nav a.active {
@@ -82,7 +89,17 @@ nav .right-nav {
     color: var(--main_color);
     cursor: pointer;
     text-decoration: none;
-    background-color: #ffffff;
+    background-color: var(--white_color);
+}
+
+.welcome-login-btn:hover {
+    border: 1.5px solid var(--hover_color);
+    color: var(--hover_color);
+}
+
+.welcome-login-btn:active {
+    border: 1.5px solid var(--clicked_color);
+    color: var(--clicked_color);
 }
 
 .welcome-signup-btn {
@@ -95,12 +112,20 @@ nav .right-nav {
     font-weight: 400;
     line-height: 22px;
     padding: 8px 16px;
-    border: 1.5px solid var(--main_color);
+    border: none;
     border-radius: 8px;
-    color: #ffffff;
+    color: var(--white_color);
     cursor: pointer;
     text-decoration: none;
     background-color: var(--main_color);
+}
+
+.welcome-signup-btn:hover {
+    background-color: var(--hover_color);
+}
+
+.welcome-signup-btn:active {
+    background-color: var(--clicked_color);
 }
 
 /* TOP NAVIGATION BAR ENDS HERE */
@@ -187,13 +212,13 @@ main .body {
 /* FOOTER STARTS HERE */
 footer {
     width: 100%;
-    height: 350px;
+    height: 438px;
     background-color: var(--main_color);
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
+    justify-content: space-between;
     padding: 57px 124px 10px 124px;
-    color: var(--white_text);
+    color: var(--white_color);
 }
 
 .footer-top {
@@ -208,7 +233,7 @@ footer {
 }
 
 .footer-logo {
-    margin-bottom: 15px;
+    height: 50px;
 }
 
 .footer-top-header h4 {
@@ -216,17 +241,19 @@ footer {
     font-weight: 500;
     line-height: 33px;
     margin: 0;
-    margin-bottom: 20.5px;
+    height: 50px;
 }
 
 .footer-links {
     display: flex;
     flex-direction: column;
+    margin-top: 20px;
 }
 
-.footer-links a {
+.footer-links a,
+.footer-links p {
     text-decoration: none;
-    color: var(--white_text);
+    color: var(--white_color);
     font-size: 18px;
     font-weight: 400;
     line-height: 25px;
@@ -237,7 +264,6 @@ footer {
 .footer-bottom {
     display: flex;
     height: 40px;
-    margin-top: 30px;
 }
 
 .copyright {
