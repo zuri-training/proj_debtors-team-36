@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
     'school_app',
 
     #third party apps
@@ -45,6 +46,8 @@ INSTALLED_APPS = [
     'uuid',
 ]
 'Apps.school_app.app.SchoolAppConfig'
+
+AUTH_USER_MODEL = 'school_app.School'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -90,6 +93,7 @@ DATABASES = {
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
+
 
 AUTH_PASSWORD_VALIDATORS = [
     {
