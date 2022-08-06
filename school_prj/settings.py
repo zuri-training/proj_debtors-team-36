@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
-from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,10 +20,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('SECRET_KEY', 'django-insecure-7xv%lrk^7-r%bp%e+55a85^p=1x!824^##mt%r4sir1p17n60%')
+SECRET_KEY = 'django-insecure-+e^j7sjy!6)li5%@wl3-vj^qoyhkd&w0&c9(a34xdhh85#c+ap'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', default= True, cast=bool)
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -38,14 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'school_app.apps.SchoolAppConfig',
-    
-    # 3rd party app
-    'django_extensions',
-    'uuid'
 ]
-
-AUTH_USER_MODEL = 'school_app.School'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -62,7 +54,7 @@ ROOT_URLCONF = 'school_prj.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR/"static"],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -88,14 +80,9 @@ DATABASES = {
     }
 }
 
-# Authentication
-AUTH_USER_MODEL = "school_app.School"
-
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
-
 
 AUTH_PASSWORD_VALIDATORS = [
     {
