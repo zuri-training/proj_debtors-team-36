@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--font-color);
+    user-select: none;
+    color: #3D3D3D;
+}
+:root {
+    --main-color: #0855A2;
+    --font-color: #fefefe
+  }
+/* Side nav */
+aside {
+    height: 100vh;
+    width: 332px;
+    min-width: 332px;
+    background-color: var(--main-color);
+    color: var(--font-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    /* fixes the side bar and prevents scrolling. Set the margin-left property of the screen by its right to 332px */
+}
+
+.aside-top {
+    width: 100%;
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-icon {
+    width: 100%;
+    margin-bottom: 56px;
+    padding-left: 48px;
+}
+
+.icon {
+    width: 160px;
+    height: 48px;
+    background-color: var(--font-color);
+    border: 3px solid var(--font-color);
+}
+
+.top-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.top-links a {
+    text-decoration: none;
+    color: var(--font-color);
+    width: 100%;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    font: poppins;
+    padding: 16px 48px;
+    
+}
+
+.top-links a.active {
+    background-color: var(--font-color);
+    color: var(--main-color);
+}
+.top-links a svg {
+    margin-right: 34px;
+}
+
+.aside-bottom {
+    width: 100%;
+    padding-bottom: 48px;
+}
+
+.aside-bottom a {
+    text-decoration: none;
+    color: var(--font-color);
+    width: 100%;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    padding: 16px 48px;
+}
+
+.aside-bottom a svg {
+    margin-right: 34px;
+}
+
+/* Edit page */
+main {
+    width: 100%;
+    padding: 80px 120px 148px 48px;
+    overflow-y: auto;
+    margin-left: 332px;
+}
+
+/* Search bar */
+.search {
+    display: flex;
+    width: 100%;
+    height: 56px;
+    align-items: center;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+    padding: 16px;
+    border: 2px solid #0000D5;
+    opacity: 0.4;
+    border-radius: 8px;
+    margin-right: 41.25px;
+}
+
+.search-text {
+    height: 40px;
+    width: 100%;
+    margin-left: 19px;
+    border: none;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    opacity: 0.5;
+}
+
+.search-text:focus {
+    outline: none;
+}
+
+.search-icons svg {
+    margin-right: 20.48px;
+}
+
+/*Page Contents*/
+.headn{
+    display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 23px;
+
+position: absolute;
+width: 944px;
+height: 60px;
+left: 378px;
+top: 276
+}

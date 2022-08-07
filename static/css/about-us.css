@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #FEFEFE;
+    color: #3D3D3D;
+    width: 1440px;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 43px;
+    padding: 13px 72px 0px 72px;
+}
+h1, h2{
+    color: #0000D4;
+    font-weight: 600;
+}
+
+nav .left-nav {
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    font-weight: 600;
+    color: #0000D4;
+}
+
+nav .middle-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    width: 421px;
+    height: 30px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+nav .middle-nav a {
+    text-decoration: none;
+    color: #292929;
+}
+
+nav .middle-nav a:hover {
+    border-bottom: 4px solid #292929;
+    border-radius: 6px;
+}
+
+nav .right-nav {
+    width: 240px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.welcome-login-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    padding: 8px 16px;
+    border: 1.5px solid #0000D4;
+    border-radius: 8px;
+    color: #0000D4;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.welcome-signup-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    padding: 8px 16px;
+    border: 1.5px solid #7E7E7E;
+    border-radius: 8px;
+    color: #ffffff;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: #0000D4;
+}
+/* Company Service Section*/
+.company-service-1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 100%;
+    margin-top: 10%;
+    
+
+}
+.article1 {
+    text-align: center;
+}
+
+.articlesub {
+    margin-top: 5px;
+}
+
+.article2 {
+    text-align: center;
+}
+.img1 {
+    position: absolute;
+    z-index: -1;
+}
+
+.box1 {
+    display: block;
+} 
+.company-service-2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 100%;
+    margin-top: 10%;
+
+}
+.box2 {
+    display: block;
+}
+.img2 {
+    position: absolute;
+    z-index: -1;
+}
+.servicebutton1 {
+    width: 200px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 27px;
+    padding: 8px 16px;
+    border: 1.5px solid #7E7E7E;
+    border-radius: 8px;
+    color: #ffffff;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: #0000D4;
+
+}
+.servicebutton1 a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.servicebutton1 a:hover{
+    border-bottom: 4px solid #ffffff;
+    border-radius: 6px;
+
+}
+
+ .vector1 {
+    position: absolute;
+    z-index: -1;
+    
+
+} 
+
+/* Meeting The Team Section */
+
+.design-team{
+    position: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-betw;
+    height: 100%;
+    width: 100%; 
+   
+}
+
+.article3 {
+    text-align: center;
+}
+.developers-team{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly; 
+    height: 100%;
+    width: 100%;
+}
+
+/* Registered schools section */
+/* .registered-schools {
+    display: block;
+}
+
+.vector2{
+    position: absolute;
+    z-index: -1;
+} */
+.school-row-1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 100%;
+
+}
+.school-row-2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 100%;
+
+}
+
+
+/*Footer*/
+footer {
+    width: 100%;
+    height: 359px;
+    border-radius: 8px;
+    background-color: #0A66C2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 57px 126px 10px 126px;
+    color: #ffffff;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footer-top-header {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-top-header h3 {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 42px;
+    color: #292929;
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.footer-top-header h4 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 36px;
+    margin: 0;
+    margin-bottom: 25px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #292D32;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    margin: 0;
+    margin-bottom: 8px;
+}
+
+.footer-bottom {
+    display: flex;
+    height: 40px;
+}
+
+.copyright {
+    display: flex;
+    align-items: center;
+}
+
+.copyright h5 {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    margin: 0;
+    margin-left: 6.5px;
+}
+
+.footer-line {
+    margin: 0;
+    margin: 0px 36px 0px 32px;
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+}
+
+.socials h5 {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    margin: 0;
+    margin-right: 14.6px;
+}
+
+.socials svg {
+    margin-right: 18.67px;
+}

@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --main_color: #0A66C2;
+    --text_color: #292929;
+    --white_color: #ffffff;
+    --hover_color: #3380cc;
+    --clicked_color: #074481;
+    --disabled_color: #a8a8a8;
+    --side_navbar_width: 332px;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Manrope', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--white_color);
+    color: var(--text_color);
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+main {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loading {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 48px;
+    margin-bottom: 40px
+}
+
+.one,
+.two,
+.three {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    background-color: var(--main_color);
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.three {
+    background-color: var(--white_color);
+    border: 1px solid var(--main_color);
+    color: var(--main_color);
+}
+
+.line {
+    flex-grow: 1;
+    height: 0px;
+    border: 4px solid var(--main_color);
+}
+
+.status {
+    width: 60%;
+    height: 401px;
+    background-color: #fefefe;
+    border: 1px solid #ff4040;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ff4040;
+}
+
+h1 {
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 51px;
+    margin-top: 38.11px;
+}
+
+.sit {
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 38px;
+    margin: 0;
+    margin-top: 82px;
+    color: #ff4040;
+}
+
+.message {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 27px;
+    color: #000033;
+    text-align: center;
+    margin: 34px 0px 40px 0px;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 210px;
+    height: 59px;
+    padding: 16px 32px;
+    background-color: #ff4040;
+    border-radius: 8px;
+    border: none;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 27px;
+    color: #ffffff;
+    cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
