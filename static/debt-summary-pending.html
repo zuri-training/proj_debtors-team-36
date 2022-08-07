@@ -5,13 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/specific-school.css">
+    <link rel="stylesheet" href="./css/debt-summary-pending.css">
+    <script defer src="./js/current-debtors.js"></script>
+    <!-- Copy the script below for the execution of the left side navbar styling -->
     <script defer src="./js/side-nav.js"></script>
-    <title>List Of Specific Schools</title>
+    <title>Debtors Summary</title>
 </head>
 
 <body>
-    <!--Side bar-->
+    <!-- When copying this side navbar, copy the link to the script in the head tag -->
     <aside>
         <div class="aside-top">
             <div class="top-icon">
@@ -178,9 +180,156 @@
             </div>
         </div>
 
-    </main>
+        <!-- other page contents -->
+        <br>
+        <br>
+        <h1>Debtors Summary</h1>
+        <div id="debtorsr"></div>
+        <div class="area-togglebuttons">
+            
+            <button class="button button2" id="button2">Pending </button>
+            <button class="button button1" id="button1">Resolved</button>
+            <button id="button3"><p>Sort by  
+               
+                
+                  <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn">
+                        <svg style="cursor: pointer; pointer-events: none;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+                      </svg></button>
+                    <div id="myDropdown" class="dropdown-content">
+                      <a href="#">Newest date first</a>
+                      <a href="#">Oldest date first</a>
+                      <a href="#">Name A to Z</a>
+                    </div>
+                  </div>
+                     </p>
+            </button>
+            
+        </div>
+       
+          <!-- Table  -->
+          <div class="container">
+            <ul class="responsive-table">
+              <li class="table-header">
 
-    
+                <div class="col col-2">Name</div>
+                <div class="col col-2">Amount</div>
+                <div class="col col-2">Entry Date</div>
+                <div class="col col-4">Contention Status</div>
+              </li>
+              <li class="table-row">
+            
+                <div class="col col-2" data-label="Customer Name">John Doe</div>
+                <div class="col col-2" data-label="Amount">#350000</div>
+                <div class="col col-2" data-label="Amount">22/07/2022</div>
+                <div class="col col-4" data-label="Payment Status"><button class="button5 button6"><b>None</b></button><button type="button" class="collapsible"><svg width="18" height="9" viewBox="0 0 18 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16.92 8.05014L10.4 1.53014C9.63 0.760137 8.37 0.760137 7.6 1.53014L1.08 8.05014" stroke="#7E7E7E" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    </button>
+                    <div class="content">
+                        <h3>Class:</h3>
+                        <p>Basic five(5)</p>
+                      <hr>
+                        <h3>Parents/Guardian's Name:</h3>
+                        <p>Alfreds Doe</p>
+                        <hr>
+                        <h3>Debt Decription</h3>
+                        <p>First and second term outstanding feeding fees for 2019/2020 </p>
+                        <p>academic session, with tax inclusive.</p>
+                        <hr>
+                        <h3>Contention Details: </h3>
+                        <p>Logged on 25/07/22 (2days ago)</p>
+                        
+                     
+                    </div></div>
+              </li>
+              
+                
+                
+              <li class="table-row">
+
+                <div class="col col-2" data-label="Customer Name">Jennifer Smith</div>
+                <div class="col col-2" data-label="Amount">#220000</div>
+                <div class="col col-2" data-label="Amount">22/07/2022</div>
+                <div class="col col-4" data-label="Payment Status"><button class="button5"><b>Logged</b></button><button type="button" class="collapsible"><svg width="18" height="9" viewBox="0 0 18 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16.92 8.05014L10.4 1.53014C9.63 0.760137 8.37 0.760137 7.6 1.53014L1.08 8.05014" stroke="#7E7E7E" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    </button>
+                    <div class="content">
+                        <h3>Class:</h3>
+                        <p>Basic five(5)</p>
+                      <hr>
+                        <h3>Parents/Guardian's Name:</h3>
+                        <p>Alfreds Doe</p>
+                        <hr>
+                        <h3>Debt Decription</h3>
+                        <p>First and second term outstanding feeding fees for 2019/2020 </p>
+                        <p>academic session, with tax inclusive.</p>
+                        <hr>
+                        <h3>Contention Details: </h3>
+                        <p>Logged on 25/07/22 (2days ago)</p>
+                        
+                     
+                    </div></div>
+              </li>
+              <li class="table-row">
+
+                <div class="col col-2" data-label="Customer Name">John Smith</div>
+                <div class="col col-2" data-label="Amount">#341000</div>
+                <div class="col col-2" data-label="Amount">22/07/20220</div>
+                <div class="col col-4" data-label="Payment Status"><button class="button5 button6"><b>None</b></button><button type="button" class="collapsible"><svg width="18" height="9" viewBox="0 0 18 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16.92 0.950195L10.4 7.4702C9.63 8.2402 8.37 8.2402 7.6 7.4702L1.08 0.950195" stroke="#7E7E7E" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                    <div class="content">
+                        <h3>Class:</h3>
+                        <p>Basic five(5)</p>
+                      <hr>
+                        <h3>Parents/Guardian's Name:</h3>
+                        <p>Alfreds Doe</p>
+                        <hr>
+                        <h3>Debt Decription</h3>
+                        <p>First and second term outstanding feeding fees for 2019/2020 </p>
+                        <p>academic session, with tax inclusive.</p>
+                        <hr>
+                        <h3>Contention Details: </h3>
+                        <p>Logged on 25/07/22 (2days ago)</p>
+                        
+                     
+                    </div></div>
+              </li>
+              <li class="table-row">
+                
+                <div class="col col-2" data-label="Customer Name">John Carpenter</div>
+                <div class="col col-2" data-label="Amount">#115000</div>
+                <div class="col col-2" data-label="Amount">#22/07/2022</div>
+                <div class="col col-4" data-label="Payment Status"><button class="button5"><b>Logged</b></button><button type="button" class="collapsible"><svg width="18" height="9" viewBox="0 0 18 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16.92 0.950195L10.4 7.4702C9.63 8.2402 8.37 8.2402 7.6 7.4702L1.08 0.950195" stroke="#7E7E7E" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                    <div class="content">
+                        <h3>Class:</h3>
+                        <p>Basic five(5)</p>
+                      <hr>
+                        <h3>Parents/Guardian's Name:</h3>
+                        <p>Alfreds Doe</p>
+                        <hr>
+                        <h3>Debt Decription</h3>
+                        <p>First and second term outstanding feeding fees for 2019/2020 </p>
+                        <p>academic session, with tax inclusive.</p>
+                        <hr>
+                        <h3>Contention Details: </h3>
+                        <p>Logged on 25/07/22 (2days ago)</p>
+                        
+                     
+                    </div></div>
+              </li>
+            </ul>
+          </div>
+    </main>
+    <script src="./js/debtor-summary.js"></script>
+       
 </body>
 
 </html>

@@ -5,5 +5,6 @@ const navLinks = document.querySelectorAll('aside a').
     forEach(link => {
         if (link.href.includes(`${currentPage}`)) {
             link.classList.add('active');
+            link.setAttribute('id', 'active')
         }
     })
