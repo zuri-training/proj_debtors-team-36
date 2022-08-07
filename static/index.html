@@ -1,3 +1,4 @@
+{% load static from static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,10 +6,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer src="./js/top-nav.js"></script>
+    <script defer src="{% static './js/top-nav.js' %}"></script>
     <!-- COPY THE SCRIPT ABOVE -->
-    <script defer src="./js/index.js"></script>
-    <link rel="stylesheet" href="./css/index.css">
+    <script defer src="{% static './js/index.js' %}"></script>
+    <link rel="stylesheet" href="{% static './css/index.css' %}">
     <title>My Debtor</title>
 </head>
 
@@ -24,14 +25,14 @@
             </svg>
         </div>
         <div class="middle-nav">
-            <a href="index.html">Home</a>
-            <a href="about-us.html">About Us</a>
-            <a href="faq.html">FAQ</a>
-            <a href="contact-us.html">Contact Us</a>
+        <a href="{% url 'index' %}">Home</a>
+          <a href="{% url 'about' %}">About Us</a>
+          <a href="faq.html">FAQ</a>
+          <a class="current" href="{% url 'contact' %}">Contact Us</a>
         </div>
         <div class="right-nav">
-            <button onclick="location.href = 'login.html'" class="welcome-login-btn">Login</button>
-            <button onclick="location.href = 'signup.html'" class="welcome-signup-btn">Sign Up</button>
+            <a class="" href="{% url 'login' %}"><button onclick="location.href = 'login.html'" class="welcome-login-btn">Login</button></a>
+            <a class="" href="{% url 'signup' %}"><button onclick="location.href = 'signup.html'" class="welcome-signup-btn">Sign Up</button></a>
         </div>
     </nav>
     <!-- TOP NAVIGATION BAR ENDS HERE -->

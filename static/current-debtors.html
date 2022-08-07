@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,10 +6,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/current-debtors.css">
-    <script defer src="./js/current-debtors.js"></script>
+    <link rel="stylesheet" href="{% static './css/current-debtors.css' %}">
+    <script defer src="{% static './js/current-debtors.js' %}"></script>
     <!-- Copy the script below for the execution of the left side navbar styling -->
-    <script defer src="./js/side-nav.js"></script>
+    <script defer src="{% static './js/side-nav.js' %}"></script>
     <title>Current Debtors</title>
 </head>
 
@@ -52,7 +53,7 @@
                     </svg>
                     Edit profile
                 </a>
-                <a href="current-debtors.html" class="debtors">
+                <a href="{% url 'current_debtors' %}" class="debtors">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M17 21H7C3 21 2 20 2 16V8C2 4 3 3 7 3H17C21 3 22 4 22 8V16C22 20 21 21 17 21Z"
                             stroke="#FEFEFE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -109,7 +110,7 @@
                 </svg>
                 Help & support
             </a>
-            <a href="index.html">
+            <a href="{% url 'index' %}">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M17.4399 14.62L19.9999 12.06L17.4399 9.5" stroke="#FEFEFE" stroke-width="1.5"
                         stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
@@ -165,7 +166,20 @@
 
         <!-- other page contents -->
         <h1>Current Debtors</h1>
-        <div id="debtors"></div>
+        <!-- list of debtors from the debtor db -->
+        <div id="debtors">
+            
+            {% for debtor in debtors  %}
+            <div>
+            <div>{{ debtors.name }}</div>
+            <div>{{ debtors.amount_owed }}</div>
+            <div>{{ debtors.gender }}</div>
+            <!-- <div>{{ debtors.created }}</div> -->
+            </div>
+            {% endfor %}
+                
+            </div>
+        </div>
     </main>
     <button class="add-debtor" onclick="location.href = 'add-new-debtor.html'">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
