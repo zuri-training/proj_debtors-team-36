@@ -1,3 +1,4 @@
+
 #from django.http import HttpResponse
 from django.shortcuts import redirect, render
 from django.contrib.auth.forms import AuthenticationForm
@@ -11,26 +12,13 @@ from .models import Debtors, School, Debtor_list, School_Post
 
 
 
-# Create your views here.
+
 def index(request):
     return render(request, 'index.html')
 
 
 def contact_view(request):
-
     return render(request, 'contact-us.html', {})
-
-
-def about_view(request):
-    return render(request, 'about-us.html')
-
-# @login_required(login_url = '/login/')
-
-
-def dashboard(request):
-    user = request.user.username
-    return render(request, 'dashboard.html', {'username': user})
-
 
 def signup_view(request):
     # if request.user.is_authentecated:
@@ -77,23 +65,35 @@ def current_debtors(request):
     return render(request, 'current-debtors.html', {'debtors': debtors})
 
 
-# @login_required(login_url = '/login/')
-#def add_debtor(request):
-    if request.method == 'POST':
-        form = CreateView(request.POST, request.FILES)
-        if form.is_valid():
-            # save to database
-            debtor = form.save(commit=FALSE)
-            debtor.author = request.user
-            debtor.save()
-            return redirect('debt-summary')
-    else:
-        form = CreateView(request.POST, request.FILES)
-    return render(request, 'add-new-debtor.html')
 
-# @login_required(login_url = '/login/')
-# @login_required(login_url = '/login/')
-# def debtor_detail(request):
-    debtors = Debtors.objects.get(id)
-    return render(request, 'debtor-detail.html')
+
+=======
+from django.shortcuts import render
+from . import models
+
+
+# Create your views here.
+
+def home(request):
+    return render(request, 'index.html')
+
+def enter_debtors(request):
+    pass
+
+def debtor_email(request):
+    """_summary_
+        This is for testing purposes only.
+        The school name will be called by User login details
+        while the student email will be gotten from the enter-debtors view
+        if the page will come as a popup. else, they will be fetched from the models
+    """
+    page_contents = {
+    "school_name" : "Chrisland school",
+    "student_email" : "alexjoe2018@gmail.com",
+    "student_name" : "Alex Sonia",
+    "contend_link" : "Contend this post",
+    "duration_owned" : "two",
+    "sponsor_name": "Mr Alex Joe",
+    }
+    return render(request, 'debtor-email.html', {"page_contents":page_contents})
 
