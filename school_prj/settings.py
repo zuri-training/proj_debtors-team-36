@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'school_app.apps.SchoolAppConfig',
 
     #third party apps
-    'uuid'
+    'uuid',
     'django_extensions'
 ]
 'Apps.school_app.app.SchoolAppConfig'
@@ -62,7 +62,7 @@ ROOT_URLCONF = 'school_prj.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+
         'DIRS': [BASE_DIR/'static'],
         'APP_DIRS': True,
         'OPTIONS': {

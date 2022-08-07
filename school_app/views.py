@@ -26,3 +26,6 @@ def debtor_email(request):
     "sponsor_name": "Mr Alex Joe",
     }
     return render(request, 'debtor-email.html', {"page_contents":page_contents})
+
+def kyc_auth(request):
+    return render(request, 'kyc-auth.html')
