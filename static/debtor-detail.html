@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/debtor-detail.css" />
     <!-- Copy the script below for the execution of the left side navbar styling -->
     <script defer src="./js/side-nav.js"></script>
+    <script defer src="./js/add-new-debtor.js"></script>
     <title>Profile</title>
   </head>
 
@@ -424,9 +425,10 @@
 
       <div class="detail-btn">
         <div>
-          <button class="detail-btn1">
-            <a href="#">Edit Details</a>
+          <button class="detail-btn1" type="button" onclick="openPopup()" >
+            <a href="add-new-debtor.html">Edit Details</a>
           </button>
+
         </div>
         <div>
           <button class="detail-btn2">
@@ -461,5 +463,7 @@
         </div>
       </div>
     </main>
+
+    
   </body>
 </html>
