@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'school_app',
 
     #third party apps
-    'django_extensions',
     'uuid',
 ]
 'Apps.school_app.app.SchoolAppConfig'
