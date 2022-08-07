@@ -1,18 +1,13 @@
 
-const vissibilityToggle = document.querySelector('.vissibility');
 
-const input = document.querySelector('.visibility input');
 
-var password = true;
+const togglePassword = document.querySelector('#togglePassword');
+  const password = document.querySelector('#password');
 
-vissibilityToggle.addEventListener('click', function() {
-  if (password) {
-    input.setAttribute('type', 'text');
-    vissibilityToggle.innerHTML = 'vissibility';
-  } else {
-    input.setAttribute('type', 'password');
-    vissibilityToggle.innerHTML = 'vissibility_off';
-  }
-  password = !password;
-  
+  togglePassword.addEventListener('click', function (e) {
+    // toggle the type attribute
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
+    // toggle the eye slash icon
+    this.classList.toggle('fa-eye-slash');
 });
