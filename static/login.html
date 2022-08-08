@@ -13,8 +13,9 @@
 <body>
   <div class="row">
     <div class="left">
-    </div>
 
+
+    </div>
     <div class="right">
       <h1>Welcome Back</h1>
       <p class="welcome">Welcome back! please enter your details.</p>
@@ -29,16 +30,19 @@
             id="password" required /><br />
           <i class="far fa-eye" vissibility id="togglePassword"></i>
         </div>
-        <p class="forgot"><a href="#">Forgot Password?</a></p>
-        <br />
-
-        <div class="rem">
-          <input type="checkbox" id="rem" name="Remember me" value="Remember me" />
-          <label for="rem">Remember me</label><br />
-          <!-- <button type="submit" class="login-btn">Login</button><br /> -->
-          <button type="submit" class="login-btn" onclick="location.href = 'dashboard.html'">Login</button><br />
-          <p id="login-tag">Don't have an account?<a class="login-tag" href="./signup.html">sign up for free</a></p>
+        <div class="recent">
+          <div class="rem">
+            <input type="checkbox" id="rem" name="Remember me" value="Remember me" />
+            <label for="rem">Remember me</label><br />
+          </div>
+          <div class="forgot">
+            <p><a href="#">Forgot Password?</a></p>
+            <br />
+          </div>
         </div>
+        <button type="submit" class="login-btn">Login</button><br />
+        <p id="login-tag">Don't have an account?<a class="login-tag" href="./signup.html">sign up</a></p>
+
       </form>
     </div>
   </div>
