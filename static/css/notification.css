@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+:root {
+    --primary-color1: #0A66C2;
+    --text-color1: #141414;
+    --text-color2: #1f1f1f;
+    --text-color3: #ffffff;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    user-select: none;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    margin-left: 3.0rem;
+    user-select: none;
+font-family: 'Manrope', sans-serif;
+    background-color: #fefefe;;
+}
+nav{
+height: 56px;
+width: 92.4285714%;
+align-content: center;
+margin-top: 3.9375rem;
+display: flex;
+justify-content: space-between;
+margin-bottom: 1.5rem;
+}
+
+.icons .notif-icon{
+    margin-left: 1rem;
+}
+
+main .notif{
+    display: flex;
+    justify-content: space-between;
+    width: 92.4285714%;
+    margin-bottom: 0.75rem;
+}
+
+main .notif h5{
+    font-size: 1.5rem;
+}
+
+main .notif p{
+    color: var(--primary-color1);
+}
+
+main #new-notif{
+    margin-top: 1rem;
+}
+
+main .new{
+    display: flex;
+    width: 92.4285714%;
+    margin-bottom: 1.3rem;
+    border-bottom: 1px solid grey;
+}
+
+main .new img{
+    margin-right: 1.3rem;
+    height: 60.480003356933594px;
+width: 60.480003356933594px;
+margin-bottom: 10px;
+}
+
+main .new .info p{
+margin-bottom: 7.56px;
+}
