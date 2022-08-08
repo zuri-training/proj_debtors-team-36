@@ -48,6 +48,15 @@ aside {
     padding-left: 48px;
 }
 
+
+.icoerrorn {
+    width: 160px;
+    height: 48px;
+    background-color: var(--font-color);
+    border: 3px solid var(--font-color);
+}
+
+
 .top-links {
     display: flex;
     flex-direction: column;

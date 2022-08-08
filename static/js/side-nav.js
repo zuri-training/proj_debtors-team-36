@@ -8,3 +8,16 @@ const navLinks = document.querySelectorAll('aside a').
             link.setAttribute('id', 'active')
         }
     })
+
+if (innerWidth <= 576) {
+    document.getElementById("aside").className = "hide"
+}
+
+
+const showNav = () => {
+    document.getElementById("aside").className = "show"
+}
+
+const hideNav = () => {
+    document.getElementById("aside").className = "hide"
+}
