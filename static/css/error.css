@@ -1,11 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
 :root {
-  --primary-color1: #000055;
+  --primary-color1: #0A66C2;
   --text-color1: #141414;
   --text-color2: #1f1f1f;
   --text-color3: #ffffff;
   --h1-color: #292929;
   --p-color: #7e7e7e;
+
+  --main_color: #0A66C2;
+    --text_color: #292929;
+    --white_color: #ffffff;
+    --hover_color: #3380cc;
+    --clicked_color: #074481;
+    --disabled_color: #a8a8a8;
 }
 * {
   box-sizing: border-box;
@@ -24,39 +31,44 @@ body {
   position: absolute;
 }
 
+/* TOP NAVIGATION BAR STARTS HERE*/
 nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 43px;
-  padding: 13px 72px 0px 72px;
+  height: 48px;
+  padding: 40px 72px 0px 72px;
+  margin-bottom: 20px;
 }
 
 nav .left-nav {
   display: flex;
   align-items: center;
-  font-size: 28px;
-  font-weight: 600;
 }
 
 nav .middle-nav {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
-  gap: 40px;
-  width: 421px;
-  height: 30px;
+  /* width: 378px; */
+  height: 27px;
   font-size: 20px;
   font-weight: 400;
+  line-height: 27px;
 }
 
 nav .middle-nav a {
   text-decoration: none;
-  color: #292929;
+  color: var(--text_color);
+  margin-right: 32px;
 }
 
-nav .middle-nav a:hover {
-  border-bottom: 4px solid var(--primary-color1);
+nav .middle-nav a:active {
+  color: var(--main_color);
+}
+
+nav a.active {
+  border-bottom: 4px solid var(--main_color);
   border-radius: 6px;
 }
 
@@ -72,16 +84,28 @@ nav .right-nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 85px;
-  border: 1px solid var(--primary-color1);
-  border-radius: 8px;
-  font-size: 18px;
+  width: 108px;
+  height: 48px;
+  font-size: 16px;
   font-weight: 400;
-  line-height: 27px;
+  line-height: 22px;
   padding: 8px 16px;
-  color: var(--primary-color1);
+  border: 1.5px solid var(--main_color);
+  border-radius: 8px;
+  color: var(--main_color);
   cursor: pointer;
   text-decoration: none;
+  background-color: var(--white_color);
+}
+
+.welcome-login-btn:hover {
+  border: 1.5px solid var(--hover_color);
+  color: var(--hover_color);
+}
+
+.welcome-login-btn:active {
+  border: 1.5px solid var(--clicked_color);
+  color: var(--clicked_color);
 }
 
 .welcome-signup-btn {
@@ -89,18 +113,29 @@ nav .right-nav {
   justify-content: center;
   align-items: center;
   width: 108px;
-  font-size: 18px;
+  height: 48px;
+  font-size: 16px;
   font-weight: 400;
-  line-height: 27px;
+  line-height: 22px;
   padding: 8px 16px;
-  border: 1px solid var(--primary-color1);
+  border: none;
   border-radius: 8px;
-  color: var(--text-color3);
+  color: var(--white_color);
   cursor: pointer;
   text-decoration: none;
-  background-color: var(--primary-color1);
+  background-color: var(--main_color);
 }
-/*End of Nav Bar*/
+
+.welcome-signup-btn:hover {
+  background-color: var(--hover_color);
+}
+
+.welcome-signup-btn:active {
+  background-color: var(--clicked_color);
+}
+
+/* TOP NAVIGATION BAR ENDS HERE */
+
 main {
   display: flex;
   z-index: 10000;
@@ -120,7 +155,6 @@ main .image {
 }
 
 main .error h1 {
-  font-family: Poppins;
   font-size: 58px;
   font-weight: 600;
   line-height: 87px;
@@ -132,7 +166,6 @@ main .error h1 {
 }
 
 main .error h3 {
-  font-family: Poppins;
   font-size: 40px;
   font-weight: 400;
   line-height: 60px;
@@ -143,7 +176,6 @@ main .error h3 {
 }
 
 main .error p {
-  font-family: Poppins;
   font-size: 20px;
   font-weight: 400;
   line-height: 30px;
@@ -163,7 +195,6 @@ main .error button {
   border: none;
   width: 438px;
   height: 108px;
-  font-family: Poppins;
   font-size: 40px;
   font-weight: 400;
   line-height: 60px;
