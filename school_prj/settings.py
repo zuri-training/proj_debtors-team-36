@@ -38,11 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
+    'school_app'
     'school_app',
 
     #third party apps
-    'django_extensions',
     'uuid',
 ]
 'Apps.school_app.app.SchoolAppConfig'
@@ -64,6 +63,7 @@ ROOT_URLCONF = 'school_prj.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [],
         'DIRS': [BASE_DIR/'static'],
         'APP_DIRS': True,
         'OPTIONS': {
