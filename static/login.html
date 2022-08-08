@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,8 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login</title>
-  <link rel="stylesheet" href="./css/login.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+  <link rel="stylesheet" href="{% static './css/login.css' %}" />
+  <link rel="stylesheet" href=" {% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css' %}" />
 </head>
 
 <body>
@@ -20,12 +21,28 @@
       <h1>Welcome Back</h1>
       <p class="welcome">Welcome back! please enter your details.</p>
 
-      <form>
+      <form method="post">
+        {% csrf_token %}
         <label class="email-psw" for="email">Email Address</label><br />
+        <div>
+          <!-- {{ form.username }} -->
         <input type="text" placeholder="Myschoolemail.edu.ng" name="email" id="email" required /><br />
-
+        </div>
         <label class="email-psw" for="password">Password</label><br />
         <div class="visibility">
+views_urls
+          <!-- {{ form.password }} -->
+          <input type="password" autocomplete="current-password" placeholder="****************" name="password" id="password" required /><br />
+          <i class="far fa-eye" visibility id="togglePassword"></i>
+        </div>
+        <p class="forgot"><a href="#">Forgot Password?</a></p>
+        <br />
+
+        <div class="rem">
+          <input type="checkbox" id="rem" name="Remember me" value="Remember me" />
+          <label for="rem">Remember me</label><br />
+          <button type="submit" class="login-btn">Login</button><br />
+          <p id="login-tag">Don't have an account?<a class="login-tag" href="{% url 'signup' %}">sign up for free</a></p>
           <input type="password" autocomplete="current-password" placeholder="****************" name="password"
             id="password" required /><br />
           <i class="far fa-eye" vissibility id="togglePassword"></i>

@@ -1,11 +1,12 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/signup.css">
-    <script src="./js/lga.js"></script>
+    <link rel="stylesheet" href="{% static './css/signup.css' %}">
+    <script src="{% static './js/lga.js' %}"></script>
     <title>Sign Up</title>
 </head>
 <body>
@@ -52,7 +53,11 @@
                 <h2>Sign Up for Free</h2>
                 <p>Please fill this form to create an account</p>
                 
-                <form action="./verify1.html">
+                <form action="./verify1.html" method="post">
+                    {% csrf_token %}
+                    <div>
+                    <!-- {{ form }} -->
+                    </div>
                    <label for="name">Name of School</label><br>
                    <input type="text" name="" id="" required><br><br>
      
@@ -131,7 +136,7 @@
                    <br><br><br>
      
                    <input type="submit" value="Sign Up"><br><br>
-                   <p>Already have an account?<a href="./login.html"> Sign in</a></p>
+                   <p>Already have an account?<a href="{% url 'login' %}"> Sign in</a></p>
      
                 </form>
      
