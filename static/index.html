@@ -34,11 +34,20 @@
             <button onclick="location.href = 'login.html'" class="welcome-login-btn">Login</button>
             <button onclick="location.href = 'signup.html'" class="welcome-signup-btn">Sign Up</button>
         </div>
-        <img src="./img/showNav.svg" alt="" class="showNavDropdown">
+        <img src="./img/showNav.svg" alt="" class="showNavDropdown" onclick="showTopNav()">
+        <div id="top-dropdown" class="hide" onclick="hideTopNav()">
+            <button class="dropdown-btn" onclick="location.href = 'index.html'">Home</button>
+            <button class="dropdown-btn" onclick="location.href = 'about-us.html'">About Us</button>
+            <button class="dropdown-btn" onclick="location.href = 'faq.html'">FAQ</button>
+            <button class="dropdown-btn" onclick="location.href = 'contact-us.html'">Contact Us</button>
+            <button class="dropdown-btn" onclick="location.href = 'login.html'">Login</button>
+            <button class="dropdown-btn" onclick="location.href = 'signup.html'">Sign Up</button>
+        </div>
     </nav>
     <!-- TOP NAVIGATION BAR ENDS HERE -->
 
-    <main>
+    <!-- Include the onclick attribute in your main content tag -->
+    <main onclick="hideTopNav()">
         <div class="welcome">
             <div class="welcome-top">
                 <article class="welcome-top-left">
@@ -52,19 +61,24 @@
                 </article>
 
                 <!-- A background image will be used instead -->
-                <!-- <div class="welcome-top-right">
-                    <div class="welcome-top-right-pics"></div>
-                </div> -->
+                <div class="welcome-top-right">
+                    <img src="./img/Group 100.png" alt="" class="welcome-top-right-pics">>
+                </div>
             </div>
         </div>
         <div class="welcome-bottom">
             <p class="welcome-bottom-text">My debtor currently serves over 2000+ schools in over 20+ countries</p>
             <div class="welcome-bottom-icons">
-                <div class="welcome-bottom-icon"></div>
-                <div class="welcome-bottom-icon"></div>
-                <div class="welcome-bottom-icon"></div>
-                <div class="welcome-bottom-icon"></div>
-                <div class="welcome-bottom-icon"></div>
+                <img class="welcome-bottom-icon icon1"
+                    src="./img/122-1224567_stafford-county-public-school-logo-best-logo-for 1.png" alt="">
+                <img class="welcome-bottom-icon icon2" src="./img/cropped-School-Badge 1.png" alt="">
+                <img class="welcome-bottom-icon icon3"
+                    src="./img/png-transparent-british-international-school-in-cairo-sun-of-knowledge-british-international-school-sbis-school-text-egypt-logo 1.png"
+                    alt="">
+                <img class="welcome-bottom-icon icon4"
+                    src="./img/png-transparent-british-international-school-of-kuala-lumpur-british-school-of-brasilia-british-school-of-nanjing-doha-college-school-label-logo-international 1.png"
+                    alt="">
+                <img class="welcome-bottom-icon icon5" src="./img/preloader 1.png" alt="">
             </div>
         </div>
 
@@ -121,12 +135,12 @@
                     </p>
                 </article>
                 <div class="welcome-contd-pic">
-                    <div></div>
+                    <img src="./img/Group 114.png" alt="">
                 </div>
             </div>
             <div class="welcome-section two">
                 <div class="welcome-contd-pic">
-                    <div></div>
+                    <img src="./img/unsplash_IrRbSND5EUc.png" alt="">
                 </div>
                 <article>
                     <p class="welcome-sect-head">Faster Debt Recovery</p>
@@ -147,7 +161,7 @@
                     </p>
                 </article>
                 <div class="welcome-contd-pic">
-                    <div></div>
+                    <img src="./img/Group 115.png" alt="">
                 </div>
             </div>
         </div>
@@ -272,7 +286,7 @@
 
 
     <!-- FOOTER STARTS HERE -->
-    <footer>
+    <footer onclick="hideTopNav()">
         <div class="footer-top">
             <div class="footer-top-header">
                 <div class="footer-logo">

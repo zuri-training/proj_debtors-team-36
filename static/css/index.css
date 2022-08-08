@@ -156,6 +156,38 @@ nav .right-nav {
     display: none;
 }
 
+.hide {
+    display: none;
+}
+
+.show {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 70px;
+    right: 5px;
+    width: 95%;
+}
+
+.show button {
+    height: 50px;
+    cursor: pointer;
+    background-color: var(--main_color);
+    border: none;
+    border-bottom: 2px solid var(--white_color);
+    color: var(--white_color);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.show button:hover {
+    background-color: var(--hover_color);
+}
+
+.show button:active {
+    background-color: var(--clicked_color);
+}
+
 /* TOP NAVIGATION BAR ENDS HERE */
 
 
@@ -179,7 +211,7 @@ nav .right-nav {
 }
 
 .welcome-top article {
-    width: 41%;
+    width: 45%;
     padding-right: 20px;
 }
 
@@ -228,8 +260,8 @@ nav .right-nav {
 
 
 /* A background image will be used instead */
-/* .welcome-top-right {
-    width: 50%;
+.welcome-top-right {
+    width: 40%;
     height: 90%;
     display: flex;
     justify-content: center;
@@ -238,11 +270,9 @@ nav .right-nav {
 }
 
 .welcome-top-right-pics {
-    width: 90%;
-    height: 80%;
-    background-color: #EEF1F4;
-    border: 3px solid #667080;
-} */
+    width: 499px;
+    height: 704px;
+}
 
 .welcome-bottom {
     width: 100%;
@@ -264,17 +294,31 @@ nav .right-nav {
 
 .welcome-bottom-icons {
     height: 100%;
-    width: 40%;
+    width: 60%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.welcome-bottom-icon {
-    width: 100px;
+.icon1,
+.icon2 {
+    width: 80px;
+    height: 80px;
+}
+
+.icon3 {
+    width: 80px;
+    height: 109px;
+}
+
+.icon4 {
+    width: 80px;
     height: 100px;
-    background-color: #D9D9D9;
-    border: none;
+}
+
+.icon5 {
+    width: 80px;
+    height: 97px;
 }
 
 /* Cookies */
@@ -293,8 +337,10 @@ nav .right-nav {
 
 .cookies {
     display: flex;
-    width: 30%;
-    height: 57%;
+    /* width: 40%; */
+    width: 553px;
+    /* height: 57%; */
+    height: 553px;
     background-color: #fefefe;
     border-radius: 8px;
     padding: 8px 16px;
@@ -583,10 +629,9 @@ nav .right-nav {
     display: flex;
 }
 
-.welcome-contd-pic div {
-    width: 412px;
+.welcome-contd-pic img {
+    width: 512px;
     height: 380px;
-    background-color: #EEF1F4;
 }
 
 /* What schools using the plaform are saying */
@@ -709,6 +754,10 @@ nav .right-nav {
     background-color: #F8F8F8;
     text-align: center;
     color: #292D32;
+    background-image: url("../img/Frame 83.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .try-debtor h2 {
@@ -872,6 +921,7 @@ footer {
 .footer-top-header {
     display: flex;
     flex-direction: column;
+    width: 220px;
 }
 
 .footer-logo {
@@ -971,16 +1021,37 @@ footer {
         cursor: pointer;
     }
 
+
+    /* #top-dropdown {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: 70px;
+        right: 5px;
+        width: 95%;
+    }
+
+    #top-dropdown button {
+        height: 50px;
+        cursor: pointer;
+    } */
+
     /* END COPY HERE */
 
     .welcome {
         padding: 0px 16px;
-        height: auto;
+        /* height: auto; */
+        height: calc(100vh - 70px);
+    }
+
+    .welcome-top-right {
+        padding: 0;
     }
 
     .welcome-top article {
         width: 61%;
         margin: 74px 0px 40px;
+        padding: 0;
     }
 
     .welcome-top .tired {
@@ -1001,9 +1072,14 @@ footer {
         line-height: 22px;
     }
 
+    .welcome-top-right-pics {
+        width: 100%;
+        height: 300px;
+    }
+
     .cookies {
-        width: 95%;
-        height: 22%;
+        width: 400px;
+        height: 211px;
     }
 
     .svg-btn {
@@ -1047,10 +1123,27 @@ footer {
         width: 85%;
     }
 
-    .welcome-bottom-icon {
+    .icon1,
+    .icon2 {
         width: 48px;
         height: 48px;
     }
+
+    .icon3 {
+        width: 35px;
+        height: 48px;
+    }
+
+    .icon4 {
+        width: 32px;
+        height: 40px;
+    }
+
+    .icon5 {
+        width: 40px;
+        height: 48px;
+    }
+
 
     .after-welcome-container {
         width: 95%;
@@ -1113,7 +1206,7 @@ footer {
         margin-top: 24px;
     }
 
-    .welcome-contd-pic div {
+    .welcome-contd-pic img {
         width: 100%;
         max-width: 500px;
     }
@@ -1217,7 +1310,7 @@ footer {
 
     .footer-top-header {
         margin-top: 24px;
-        width: 50%;
+        width: 180px;
     }
 
     .footer-top-header h4 {

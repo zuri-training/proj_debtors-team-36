@@ -7,15 +7,22 @@ const navLinks = document.querySelectorAll('nav a').
     })
 
 
-// if (innerWidth <= 576) {
-//     document.getElementById("aside").className = "hide"
-// }
-
+if (innerWidth <= 576) {
+    document.getElementById("top-dropdown").className = "hide"
+}
 
 const showTopNav = () => {
-    document.getElementById("aside").className = "show"
+    const drop = document.getElementById("top-dropdown");
+    if (drop.className === "show") {
+        drop.className = "hide"
+    }
+    else {
+        drop.className = "show"
+    }
 }
 
 const hideTopNav = () => {
-    document.getElementById("aside").className = "hide"
+    document.getElementById("top-dropdown").className = "hide"
 }
+
+// document.querySelector(".dropdown-btn").setAttribute("onclick", hideTopNav())

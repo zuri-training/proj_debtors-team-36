@@ -26,9 +26,17 @@
             <button onclick="location.href = 'login.html'" class="welcome-login-btn">Login</button>
             <button onclick="location.href = 'signup.html'" class="welcome-signup-btn">Sign Up</button>
         </div>
-        <img src="./img/showNav.svg" alt="" class="showNavDropdown">
+        <img src="./img/showNav.svg" alt="" class="showNavDropdown" onclick="showTopNav()">
+        <div id="top-dropdown" class="hide" onclick="hideTopNav()">
+            <button class="dropdown-btn" onclick="location.href = 'index.html'">Home</button>
+            <button class="dropdown-btn" onclick="location.href = 'about-us.html'">About Us</button>
+            <button class="dropdown-btn" onclick="location.href = 'faq.html'">FAQ</button>
+            <button class="dropdown-btn" onclick="location.href = 'contact-us.html'">Contact Us</button>
+            <button class="dropdown-btn" onclick="location.href = 'login.html'">Login</button>
+            <button class="dropdown-btn" onclick="location.href = 'signup.html'">Sign Up</button>
+        </div>
     </nav>
-    <main>
+    <main onclick="hideTopNav()">
         <div class="side-panel">
             <div class="links" id="links"></div>
         </div>
@@ -39,7 +47,7 @@
             <p class="body">Don't worry, we never sell or rent your personal information. Opt-out anytime.</p>
         </div>
     </main>
-    <footer>
+    <footer onclick="hideTopNav()">
         <div class="footer-top">
             <div class="footer-top-header">
                 <div class="footer-logo">

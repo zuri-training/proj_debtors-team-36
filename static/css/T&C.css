@@ -156,6 +156,38 @@ nav .right-nav {
     display: none;
 }
 
+.hide {
+    display: none;
+}
+
+.show {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 70px;
+    right: 5px;
+    width: 95%;
+}
+
+.show button {
+    height: 50px;
+    cursor: pointer;
+    background-color: var(--main_color);
+    border: none;
+    border-bottom: 2px solid var(--white_color);
+    color: var(--white_color);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.show button:hover {
+    background-color: var(--hover_color);
+}
+
+.show button:active {
+    background-color: var(--clicked_color);
+}
+
 /* TOP NAVIGATION BAR ENDS HERE */
 
 /* Main Page */
@@ -264,6 +296,7 @@ footer {
 .footer-top-header {
     display: flex;
     flex-direction: column;
+    width: 220px;
 }
 
 .footer-logo {
@@ -416,7 +449,7 @@ footer {
 
     .footer-top-header {
         margin-top: 24px;
-        width: 50%;
+        width: 180px;
     }
 
     .footer-top-header h4 {

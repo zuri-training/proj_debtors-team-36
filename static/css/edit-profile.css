@@ -12,6 +12,7 @@
     --clicked_color: #074481;
     --disabled_color: #a8a8a8;
     --side_navbar_width: 332px;
+    --search_bar_color: #D2D2D2;
 }
 
 body {
@@ -179,7 +180,7 @@ main {
     width: 88%;
     height: 100%;
     padding: 16px;
-    border: 2px solid var(--main_color);
+    border: 2px solid var(--search_bar_color);
     border-radius: 8px;
     margin-right: 20px;
 }
