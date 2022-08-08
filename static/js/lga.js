@@ -90,30 +90,7 @@
           "Urue-Offong Oruko",
           "Uyo"
         ],
-        Anambra: [
-          "Aguata",
-          "Anambra East",
-          "Anambra West",
-          "Anaocha",
-          "Awka North",
-          "Awka South",
-          "Ayamelum",
-          "Dunukofia",
-          "Ekwusigo",
-          "Idemili North",
-          "Idemili South",
-          "Ihiala",
-          "Njikoka",
-          "Nnewi North",
-          "Nnewi South",
-          "Ogbaru",
-          "Onitsha North",
-          "Onitsha South",
-          "Orumba North",
-          "Orumba South",
-          "Oyi"
-        ],
-
+       
         Anambra: [
           "Aguata",
           "Anambra East",
