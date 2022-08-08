@@ -18,8 +18,11 @@ body {
 }
 :root {
     --main-color: #0855A2;
-    --font-color: #fefefe
+    --font-color: #fefefe;
+    --border-color: #0A66C2;
+    --dark-font-color: #292929;
   }
+
 /* Side nav */
 aside {
     height: 100vh;
@@ -47,13 +50,6 @@ aside {
     padding-left: 48px;
 }
 
-.icon {
-    width: 160px;
-    height: 48px;
-    background-color: var(--font-color);
-    border: 3px var(--font-color);
-}
-
 .top-links {
     display: flex;
     flex-direction: column;
@@ -75,7 +71,7 @@ aside {
 
 .top-links a.active {
     background-color: var(--font-color);
-    color: var(--main-color);
+    color: #292929;
 }
 .top-links a svg {
     margin-right: 34px;
@@ -125,7 +121,7 @@ main {
     width: 80%;
     height: 100%;
     padding: 16px;
-    border: 2px solid #0000D5;
+    border: 2px solid #0A66C2;
     opacity:0.4;
     border-radius: 8px;
     margin-right: 41.25px;
@@ -195,7 +191,6 @@ h5{
     line-height: 24px;
     font-weight: 400;
 }
-
 .local-govt {
     border: none; 
     width: 33.3%;
@@ -223,7 +218,7 @@ h5{
     text-align: right;
  }
 .all a{
-   color: #0000D4;
+   color: #0A66C2;
 }
 .input{
     display: inline-block;
@@ -234,5 +229,5 @@ h5{
  }
  .view a {
     text-decoration: none;
-    color: #0000D5;
+    color: #0A66C2;
 }

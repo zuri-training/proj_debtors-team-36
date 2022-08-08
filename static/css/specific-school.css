@@ -2,6 +2,9 @@
 
 * {
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
 }
 
 body {
@@ -9,18 +12,21 @@ body {
     padding: 0;
     display: flex;
     font-family: 'Poppins', sans-serif;
+    background-color: var(--font-color);
     user-select: none;
+    color: #3D3D3D;
 }
-
+:root {
+    --main-color: #0855A2;
+    --font-color: #fefefe
+  }
 /* Side nav */
-/* Copy this code to implement the side nav styling */
-
 aside {
     height: 100vh;
     width: 332px;
     min-width: 332px;
-    background-color: #d2d2d2;
-    color: #242433;
+    background-color: var(--main-color);
+    color: var(--font-color);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -44,8 +50,8 @@ aside {
 .icon {
     width: 160px;
     height: 48px;
-    background-color: #eef1f4;
-    border: 3px solid #667080;
+    background-color: var(--font-color);
+    border: 3px solid var(--font-color);
 }
 
 .top-links {
@@ -55,7 +61,7 @@ aside {
 
 .top-links a {
     text-decoration: none;
-    color: #242433;
+    color: var(--font-color);
     width: 100%;
     height: 56px;
     display: flex;
@@ -63,13 +69,15 @@ aside {
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
+    font: poppins;
     padding: 16px 48px;
+    
 }
 
 .top-links a.active {
-    background-color: #ffffff;
+    background-color: var(--font-color);
+    color: var(--main-color);
 }
-
 .top-links a svg {
     margin-right: 34px;
 }
@@ -81,7 +89,7 @@ aside {
 
 .aside-bottom a {
     text-decoration: none;
-    color: #242433;
+    color: var(--font-color);
     width: 100%;
     height: 56px;
     display: flex;
@@ -95,7 +103,6 @@ aside {
 .aside-bottom a svg {
     margin-right: 34px;
 }
-
 
 /* Edit page */
 main {
@@ -119,7 +126,8 @@ main {
     width: 80%;
     height: 100%;
     padding: 16px;
-    border: 2px solid #d2d2d2;
+    border: 2px solid #0000D5;
+    opacity: 0.4;
     border-radius: 8px;
     margin-right: 41.25px;
 }
@@ -132,6 +140,7 @@ main {
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
+    opacity: 0.5;
 }
 
 .search-text:focus {
@@ -140,4 +149,19 @@ main {
 
 .search-icons svg {
     margin-right: 20.48px;
+}
+
+/*Page Contents*/
+.headn{
+    display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 23px;
+
+position: absolute;
+width: 944px;
+height: 60px;
+left: 378px;
+top: 276
 }
