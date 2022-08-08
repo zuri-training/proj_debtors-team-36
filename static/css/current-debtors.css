@@ -27,11 +27,43 @@ body {
     overflow-x: hidden;
 }
 
+/* Custom Scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--main_color);
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--hover_color);
+}
+
 /* SIDE NAVIGATION BAR STARTS HERE */
 /* Side nav */
 /* Copy this code to implement the side nav styling */
 
 aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* width: var(--side_navbar_width); */
+    /* background-color: red; */
+    position: fixed;
+}
+
+.aside-container {
     height: 100vh;
     width: var(--side_navbar_width);
     min-width: var(--side_navbar_width);
@@ -40,9 +72,9 @@ aside {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    position: fixed;
     /* fixes the side bar and prevents scrolling. Set the margin-left property of the screen by its right to 332px */
 }
+
 
 .aside-top {
     width: 100%;
@@ -111,6 +143,10 @@ aside {
     margin-right: 34px;
 }
 
+.hide {
+    display: none;
+}
+
 /* SIDE NAVIGATION BAR ENDS HERE */
 
 
@@ -130,6 +166,10 @@ main {
     width: 100%;
     height: 56px;
     align-items: center;
+}
+
+.small-screen {
+    display: none;
 }
 
 .search-bar {
@@ -192,6 +232,7 @@ h1 {
     border-radius: 8px;
     color: #242433;
     margin-bottom: 16px;
+    text-decoration: none;
 }
 
 .debt {
@@ -245,37 +286,29 @@ h1 {
     color: #808080;
 }
 
-.svg_icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #ffffff;
-    border: none;
-    cursor: pointer;
-}
-
 .description {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-top: 16px;
     width: 100%;
+
 }
 
 .view {
     display: flex;
     height: 21px;
-    width: 100px;
+    width: 80px;
     align-items: flex-end;
     text-decoration: none;
-    color: #242433;
+    color: var(--main_color);
     font-size: 14px;
     font-weight: 400;
     line-height: 21px;
 }
 
 .debtor-description {
-    width: 65%;
+    width: 80%;
     margin: 0;
     font-size: 14px;
     font-weight: 400;
@@ -304,7 +337,7 @@ h1 {
     border-radius: 8px;
     box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.16);
     position: fixed;
-    bottom: 66px;
+    bottom: 64px;
     right: 121px;
     cursor: pointer;
 }
@@ -323,4 +356,86 @@ h1 {
 
 .add-debtor:active {
     background-color: var(--clicked_color);
+}
+
+@media screen and (max-width: 576px) {
+
+    ::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+    }
+
+    main {
+        width: 95%;
+        margin-left: 0px;
+        padding: 48px 16px 10px 16px;
+    }
+
+    .small-screen {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 56px;
+        margin-bottom: 16px;
+    }
+
+    .search-not {
+        display: none;
+    }
+
+    .search-bar {
+        width: 100%;
+        margin: 0;
+    }
+
+    .showNav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        background-color: var(--white_color);
+        cursor: pointer;
+    }
+
+    aside {
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+        background-color: rgba(0, 0, 0, 0.35);
+    }
+
+    .aside-container {
+        width: 60%;
+    }
+
+    .hideNav {
+        width: 40%;
+        display: flex;
+        align-items: flex-start;
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    .hideNav button {
+        background-color: rgba(230, 213, 213, 0.8);
+        border: none;
+        margin-top: 100px;
+        cursor: pointer;
+    }
+
+    h1 {
+        margin: 24px 0px 16px;
+    }
+
+    .debtor {
+        width: 100%;
+    }
+
+    .add-debtor {
+        right: 16px;
+    }
+
 }

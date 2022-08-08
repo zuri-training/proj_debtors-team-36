@@ -31,9 +31,33 @@ body {
     user-select: none;
 }
 
+/* Custom Scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--main_color);
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--hover_color);
+}
+
 main {
     width: 70%;
     display: flex;
+    height: 100%;
     flex-direction: column;
     align-items: center;
 }
@@ -42,41 +66,53 @@ main {
     display: flex;
     align-items: center;
     width: 100%;
-    height: 48px;
-    margin-bottom: 40px
+    height: 40px;
+    margin: 50px 0px;
+}
+
+.loading-text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+    margin-left: 9px;
 }
 
 .one,
 .two,
-.three {
-    width: 48px;
-    height: 48px;
+.three,
+.four {
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     font-size: 20px;
     font-weight: 400;
     line-height: 30px;
-    background-color: var(--main_color);
-    border: none;
+    background-color: var(--white_color);
+    border: 1px solid var(--main_color);
+    color: var(--main_color);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.three {
-    background-color: var(--white_color);
-    border: 1px solid var(--main_color);
-    color: var(--main_color);
+.one,
+.two {
+    background-color: var(--main_color);
+    border: none;
+    color: var(--white_color);
 }
 
 .line {
     flex-grow: 1;
     height: 0px;
-    border: 4px solid var(--main_color);
+    border: 0.5px solid #000000;
+    margin: 0px 25px 0px 8px;
 }
+
 
 .status {
     width: 60%;
-    height: 401px;
+    height: 40%;
     background-color: #fefefe;
     border: 1px solid #ff4040;
     border-radius: 8px;
@@ -90,17 +126,17 @@ main {
 h1 {
     font-size: 34px;
     font-weight: 600;
-    line-height: 51px;
-    margin-top: 38.11px;
+    line-height: 46px;
+    margin: 0
 }
 
 .sit {
     font-size: 28px;
-    font-weight: 400;
+    font-weight: 600;
     line-height: 38px;
     margin: 0;
-    margin-top: 82px;
-    color: #ff4040;
+    margin-top: 74px;
+    color: #e98326;
 }
 
 .message {
@@ -125,7 +161,65 @@ button {
     font-size: 20px;
     font-weight: 400;
     line-height: 27px;
-    color: #ffffff;
+    color: #fefefe;
     cursor: pointer;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+@media screen and (max-width: 576px) {
+
+    ::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    main {
+        width: 95%;
+    }
+
+    .loading {
+        height: 20px;
+    }
+
+    .loading img {
+        transform: scale(0.6);
+    }
+
+    .loading-text {
+        display: none;
+    }
+
+    .one,
+    .two,
+    .three,
+    .four {
+        width: 20px;
+        height: 20px;
+        font-size: 10px;
+        line-height: 14px;
+        font-weight: 500;
+    }
+
+    .line {
+        margin: 0px 5px;
+    }
+
+    .status {
+        width: 100%;
+    }
+
+    .status img {
+        transform: scale(0.7);
+    }
+
+    h1 {
+        font-size: 28px;
+        line-height: 38px;
+        margin: 55px 0px 0px;
+    }
+
+    .sit {
+        font-size: 24px;
+        line-height: 33px;
+    }
+
 }

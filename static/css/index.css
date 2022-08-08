@@ -6,6 +6,7 @@
 
 :root {
     --main_color: #0A66C2;
+    --footer_color: #0855A2;
     --text_color: #292929;
     --white_color: #ffffff;
     --hover_color: #3380cc;
@@ -23,6 +24,29 @@ body {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+/* Custom Scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--main_color);
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--hover_color);
 }
 
 /* TOP NAVIGATION BAR STARTS HERE*/
@@ -128,6 +152,10 @@ nav .right-nav {
     background-color: var(--clicked_color);
 }
 
+.showNavDropdown {
+    display: none;
+}
+
 /* TOP NAVIGATION BAR ENDS HERE */
 
 
@@ -151,21 +179,21 @@ nav .right-nav {
 }
 
 .welcome-top article {
-    width: 80%;
+    width: 41%;
     padding-right: 20px;
 }
 
 .welcome-top .tired {
     font-size: 48px;
-    font-weight: 800;
+    font-weight: 600;
     line-height: 66px;
     margin: 0;
 }
 
 .welcome-top .tired2 {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 500;
-    line-height: 33px;
+    line-height: 27px;
     color: #333333;
     margin: 16px 0px 50px 0px;
 }
@@ -175,8 +203,8 @@ nav .right-nav {
 }
 
 .welcome-top button {
-    width: 190px;
-    height: 65px;
+    width: 210px;
+    height: 57px;
     border-radius: 8px;
     font-size: 24px;
     font-weight: 400;
@@ -229,13 +257,14 @@ nav .right-nav {
     font-size: 20px;
     font-weight: 500;
     line-height: 27px;
-    color: #737373;
+    color: #0c0c0c;
+    text-align: center;
     margin-bottom: 24px;
 }
 
 .welcome-bottom-icons {
     height: 100%;
-    width: 80%;
+    width: 40%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -264,8 +293,8 @@ nav .right-nav {
 
 .cookies {
     display: flex;
-    width: 557px;
-    height: 548px;
+    width: 30%;
+    height: 57%;
     background-color: #fefefe;
     border-radius: 8px;
     padding: 8px 16px;
@@ -411,6 +440,7 @@ nav .right-nav {
 
 .btn-container {
     margin-top: 8px;
+    display: flex;
 }
 
 .btn {
@@ -423,6 +453,9 @@ nav .right-nav {
     border-radius: 8px;
     margin-right: 24px;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .btn:hover {
@@ -465,9 +498,10 @@ nav .right-nav {
 }
 
 .after-welcome-head {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 30px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 33px;
+    width: 80%;
 }
 
 .snippet-container {
@@ -499,8 +533,8 @@ nav .right-nav {
 
 .snippet-head {
     font-weight: 500;
-    font-size: 18px;
-    line-height: 25px;
+    font-size: 20px;
+    line-height: 27px;
     color: #333333;
     padding: 16px 0px;
 }
@@ -510,11 +544,12 @@ nav .right-nav {
     font-size: 16px;
     line-height: 22px;
     padding-bottom: 28px;
+    width: 92%;
 }
 
 /* Welcome Continued */
 .welcome-contd {
-    padding: 104px 72px 50px 72px;
+    padding: 104px 181px 50px 181px;
 }
 
 .welcome-section {
@@ -526,26 +561,26 @@ nav .right-nav {
     margin-bottom: 104px;
 }
 
+.welcome-section article {
+    width: 47%;
+}
+
 .welcome-sect-head {
     font-size: 24px;
-    font-weight: 500;
-    text-align: center;
-    line-height: 32.78px;
+    font-weight: 600;
+    line-height: 33px;
 }
 
 .welcome-sect-body {
     font-size: 20px;
     font-weight: 400;
-    text-align: center;
-    line-height: 30px;
+    line-height: 27px;
     color: #3d3d3d;
 }
 
 .welcome-contd-pic {
-    width: 45%;
+    width: 47%;
     display: flex;
-    justify-content: center;
-    margin-left: 30px;
 }
 
 .welcome-contd-pic div {
@@ -555,7 +590,6 @@ nav .right-nav {
 }
 
 /* What schools using the plaform are saying */
-/* Review this */
 .schools {
     display: flex;
     align-items: center;
@@ -569,6 +603,7 @@ nav .right-nav {
     font-weight: 500;
     color: #292929;
     margin-right: 24px;
+    line-height: 27px;
 }
 
 .school-say {
@@ -742,22 +777,6 @@ nav .right-nav {
     margin: 0;
 }
 
-/* .faq-contact {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.faq-contact a {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    margin: 0;
-    text-decoration: none;
-    color: #292929;
-} */
-
 
 .faq-bottom {
     display: flex;
@@ -836,7 +855,7 @@ nav .right-nav {
 footer {
     width: 100%;
     height: 438px;
-    background-color: var(--main_color);
+    background-color: var(--footer_color);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -865,6 +884,8 @@ footer {
     line-height: 33px;
     margin: 0;
     height: 50px;
+    display: flex;
+    align-items: center;
 }
 
 .footer-links {
@@ -921,8 +942,305 @@ footer {
     margin-right: 14.6px;
 }
 
-.socials svg {
+.socials img {
     margin-right: 18.67px;
 }
 
 /* FOOTER ENDS HERE */
+
+@media screen and (max-width: 576px) {
+
+    /* START COPY HERE */
+
+    ::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    nav {
+        padding: 16px;
+        padding-top: 40px;
+    }
+
+    nav .middle-nav,
+    nav .right-nav {
+        display: none;
+    }
+
+    .showNavDropdown {
+        display: block;
+        cursor: pointer;
+    }
+
+    /* END COPY HERE */
+
+    .welcome {
+        padding: 0px 16px;
+        height: auto;
+    }
+
+    .welcome-top article {
+        width: 61%;
+        margin: 74px 0px 40px;
+    }
+
+    .welcome-top .tired {
+        font-size: 20px;
+        line-height: 27px;
+    }
+
+    .welcome-top .tired2 {
+        font-size: 14px;
+        line-height: 19px;
+        margin: 8px 0px 16px 0px;
+    }
+
+    .welcome-top button {
+        width: 136px;
+        height: 40px;
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .cookies {
+        width: 95%;
+        height: 22%;
+    }
+
+    .svg-btn {
+        transform: scale(0.9);
+    }
+
+    .cookies-head {
+        font-size: 20px;
+        line-height: 27px;
+    }
+
+    .cookies-body {
+        margin: 8px 0px 16px;
+        /* width: 90%; */
+    }
+
+    .cookie,
+    .necessary {
+        display: none;
+    }
+
+    .btn-container {
+        width: 100%;
+    }
+
+    .btn {
+        width: 151px;
+        height: 40px;
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .welcome-bottom-text {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+        width: 85%;
+    }
+
+    .welcome-bottom-icons {
+        width: 85%;
+    }
+
+    .welcome-bottom-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .after-welcome-container {
+        width: 95%;
+    }
+
+    .after-welcome-head {
+        width: 100%;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 22px;
+        width: 72%;
+    }
+
+    .snippet-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .snippet {
+        width: 50%;
+        padding: 8px;
+        margin-top: 10px;
+    }
+
+    .welcome-contd {
+        padding: 50px 16px;
+    }
+
+    .welcome-contd .three {
+        display: none;
+    }
+
+    .welcome-section {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 24px;
+    }
+
+    .welcome-section article {
+        width: 100%;
+    }
+
+    .welcome-sect-head {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 27px;
+    }
+
+    .welcome-sect-body {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+    }
+
+    .welcome-contd-pic {
+        order: 1;
+        width: 100%;
+        justify-content: center;
+        margin-top: 24px;
+    }
+
+    .welcome-contd-pic div {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .schools {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 0;
+        padding: 50px 16px;
+    }
+
+    .schools h2 {
+        width: 100%;
+        font-size: 20px;
+        margin: 0;
+        margin-bottom: 24px;
+        text-align: center;
+    }
+
+    .school-say {
+        width: 100%;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+    }
+
+    .card-container {
+        height: auto;
+        margin-bottom: 20px;
+        justify-content: flex-start;
+
+    }
+
+    .school-card-right,
+    .school-card-left {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 24px;
+    }
+
+    .right-top,
+    .left-bottom {
+        margin: 0;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .left-top,
+    .right-bottom {
+        display: none;
+    }
+
+    .try-debtor {
+        height: auto;
+        margin-bottom: 40px;
+    }
+
+    .try-debtor h2 {
+        font-size: 24px;
+        line-height: 33px;
+        margin-top: 32px;
+    }
+
+    .try-debtor p {
+        font-size: 16px;
+        line-height: 22px;
+        margin: 16px 0px;
+    }
+
+    .try-debtor button {
+        width: 250px;
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 19px;
+    }
+
+    .faq {
+        display: none;
+    }
+
+
+    /* START COPY HERE */
+    footer {
+        height: auto;
+        flex-wrap: wrap;
+        padding: 46px 20px 20px 20px;
+        padding: 16px;
+    }
+
+    .footer-top {
+        flex-wrap: wrap;
+        height: auto;
+        justify-content: space-between;
+        width: 95%;
+    }
+
+    .footer-top-header {
+        margin-top: 24px;
+        width: 50%;
+    }
+
+    .footer-top-header h4 {
+        font-size: 20px;
+        line-height: 27px;
+    }
+
+    .footer-links a,
+    .footer-links p {
+        font-size: 14px;
+        line-height: 19px;
+    }
+
+    .footer-bottom {
+        margin-top: 24px;
+    }
+
+    .copyright,
+    .footer-line {
+        display: none;
+    }
+
+    .socials img {
+        margin-right: 10px;
+    }
+}
