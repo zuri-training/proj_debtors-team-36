@@ -12,6 +12,7 @@
     --clicked_color: #074481;
     --disabled_color: #a8a8a8;
     --side_navbar_width: 332px;
+    --search_bar_color: #D2D2D2;
 }
 
 body {
@@ -27,11 +28,43 @@ body {
     overflow-x: hidden;
 }
 
+/* Custom Scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--main_color);
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--hover_color);
+}
+
 /* SIDE NAVIGATION BAR STARTS HERE */
 /* Side nav */
 /* Copy this code to implement the side nav styling */
 
 aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* width: var(--side_navbar_width); */
+    /* background-color: red; */
+    position: fixed;
+}
+
+.aside-container {
     height: 100vh;
     width: var(--side_navbar_width);
     min-width: var(--side_navbar_width);
@@ -40,9 +73,9 @@ aside {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    position: fixed;
     /* fixes the side bar and prevents scrolling. Set the margin-left property of the screen by its right to 332px */
 }
+
 
 .aside-top {
     width: 100%;
@@ -111,6 +144,10 @@ aside {
     margin-right: 34px;
 }
 
+.hide {
+    display: none;
+}
+
 /* SIDE NAVIGATION BAR ENDS HERE */
 
 
@@ -133,13 +170,17 @@ main {
     align-items: center;
 }
 
+.small-screen {
+    display: none;
+}
+
 .search-bar {
     display: flex;
     align-items: center;
     width: 88%;
     height: 100%;
     padding: 16px;
-    border: 2px solid var(--main_color);
+    border: 2px solid var(--search_bar_color);
     border-radius: 8px;
     margin-right: 20px;
 }
@@ -167,8 +208,8 @@ main {
     cursor: pointer;
 }
 
-
 /* SEARCH BAR ENDS HERE */
+
 
 /* Page content */
 
@@ -315,6 +356,12 @@ h2 {
     margin-right: 16px;
 }
 
+.user-input option {
+    height: 50px;
+    margin: 10px 0px;
+    /* background-color: aqua; */
+}
+
 .pwd-change {
     margin: 32.42px 0px 32px 0px;
 }
@@ -330,7 +377,7 @@ h2 {
     flex-grow: 2;
 }
 
-.pswd button {
+.show-pwd {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -359,4 +406,102 @@ h2 {
 
 .submit:active {
     background-color: var(--clicked_color);
+}
+
+@media screen and (max-width: 576px) {
+
+    /* START COPY HERE */
+
+    body {
+        display: flex;
+        justify-content: center;
+    }
+
+    ::-webkit-scrollbar {
+        width: 5px;
+    }
+
+
+    .small-screen {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 56px;
+        margin-bottom: 16px;
+    }
+
+    .search-not {
+        display: none;
+    }
+
+    .search-bar {
+        width: 100%;
+        margin: 0;
+    }
+
+    .showNav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        background-color: var(--white_color);
+        cursor: pointer;
+    }
+
+    aside {
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+        background-color: rgba(0, 0, 0, 0.35);
+    }
+
+    .aside-container {
+        width: 60%;
+    }
+
+    .hideNav {
+        width: 40%;
+        display: flex;
+        align-items: flex-start;
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    .hideNav button {
+        background-color: rgba(230, 213, 213, 0.8);
+        border: none;
+        margin-top: 100px;
+        cursor: pointer;
+    }
+
+    main {
+        width: 95%;
+        margin-left: 0px;
+        /* Remove the margin left applied in your main content for the web view */
+        padding: 48px 16px 10px 16px;
+    }
+
+    /* ADD THE ABOVE STYLES TO YOUR MAIN TAG FOR SCREEN SIZING */
+    /*  STOP COPY HERE */
+
+    h1 {
+        margin: 24px 0px 16px;
+    }
+
+    .user-input input,
+    .pswd {
+        width: 100%;
+    }
+
+    .dropdown {
+        flex-direction: column;
+    }
+
+    .user-input select {
+        width: 100%;
+    }
+
+    .submit {
+        width: 100%;
+    }
+
 }
