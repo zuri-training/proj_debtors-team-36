@@ -6,6 +6,7 @@
 
 :root {
     --main_color: #0A66C2;
+    --footer_color: #0855A2;
     --text_color: #292929;
     --white_color: #ffffff;
     --hover_color: #3380cc;
@@ -31,7 +32,34 @@ body {
 >>>>>>> 6f48880e7d2f43fb1deadb3953668d8e742e7232
 }
 
+<<<<<<< HEAD
 /* Navbar */
+=======
+/* Custom Scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--main_color);
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--hover_color);
+}
+
+/* TOP NAVIGATION BAR STARTS HERE*/
+>>>>>>> e69e7f606a89490358d3b7f2122abdc331393194
 nav {
     display: flex;
     align-items: center;
@@ -163,6 +191,49 @@ nav .right-nav {
 >>>>>>> 6f48880e7d2f43fb1deadb3953668d8e742e7232
 }
 
+<<<<<<< HEAD
+=======
+.showNavDropdown {
+    display: none;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 70px;
+    right: 5px;
+    width: 95%;
+}
+
+.show button {
+    height: 50px;
+    cursor: pointer;
+    background-color: var(--main_color);
+    border: none;
+    border-bottom: 2px solid var(--white_color);
+    color: var(--white_color);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.show button:hover {
+    background-color: var(--hover_color);
+}
+
+.show button:active {
+    background-color: var(--clicked_color);
+}
+
+/* TOP NAVIGATION BAR ENDS HERE */
+
+
+
+>>>>>>> e69e7f606a89490358d3b7f2122abdc331393194
 /* Welcome Page */
 .welcome {
 <<<<<<< HEAD
@@ -187,7 +258,7 @@ nav .right-nav {
 }
 
 .welcome-top article {
-    width: 80%;
+    width: 45%;
     padding-right: 20px;
 }
 
@@ -196,16 +267,20 @@ nav .right-nav {
 =======
 .welcome-top .tired {
     font-size: 48px;
-    font-weight: 800;
+    font-weight: 600;
     line-height: 66px;
     margin: 0;
 }
 
 .welcome-top .tired2 {
+<<<<<<< HEAD
 >>>>>>> 6f48880e7d2f43fb1deadb3953668d8e742e7232
     font-size: 24px;
+=======
+    font-size: 20px;
+>>>>>>> e69e7f606a89490358d3b7f2122abdc331393194
     font-weight: 500;
-    line-height: 33px;
+    line-height: 27px;
     color: #333333;
     margin: 16px 0px 50px 0px;
 }
@@ -221,8 +296,8 @@ nav .right-nav {
 }
 
 .welcome-top button {
-    width: 190px;
-    height: 65px;
+    width: 210px;
+    height: 57px;
     border-radius: 8px;
     font-size: 24px;
     font-weight: 400;
@@ -246,8 +321,14 @@ nav .right-nav {
 
 
 /* A background image will be used instead */
+<<<<<<< HEAD
 /* .welcome-top-right {
     width: 50%;
+=======
+.welcome-top-right {
+    width: 40%;
+    height: 90%;
+>>>>>>> e69e7f606a89490358d3b7f2122abdc331393194
     display: flex;
     justify-content: center;
     align-items: center;
@@ -255,11 +336,17 @@ nav .right-nav {
 }
 
 .welcome-top-right-pics {
+<<<<<<< HEAD
     width: 644px;
     height: 511px;
     background-color: #EEF1F4;
     border: 3px solid #667080;
 } */
+=======
+    width: 499px;
+    height: 704px;
+}
+>>>>>>> e69e7f606a89490358d3b7f2122abdc331393194
 
 .welcome-bottom {
     width: 100%;
@@ -274,23 +361,38 @@ nav .right-nav {
     font-size: 20px;
     font-weight: 500;
     line-height: 27px;
-    color: #737373;
+    color: #0c0c0c;
+    text-align: center;
     margin-bottom: 24px;
 }
 
 .welcome-bottom-icons {
     height: 100%;
-    width: 80%;
+    width: 60%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.welcome-bottom-icon {
-    width: 100px;
+.icon1,
+.icon2 {
+    width: 80px;
+    height: 80px;
+}
+
+.icon3 {
+    width: 80px;
+    height: 109px;
+}
+
+.icon4 {
+    width: 80px;
     height: 100px;
-    background-color: #D9D9D9;
-    border: none;
+}
+
+.icon5 {
+    width: 80px;
+    height: 97px;
 }
 
 <<<<<<< HEAD
@@ -318,8 +420,10 @@ nav .right-nav {
 
 .cookies {
     display: flex;
-    width: 557px;
-    height: 548px;
+    /* width: 40%; */
+    width: 553px;
+    /* height: 57%; */
+    height: 553px;
     background-color: #fefefe;
     border-radius: 8px;
     padding: 8px 16px;
@@ -465,6 +569,7 @@ nav .right-nav {
 
 .btn-container {
     margin-top: 8px;
+    display: flex;
 }
 
 .btn {
@@ -477,6 +582,9 @@ nav .right-nav {
     border-radius: 8px;
     margin-right: 24px;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .btn:hover {
@@ -519,9 +627,10 @@ nav .right-nav {
 }
 
 .after-welcome-head {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 30px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 33px;
+    width: 80%;
 }
 
 .snippet-container {
@@ -553,8 +662,8 @@ nav .right-nav {
 
 .snippet-head {
     font-weight: 500;
-    font-size: 18px;
-    line-height: 25px;
+    font-size: 20px;
+    line-height: 27px;
     color: #333333;
     padding: 16px 0px;
 }
@@ -564,12 +673,16 @@ nav .right-nav {
     font-size: 16px;
     line-height: 22px;
     padding-bottom: 28px;
+<<<<<<< HEAD
 >>>>>>> 6f48880e7d2f43fb1deadb3953668d8e742e7232
+=======
+    width: 92%;
+>>>>>>> e69e7f606a89490358d3b7f2122abdc331393194
 }
 
 /* Welcome Continued */
 .welcome-contd {
-    padding: 104px 72px 50px 72px;
+    padding: 104px 181px 50px 181px;
 }
 
 .welcome-section {
@@ -581,36 +694,38 @@ nav .right-nav {
     margin-bottom: 104px;
 }
 
+<<<<<<< HEAD
 .welcome-section h2 {
+=======
+.welcome-section article {
+    width: 47%;
+}
+
+.welcome-sect-head {
+>>>>>>> e69e7f606a89490358d3b7f2122abdc331393194
     font-size: 24px;
-    font-weight: 500;
-    text-align: center;
-    line-height: 32.78px;
+    font-weight: 600;
+    line-height: 33px;
 }
 
 .welcome-section h3 {
     font-size: 20px;
     font-weight: 400;
-    text-align: center;
-    line-height: 30px;
+    line-height: 27px;
     color: #3d3d3d;
 }
 
 .welcome-contd-pic {
-    width: 45%;
+    width: 47%;
     display: flex;
-    justify-content: center;
-    margin-left: 30px;
 }
 
-.welcome-contd-pic div {
-    width: 412px;
+.welcome-contd-pic img {
+    width: 512px;
     height: 380px;
-    background-color: #EEF1F4;
 }
 
 /* What schools using the plaform are saying */
-/* Review this */
 .schools {
     display: flex;
     align-items: center;
@@ -624,6 +739,7 @@ nav .right-nav {
     font-weight: 500;
     color: #292929;
     margin-right: 24px;
+    line-height: 27px;
 }
 
 .school-say {
@@ -729,6 +845,10 @@ nav .right-nav {
     background-color: #F8F8F8;
     text-align: center;
     color: #292D32;
+    background-image: url("../img/Frame 83.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .try-debtor h2 {
@@ -805,22 +925,6 @@ nav .right-nav {
     line-height: 27px;
     margin: 0;
 }
-
-/* .faq-contact {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.faq-contact a {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    margin: 0;
-    text-decoration: none;
-    color: #292929;
-} */
 
 
 .faq-bottom {
@@ -910,7 +1014,7 @@ footer {
     color: #292D32;
 =======
     height: 438px;
-    background-color: var(--main_color);
+    background-color: var(--footer_color);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -928,6 +1032,7 @@ footer {
 .footer-top-header {
     display: flex;
     flex-direction: column;
+    width: 220px;
 }
 
 <<<<<<< HEAD
@@ -953,7 +1058,12 @@ footer {
     margin-bottom: 25px;
 =======
     height: 50px;
+<<<<<<< HEAD
 >>>>>>> 6f48880e7d2f43fb1deadb3953668d8e742e7232
+=======
+    display: flex;
+    align-items: center;
+>>>>>>> e69e7f606a89490358d3b7f2122abdc331393194
 }
 
 .footer-links {
@@ -1013,6 +1123,351 @@ footer {
     margin-right: 14.6px;
 }
 
-.socials svg {
+.socials img {
     margin-right: 18.67px;
+<<<<<<< HEAD
+=======
+}
+
+/* FOOTER ENDS HERE */
+
+@media screen and (max-width: 576px) {
+
+    /* START COPY HERE */
+
+    ::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    nav {
+        padding: 16px;
+        padding-top: 40px;
+    }
+
+    nav .middle-nav,
+    nav .right-nav {
+        display: none;
+    }
+
+    .showNavDropdown {
+        display: block;
+        cursor: pointer;
+    }
+
+
+    /* #top-dropdown {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: 70px;
+        right: 5px;
+        width: 95%;
+    }
+
+    #top-dropdown button {
+        height: 50px;
+        cursor: pointer;
+    } */
+
+    /* END COPY HERE */
+
+    .welcome {
+        padding: 0px 16px;
+        /* height: auto; */
+        height: calc(100vh - 70px);
+    }
+
+    .welcome-top-right {
+        padding: 0;
+    }
+
+    .welcome-top article {
+        width: 61%;
+        margin: 74px 0px 40px;
+        padding: 0;
+    }
+
+    .welcome-top .tired {
+        font-size: 20px;
+        line-height: 27px;
+    }
+
+    .welcome-top .tired2 {
+        font-size: 14px;
+        line-height: 19px;
+        margin: 8px 0px 16px 0px;
+    }
+
+    .welcome-top button {
+        width: 136px;
+        height: 40px;
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .welcome-top-right-pics {
+        width: 100%;
+        height: 300px;
+    }
+
+    .cookies {
+        width: 400px;
+        height: 211px;
+    }
+
+    .svg-btn {
+        transform: scale(0.9);
+    }
+
+    .cookies-head {
+        font-size: 20px;
+        line-height: 27px;
+    }
+
+    .cookies-body {
+        margin: 8px 0px 16px;
+        /* width: 90%; */
+    }
+
+    .cookie,
+    .necessary {
+        display: none;
+    }
+
+    .btn-container {
+        width: 100%;
+    }
+
+    .btn {
+        width: 151px;
+        height: 40px;
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .welcome-bottom-text {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+        width: 85%;
+    }
+
+    .welcome-bottom-icons {
+        width: 85%;
+    }
+
+    .icon1,
+    .icon2 {
+        width: 48px;
+        height: 48px;
+    }
+
+    .icon3 {
+        width: 35px;
+        height: 48px;
+    }
+
+    .icon4 {
+        width: 32px;
+        height: 40px;
+    }
+
+    .icon5 {
+        width: 40px;
+        height: 48px;
+    }
+
+
+    .after-welcome-container {
+        width: 95%;
+    }
+
+    .after-welcome-head {
+        width: 100%;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 22px;
+        width: 72%;
+    }
+
+    .snippet-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .snippet {
+        width: 50%;
+        padding: 8px;
+        margin-top: 10px;
+    }
+
+    .welcome-contd {
+        padding: 50px 16px;
+    }
+
+    .welcome-contd .three {
+        display: none;
+    }
+
+    .welcome-section {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 24px;
+    }
+
+    .welcome-section article {
+        width: 100%;
+    }
+
+    .welcome-sect-head {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 27px;
+    }
+
+    .welcome-sect-body {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+    }
+
+    .welcome-contd-pic {
+        order: 1;
+        width: 100%;
+        justify-content: center;
+        margin-top: 24px;
+    }
+
+    .welcome-contd-pic img {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .schools {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 0;
+        padding: 50px 16px;
+    }
+
+    .schools h2 {
+        width: 100%;
+        font-size: 20px;
+        margin: 0;
+        margin-bottom: 24px;
+        text-align: center;
+    }
+
+    .school-say {
+        width: 100%;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+    }
+
+    .card-container {
+        height: auto;
+        margin-bottom: 20px;
+        justify-content: flex-start;
+
+    }
+
+    .school-card-right,
+    .school-card-left {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 24px;
+    }
+
+    .right-top,
+    .left-bottom {
+        margin: 0;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .left-top,
+    .right-bottom {
+        display: none;
+    }
+
+    .try-debtor {
+        height: auto;
+        margin-bottom: 40px;
+    }
+
+    .try-debtor h2 {
+        font-size: 24px;
+        line-height: 33px;
+        margin-top: 32px;
+    }
+
+    .try-debtor p {
+        font-size: 16px;
+        line-height: 22px;
+        margin: 16px 0px;
+    }
+
+    .try-debtor button {
+        width: 250px;
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 19px;
+    }
+
+    .faq {
+        display: none;
+    }
+
+
+    /* START COPY HERE */
+    footer {
+        height: auto;
+        flex-wrap: wrap;
+        padding: 46px 20px 20px 20px;
+        padding: 16px;
+    }
+
+    .footer-top {
+        flex-wrap: wrap;
+        height: auto;
+        justify-content: space-between;
+        width: 95%;
+    }
+
+    .footer-top-header {
+        margin-top: 24px;
+        width: 180px;
+    }
+
+    .footer-top-header h4 {
+        font-size: 20px;
+        line-height: 27px;
+    }
+
+    .footer-links a,
+    .footer-links p {
+        font-size: 14px;
+        line-height: 19px;
+    }
+
+    .footer-bottom {
+        margin-top: 24px;
+    }
+
+    .copyright,
+    .footer-line {
+        display: none;
+    }
+
+    .socials img {
+        margin-right: 10px;
+    }
+>>>>>>> e69e7f606a89490358d3b7f2122abdc331393194
 }

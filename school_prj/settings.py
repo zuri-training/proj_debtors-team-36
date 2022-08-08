@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'school_app.apps.SchoolAppConfig',
+    'account.apps.AccountConfig',
 
     #third party apps
     'uuid',

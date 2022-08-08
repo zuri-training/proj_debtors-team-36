@@ -14,21 +14,39 @@
 
 <body>
      <main>
-          <h1>KYC Authentication</h1>
+          <!-- <h1>KYC Authentication</h1> -->
+          <div class="loading">
+               <div class="one">
+                    <img src="./img/verify-check.svg" alt="">
+               </div>
+               <p class="loading-text">Verification</p>
+               <div class="line"></div>
+               <div class="two">
+                    <div class="one">
+                         <img src="./img/verify-check.svg" alt="">
+                    </div>
+               </div>
+               <p class="loading-text">Verify Email</p>
+               <div class="line"></div>
+               <div class="three">
+                    <div class="one">
+                         <img src="./img/verify-check.svg" alt="">
+                    </div>
+               </div>
+               <p class="loading-text">Email Verification Successful</p>
+               <div class="line"></div>
+               <div class="four">4</div>
+               <p class="loading-text">Authentication</p>
+          </div>
           <div class="cac">
                <div class="title">
                     <h2>CAC Document</h2>
-                    <p class="document">Please upload the document you were issued when your school<br>was registered
+                    <p class="document">Please upload the document you were issued when your school was registered
                     </p>
                </div>
                <div class="upload" id="cac">
                     <div class="before-upload" id="before_cac_upload">
-                         <svg width="87" height="87" viewBox="0 0 87 87" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M46.2188 62.5312C46.2188 64.0328 45.0015 65.25 43.5 65.25C41.9985 65.25 40.7812 64.0328 40.7812 62.5312V41.9074L34.5474 48.1412C33.4857 49.2029 31.7643 49.2029 30.7026 48.1412C29.6408 47.0795 29.6408 45.358 30.7026 44.2963L41.5776 33.4213C42.6393 32.3596 44.3607 32.3596 45.4224 33.4213L56.2975 44.2963C57.3592 45.358 57.3592 47.0795 56.2975 48.1412C55.2357 49.2029 53.5143 49.2029 52.4526 48.1412L46.2188 41.9074V62.5312Z"
-                                   fill="#3380CC" />
-                              <path d="M76.125 76.125V24.4688L51.6562 0H21.75C15.7439 0 10.875 4.8689 10.875 10.875V76.125C10.875 82.1311 15.7439 87 21.75 87H65.25C71.2561 87 76.125 82.1311 76.125 76.125ZM51.6562 16.3125C51.6562 20.8171 55.3079 24.4688 59.8125 24.4688H70.6875V76.125C70.6875 79.1281 68.2531 81.5625 65.25 81.5625H21.75C18.747 81.5625 16.3125 79.128 16.3125 76.125V10.875C16.3125 7.87195 18.747 5.4375 21.75 5.4375H51.6562V16.3125Z"
-                                   fill="#3380CC" />
-                         </svg>
+                         <img src=" " alt="">
                          <p id="cac_text" class="drag">Drag & drop your file here</p>
                          <span class="or">OR</span>
                          <button class="browse" onclick="importCac()">Browse file</button>
@@ -39,22 +57,11 @@
                <div class="title">
                     <h2>School ID</h2>
                     <p class="document">Please upload a copy of your identity with a clear photo to proof
-                         the<br>document holder</p>
+                         the document holder</p>
                </div>
                <div class="upload" id="id">
                     <div class="before-upload" id="before_id_upload">
-                         <svg width="89" height="88" viewBox="0 0 89 88" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M33.4998 39.4167C27.9265 39.4167 23.4165 34.9067 23.4165 29.3333C23.4165 23.76 27.9265 19.25 33.4998 19.25C39.0732 19.25 43.5832 23.76 43.5832 29.3333C43.5832 34.9067 39.0732 39.4167 33.4998 39.4167ZM33.4998 24.75C30.9698 24.75 28.9165 26.8033 28.9165 29.3333C28.9165 31.8633 30.9698 33.9167 33.4998 33.9167C36.0298 33.9167 38.0832 31.8633 38.0832 29.3333C38.0832 26.8033 36.0298 24.75 33.4998 24.75Z"
-                                   fill="#0A66C2" />
-                              <path d="M55.5002 83.4166H33.5002C13.5902 83.4166 5.0835 74.9099 5.0835 54.9999V32.9999C5.0835 13.0899 13.5902 4.58325 33.5002 4.58325H48.1668C49.6702 4.58325 50.9168 5.82992 50.9168 7.33325C50.9168 8.83659 49.6702 10.0833 48.1668 10.0833H33.5002C16.5968 10.0833 10.5835 16.0966 10.5835 32.9999V54.9999C10.5835 71.9033 16.5968 77.9166 33.5002 77.9166H55.5002C72.4035 77.9166 78.4168 71.9033 78.4168 54.9999V36.6666C78.4168 35.1632 79.6635 33.9166 81.1668 33.9166C82.6702 33.9166 83.9168 35.1632 83.9168 36.6666V54.9999C83.9168 74.9099 75.4102 83.4166 55.5002 83.4166Z"
-                                   fill="#0A66C2" />
-                              <path d="M78.4167 21.0833H58.25C56.7467 21.0833 55.5 19.8366 55.5 18.3333C55.5 16.8299 56.7467 15.5833 58.25 15.5833H78.4167C79.92 15.5833 81.1667 16.8299 81.1667 18.3333C81.1667 19.8366 79.92 21.0833 78.4167 21.0833Z"
-                                   fill="#0A66C2" />
-                              <path d="M68.3335 31.1667C66.8302 31.1667 65.5835 29.92 65.5835 28.4167V8.25C65.5835 6.74667 66.8302 5.5 68.3335 5.5C69.8368 5.5 71.0835 6.74667 71.0835 8.25V28.4167C71.0835 29.92 69.8368 31.1667 68.3335 31.1667Z"
-                                   fill="#0A66C2" />
-                              <path d="M10.2899 72.2332C9.40994 72.2332 8.52994 71.7932 8.0166 71.0232C7.17327 69.7766 7.50327 68.0532 8.74994 67.2099L26.8266 55.0732C30.7866 52.4332 36.2499 52.7266 39.8433 55.7699L41.0533 56.8332C42.8866 58.4099 46.0033 58.4099 47.7999 56.8332L63.0533 43.7432C66.9766 40.4066 73.0633 40.4066 76.9866 43.7432L82.9633 48.8766C84.0999 49.8666 84.2466 51.5899 83.2566 52.7632C82.2666 53.8999 80.5433 54.0466 79.3699 53.0566L73.3933 47.9232C71.5599 46.3466 68.4433 46.3466 66.6466 47.9232L51.3933 61.0132C47.5066 64.3499 41.3833 64.3499 37.4599 61.0132L36.2499 59.9499C34.5633 58.5199 31.7766 58.3732 29.9066 59.6566L11.8666 71.7932C11.3533 72.0866 10.8033 72.2332 10.2899 72.2332Z"
-                                   fill="#0A66C2" />
-                         </svg>
+                         <img src="" alt="">
                          <p id="id_text" class="drag">Drag & drop your file here</p>
                          <span class="or">OR</span>
                          <button class="browse" onclick="importID()">Browse file</button>
@@ -64,12 +71,8 @@
           <div class="valid">
                <label for="validate">
                     <input type="checkbox" name="validate" id="validate" value="validate">
-                    <span>
-                         <svg class="check" width="15" height="11" viewBox="0 0 15 11" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path d="M5.30333 7.66083L12.9633 0L14.1425 1.17833L5.30333 10.0175L0 4.71417L1.17833 3.53583L5.30333 7.66083Z"
-                                   fill="white" />
-                         </svg>
+                    <span id="valid" onclick="marked()">
+                         <img src="/static/img/kyc-checkmark.svg" alt="">
                     </span>
                     <!-- I confirm ID is valid until the expiry date and is in color. -->
                </label>
