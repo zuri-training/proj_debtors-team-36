@@ -600,6 +600,7 @@ nav .right-nav {
 
 .welcome-section {
     width: 100%;
+    min-width: 70%;
     height: 380px;
     display: flex;
     justify-content: space-between;
@@ -608,7 +609,7 @@ nav .right-nav {
 }
 
 .welcome-section article {
-    width: 47%;
+    /* width: 47%; */
 }
 
 .welcome-sect-head {
@@ -622,10 +623,11 @@ nav .right-nav {
     font-weight: 400;
     line-height: 27px;
     color: #3d3d3d;
+    width: 512px;
 }
 
 .welcome-contd-pic {
-    width: 47%;
+    /* width: 47%; */
     display: flex;
 }
 
