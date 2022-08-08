@@ -1,21 +1,34 @@
+from pyexpat import model
 from unicodedata import name
 from django.db import models
 from django.contrib.auth import get_user_model
 from django.utils import timezone
+import uuid
+import random
 
 
 class Debtors(models.Model):
-    GENDER_CHOICES = ("Male", "Female", "Other")
-    id = models.ForeignKey(primary_key=True, blank=False)
+    #GENDER_CHOICES = ("Male", "Female", "Other")
+    class GENDER_CHOICES(models.TextChoices):
+        male = "Male"
+        female = "Female"
+        others = "Others"
+    
+    "Temporal solution"
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    "Instead of this"
+        #id = models.ForeignKey(primary_key=True, blank=False, on_delete=models.CASCADE)
     name = models.CharField(max_length=50)
+    #Error was here
+    "Temperal solution"
     gender = models.CharField(choices=GENDER_CHOICES.choices, max_length=10, null=False)
+    "Instead of this" 
+        #choices=GENDER_CHOICES.choices, max_length=10, null=False)
     amount_owed = models.IntegerField(default=0)
     amount_cleared = models.IntegerField(default=0)
 
     class Meta:
         ordering = ['name']
-
-        
 
  
 from django.contrib.auth.models import AbstractUser
@@ -62,7 +75,7 @@ class Debtor_list(models.Model):
     participants = models.ManyToManyField(
         School, related_name='participants', blank=True)
     updated = models.DateTimeField(auto_now=True)
-    created = models.DateTimeField(auto_now_add=True)
+    created = models.DateTimeField(auto_now_add=True) #debtor_list
 
     class Meta:
         ordering = ['-updated', '-created']

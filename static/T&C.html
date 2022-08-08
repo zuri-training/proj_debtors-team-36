@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="./js/top-nav.js"></script>
+    <script defer src="./js/T&C.js"></script>
     <link rel="stylesheet" href="./css/T&C.css">
     <title>Terms and Conditions</title>
 </head>
@@ -12,19 +14,93 @@
 <body>
     <nav>
         <div class="left-nav">
-            <h1>My Debtor</h1>
+            <img src="./img/top-nav-app-logo.svg" alt="">
         </div>
         <div class="middle-nav">
             <a href="index.html">Home</a>
             <a href="about-us.html">About Us</a>
-            <a href="#faq">FAQ</a>
+            <a href="faq.html">FAQ</a>
             <a href="contact-us.html">Contact Us</a>
         </div>
         <div class="right-nav">
-            <a href="login.html" class="welcome-login-btn">Login</a>
+            <button onclick="location.href = 'login.html'" class="welcome-login-btn">Login</button>
             <button onclick="location.href = 'signup.html'" class="welcome-signup-btn">Sign Up</button>
         </div>
+        <img src="./img/showNav.svg" alt="" class="showNavDropdown" onclick="showTopNav()">
+        <div id="top-dropdown" class="hide" onclick="hideTopNav()">
+            <button class="dropdown-btn" onclick="location.href = 'index.html'">Home</button>
+            <button class="dropdown-btn" onclick="location.href = 'about-us.html'">About Us</button>
+            <button class="dropdown-btn" onclick="location.href = 'faq.html'">FAQ</button>
+            <button class="dropdown-btn" onclick="location.href = 'contact-us.html'">Contact Us</button>
+            <button class="dropdown-btn" onclick="location.href = 'login.html'">Login</button>
+            <button class="dropdown-btn" onclick="location.href = 'signup.html'">Sign Up</button>
+        </div>
     </nav>
+    <main onclick="hideTopNav()">
+        <div class="side-panel">
+            <div class="links" id="links"></div>
+        </div>
+        <div class="main-content">
+            <h2>TERMS & CONDITIONS</h2>
+            <p class="last-update">Last updated on August, 2022</p>
+            <div class="terms" id="terms"></div>
+            <p class="body">Don't worry, we never sell or rent your personal information. Opt-out anytime.</p>
+        </div>
+    </main>
+    <footer onclick="hideTopNav()">
+        <div class="footer-top">
+            <div class="footer-top-header">
+                <div class="footer-logo">
+                    <img src="./img/footer-app-logo.svg" alt="">
+                </div>
+                <div class="footer-links">
+                    <a href="about-us.html">About</a>
+                    <a href="privacy-policy.html">Legal</a>
+                    <a href="contact-us.html">Contact Us</a>
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="T&C.html">Terms and Conditions</a>
+                    <a href="accessibility-statement.html">Accessibility Statement</a>
+                </div>
+            </div>
+            <div class="footer-top-header">
+                <h4>Features</h4>
+                <div class="footer-links">
+                    <p>Dashboard</p>
+                    <p>Debtor List</p>
+                    <p>Contend Debt</p>
+                    <p>Debt Summary</p>
+                </div>
+            </div>
+            <div class="footer-top-header">
+                <h4>Use Cases</h4>
+                <div class="footer-links">
+                    <p>School Management</p>
+                </div>
+            </div>
+            <div class="footer-top-header">
+                <h4>Resources</h4>
+                <div class="footer-links">
+                    <a href="help-and-support.html">Help and Support</a>
+                    <p>Community</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="copyright">
+                <img src="./img//copyright.svg" alt="">
+                <p class="footer-small-text">2022 Team 36 my debtor project. Zuri Team, Inc. All rights reserved.</p>
+            </div>
+            <hr class="footer-line">
+            <div class="socials">
+                <p class="footer-small-text">Follow Us.</p>
+                <img src="./img/facebook.svg" alt="">
+                <img src="./img/gmail.svg" alt="">
+                <img src="./img/linkedin.svg" alt="">
+                <img src="./img/twitter.svg" alt="">
+                <img src="./img/instagram.svg" alt="">
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>

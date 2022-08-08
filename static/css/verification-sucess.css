@@ -1,23 +1,63 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
 
 * {
     box-sizing: border-box;
 }
 
+:root {
+    --main_color: #0A66C2;
+    --text_color: #292929;
+    --white_color: #ffffff;
+    --hover_color: #3380cc;
+    --clicked_color: #074481;
+    --disabled_color: #a8a8a8;
+    --side_navbar_width: 332px;
+}
+
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Manrope', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-color: var(--white_color);
+    color: var(--text_color);
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     user-select: none;
 }
 
+/* Custom Scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--main_color);
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--hover_color);
+}
+
 main {
-    width: 50%;
+    width: 70%;
     display: flex;
+    height: 100%;
     flex-direction: column;
     align-items: center;
 }
@@ -25,82 +65,166 @@ main {
 .loading {
     display: flex;
     align-items: center;
-    width: 85%;
-    height: 48px;
-    margin-bottom: 40px
+    width: 100%;
+    height: 40px;
+    margin: 50px 0px;
+}
+
+.loading-text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+    margin-left: 9px;
+}
+
+.one,
+.two,
+.three,
+.four {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    background-color: var(--white_color);
+    border: 1px solid var(--main_color);
+    color: var(--main_color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .one,
 .two,
 .three {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 30px;
-    background-color: #1f1f1f;
-    border: 1px solid #000000;
-    color: #000000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: var(--main_color);
+    border: none;
+    color: var(--white_color);
 }
 
 .line {
     flex-grow: 1;
     height: 0px;
-    border: 4px solid #000000;
+    border: 0.5px solid #000000;
+    margin: 0px 25px 0px 8px;
 }
 
+
 .status {
-    width: 638px;
-    height: 401px;
-    background-color: #ecebeb;
-    border: 1px solid #000033;
+    width: 60%;
+    height: 40%;
+    background-color: #fefefe;
+    border: 1px solid #4eca5a;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: #808080;
+    color: #4eca5a;
 }
 
 h1 {
     font-size: 34px;
     font-weight: 600;
-    line-height: 51px;
-    margin-top: 38.11px;
+    line-height: 46px;
+    margin: 0;
 }
 
 .sit {
     font-size: 28px;
-    font-weight: 500;
-    line-height: 42px;
+    font-weight: 400;
+    line-height: 38px;
     margin: 0;
-    margin-top: 80px;
+    margin-top: 74px;
     color: #000033
 }
 
 .message {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 400;
     line-height: 27px;
     color: #000033;
     text-align: center;
-    margin: 32px 0px 40px 0px;
+    margin: 34px 0px 40px 0px;
+    width: 43%;
 }
 
 button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 210px;
-    height: 62px;
+    height: 59px;
     padding: 16px 32px;
-    background-color: #808080;
+    background-color: #4eca5a;
     border-radius: 8px;
     border: none;
     font-size: 20px;
     font-weight: 400;
-    line-height: 30px;
-    color: #ffffff;
+    line-height: 27px;
+    color: #fefefe;
     cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+@media screen and (max-width: 576px) {
+
+    ::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    main {
+        width: 95%;
+    }
+
+    .loading {
+        height: 20px;
+    }
+
+    .loading img {
+        transform: scale(0.6);
+    }
+
+    .loading-text {
+        display: none;
+    }
+
+    .one,
+    .two,
+    .three,
+    .four {
+        width: 20px;
+        height: 20px;
+        font-size: 10px;
+        line-height: 14px;
+        font-weight: 500;
+    }
+
+    .line {
+        margin: 0px 5px;
+    }
+
+    .status {
+        width: 100%;
+    }
+
+    .status img {
+        transform: scale(0.7);
+    }
+
+    h1 {
+        font-size: 28px;
+        line-height: 38px;
+        margin: 55px 0px 0px;
+    }
+
+    .sit {
+        font-size: 24px;
+        line-height: 33px;
+    }
+
+    .message {
+        width: 100%
+    }
 }

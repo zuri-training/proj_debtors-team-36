@@ -5,5 +5,19 @@ const navLinks = document.querySelectorAll('aside a').
     forEach(link => {
         if (link.href.includes(`${currentPage}`)) {
             link.classList.add('active');
+            link.setAttribute('id', 'active')
         }
     })
+
+if (innerWidth <= 576) {
+    document.getElementById("aside").className = "hide"
+}
+
+
+const showNav = () => {
+    document.getElementById("aside").className = "show"
+}
+
+const hideNav = () => {
+    document.getElementById("aside").className = "hide"
+}
