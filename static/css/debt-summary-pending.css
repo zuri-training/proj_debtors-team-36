@@ -14,7 +14,50 @@ body {
     -ms-user-select: none;
     user-select: none;
 }
+:root {
+  --main_color: #0A66C2;
+  --footer_color: #0855A2;
+  --text_color: #292929;
+  --white_color: #ffffff;
+  --hover_color: #3380cc;
+  --clicked_color: #074481;
+  --disabled_color: #a8a8a8;
+}
 
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Manrope', sans-serif;
+  background-color: var(--white_color);
+  color: var(--text_color);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Custom Scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--main_color);
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--hover_color);
+}
 /* SIDE NAVIGATION BAR STARTS HERE */
 /* Side nav */
 /* Copy this code to implement the side nav styling */
