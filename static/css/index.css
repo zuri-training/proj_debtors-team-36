@@ -595,11 +595,15 @@ nav .right-nav {
 
 /* Welcome Continued */
 .welcome-contd {
-    padding: 104px 181px 50px 181px;
+    /* padding: 104px 181px 50px 181px; */
+    padding: 104px 0px 50px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .welcome-section {
-    width: 100%;
+    width: 80%;
     min-width: 70%;
     height: 380px;
     display: flex;
@@ -608,9 +612,9 @@ nav .right-nav {
     margin-bottom: 104px;
 }
 
-.welcome-section article {
-    /* width: 47%; */
-}
+/* .welcome-section article {
+    width: 47%;
+} */
 
 .welcome-sect-head {
     font-size: 24px;
