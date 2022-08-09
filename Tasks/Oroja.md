@@ -10,12 +10,6 @@
 * Design page with the list of schools in the locality
 -https://github.com/zuri-training/proj_debtors-team-36/issues/45
 
-* Design page with the list of schools in the locality
--https://github.com/zuri-training/proj_debtors-team-36/issues/45
-
-* Design page with the list of schools in the locality
--https://github.com/zuri-training/proj_debtors-team-36/issues/45
-
 * Design page to add a new debtor
 -https://github.com/zuri-training/proj_debtors-team-36/issues/44
 
