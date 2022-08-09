@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,10 +6,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/current-debtors.css">
-    <script defer src="./js/current-debtors.js"></script>
+    <link rel="stylesheet" href="{% static './css/current-debtors.css' %}">
+    <script defer src="{% static './js/current-debtors.js' %}"></script>
     <!-- Copy the script below for the execution of the left side navbar styling -->
-    <script defer src="./js/side-nav.js"></script>
+    <script defer src="{% static './js/side-nav.js' %}"></script>
     <title>Current Debtors</title>
 </head>
 
@@ -39,6 +40,20 @@
                             fill="#FEFEFE" />
                         <path d="M140.379 35.7539V22.9816H135.489V20.2462H148.197V22.9816H143.308V35.7539H140.379Z"
                             fill="#FEFEFE" />
+views_urls
+                    </svg>
+                    Edit profile
+                </a>
+                <a href="{% url 'current_debtors' %}" class="debtors">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17 21H7C3 21 2 20 2 16V8C2 4 3 3 7 3H17C21 3 22 4 22 8V16C22 20 21 21 17 21Z"
+                            stroke="#FEFEFE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M14 8H19" stroke="#FEFEFE" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M15 12H19" stroke="#FEFEFE" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M17 16H19" stroke="#FEFEFE" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
                         <path
                             d="M155.291 36.0769C153.74 36.0769 152.401 35.7395 151.274 35.0646C150.154 34.3898 149.289 33.4457 148.678 32.2323C148.075 31.019 147.774 29.6082 147.774 28C147.774 26.3918 148.075 24.981 148.678 23.7677C149.289 22.5544 150.154 21.6103 151.274 20.9354C152.401 20.2605 153.74 19.9231 155.291 19.9231C156.841 19.9231 158.177 20.2605 159.297 20.9354C160.424 21.6103 161.289 22.5544 161.892 23.7677C162.503 24.981 162.808 26.3918 162.808 28C162.808 29.6082 162.503 31.019 161.892 32.2323C161.289 33.4457 160.424 34.3898 159.297 35.0646C158.177 35.7395 156.841 36.0769 155.291 36.0769ZM155.291 33.32C156.274 33.3344 157.093 33.1226 157.746 32.6846C158.399 32.2467 158.888 31.6257 159.211 30.8216C159.541 30.0175 159.706 29.0769 159.706 28C159.706 26.9231 159.541 25.9898 159.211 25.2C158.888 24.4103 158.399 23.7964 157.746 23.3585C157.093 22.9205 156.274 22.6944 155.291 22.68C154.307 22.6657 153.489 22.8775 152.835 23.3154C152.182 23.7534 151.69 24.3744 151.36 25.1785C151.037 25.9826 150.875 26.9231 150.875 28C150.875 29.0769 151.037 30.0103 151.36 30.8C151.69 31.5898 152.182 32.2036 152.835 32.6416C153.489 33.0795 154.307 33.3057 155.291 33.32Z"
                             fill="#FEFEFE" />
@@ -149,6 +164,34 @@
                 </a>
             </div>
         </div>
+ views_urls
+        <div class="aside-bottom">
+            <a href="help-and-support.html">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M17 18.43H13L8.54999 21.39C7.88999 21.83 7 21.36 7 20.56V18.43C4 18.43 2 16.43 2 13.43V7.42993C2 4.42993 4 2.42993 7 2.42993H17C20 2.42993 22 4.42993 22 7.42993V13.43C22 16.43 20 18.43 17 18.43Z"
+                        stroke="#FEFEFE" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path
+                        d="M12.0001 11.36V11.15C12.0001 10.47 12.4201 10.11 12.8401 9.82001C13.2501 9.54001 13.66 9.18002 13.66 8.52002C13.66 7.60002 12.9201 6.85999 12.0001 6.85999C11.0801 6.85999 10.3401 7.60002 10.3401 8.52002"
+                        stroke="#FEFEFE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M11.9955 13.75H12.0045" stroke="#FEFEFE" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+                Help & support
+            </a>
+            <a href="{% url 'index' %}">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.4399 14.62L19.9999 12.06L17.4399 9.5" stroke="#FEFEFE" stroke-width="1.5"
+                        stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M9.76001 12.0601H19.93" stroke="#FEFEFE" stroke-width="1.5" stroke-miterlimit="10"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M11.76 20C7.34001 20 3.76001 17 3.76001 12C3.76001 7 7.34001 4 11.76 4" stroke="#FEFEFE"
+                        stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                Log out
+            </a>
+        </div>
         <div class="hideNav" onclick="hideNav()"></div>
     </aside>
     <main>
@@ -173,7 +216,20 @@
 
         <!-- other page contents -->
         <h1>Current Debtors</h1>
-        <div id="debtors"></div>
+        <!-- list of debtors from the debtor db -->
+        <div id="debtors">
+            
+            {% for debtor in debtors  %}
+            <div>
+            <div>{{ debtors.name }}</div>
+            <div>{{ debtors.amount_owed }}</div>
+            <div>{{ debtors.gender }}</div>
+            <!-- <div>{{ debtors.created }}</div> -->
+            </div>
+            {% endfor %}
+                
+            </div>
+        </div>
     </main>
     <button class="add-debtor" onclick="location.href = 'add-new-debtor.html'">
         <img src="./img//new-debtor.svg" alt="">

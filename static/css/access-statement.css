@@ -1,107 +1,144 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
 :root {
-  --primary-color1: #000055;
+  --primary-color1: #0A66C2;
   --text-color1: #141414;
   --text-color2: #1f1f1f;
   --text-color3: #ffffff;
+
+  --main_color: #0A66C2;
+    --text_color: #292929;
+    --white_color: #ffffff;
+    --hover_color: #3380cc;
+    --clicked_color: #074481;
+    --disabled_color: #a8a8a8;
 }
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  text-decoration: none;
 }
 
 body {
   margin: 0px;
   padding: 0px;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Manrope', sans-serif;
   background-color: #fefefe;
   user-select: none;
   position: absolute;
 }
 
+/* TOP NAVIGATION BAR STARTS HERE */
 nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 43px;
-  padding: 13px 72px 0px 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 48px;
+    padding: 40px 72px 0px 72px;
+    margin-bottom: 20px;
 }
 
 nav .left-nav {
-  display: flex;
-  align-items: center;
-  font-size: 28px;
-  font-weight: 600;
+    display: flex;
+    align-items: center;
 }
 
 nav .middle-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 40px;
-  width: 421px;
-  height: 30px;
-  font-size: 20px;
-  font-weight: 400;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    /* width: 378px; */
+    height: 27px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 27px;
 }
 
 nav .middle-nav a {
-  text-decoration: none;
-  color: #292929;
+    text-decoration: none;
+    color: var(--text_color);
+    margin-right: 32px;
 }
 
-nav .middle-nav a:hover {
-  border-bottom: 4px solid var(--primary-color1);
-  border-radius: 6px;
+nav .middle-nav a:active {
+    color: var(--main_color);
+}
+
+nav a.active {
+    border-bottom: 4px solid var(--main_color);
+    border-radius: 6px;
 }
 
 nav .right-nav {
-  width: 201px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
+    width: 201px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
 }
 
 .welcome-login-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 85px;
-  border: 1px solid var(--primary-color1);
-  border-radius: 8px;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 27px;
-  padding: 8px 16px;
-  color: var(--primary-color1);
-  cursor: pointer;
-  text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 108px;
+    height: 48px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    padding: 8px 16px;
+    border: 1.5px solid var(--main_color);
+    border-radius: 8px;
+    color: var(--main_color);
+    cursor: pointer;
+    text-decoration: none;
+    background-color: var(--white_color);
+}
+
+.welcome-login-btn:hover {
+    border: 1.5px solid var(--hover_color);
+    color: var(--hover_color);
+}
+
+.welcome-login-btn:active {
+    border: 1.5px solid var(--clicked_color);
+    color: var(--clicked_color);
 }
 
 .welcome-signup-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 108px;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 27px;
-  padding: 8px 16px;
-  border: 1px solid var(--primary-color1);
-  border-radius: 8px;
-  color: var(--text-color3);
-  cursor: pointer;
-  text-decoration: none;
-  background-color: var(--primary-color1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 108px;
+    height: 48px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    color: var(--white_color);
+    cursor: pointer;
+    text-decoration: none;
+    background-color: var(--main_color);
 }
+
+.welcome-signup-btn:hover {
+    background-color: var(--hover_color);
+}
+
+.welcome-signup-btn:active {
+    background-color: var(--clicked_color);
+}
+
+/* TOP NAVIGATION BAR ENDS HERE */
+
 main {
   padding: 128px 120px 10px 120px;
 }
 main h1 {
-  font-family: Poppins;
   font-size: 20px;
   font-weight: 500;
   line-height: 32px;
@@ -111,7 +148,6 @@ main h1 {
   margin-bottom: 32px;
 }
 main p {
-  font-family: Poppins;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -121,7 +157,6 @@ main p {
   color: var(--text-color1);
 }
 main h2 {
-  font-family: Poppins;
   font-size: 20px;
   font-weight: 500;
   line-height: 32px;
@@ -138,19 +173,22 @@ main p.contact {
   margin-top: 32px;
   margin-bottom: 167px;
 }
+main .colour a{
+  color: var(--primary-color1);
+}
 main .colour {
   color: var(--primary-color1);
 }
-/*Footer*/
+/* FOOTER STARTS HERE */
 footer {
   width: 100%;
-  height: 359px;
-  background-color: var(--primary-color1);
+  height: 438px;
+  background-color: var(--main_color);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 57px 126px 10px 126px;
-  color: var(--text-color3);
+  padding: 57px 124px 10px 124px;
+  color: var(--white_color);
 }
 
 .footer-top {
@@ -164,34 +202,31 @@ footer {
   flex-direction: column;
 }
 
-.footer-top-header h3 {
-  font-size: 28px;
-  font-weight: 600;
-  line-height: 42px;
-  color: var(--text-color3);
-  margin: 0;
-  margin-bottom: 15px;
+.footer-logo {
+  height: 50px;
 }
 
 .footer-top-header h4 {
   font-size: 24px;
   font-weight: 500;
-  line-height: 36px;
+  line-height: 33px;
   margin: 0;
-  margin-bottom: 25px;
+  height: 50px;
 }
 
 .footer-links {
   display: flex;
   flex-direction: column;
+  margin-top: 20px;
 }
 
-.footer-links a {
+.footer-links a,
+.footer-links p {
   text-decoration: none;
-  color: var(--text-color3);
+  color: var(--white_color);
   font-size: 18px;
   font-weight: 400;
-  line-height: 27px;
+  line-height: 25px;
   margin: 0;
   margin-bottom: 8px;
 }
@@ -204,6 +239,7 @@ footer {
 .copyright {
   display: flex;
   align-items: center;
+  padding-left: 6px;
 }
 
 .copyright .footer-small-text {
@@ -235,3 +271,5 @@ footer {
 .socials svg {
   margin-right: 18.67px;
 }
+
+/* FOOTER ENDS HERE */
