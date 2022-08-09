@@ -39,8 +39,6 @@ This project was created with ![Visual Studio Code](https://img.shields.io/badge
 * __Database__<br/>
         ![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
 
-* __API__<br/>
-        ![DjangoREST](https://img.shields.io/badge/DJANGO-REST-ff1709?style=for-the-badge&logo=django&logoColor=white&color=ff1709&labelColor=gray)
 
 * __Project Management and Version Control__<br/>
         ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
@@ -220,13 +218,14 @@ __Iniubong Abasi__
 * Github- https://github.com/IniubongJ
 * Track- Product Design
 
-
+## Documentation
+The documentaion that includes details on how the project was built from the backend, prerequisites, installation procedures, etc can be found here - "Documentationlinkwhenready"
 ## Design
 The design for this project was done by the product design team on figma. Check out the design [here](https://www.figma.com/file/OnOlNH07Q0By2YOEDJIhi4?node-id=417:2)
 
 
-## Documentation
-A more detailed documentation on the updates and details of this project can be found [here](https://docs.google.com/document/d/16CPt2fXZ0yxgzU6eVFkCaoYp0vyjdBYsWjMzPmxbdeQ/edit)
+## Project Documentation
+A more detailed documentation on the updates,features and details of this project can be found [here](https://docs.google.com/document/d/16CPt2fXZ0yxgzU6eVFkCaoYp0vyjdBYsWjMzPmxbdeQ/edit)
 
 ## Acknowledgements
 
