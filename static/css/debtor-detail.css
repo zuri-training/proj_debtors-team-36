@@ -1,158 +1,184 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:root {
+    --main_color: #0855A2;
+    --text_color: #292929;
+    --white_color: #ffffff;
+    --hover_color: #3380cc;
+    --clicked_color: #074481;
+    --disabled_color: #a8a8a8;
+    --side_navbar_width: 332px;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  font-family: "manrope", sans-serif;
-  user-select: none;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Manrope', sans-serif;
+    background-color: var(--white_color);
+    color: var(--text_color);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    overflow-x: hidden;
+    width: 1440px;
+    height: 1440px;
+    
 }
 
+/* SIDE NAVIGATION BAR STARTS HERE */
 /* Side nav */
 /* Copy this code to implement the side nav styling */
 
 aside {
-  height: 100vh;
-  width: 332px;
-  min-width: 332px;
-  background-color: #0855a2;
-  color: #fefefe;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: fixed;
-  /* fixes the side bar and prevents scrolling. Set the margin-left property of the screen by its right to 332px */
+    height: 100vh;
+    width: var(--side_navbar_width);
+    min-width: var(--side_navbar_width);
+    background-color: var(--main_color);
+    color: var(--white_color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    /* fixes the side bar and prevents scrolling. Set the margin-left property of the screen by its right to 332px */
 }
 
 .aside-top {
-  width: 100%;
-  padding-top: 80px;
-  display: flex;
-  flex-direction: column;
+    width: 100%;
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
 }
 
 .top-icon {
-  width: 100%;
-  margin-bottom: 56px;
-  padding-left: 48px;
-}
-
-.icon {
-  width: 160px;
-  height: 48px;
-  background-color: #eef1f4;
-  border: 3px solid #667080;
+    width: 100%;
+    margin-bottom: 56px;
+    padding-left: 48px;
 }
 
 .top-links {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .top-links a {
-  text-decoration: none;
-  color: #fefefe;
-  width: 100%;
-  height: 56px;
-  display: flex;
-  align-items: center;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-  padding: 16px 48px;
+    text-decoration: none;
+    color: var(--white_color);
+    width: 100%;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    padding: 16px 48px;
 }
 
 .top-links a.active {
-  background-color: #ffffff;
+    background-color: var(--white_color);
+    color: var(--text_color);
+}
+
+/* Changes the color of the active svg */
+.top-links a.active svg {
+    filter: invert(100%) sepia(100%) saturate(8%) hue-rotate(118deg) brightness(101%) contrast(104%);
 }
 
 .top-links a svg {
-  margin-right: 34px;
+    margin-right: 34px;
 }
 
 .aside-bottom {
-  width: 100%;
-  padding-bottom: 48px;
+    width: 100%;
+    padding-bottom: 48px;
 }
 
 .aside-bottom a {
-  text-decoration: none;
-  color: #fefefe;
-  width: 100%;
-  height: 56px;
-  display: flex;
-  align-items: center;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-  padding: 16px 48px;
+    text-decoration: none;
+    color: var(--white_color);
+    width: 100%;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    padding: 16px 48px;
 }
 
 .aside-bottom a svg {
-  margin-right: 34px;
+    margin-right: 34px;
 }
+
+/* SIDE NAVIGATION BAR ENDS HERE */
+
 
 /* Edit page */
 main {
-  width: 100%;
-  height: 100%;
-  padding: 80px 120px 148px 48px;
-  overflow-y: auto;
-  margin-left: 332px;
+    width: calc(100% - 332px);
+    padding: 80px 120px 148px 48px;
+    overflow-y: auto;
+    margin-left: 332px;
+    /* notify if changes are made */
 }
 
+/* SEARCH BAR STARTS HERE */
 /* Search bar */
+/* Set the width of your main content to calc(100vw - 332px) to prevent overflow. Refer to my code for main tag above */
 .search {
-  display: flex;
-  width: 100%;
-  height: 56px;
-  align-items: center;
+    display: flex;
+    width: 100%;
+    height: 56px;
+    align-items: center;
 }
 
 .search-bar {
-  display: flex;
-  align-items: center;
-  width: 80%;
-  height: 100%;
-  padding: 16px;
-  border: 2px solid #d2d2d2;
-  border-radius: 8px;
-  margin-right: 41.25px;
+    display: flex;
+    align-items: center;
+    width: 88%;
+    height: 100%;
+    padding: 16px;
+    border: 2px solid var(--main_color);
+    border-radius: 8px;
+    margin-right: 20px;
 }
 
 .search-text {
-  height: 40px;
-  width: 100%;
-  margin-left: 19px;
-  border: none;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
+    height: 40px;
+    width: 100%;
+    margin-left: 19px;
+    border: none;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
 }
 
 .search-text:focus {
-  outline: none;
+    outline: none;
 }
 
-.search-icons {
+.search-btn {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: var(--white_color);
+    cursor: pointer;
 }
 
-.search-icons svg {
-  margin-right: 20.48px;
-
-}
+/* SEARCH BAR ENDS HERE */
 
 /* END OF COPIED CONTENT FROM EDIT-PROFILE.CSS */
 
-.undersearch {
+ .undersearch {
   display: flex;
   margin-top: 15px;
 }
+
 
 .back-icon,
 .debtor-detail {
@@ -161,12 +187,20 @@ main {
 
 .current-debtor a {
   text-decoration: none;
+  color: var(--main_color);
 }
 
 .debtor-detail-heading {
   width: 175px;
   height: 33px;
 }
+
+
+.nameofdebtor {
+  display: flex;
+  justify-content: space-between;
+}
+
 
 .johndoe-detail {
     font-weight: 200;
@@ -191,9 +225,9 @@ line-height: 38px;
 
   width: 104px;
   height: 35px;
-  background: #0855a2;
+  background: var(--main_color);
   border-radius: 8px;
-  border: 2px solid #0855a2;
+  border: 2px solid var(--main_color);
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -213,7 +247,7 @@ line-height: 38px;
   height: 35px;
   background: #ffffff;
   border-radius: 8px;
-  border: 2px solid #0855a2;
+  border: 2px solid var(--main_color);
   margin-left: 10px;
   font-style: normal;
   font-weight: 400;
@@ -225,15 +259,55 @@ line-height: 38px;
   text-decoration: none;
   color: #0855a2;
   font-family: "manrope", sans-serif;
+} 
+
+
+.detail-btn3 {
+  width: 120px;
+  height: 35px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  border: 2px solid var(--text_color);
+  border-radius: 8px;
+}
+
+.detail-btn3 a {
+  text-decoration: none;
+  color: var(--text_color);
+  font-family: "manrope", sans-serif;
+} 
+
+.debtowed {
+  margin-top: 25px;
+  font-size: 28px;
+  margin-right: 190px;
+}
+
+.debtowed p {
+  position: absolute;
+  font-size: 16px;
+  top: 42%;
+  left: 77.2%;
+  color: var(--disabled_color);
+}
+
+.debtowed button {
+  font-size: 14px;
+  margin-top: 50px;
+  position: absolute;
+  top: 44%;
+  left: 74.5%;
+  background-color: var(--white_color);
 }
 
 /* ACTUAL DETAILS PART */
 .actual-details {
-  margin-top: 35px;
+  margin-top: 40px;
 }
 
 .actual-details button {
-  width: 844px;
+  width: 750px;
   height: 56px;
   border: 2px solid #667080;
   border-radius: 8px;
@@ -251,3 +325,130 @@ line-height: 38px;
 .actual-details p {
   color: #667080;
 }
+
+.actual-details div {
+  margin-top: 50px;
+}
+
+
+/* EDIT-DEBTORS POP-UP */
+
+
+.heading-texts {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.close {
+  font-size: 30px;
+  transform: rotate(45deg);
+  color: var(--text_color);
+}
+
+.close a:hover {
+  color: red;
+}
+
+.close a {
+  text-decoration: none;
+  color: var(--text_color);
+}
+
+/* ACTUAL DETAILS PART */
+
+.actual-details-part {
+  margin-top: 35px;
+  width: 576px;
+  height: 100%;
+  color: var(--text_color);
+  
+}
+
+.actual-details-part div {
+  margin-top: 40px;
+}
+
+.actual-details-part input{
+  width: 100%;
+  height: 56px;
+  border: 2px solid #667080;
+  border-radius: 8px;
+  font-family: "manrope", sans-serif;
+  color: var(--text_color);
+  background-color: #ffffff;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: left;
+  font-weight: 400;
+  font-style: normal;
+}
+
+input::placeholder {
+  color: var(--text_color);
+}
+
+
+.Debt-description input {
+  height: 100px;
+}
+
+.save-btn input {
+  background-color: var(--main_color);
+  color: white;
+  margin-top: 40px;
+  font-family: "manrope", sans-serif;
+  text-align: center;
+  border: 2px solid var(--main_color);
+}
+
+
+.form {
+  width: 1440px;
+  height: 1440px;
+  background-color: rgba(21, 19, 19, 0.297);
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.edit-popup {
+  background-color: var(--white_color);
+  padding: 30px 30px;
+  
+  
+}
+
+
+/* SCROLL BAR */
+
+/* Custom Scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--main_color);
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--hover_color);
+}
+
+
+/* MOBILE VIEW PORTION */
