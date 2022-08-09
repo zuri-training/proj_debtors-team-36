@@ -6,7 +6,7 @@
     - [faq](https://github.com/zuri-training/proj_debtors-team-36/pull/74)
     
 * Build Debt Summary Page <br>
-    - [debt summary]((https://github.com/zuri-training/proj_debtors-team-36/pull/81))
+    - [debt summary](https://github.com/zuri-training/proj_debtors-team-36/pull/81)
 
 * Build debtor email Page <br>
     -[Debtor Email](https://github.com/zuri-training/proj_debtors-team-36/pull/91)
