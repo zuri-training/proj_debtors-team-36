@@ -1,4 +1,4 @@
-## Bilweu Isaac Iyinoluwa
+## Bilweu Isaac
  __Fullstack__
 
 ##### Below is a list of description and links to issues of tasks assigned to me and ways i contributed to the progress of the team. The solution to the tasks are commented on the issues *(NB: They're clickable)*
