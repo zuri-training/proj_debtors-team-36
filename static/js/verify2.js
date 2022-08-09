@@ -23,27 +23,36 @@ const handleOtp = (e) => {
     if (e.key === "Backspace" && fieldIndex > 0) {
         input.previousElementSibling.focus();
     }
+    // console.log("clicked")
 }
 
+
 const submit = () => {
-    console.log("Submitting.....");
     inputs.forEach((input) => {
         code += input.value;
-        input.disabled = true;
+        // input.disabled = true;
         input.classList.add("disabled");
     })
     console.log(code);
-    if (code === "123456") {
-        location.href = 'verification-sucess.html'
+    if (code.length < 6) {
+        console.log("otp incomplete")
+        // document.getElementById("otp").classList.add("err");
     }
     else {
-        location.href = 'verification-fail.html'
+        console.log("Submitting.....");
+        if (code === "123456") {
+            location.href = 'verification-sucess.html'
+        }
+        else {
+            location.href = 'verification-fail.html'
+        }
+
+        code = "";
     }
 }
 
 inputs.forEach((input, index) => {
     input.dataset.index = index;
     input.addEventListener("paste", handleOtpPaste);
+    input.addEventListener("keyup", handleOtp);
 })
-
-// document.getElementById("verify-btn").setAttribute("onclick", submit)

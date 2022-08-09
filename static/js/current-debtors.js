@@ -81,32 +81,12 @@ const all_debtors = [
 
 ]
 
-// const dropdown_menu = () => {
-//     const dropdown = document.createElement('div');
-//     dropdown.className = "dropdown";
-//     const btn1 = document.createElement('button');
-//     btn1.className = "btn1";
-//     btn1.innerText = "Edit details";
-//     dropdown.appendChild(btn1)
-//     const btn2 = document.createElement('button');
-//     btn2.className = "btn2";
-//     btn2.innerText = "Mark as paid";
-//     dropdown.appendChild(btn2)
-//     const btn3 = document.createElement('button');
-//     btn3.className = "btn3";
-//     btn3.innerText = "Delete";
-//     dropdown.appendChild(btn3)
-//     const combine = getElementById('debtor').appendChild(dropdown);
-//     return combine
-// }
-
-
-
 all_debtors.map((each_debtor) => {
     // create containers to display each segment of the debt details
-    const debtor = document.createElement('div') // whole container
+    const debtor = document.createElement('a') // whole container
     debtor.className = 'debtor';
     debtor.setAttribute('id', 'debtor');
+    debtor.setAttribute("href", "debtor-detail.html")
 
     //  top sub-containers
     const debt = document.createElement('div');
@@ -145,36 +125,6 @@ all_debtors.map((each_debtor) => {
     debtor_date.innerText = each_debtor.date;
     owe_date.appendChild(debtor_date);
     debt_right.appendChild(owe_date);
-
-    // svg
-    const svg_icon = document.createElement('button');
-    svg_icon.className = "svg_icon";
-    let svg = document.createElementNS("http://www.w3.org/2000/svg", 'svg');
-    let svgPath1 = document.createElementNS("http://www.w3.org/2000/svg", 'path')
-    let svgPath2 = document.createElementNS("http://www.w3.org/2000/svg", 'path')
-    let svgPath3 = document.createElementNS("http://www.w3.org/2000/svg", 'path')
-    svg.setAttribute('width', '40')
-    svg.setAttribute('height', '40')
-    svg.setAttribute('viewBox', '0 0 40 40')
-    svg.setAttribute('fill', 'none')
-    svgPath1.setAttribute('d', "M18 27C18 28.1 18.9 29 20 29C21.1 29 22 28.1 22 27C22 25.9 21.1 25 20 25C18.9 25 18 25.9 18 27Z")
-    // svgPath1.setAttribute('fill', "#C0C0C0")
-    svgPath1.setAttribute('stroke', "#292D32")
-    svgPath1.setAttribute('stroke-width', "1.5")
-    svgPath2.setAttribute('d', "M18 13C18 14.1 18.9 15 20 15C21.1 15 22 14.1 22 13C22 11.9 21.1 11 20 11C18.9 11 18 11.9 18 13Z")
-    svgPath2.setAttribute('fill', "#C0C0C0")
-    svgPath1.setAttribute('stroke', "#292D32")
-    svgPath1.setAttribute('stroke-width', "1.5")
-    svgPath3.setAttribute('d', "M18 20C18 21.1 18.9 22 20 22C21.1 22 22 21.1 22 20C22 18.9 21.1 18 20 18C18.9 18 18 18.9 18 20Z")
-    svgPath3.setAttribute('fill', "#C0C0C0")
-    svgPath1.setAttribute('stroke', "#292D32")
-    svgPath1.setAttribute('stroke-width', "1.5")
-    svg.appendChild(svgPath1)
-    svg.appendChild(svgPath2)
-    svg.appendChild(svgPath3)
-    svg_icon.appendChild(svg)
-    // svg_icon.onclick = () => dropdown_menu();
-    debt_right.appendChild(svg_icon);
 
     const debtor_description = document.createElement('p');
     debtor_description.className = 'debtor-description';

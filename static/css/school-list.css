@@ -18,7 +18,8 @@ body {
 }
 :root {
     --main-color: #0855A2;
-    --font-color: #fefefe
+    --font-color: #fefefe;
+    --border-color: #0A66C2;
   }
 /* Side nav */
 aside {
@@ -47,12 +48,14 @@ aside {
     padding-left: 48px;
 }
 
-.icon {
+
+.icoerrorn {
     width: 160px;
     height: 48px;
     background-color: var(--font-color);
     border: 3px solid var(--font-color);
 }
+
 
 .top-links {
     display: flex;
@@ -126,7 +129,7 @@ main {
     width: 80%;
     height: 100%;
     padding: 16px;
-    border: 2px solid #0000D5;
+    border: 2px solid #0A66C2;
     opacity: 0.4;
     border-radius: 8px;
     margin-right: 41.25px;
@@ -161,7 +164,7 @@ main {
 
 .direct a{
 text-decoration: none;
-color: #0000D5;
+color: #0A66C2;
 }
 
 h5{
@@ -252,5 +255,5 @@ h5{
  }
  .view a {
     text-decoration: none;
-    color: #0000D5;
+    color: #0A66C2;
 }
