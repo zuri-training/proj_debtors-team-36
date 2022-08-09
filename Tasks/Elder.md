@@ -1,6 +1,6 @@
-##Ayodele Samuel Tosin 
+## Ayodele Samuel Tosin 
 _Product Design_
-####Below is a list of description and links to issues of tasks assigned to me. All solutions are commented in the respective issues. 
+#### Below is a list of description and links to issues of tasks assigned to me. All solutions are commented in the respective issues. 
 * Design the 'About us' page <br> 
    - [About Us Issue](https://github.com/zuri-training/proj_debtors-team-36/issues/117)
 * Design the 'Contact us' page <br>
