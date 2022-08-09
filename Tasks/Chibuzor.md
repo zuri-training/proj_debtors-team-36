@@ -1,5 +1,5 @@
 ## Molokwu Chibuzor (Team Lead)
- *Fullstack*
+ __Fullstack__
 
 ##### Below is a list of description and links to issues of tasks assigned to me. The solution to the tasks are commented on the issues
 
