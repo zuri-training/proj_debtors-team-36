@@ -1,4 +1,4 @@
-## Jeremiah Nosakhare __Product Design__
+## Jeremiah Nosakhare Akhigbe CProduct Design)
 ##### Below is a list of description and links to issues of tasks that were assigned to me. The solution to the tasks are commented on the issues *(NB: They're clickable)*
 
 * I drafted the research plan and conducted the user research which I used to create the FigJam Board <br>    - [FigJam Board Issue](https://github.com/zuri-training/proj_debtors-team-36/issues/9)    
