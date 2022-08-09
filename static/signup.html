@@ -1,6 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,14 +10,15 @@
     <script src="{% static './js/lga.js' %}"></script>
     <title>Sign Up</title>
 </head>
+
 <body>
     <header>
-       
+
     </header>
     <main>
-        <div class="flex-container"> 
+        <div class="flex-container">
             <div class="left">
-                <svg class="img"  viewBox="0 0 189 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="img" viewBox="0 0 189 56" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M56 0H0V56H56V0ZM4.30769 51.6923V4.30769H51.6923V51.6923H4.30769ZM11.1139 17.4892C10.9719 17.3827 10.7693 17.4841 10.7693 17.6615V38.5539C10.7693 38.6728 10.8657 38.7692 10.9847 38.7692H14.8616C14.9806 38.7692 15.077 38.6728 15.077 38.5539V26.2769C15.077 26.0994 15.2796 25.9981 15.4216 26.1046L21.4093 30.5954C21.4859 30.6528 21.5912 30.6528 21.6678 30.5954L27.6555 26.1046C27.7974 25.9981 28.0001 26.0994 28.0001 26.2769V38.5539C28.0001 38.6728 28.0965 38.7692 28.2155 38.7692H36.6155C42.5631 38.7692 47.3847 33.9477 47.3847 28C47.3847 22.0523 42.5631 17.2308 36.6155 17.2308H32.3078L21.6678 25.2108C21.5912 25.2682 21.4859 25.2682 21.4093 25.2108L11.1139 17.4892ZM32.3078 34.2462V21.3231C32.3078 21.442 32.4042 21.5385 32.5231 21.5385H36.6155C40.1841 21.5385 43.077 24.4314 43.077 28C43.077 31.5686 40.1841 34.4615 36.6155 34.4615H32.5231C32.4042 34.4615 32.3078 34.3651 32.3078 34.2462Z"
                         fill="#FEFEFE" />
@@ -52,102 +54,103 @@
             <div class="right">
                 <h2>Sign Up for Free</h2>
                 <p>Please fill this form to create an account</p>
-                
+
                 <form action="./verify1.html" method="post">
                     {% csrf_token %}
                     <div>
-                    <!-- {{ form }} -->
+                        <!-- {{ form }} -->
                     </div>
-                   <label for="name">Name of School</label><br>
-                   <input type="text" name="" id="" required><br><br>
-     
-                   <label for="email">School Email Address</label><br>
-                   <input type="email" name="" id="" required><br><br><br>
-     
-                   <label for="state">State</label>
-                   <select onchange="toggleLGA(this);" class="state"
-                   name="state" id="states" class="form-control" required>
-                      <option value="">Select...</option>
-                      <option value="Abuja FCT">Abuja FCT</option>
-                      <option value="Abia">Abia</option>
-                      <option value="Adamawa">Adamawa</option>
-                      <option value="Akwa Ibom">Akwa Ibom</option>
-                      <option value="Anambra">Anambra</option>
-                      <option value="Bauchi">Bauchi</option>
-                      <option value="Bayelsa">Bayelsa</option>
-                      <option value="Benue">Benue</option>
-                      <option value="Borno">Borno</option>
-                      <option value="Cross River">Cross River</option>
-                      <option value="Delta">Delta</option>
-                      <option value="Ebonyi">Ebonyi</option>
-                      <option value="Edo">Edo</option>
-                      <option value="Ekiti">Ekiti</option>
-                      <option value="Enugu">Enugu</option>
-                      <option value="Gombe">Gombe</option>
-                      <option value="Imo">Imo</option>
-                      <option value="Jigawa">Jigawa</option>
-                      <option value="Kaduna">Kaduna</option>
-                      <option value="Kano">Kano</option>
-                      <option value="Katsina">Katsina</option>
-                      <option value="Kebbi">Kebbi</option>
-                      <option value="Kogi">Kogi</option>
-                      <option value="Kwara">Kwara</option>
-                      <option value="Lagos">Lagos</option>
-                      <option value="Nassarawa">Nassarawa</option>
-                      <option value="Niger">Niger</option>
-                      <option value="Ogun">Ogun</option>
-                      <option value="Ondo">Ondo</option>
-                      <option value="Osun">Osun</option>
-                      <option value="Oyo">Oyo</option>
-                      <option value="Plateau">Plateau</option>
-                      <option value="Rivers">Rivers</option>
-                      <option value="Sokoto">Sokoto</option>
-                      <option value="Taraba">Taraba</option>
-                      <option value="Yobe">Yobe</option>
-                      <option value="Zamfara">Zamfara</option>
-                      <option value="Outside Nigeria">Outside Nigeria</option>
-                   </select>&nbsp;&nbsp;&nbsp;
-     
-                   <label for="LGA">Local Government Area</label>
-                   <select name="lga" id="lga" class="form-control select-lga" >
-                      <option value="">Select...</option>
-     
-     
-                   </select><br><br><br>
-     
-                   <label for="level">Level of Instituion</label>
-                   <select name="level" id="level" required>
-                       <option value="">Select...</option>
-                       <option value="">Elementary School</option>
-                       <option value="">Secondary School</option>
-                       <option value="">Tertiary School</option>
-                       
-     
-                   </select><br><br>
-     
-                   <label for="password">Password</label><br>
-                   <input type="password" name="" id="" required><br><br>
-     
-                   <label for="confirm password">Confirm Password</label><br>
-                   <input type="password" name="" id="" required><br>
-     
-                   <input type="checkbox" name="checkbox" id="" required>
-                   <label for="checkbox">I accept terms and condition</label>
-                   <br><br><br>
-     
-                   <input type="submit" value="Sign Up"><br><br>
-                   <p>Already have an account?<a href="{% url 'login' %}"> Sign in</a></p>
-     
+                    <label for="name">Name of School</label><br>
+                    <input type="text" name="" id="" required><br><br>
+
+                    <label for="email">School Email Address</label><br>
+                    <input type="email" name="" id="" required><br><br><br>
+
+                    <label for="state">State</label>
+                    <select onchange="toggleLGA(this);" class="state" name="state" id="states" class="form-control"
+                        required>
+                        <option value="">Select...</option>
+                        <option value="Abuja FCT">Abuja FCT</option>
+                        <option value="Abia">Abia</option>
+                        <option value="Adamawa">Adamawa</option>
+                        <option value="Akwa Ibom">Akwa Ibom</option>
+                        <option value="Anambra">Anambra</option>
+                        <option value="Bauchi">Bauchi</option>
+                        <option value="Bayelsa">Bayelsa</option>
+                        <option value="Benue">Benue</option>
+                        <option value="Borno">Borno</option>
+                        <option value="Cross River">Cross River</option>
+                        <option value="Delta">Delta</option>
+                        <option value="Ebonyi">Ebonyi</option>
+                        <option value="Edo">Edo</option>
+                        <option value="Ekiti">Ekiti</option>
+                        <option value="Enugu">Enugu</option>
+                        <option value="Gombe">Gombe</option>
+                        <option value="Imo">Imo</option>
+                        <option value="Jigawa">Jigawa</option>
+                        <option value="Kaduna">Kaduna</option>
+                        <option value="Kano">Kano</option>
+                        <option value="Katsina">Katsina</option>
+                        <option value="Kebbi">Kebbi</option>
+                        <option value="Kogi">Kogi</option>
+                        <option value="Kwara">Kwara</option>
+                        <option value="Lagos">Lagos</option>
+                        <option value="Nassarawa">Nassarawa</option>
+                        <option value="Niger">Niger</option>
+                        <option value="Ogun">Ogun</option>
+                        <option value="Ondo">Ondo</option>
+                        <option value="Osun">Osun</option>
+                        <option value="Oyo">Oyo</option>
+                        <option value="Plateau">Plateau</option>
+                        <option value="Rivers">Rivers</option>
+                        <option value="Sokoto">Sokoto</option>
+                        <option value="Taraba">Taraba</option>
+                        <option value="Yobe">Yobe</option>
+                        <option value="Zamfara">Zamfara</option>
+                        <option value="Outside Nigeria">Outside Nigeria</option>
+                    </select>&nbsp;&nbsp;&nbsp;
+
+                    <label for="LGA">Local Government Area</label>
+                    <select name="lga" id="lga" class="form-control select-lga">
+                        <option value="">Select...</option>
+
+
+                    </select><br><br><br>
+
+                    <label for="level">Level of Instituion</label>
+                    <select name="level" id="level" required>
+                        <option value="">Select...</option>
+                        <option value="">Elementary School</option>
+                        <option value="">Secondary School</option>
+                        <option value="">Tertiary School</option>
+
+
+                    </select><br><br>
+
+                    <label for="password">Password</label><br>
+                    <input type="password" name="" id="" required><br><br>
+
+                    <label for="confirm password">Confirm Password</label><br>
+                    <input type="password" name="" id="" required><br>
+
+                    <input type="checkbox" name="checkbox" id="" required>
+                    <label for="checkbox">I accept terms and condition</label>
+                    <br><br><br>
+
+                    <input type="submit" value="Sign Up"><br><br>
+                    <p>Already have an account?<a href="{% url 'login' %}"> Sign in</a></p>
+
                 </form>
-     
+
             </div>
         </div>
-       
+
     </main>
     <footer>
 
     </footer>
 </body>
+
 </html>
 
 <!--Adjust the width and the height-->

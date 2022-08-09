@@ -595,11 +595,16 @@ nav .right-nav {
 
 /* Welcome Continued */
 .welcome-contd {
-    padding: 104px 181px 50px 181px;
+    /* padding: 104px 181px 50px 181px; */
+    padding: 104px 0px 50px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .welcome-section {
-    width: 100%;
+    width: 80%;
+    min-width: 70%;
     height: 380px;
     display: flex;
     justify-content: space-between;
@@ -607,9 +612,9 @@ nav .right-nav {
     margin-bottom: 104px;
 }
 
-.welcome-section article {
+/* .welcome-section article {
     width: 47%;
-}
+} */
 
 .welcome-sect-head {
     font-size: 24px;
@@ -622,10 +627,11 @@ nav .right-nav {
     font-weight: 400;
     line-height: 27px;
     color: #3d3d3d;
+    width: 512px;
 }
 
 .welcome-contd-pic {
-    width: 47%;
+    /* width: 47%; */
     display: flex;
 }
 

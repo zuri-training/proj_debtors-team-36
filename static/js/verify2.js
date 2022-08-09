@@ -1,5 +1,6 @@
 const inputs = document.querySelectorAll(".code input");
 let code = "";
+let timer = 59;
 
 const handleOtpPaste = (e) => {
     const data = e.clipboardData.getData("text");
@@ -23,7 +24,6 @@ const handleOtp = (e) => {
     if (e.key === "Backspace" && fieldIndex > 0) {
         input.previousElementSibling.focus();
     }
-    // console.log("clicked")
 }
 
 
@@ -56,3 +56,32 @@ inputs.forEach((input, index) => {
     input.addEventListener("paste", handleOtpPaste);
     input.addEventListener("keyup", handleOtp);
 })
+
+// To implement countdown timer
+
+const countdown = () => {
+
+    const time = document.getElementById("countdown-timer")
+
+    if (timer > 9) {
+        time.innerText = ": 00:" + timer
+        timer = timer - 1;
+    }
+    else if (timer < 10 && timer > 0) {
+        time.innerText = ": 00:0" + timer
+        timer = timer - 1;
+    }
+    else {
+        time.innerText = ": 00:00"
+        inputs.forEach((input) => {
+            input.disabled = true;
+        })
+    }
+}
+
+setInterval(countdown, 1000)
+
+// to resend the code 
+const resend = () => {
+    timer = 59;
+}
