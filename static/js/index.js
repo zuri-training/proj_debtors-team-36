@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+// YOur JS code goes here
+=======
 // Cookies
 
 const cookies_list = [
@@ -171,3 +174,4 @@ const showCookies = () => {
 }
 
 const callCookies = setTimeout(showCookies, 1000);  // to call the cookies
+>>>>>>> 6f48880e7d2f43fb1deadb3953668d8e742e7232
