@@ -1,4 +1,5 @@
-##Samuel Ogunsanya
+Samuel Ogunsanya
+ 
  __Fullstack__
 
 ##### Below is a list of description and links to issues of tasks assigned to me and ways i contributed to the progress of the team. 
