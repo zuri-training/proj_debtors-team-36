@@ -1,4 +1,12 @@
+ views_urls
+
+
+
+{% load static %}
+
 <!-- {% load static %} -->
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -7,12 +15,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+views_urls
+
+    <script defer src="{% static './js/top-nav.js' %}"></script>
+    <!-- COPY THE SCRIPT ABOVE -->
+    <script defer src="./js/index.js"></script>
+    <link rel="stylesheet" href="./css/index.css">
+
+
+    <link rel="stylesheet" href="{% static './css/index.css' %}">
+
+
     <!-- <link rel="stylesheet" href="{% static './css/index.css' %}"> -->
     <link rel="stylesheet" href="./css/index.css">
+ main
     <script defer src="./js/top-nav.js"></script>
     <!-- COPY THE SCRIPT ABOVE -->
     <script defer src="./js/index.js"></script>
     <link rel="stylesheet" href="./css/index.css">
+
 
     <title>My Debtor</title>
 </head>
@@ -20,7 +41,6 @@
 <body>
     <nav>
         <div class="left-nav">
-<<<<<<< HEAD
 
             <h1>My Debtor</h1>
 
@@ -55,9 +75,7 @@
                     d="M141.529 28.2582C140.639 28.2582 139.835 28.1024 139.117 27.7909C138.405 27.4738 137.819 27.0232 137.357 26.4391C136.901 25.8495 136.611 25.1486 136.489 24.3364L138.859 23.9859C139.026 24.6757 139.371 25.207 139.893 25.5797C140.416 25.9524 141.012 26.1387 141.679 26.1387C142.052 26.1387 142.413 26.0803 142.764 25.9635C143.114 25.8467 143.401 25.6742 143.623 25.4462C143.851 25.2181 143.965 24.9372 143.965 24.6034C143.965 24.481 143.946 24.3642 143.907 24.2529C143.874 24.1361 143.815 24.0276 143.732 23.9275C143.648 23.8274 143.529 23.7328 143.373 23.6438C143.223 23.5548 143.031 23.4741 142.797 23.4018L139.676 22.484C139.443 22.4172 139.17 22.3226 138.859 22.2003C138.553 22.0779 138.255 21.9027 137.966 21.6746C137.677 21.4465 137.435 21.1461 137.24 20.7734C137.051 20.3951 136.956 19.9195 136.956 19.3465C136.956 18.5399 137.159 17.8696 137.565 17.3356C137.971 16.8016 138.514 16.4038 139.193 16.1424C139.871 15.8809 140.622 15.753 141.445 15.7585C142.274 15.7696 143.014 15.9115 143.665 16.1841C144.316 16.4567 144.861 16.8544 145.301 17.3773C145.74 17.8946 146.057 18.5288 146.252 19.2798L143.799 19.697C143.71 19.3076 143.545 18.9794 143.306 18.7124C143.067 18.4454 142.781 18.2423 142.447 18.1033C142.119 17.9642 141.774 17.8891 141.412 17.878C141.056 17.8668 140.72 17.9169 140.402 18.0282C140.091 18.1338 139.835 18.2896 139.635 18.4954C139.44 18.7013 139.343 18.946 139.343 19.2297C139.343 19.4912 139.423 19.7053 139.585 19.8722C139.746 20.0335 139.949 20.1643 140.194 20.2644C140.439 20.3645 140.689 20.448 140.945 20.5147L143.031 21.0821C143.342 21.1656 143.687 21.2768 144.066 21.4159C144.444 21.5494 144.805 21.7385 145.15 21.9833C145.501 22.2225 145.787 22.5396 146.01 22.9346C146.238 23.3295 146.352 23.8302 146.352 24.4365C146.352 25.0818 146.216 25.6464 145.943 26.1304C145.676 26.6088 145.314 27.0065 144.858 27.3236C144.402 27.6351 143.885 27.8688 143.306 28.0245C142.733 28.1803 142.141 28.2582 141.529 28.2582Z"
                     fill="#0855A2" />
             </svg>
-=======
             <img src="./img/top-nav-app-logo.svg" alt="">
->>>>>>> e69e7f606a89490358d3b7f2122abdc331393194
         </div>
         <div class="middle-nav">
             <a href="index.html">Home</a>
@@ -68,6 +86,14 @@
         <div class="right-nav">
             <a href="login.html" class="welcome-login-btn">Login</a>
             <button onclick="location.href = 'signup.html'" class="welcome-signup-btn">Sign Up</button>
+            <a href="{% url 'index' %}">Home</a>
+            <a href="{% url 'about' %}">About Us</a>
+            <a href="faq.html">FAQ</a>
+            <a class="current" href="{% url 'contact' %}">Contact Us</a>
+        </div>
+        <div class="right-nav">
+            <a class="" href="{% url 'login' %}"><button onclick="location.href = 'login.html'" class="welcome-login-btn">Login</button></a>
+            <a class="" href="{% url 'signup' %}"><button onclick="location.href = 'signup.html'" class="welcome-signup-btn">Sign Up</button></a>
         </div>
         <img src="./img/showNav.svg" alt="" class="showNavDropdown" onclick="showTopNav()">
         <div id="top-dropdown" class="hide" onclick="hideTopNav()">
@@ -79,7 +105,6 @@
             <button class="dropdown-btn" onclick="location.href = 'signup.html'">Sign Up</button>
         </div>
     </nav>
-<<<<<<< HEAD
     <main>
         <div class="welcome">
             <div class="welcome-top">
@@ -92,7 +117,6 @@
                     <button onclick="location.href = 'signup.html'">List Your School for Free!</button>
                     <p class="tired">Increase profitability, manage<br>student debts as a school owner.</p>
                     <p class="tired2">Let My Debtor help you keep an accurate list directory<br />of wards in debt and
-=======
     <!-- TOP NAVIGATION BAR ENDS HERE -->
 
     <!-- Include the onclick attribute in your main content tag -->
@@ -102,7 +126,6 @@
                 <article class="welcome-top-left">
                     <p class="tired">Increase profitability, manage student debts as a school owner.</p>
                     <p class="tired2">Let My Debtor help you keep an accurate list directory of wards in debt and
->>>>>>> e69e7f606a89490358d3b7f2122abdc331393194
                         debtor list of schools in your locality.</p>
                     <div class="welcome-top-btn">
                         <button class="get_started" onclick="location.href = 'signup.html'">Get started</button>
@@ -178,7 +201,6 @@
         <div class="welcome-contd">
             <div class="welcome-section one">
                 <article>
-<<<<<<< HEAD
                     <h2>Wondering if the new kid at your school has unresolved <br />debt with the previous one?
                         <br />Scared they might do same in your school?
                     </h2>
@@ -193,13 +215,11 @@
                         <br />You can see the
                         debt lists of schools in the locality as well. <br />This was you can know what's coming before
                         admission.
-=======
                     <p class="welcome-sect-head">Accurate List Directory</p>
                     <p class="welcome-sect-body">My debtor enables you keep an accurate directory list of students/wards
                         owing the school.we also provide you with a place to manage debtor information. You can; add a
                         new debtor, view the debt status, attach a note to the debtors details all this information is
                         available to you at a glance.
->>>>>>> e69e7f606a89490358d3b7f2122abdc331393194
                     </p>
                 </article>
                 <div class="welcome-contd-pic">
@@ -229,7 +249,6 @@
             </div>
             <div class="welcome-section three">
                 <article>
-<<<<<<< HEAD
                     <h2>Faster Debt Recovery</h2>
                     <h3>Work hand in hand with schools in your locality <br />and share updates on wards with pending
                         debt
@@ -243,13 +262,11 @@
                         on wards with pending debt <br />that have not made efforts to pay. This leads to a faster
                         debt <br />recovery as parents will be
                         encouraged to settle old debts <br />before moving on to another..
-=======
                     <p class="welcome-sect-head">Easily resolve collection disputes</p>
                     <p class="welcome-sect-body">Avoid the drama With our “contend debt” feature. it is easier to
                         resolve issues that come with collecting your debt as the entire process is automated for you
                         from alerting your debtor to resolving disputes this also helps you reach out to more customers
                         at a time.
->>>>>>> e69e7f606a89490358d3b7f2122abdc331393194
                     </p>
                 </article>
                 <div class="welcome-contd-pic">
@@ -350,7 +367,6 @@
                     <div class="faq-left">
                         <button class="faq-closed">
                             <p class="faq-question-head">What is my debtor</p>
-<<<<<<< HEAD
                             <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path d="M12 5.5V19.5" stroke="#0A66C2" stroke-width="2" stroke-linecap="round"
@@ -359,9 +375,7 @@
                                     stroke-linejoin="round" />
                             </svg>
 
-=======
                             <img src="./img/faq-closed.svg" alt="">
->>>>>>> e69e7f606a89490358d3b7f2122abdc331393194
                         </button>
                         <button class="faq-opened">
                             <div class="faq-question">
@@ -397,14 +411,11 @@
             </div>
         </div>
     </main>
-<<<<<<< HEAD
     <footer>
-=======
 
 
     <!-- FOOTER STARTS HERE -->
     <footer onclick="hideTopNav()">
->>>>>>> e69e7f606a89490358d3b7f2122abdc331393194
         <div class="footer-top">
             <div class="footer-top-header">
                 <div class="footer-logo">
@@ -412,7 +423,6 @@
                 </div>
                 <div class="footer-links">
                     <a href="about-us.html">About</a>
-                    <a href="privacy-policy.html">Legal</a>
                     <a href="contact-us.html">Contact Us</a>
                     <a href="privacy-policy.html">Privacy Policy</a>
                     <a href="T&C.html">Terms and Conditions</a>
@@ -444,7 +454,6 @@
         </div>
         <div class="footer-bottom">
             <div class="copyright">
-<<<<<<< HEAD
                 <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M10.5 0.5C4.70156 0.5 0 5.20156 0 11C0 16.7984 4.70156 21.5 10.5 21.5C16.2984 21.5 21 16.7984 21 11C21 5.20156 16.2984 0.5 10.5 0.5ZM10.5 19.7188C5.68594 19.7188 1.78125 15.8141 1.78125 11C1.78125 6.18594 5.68594 2.28125 10.5 2.28125C15.3141 2.28125 19.2188 6.18594 19.2188 11C19.2188 15.8141 15.3141 19.7188 10.5 19.7188ZM10.6312 7.23359C11.8734 7.23359 12.7172 8.02578 12.8109 9.18828C12.818 9.28672 12.9 9.36172 12.9984 9.36172H14.3273C14.3883 9.36172 14.4375 9.3125 14.4375 9.25156C14.4375 7.21953 12.8344 5.79688 10.6242 5.79688C8.04844 5.79688 6.5625 7.53594 6.5625 10.4094V11.6352C6.5625 14.4875 8.04844 16.2031 10.6242 16.2031C12.8273 16.2031 14.4375 14.825 14.4375 12.8891C14.4375 12.8281 14.3883 12.7789 14.3273 12.7789H12.9961C12.8977 12.7789 12.818 12.8539 12.8086 12.95C12.7102 14.0305 11.8687 14.7734 10.6289 14.7734C9.09844 14.7734 8.23594 13.6508 8.23594 11.6422V10.4094C8.23828 8.37031 9.10312 7.23359 10.6312 7.23359Z"
@@ -494,7 +503,6 @@
                         fill="#292D32" />
                 </svg>
 
-=======
                 <img src="./img//copyright.svg" alt="">
                 <p class="footer-small-text">2022 Team 36 my debtor project. Zuri Team, Inc. All rights reserved.</p>
             </div>
@@ -506,7 +514,6 @@
                 <img src="./img/linkedin.svg" alt="">
                 <img src="./img/twitter.svg" alt="">
                 <img src="./img/instagram.svg" alt="">
->>>>>>> e69e7f606a89490358d3b7f2122abdc331393194
             </div>
         </div>
     </footer>
