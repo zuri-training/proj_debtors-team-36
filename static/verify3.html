@@ -1,3 +1,53 @@
-<!--Verification Page-3-->
-<!--Your code goes here
- Delete this when you start working-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/verify3.css">
+    <title>Verification</title>
+</head>
+
+<body>
+    <main>
+        <div class="loading">
+            <div class="one">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 0.75L7.05 16.0875L3 13.0125H0.75L7.05 23.25L23.25 0.75H21Z" fill="#ECEBEB" />
+                </svg>
+            </div>
+            <div class="line1"></div>
+            <div class="two">2</div>
+            <div class="line2"></div>
+            <div class="three">3</div>
+        </div>
+        <div class="verify">
+            <h1>Verify Your Phone Number</h1>
+            <p class="check">Please Check your Messages</p>
+            <p class="enter">Enter the six digits verification code sent to +234824****221<br />to complete your
+                account creation.</p>
+
+            <!-- This is the OTP code the user inputs. Must change from div -->
+            <div class="code">
+                <div>0</div>
+                <div>0</div>
+                <div>0</div>
+                <div>0</div>
+                <div>0</div>
+                <div>0</div>
+            </div>
+            <div class="timer">
+                <p class="time-text">Code expires in <span>: 00:59</span></p>
+            </div>
+            <div class="btns">
+                <button class="cancel" onclick="location.href='index.html'">Cancel</button>
+                <!-- Change destination of verify button -->
+                <button class="verify-btn" onclick="location.href='verification-fail.html'">Verify</button>
+            </div>
+            <p class="resend">Didn't get the code? <a href="#">Resend Code</a></p>
+        </div>
+    </main>
+</body>
+
+</html>

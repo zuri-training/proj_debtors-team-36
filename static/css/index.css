@@ -17,11 +17,6 @@
 body {
     margin: 0px;
     padding: 0px;
-<<<<<<< HEAD
-    font-family: 'Poppins', sans-serif;
-    background-color: #FEFEFE;
-    color: #3D3D3D;
-=======
     font-family: 'Manrope', sans-serif;
     background-color: var(--white_color);
     color: var(--text_color);
@@ -29,12 +24,8 @@ body {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
->>>>>>> 6f48880e7d2f43fb1deadb3953668d8e742e7232
 }
 
-<<<<<<< HEAD
-/* Navbar */
-=======
 /* Custom Scrollbar */
 
 /* width */
@@ -59,49 +50,33 @@ body {
 }
 
 /* TOP NAVIGATION BAR STARTS HERE*/
->>>>>>> e69e7f606a89490358d3b7f2122abdc331393194
 nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-<<<<<<< HEAD
-    height: 43px;
-    padding: 13px 72px 0px 72px;
-=======
     height: 48px;
     padding: 40px 72px 0px 72px;
     margin-bottom: 20px;
->>>>>>> 6f48880e7d2f43fb1deadb3953668d8e742e7232
 }
 
 nav .left-nav {
     display: flex;
     align-items: center;
-    font-size: 28px;
-    font-weight: 600;
-    color: #292929;
 }
 
 nav .middle-nav {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
-    gap: 40px;
-    width: 421px;
-    height: 30px;
+    /* width: 378px; */
+    height: 27px;
     font-size: 20px;
     font-weight: 400;
+    line-height: 27px;
 }
 
 nav .middle-nav a {
     text-decoration: none;
-<<<<<<< HEAD
-    color: #292929;
-}
-
-nav .middle-nav a:hover {
-    border-bottom: 4px solid #292929;
-=======
     color: var(--text_color);
     margin-right: 32px;
 }
@@ -112,7 +87,6 @@ nav .middle-nav a:active {
 
 nav a.active {
     border-bottom: 4px solid var(--main_color);
->>>>>>> 6f48880e7d2f43fb1deadb3953668d8e742e7232
     border-radius: 6px;
 }
 
@@ -128,16 +102,12 @@ nav .right-nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 85px;
-    font-size: 18px;
+    width: 108px;
+    height: 48px;
+    font-size: 16px;
     font-weight: 400;
-    line-height: 27px;
+    line-height: 22px;
     padding: 8px 16px;
-<<<<<<< HEAD
-    color: #3D3D3D;
-    cursor: pointer;
-    text-decoration: none;
-=======
     border: 1.5px solid var(--main_color);
     border-radius: 8px;
     color: var(--main_color);
@@ -154,26 +124,18 @@ nav .right-nav {
 .welcome-login-btn:active {
     border: 1.5px solid var(--clicked_color);
     color: var(--clicked_color);
->>>>>>> 6f48880e7d2f43fb1deadb3953668d8e742e7232
 }
 
 .welcome-signup-btn {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100px;
-    font-size: 18px;
+    width: 108px;
+    height: 48px;
+    font-size: 16px;
     font-weight: 400;
-    line-height: 27px;
+    line-height: 22px;
     padding: 8px 16px;
-<<<<<<< HEAD
-    border: 1.5px solid #7E7E7E;
-    border-radius: 8px;
-    color: #3D3D3D;
-    cursor: pointer;
-    text-decoration: none;
-    background-color: #FFFFFF;
-=======
     border: none;
     border-radius: 8px;
     color: var(--white_color);
@@ -188,11 +150,8 @@ nav .right-nav {
 
 .welcome-signup-btn:active {
     background-color: var(--clicked_color);
->>>>>>> 6f48880e7d2f43fb1deadb3953668d8e742e7232
 }
 
-<<<<<<< HEAD
-=======
 .showNavDropdown {
     display: none;
 }
@@ -233,16 +192,10 @@ nav .right-nav {
 
 
 
->>>>>>> e69e7f606a89490358d3b7f2122abdc331393194
 /* Welcome Page */
 .welcome {
-<<<<<<< HEAD
-    height: calc(100vh - 60px);
-    padding: 0px 72px 0px 72px;
-=======
     height: calc(100vh - 70px);
     padding: 0px 81px;
->>>>>>> 6f48880e7d2f43fb1deadb3953668d8e742e7232
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -262,9 +215,6 @@ nav .right-nav {
     padding-right: 20px;
 }
 
-<<<<<<< HEAD
-.welcome-top h2 {
-=======
 .welcome-top .tired {
     font-size: 48px;
     font-weight: 600;
@@ -273,26 +223,15 @@ nav .right-nav {
 }
 
 .welcome-top .tired2 {
-<<<<<<< HEAD
->>>>>>> 6f48880e7d2f43fb1deadb3953668d8e742e7232
-    font-size: 24px;
-=======
     font-size: 20px;
->>>>>>> e69e7f606a89490358d3b7f2122abdc331393194
     font-weight: 500;
     line-height: 27px;
     color: #333333;
     margin: 16px 0px 50px 0px;
 }
 
-<<<<<<< HEAD
-.welcome-top h3 {
-    font-size: 18px;
-    font-weight: 400;
-=======
 .welcome-top-btn {
     display: flex;
->>>>>>> 6f48880e7d2f43fb1deadb3953668d8e742e7232
 }
 
 .welcome-top button {
@@ -321,14 +260,9 @@ nav .right-nav {
 
 
 /* A background image will be used instead */
-<<<<<<< HEAD
-/* .welcome-top-right {
-    width: 50%;
-=======
 .welcome-top-right {
     width: 40%;
     height: 90%;
->>>>>>> e69e7f606a89490358d3b7f2122abdc331393194
     display: flex;
     justify-content: center;
     align-items: center;
@@ -336,17 +270,9 @@ nav .right-nav {
 }
 
 .welcome-top-right-pics {
-<<<<<<< HEAD
-    width: 644px;
-    height: 511px;
-    background-color: #EEF1F4;
-    border: 3px solid #667080;
-} */
-=======
     width: 499px;
     height: 704px;
 }
->>>>>>> e69e7f606a89490358d3b7f2122abdc331393194
 
 .welcome-bottom {
     width: 100%;
@@ -395,15 +321,6 @@ nav .right-nav {
     height: 97px;
 }
 
-<<<<<<< HEAD
-.after-welcome {
-    margin: 10px 72px 0px 72px;
-    border-bottom: 1px solid #5D5D5D;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    transform: rotate(-0.35deg);
-=======
 /* Cookies */
 
 .cookies-back {
@@ -673,11 +590,7 @@ nav .right-nav {
     font-size: 16px;
     line-height: 22px;
     padding-bottom: 28px;
-<<<<<<< HEAD
->>>>>>> 6f48880e7d2f43fb1deadb3953668d8e742e7232
-=======
     width: 92%;
->>>>>>> e69e7f606a89490358d3b7f2122abdc331393194
 }
 
 /* Welcome Continued */
@@ -699,25 +612,17 @@ nav .right-nav {
     margin-bottom: 104px;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-.welcome-section h2 {
-=======
-.welcome-section article {
-=======
 /* .welcome-section article {
->>>>>>> a71d6d8d43c34af5463506b0faf0fd1199eae0b6
     width: 47%;
 } */
 
 .welcome-sect-head {
->>>>>>> e69e7f606a89490358d3b7f2122abdc331393194
     font-size: 24px;
     font-weight: 600;
     line-height: 33px;
 }
 
-.welcome-section h3 {
+.welcome-sect-body {
     font-size: 20px;
     font-weight: 400;
     line-height: 27px;
@@ -869,7 +774,7 @@ nav .right-nav {
     color: var(--main_color)
 }
 
-.try-debtor h4 {
+.try-debtor p {
     font-size: 20px;
     font-weight: 400;
     line-height: 27px;
@@ -893,21 +798,12 @@ nav .right-nav {
     cursor: pointer;
 }
 
-<<<<<<< HEAD
-.before-faq {
-    border-bottom: 1px solid #5D5D5D;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    transform: rotate(-0.16deg);
-=======
 .try-debtor button:hover {
     background-color: var(--hover_color);
 }
 
 .try-debtor button:active {
     background-color: var(--clicked_color);
->>>>>>> 6f48880e7d2f43fb1deadb3953668d8e742e7232
 }
 
 /* FAQ */
@@ -929,7 +825,7 @@ nav .right-nav {
     margin: 0;
 }
 
-.faq-header h3 {
+.faq-header p {
     font-size: 20px;
     font-weight: 400;
     line-height: 27px;
@@ -991,7 +887,7 @@ nav .right-nav {
     align-items: center;
 }
 
-.faq-bottom h3 {
+.faq-question-head {
     font-size: 20px;
     font-weight: 400;
     line-height: 30px;
@@ -1000,7 +896,7 @@ nav .right-nav {
     margin-right: 20px;
 }
 
-.faq-bottom h4 {
+.faq-answer-body {
     font-size: 18px;
     font-weight: 400;
     color: #333333;
@@ -1010,19 +906,9 @@ nav .right-nav {
     text-align: start;
 }
 
-/* Footer */
+/* FOOTER STARTS HERE */
 footer {
     width: 100%;
-<<<<<<< HEAD
-    height: 359px;
-    border-radius: 8px;
-    background-color: #F8F8F8;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 57px 126px 10px 126px;
-    color: #292D32;
-=======
     height: 438px;
     background-color: var(--footer_color);
     display: flex;
@@ -1030,7 +916,6 @@ footer {
     justify-content: space-between;
     padding: 57px 124px 10px 124px;
     color: var(--white_color);
->>>>>>> 6f48880e7d2f43fb1deadb3953668d8e742e7232
 }
 
 .footer-top {
@@ -1045,35 +930,18 @@ footer {
     width: 220px;
 }
 
-<<<<<<< HEAD
-.footer-top-header h3 {
-    font-size: 28px;
-    font-weight: 600;
-    line-height: 42px;
-    color: #292929;
-    margin: 0;
-    margin-bottom: 15px;
-=======
 .footer-logo {
     height: 50px;
->>>>>>> 6f48880e7d2f43fb1deadb3953668d8e742e7232
 }
 
 .footer-top-header h4 {
     font-size: 24px;
     font-weight: 500;
-    line-height: 36px;
+    line-height: 33px;
     margin: 0;
-<<<<<<< HEAD
-    margin-bottom: 25px;
-=======
     height: 50px;
-<<<<<<< HEAD
->>>>>>> 6f48880e7d2f43fb1deadb3953668d8e742e7232
-=======
     display: flex;
     align-items: center;
->>>>>>> e69e7f606a89490358d3b7f2122abdc331393194
 }
 
 .footer-links {
@@ -1085,14 +953,10 @@ footer {
 .footer-links a,
 .footer-links p {
     text-decoration: none;
-<<<<<<< HEAD
-    color: #292D32;
-=======
     color: var(--white_color);
->>>>>>> 6f48880e7d2f43fb1deadb3953668d8e742e7232
     font-size: 18px;
     font-weight: 400;
-    line-height: 27px;
+    line-height: 25px;
     margin: 0;
     margin-bottom: 8px;
 }
@@ -1105,9 +969,10 @@ footer {
 .copyright {
     display: flex;
     align-items: center;
+    padding-left: 6px;
 }
 
-.copyright h5 {
+.copyright .footer-small-text {
     font-size: 14px;
     font-weight: 400;
     line-height: 21px;
@@ -1125,7 +990,7 @@ footer {
     align-items: center;
 }
 
-.socials h5 {
+.socials .footer-small-text {
     font-size: 14px;
     font-weight: 400;
     line-height: 21px;
@@ -1135,8 +1000,6 @@ footer {
 
 .socials img {
     margin-right: 18.67px;
-<<<<<<< HEAD
-=======
 }
 
 /* FOOTER ENDS HERE */
@@ -1479,5 +1342,4 @@ footer {
     .socials img {
         margin-right: 10px;
     }
->>>>>>> e69e7f606a89490358d3b7f2122abdc331393194
 }
