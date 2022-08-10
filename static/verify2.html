@@ -42,11 +42,11 @@
                 <input type="text" name="otp" id="otp" class="otp" maxlength="1">
             </div>
             <div class="timer">
-                <p class="time-text">Code expires in <span>: 00:59</span></p>
+                <p class="time-text">Code expires in<span id="countdown-timer">: 00:59</span></p>
             </div>
             <!-- Change destination of verify button -->
             <button id="verify-btn" class="verify-btn" onclick="submit()">Verify</button>
-            <p class="resend">Didn't get the code? <a href="#">Resend Code</a></p>
+            <p class="resend">Didn't get the code? <a href="#" onclick="resend()">Resend Code</a></p>
         </div>
     </main>
 </body>

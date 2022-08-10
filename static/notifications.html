@@ -1,3 +1,88 @@
-<!--Notification-->
-<!--Your code goes here
- Delete this when you start working-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/notification.css" />
+    <script defer src="./js/notification.js"></script>
+    <title>Notifications</title>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="./img/new-logo.svg" alt="">           
+        </div>
+        <div class="icons">
+           <a href="edit-profile.html"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.1205 13.53C12.1005 13.53 12.0705 13.53 12.0505 13.53C12.0205 13.53 11.9805 13.53 11.9505 13.53C9.68047 13.46 7.98047 11.69 7.98047 9.51001C7.98047 7.29001 9.79047 5.48001 12.0105 5.48001C14.2305 5.48001 16.0405 7.29001 16.0405 9.51001C16.0305 11.7 14.3205 13.46 12.1505 13.53C12.1305 13.53 12.1305 13.53 12.1205 13.53ZM12.0005 6.97001C10.6005 6.97001 9.47047 8.11001 9.47047 9.50001C9.47047 10.87 10.5405 11.98 11.9005 12.03C11.9305 12.02 12.0305 12.02 12.1305 12.03C13.4705 11.96 14.5205 10.86 14.5305 9.50001C14.5305 8.11001 13.4005 6.97001 12.0005 6.97001Z" fill="#3380CC"/>
+                <path d="M12.0008 22.75C9.31081 22.75 6.74081 21.75 4.75081 19.93C4.57081 19.77 4.49081 19.53 4.51081 19.3C4.64081 18.11 5.38081 17 6.61081 16.18C9.59081 14.2 14.4208 14.2 17.3908 16.18C18.6208 17.01 19.3608 18.11 19.4908 19.3C19.5208 19.54 19.4308 19.77 19.2508 19.93C17.2608 21.75 14.6908 22.75 12.0008 22.75ZM6.08081 19.1C7.74081 20.49 9.83081 21.25 12.0008 21.25C14.1708 21.25 16.2608 20.49 17.9208 19.1C17.7408 18.49 17.2608 17.9 16.5508 17.42C14.0908 15.78 9.92081 15.78 7.44081 17.42C6.73081 17.9 6.26081 18.49 6.08081 19.1Z" fill="#3380CC"/>
+                <path d="M12 22.75C6.07 22.75 1.25 17.93 1.25 12C1.25 6.07 6.07 1.25 12 1.25C17.93 1.25 22.75 6.07 22.75 12C22.75 17.93 17.93 22.75 12 22.75ZM12 2.75C6.9 2.75 2.75 6.9 2.75 12C2.75 17.1 6.9 21.25 12 21.25C17.1 21.25 21.25 17.1 21.25 12C21.25 6.9 17.1 2.75 12 2.75Z" fill="#3380CC"/>
+                </svg></a>
+                <a href="notifications.html"><svg class="notif-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="24" height="24" fill="#0855A2"/>
+                    <path d="M12.0199 20.53C9.68987 20.53 7.35987 20.16 5.14987 19.42C4.30987 19.13 3.66987 18.54 3.38987 17.77C3.09987 17 3.19987 16.15 3.65987 15.39L4.80987 13.48C5.04987 13.08 5.26987 12.28 5.26987 11.81V8.92001C5.26987 5.20001 8.29987 2.17001 12.0199 2.17001C15.7399 2.17001 18.7699 5.20001 18.7699 8.92001V11.81C18.7699 12.27 18.9899 13.08 19.2299 13.49L20.3699 15.39C20.7999 16.11 20.8799 16.98 20.5899 17.77C20.2999 18.56 19.6699 19.16 18.8799 19.42C16.6799 20.16 14.3499 20.53 12.0199 20.53ZM12.0199 3.67001C9.12987 3.67001 6.76987 6.02001 6.76987 8.92001V11.81C6.76987 12.54 6.46987 13.62 6.09987 14.25L4.94987 16.16C4.72987 16.53 4.66987 16.92 4.79987 17.25C4.91987 17.59 5.21987 17.85 5.62987 17.99C9.80987 19.39 14.2399 19.39 18.4199 17.99C18.7799 17.87 19.0599 17.6 19.1899 17.24C19.3199 16.88 19.2899 16.49 19.0899 16.16L17.9399 14.25C17.5599 13.6 17.2699 12.53 17.2699 11.8V8.92001C17.2699 6.02001 14.9199 3.67001 12.0199 3.67001Z" fill="#F8F8F8"/>
+                    <path d="M13.8806 3.93999C13.8106 3.93999 13.7406 3.92999 13.6706 3.90999C13.3806 3.82999 13.1006 3.76999 12.8306 3.72999C11.9806 3.61999 11.1606 3.67999 10.3906 3.90999C10.1106 3.99999 9.8106 3.90999 9.6206 3.69999C9.4306 3.48999 9.3706 3.18999 9.4806 2.91999C9.8906 1.86999 10.8906 1.17999 12.0306 1.17999C13.1706 1.17999 14.1706 1.85999 14.5806 2.91999C14.6806 3.18999 14.6306 3.48999 14.4406 3.69999C14.2906 3.85999 14.0806 3.93999 13.8806 3.93999Z" fill="#F8F8F8"/>
+                    <path d="M12.0195 22.81C11.0295 22.81 10.0695 22.41 9.36953 21.71C8.66953 21.01 8.26953 20.05 8.26953 19.06H9.76953C9.76953 19.65 10.0095 20.23 10.4295 20.65C10.8495 21.07 11.4295 21.31 12.0195 21.31C13.2595 21.31 14.2695 20.3 14.2695 19.06H15.7695C15.7695 21.13 14.0895 22.81 12.0195 22.81Z" fill="#F8F8F8"/>
+                    </svg>  </a>                                
+        </div>
+    </nav>
+    <main>
+        <div class="notif">
+            <h5>Notifications</h5>
+            <p>Mark all as read</p>
+        </div>
+        <p>New</p>
+        <div id="new-notif">
+<div class="new">
+    <img src="./img/gbagada-avi.svg" alt="Gbagada School">
+    <div class = "info"> <p><b>Gbagada secondary school</b> commented on your post</p>
+    <p><small> 2 hours ago </small></p>  </div>
+</div>
+
+<div class="new">
+    <img src="./img/debtor-avi.svg" alt="Debtor">
+    <div class = "info"> <p><b>Mrs Eka Mary</b> contended to your post</p>
+    <p><small> 3 hours ago </small></p>  </div>
+</div>
+
+<div class="new">
+    <img src="./img/mayflower-avi.svg" alt="Mayflower girls School">
+    <div class = "info"> <p><b>Mayflower secondary school</b> commented on your post</p>
+    <p><small> 5 hours ago </small></p>  </div>
+</div>
+
+<div class="new">
+    <img src="./img/asolo-avi.svg" alt="Gbagada School">
+    <div class = "info"> <p><b>Asolo secondary school</b> and 2 others commented on your post</p>
+    <p><small> 6 hours ago </small></p>  </div>
+</div>
+
+<!--Earlier-->
+<div class="new">
+    <img src="./img/gbagada-avi.svg" alt="Gbagada School">
+    <div class = "info"> <p><b>Gbagada secondary school</b> commented on your post</p>
+    <p><small> 2 hours ago </small></p>  </div>
+</div>
+
+<div class="new">
+    <img src="./img/debtor-avi.svg" alt="Debtor">
+    <div class = "info"> <p><b>Mrs Eka Mary</b> contended to your post</p>
+    <p><small> 3 hours ago </small></p>  </div>
+</div>
+
+<div class="new">
+    <img src="./img/mayflower-avi.svg" alt="Mayflower girls School">
+    <div class = "info"> <p><b>Mayflower secondary school</b> commented on your post</p>
+    <p><small> 5 hours ago </small></p>  </div>
+</div>
+
+<div class="new">
+    <img src="./img/asolo-avi.svg" alt="Gbagada School">
+    <div class = "info"> <p><b>Asolo secondary school</b> and 2 others commented on your post</p>
+    <p><small> 6 hours ago </small></p>  </div>
+</div>
+        </div>
+    </main>
+</body>
+</html>
