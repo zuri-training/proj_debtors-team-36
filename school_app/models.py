@@ -16,12 +16,12 @@ from django.contrib.auth.models import AbstractUser
 
 class School(AbstractUser):
     name = models.CharField(max_length=200, null=True)
-    email = models.EmailField(unique=True, null=True)
+    username = models.EmailField(unique=True)
     bio = models.TextField(null=True)
 
     avatar = models.ImageField(null=True, default="")
 
-    USERNAME_FIELD = 'email'
+    USERNAME_FIELD = 'username'
     REQUIRED_FIELDS = []
 
 
