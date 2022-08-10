@@ -4,6 +4,8 @@
 Full name: John Blessing Awa
 Track: Fullstack
 Team: 36
+*(NB: They're clickable)*
+
 
 ##Contributions
  The links below lead to my contributions in the project phase.  <br>
