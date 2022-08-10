@@ -20,6 +20,34 @@ body {
     --main-color: #0855A2;
     --font-color: #fefefe
   }
+
+  
+  /* Custom Scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--main_color);
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--hover_color);
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
 /* Side nav */
 aside {
     height: 100vh;
@@ -152,16 +180,52 @@ main {
 }
 
 /*Page Contents*/
-.headn{
+.cover{
+    padding: 0px 0px 0px 20px;
+    width: auto;
+    margin-right: 100px;
+}
+.title {
+    width: 100%;
     display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0px;
-gap: 23px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 10px;
+    border: none; 
+    font-size: 20px;
+    font: poppins;
+    line-height: 32px;
+    font-weight: 500;
+}
+.details {
+    width: 100%- 332px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    border: none; 
+    margin-top: 10px;
+    margin-bottom: 10px;
 
-position: absolute;
-width: 944px;
-height: 60px;
-left: 378px;
-top: 276
+}
+.heading{
+    width: 33.3%;
+    flex: 33.3%;
+    flex-wrap: wrap;
+    border: none; 
+    font-size: 20px;
+    font: poppins;
+    line-height: 32px;
+    font-weight: 500;
+}
+.input{
+    display: inline-block;
+    width: 60%;
+    border: none;
+    outline: none;
+    color: var(--main-color);
+ }
+
+ .details a {
+    text-decoration: none;
+    color: #0000D5;
 }

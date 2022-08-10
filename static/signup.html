@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/signup.css">
     <script src="./js/lga.js"></script>
+    <script src="./js/signup.js"></script>
     <title>Sign Up</title>
 </head>
 <body>
@@ -54,16 +55,16 @@
                 
                 <form action="./verify1.html">
                    <label for="name">Name of School</label><br>
-                   <input type="text" name="" id="" required><br><br>
+                   <input type="text" name="name of school" id="name of school" required><br><br>
      
                    <label for="email">School Email Address</label><br>
-                   <input type="email" name="" id="" required><br><br><br>
+                   <input type="email" name="school email" id="school email" required><br><br><br>
      
                    <label for="state">State</label>
                    <select onchange="toggleLGA(this);" class="state"
                    name="state" id="states" class="form-control" required>
                       <option value="">Select...</option>
-                      <option value="Abuja FCT">Abuja FCT</option>
+                      <option value="Abuja">Abuja</option>
                       <option value="Abia">Abia</option>
                       <option value="Adamawa">Adamawa</option>
                       <option value="Akwa Ibom">Akwa Ibom</option>
@@ -121,10 +122,12 @@
                    </select><br><br>
      
                    <label for="password">Password</label><br>
-                   <input type="password" name="" id="" required><br><br>
+                   <input type="password" name="password" id="password" minlength="8" maxlength="30"
+                   pattern="" title="" required><br><br>
      
                    <label for="confirm password">Confirm Password</label><br>
-                   <input type="password" name="" id="" required><br>
+                   <input type="password" name="password" id="password" minlength="8" maxlength="30"
+                   pattern="" title="" required><br>
      
                    <input type="checkbox" name="checkbox" id="" required>
                    <label for="checkbox">I accept terms and condition</label>
