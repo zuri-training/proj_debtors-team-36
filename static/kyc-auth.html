@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="./css/kyc-auth.css">
+     <script defer src="./js/kyc-auth.js"></script>
+     <title>Authentication</title>
+</head>
+
+<body>
+     <main>
+          <!-- <h1>KYC Authentication</h1> -->
+          <div class="loading">
+               <div class="one">
+                    <img src="./img/verify-check.svg" alt="">
+               </div>
+               <p class="loading-text">Verification</p>
+               <div class="line"></div>
+               <div class="two">
+                    <div class="one">
+                         <img src="./img/verify-check.svg" alt="">
+                    </div>
+               </div>
+               <p class="loading-text">Verify Email</p>
+               <div class="line"></div>
+               <div class="three">
+                    <div class="one">
+                         <img src="./img/verify-check.svg" alt="">
+                    </div>
+               </div>
+               <p class="loading-text">Email Verification Successful</p>
+               <div class="line"></div>
+               <div class="four">4</div>
+               <p class="loading-text">Authentication</p>
+          </div>
+          <div class="cac">
+               <div class="title">
+                    <h2>CAC Document</h2>
+                    <p class="document">Please upload the document you were issued when your school was registered
+                    </p>
+               </div>
+               <div class="upload" id="cac">
+                    <div class="before-upload" id="before_cac_upload">
+                         <img src=" " alt="">
+                         <p id="cac_text" class="drag">Drag & drop your file here</p>
+                         <span class="or">OR</span>
+                         <button class="browse" onclick="importCac()">Browse file</button>
+                    </div>
+               </div>
+          </div>
+          <div class="school_id" id="school_id">
+               <div class="title">
+                    <h2>School ID</h2>
+                    <p class="document">Please upload a copy of your identity with a clear photo to proof
+                         the document holder</p>
+               </div>
+               <div class="upload" id="id">
+                    <div class="before-upload" id="before_id_upload">
+                         <img src="" alt="">
+                         <p id="id_text" class="drag">Drag & drop your file here</p>
+                         <span class="or">OR</span>
+                         <button class="browse" onclick="importID()">Browse file</button>
+                    </div>
+               </div>
+          </div>
+          <div class="valid">
+               <label for="validate">
+                    <input type="checkbox" name="validate" id="validate" value="validate">
+                    <span id="valid" onclick="marked()">
+                         <img src="/static/img/kyc-checkmark.svg" alt="">
+                    </span>
+                    <!-- I confirm ID is valid until the expiry date and is in color. -->
+               </label>
+               <p>I confirm ID is valid until the expiry date and is in color.</p>
+          </div>
+          <div class="btn">
+               <button class="enter" onclick="uploadFile()">Upload</button>
+          </div>
+     </main>
+</body>
+
+</html>

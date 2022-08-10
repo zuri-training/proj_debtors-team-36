@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="./js/verify2.js"></script>
+    <link rel="stylesheet" href="./css/verify2.css">
+    <title>Verification</title>
+</head>
+
+<body>
+    <main>
+        <div class="loading">
+            <div class="one">
+                <img src="./img/verify-check.svg" alt="">
+            </div>
+            <p class="loading-text">Verification</p>
+            <div class="line"></div>
+            <div class="two">2</div>
+            <p class="loading-text">Verify Email</p>
+            <div class="line"></div>
+            <div class="three">3</div>
+            <p class="loading-text">Email Verification Successful</p>
+            <div class="line"></div>
+            <div class="four">4</div>
+            <p class="loading-text">Authentication</p>
+        </div>
+        <div class="verify">
+            <h1>Verify Your Email</h1>
+            <p class="check">Please Check your email</p>
+            <p class="enter">Enter the six digits verification code sent to Jones23@gmail.com to complete your
+                account creation.</p>
+            <!-- This is the OTP code the user inputs. Must change from div -->
+            <div class="code">
+                <input type="text" name="otp" id="otp" class="otp" maxlength="1">
+                <input type="text" name="otp" id="otp" class="otp" maxlength="1">
+                <input type="text" name="otp" id="otp" class="otp" maxlength="1">
+                <input type="text" name="otp" id="otp" class="otp" maxlength="1">
+                <input type="text" name="otp" id="otp" class="otp" maxlength="1">
+                <input type="text" name="otp" id="otp" class="otp" maxlength="1">
+            </div>
+            <div class="timer">
+                <p class="time-text">Code expires in<span id="countdown-timer">: 00:59</span></p>
+            </div>
+            <!-- Change destination of verify button -->
+            <button id="verify-btn" class="verify-btn" onclick="submit()">Verify</button>
+            <p class="resend">Didn't get the code? <a href="#" onclick="resend()">Resend Code</a></p>
+        </div>
+    </main>
+</body>
+
+</html>
+
+<!-- 
+    onclick="location.href='verification-sucess.html'">Verify</button>
+ -->

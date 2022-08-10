@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+:root {
+  --primary-color1: #0A66C2;
+  --text-color1: #141414;
+  --text-color2: #1f1f1f;
+  --text-color3: #ffffff;
+  --h1-color: #292929;
+  --p-color: #7e7e7e;
+
+  --main_color: #0A66C2;
+    --text_color: #292929;
+    --white_color: #ffffff;
+    --hover_color: #3380cc;
+    --clicked_color: #074481;
+    --disabled_color: #a8a8a8;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Poppins", sans-serif;
+  background-color: #fefefe;
+  padding: 13px 72px 132px;
+  user-select: none;
+  position: absolute;
+}
+
+/* TOP NAVIGATION BAR STARTS HERE*/
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 48px;
+  padding: 40px 72px 0px 72px;
+  margin-bottom: 20px;
+}
+
+nav .left-nav {
+  display: flex;
+  align-items: center;
+}
+
+nav .middle-nav {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  /* width: 378px; */
+  height: 27px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 27px;
+}
+
+nav .middle-nav a {
+  text-decoration: none;
+  color: var(--text_color);
+  margin-right: 32px;
+}
+
+nav .middle-nav a:active {
+  color: var(--main_color);
+}
+
+nav a.active {
+  border-bottom: 4px solid var(--main_color);
+  border-radius: 6px;
+}
+
+nav .right-nav {
+  width: 201px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.welcome-login-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 108px;
+  height: 48px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  padding: 8px 16px;
+  border: 1.5px solid var(--main_color);
+  border-radius: 8px;
+  color: var(--main_color);
+  cursor: pointer;
+  text-decoration: none;
+  background-color: var(--white_color);
+}
+
+.welcome-login-btn:hover {
+  border: 1.5px solid var(--hover_color);
+  color: var(--hover_color);
+}
+
+.welcome-login-btn:active {
+  border: 1.5px solid var(--clicked_color);
+  color: var(--clicked_color);
+}
+
+.welcome-signup-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 108px;
+  height: 48px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  color: var(--white_color);
+  cursor: pointer;
+  text-decoration: none;
+  background-color: var(--main_color);
+}
+
+.welcome-signup-btn:hover {
+  background-color: var(--hover_color);
+}
+
+.welcome-signup-btn:active {
+  background-color: var(--clicked_color);
+}
+
+/* TOP NAVIGATION BAR ENDS HERE */
+
+main {
+  display: flex;
+  z-index: 10000;
+}
+main .error {
+  flex: 1 1 45.2777778%;
+}
+main .image {
+  height: 65.9130335%;
+  width: 50.9931183%;
+  left: 664px;
+  top: 104px;
+  border-radius: 0px;
+  margin-top: 54.5px;
+  margin-left: 2.606rem;
+  flex: 1 1 54.7222222%;
+}
+
+main .error h1 {
+  font-size: 58px;
+  font-weight: 600;
+  line-height: 87px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-top: 63.5px;
+  color: var(--h1-color);
+  padding: 0;
+}
+
+main .error h3 {
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 60px;
+  margin-top: 16px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #3d3d3d;
+}
+
+main .error p {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--p-color);
+  height: 60px;
+  width: 580px;
+  left: 72px;
+  top: 302px;
+  margin-top: 20px;
+}
+
+main .error button {
+  background-color: var(--primary-color1);
+  border-radius: 8px;
+  border: none;
+  width: 438px;
+  height: 108px;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 60px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #ffffff;
+  margin-top: 40px;
+  padding: 24px 40px;
+  cursor: pointer;
+}
+
+.lines .line1 {
+  position: absolute;
+  width: 84.3652778%;
+  height: 80.5791016%;
+  left: 66.74px;
+  top: 62.39px;
+  z-index: -1;
+}
+
+.lines .line2 {
+  position: absolute;
+  width: 84.3652778%;
+  height: 80.5791016%;
+  left: 85px;
+  top: 134.74px;
+  z-index: -1;
+}
+
+main .erropic {
+  z-index: 100;
+}

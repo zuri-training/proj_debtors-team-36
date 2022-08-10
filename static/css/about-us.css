@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --main_color: #0A66C2;
+    --text_color: #292929;
+    --white_color: #ffffff;
+    --hover_color: #3380cc;
+    --clicked_color: #074481;
+    --disabled_color: #a8a8a8;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Manrope', sans-serif;
+    background-color: var(--white_color);
+    color: var(--text_color);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* TOP NAVIGATION BAR STARTS HERE*/
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 48px;
+    padding: 40px 72px 0px 72px;
+    margin-bottom: 20px;
+}
+
+nav .left-nav {
+    display: flex;
+    align-items: center;
+}
+
+nav .middle-nav {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    /* width: 378px; */
+    height: 27px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 27px;
+}
+
+nav .middle-nav a {
+    text-decoration: none;
+    color: var(--text_color);
+    margin-right: 32px;
+}
+
+nav .middle-nav a:active {
+    color: var(--main_color);
+}
+
+nav a.active {
+    border-bottom: 4px solid var(--main_color);
+    border-radius: 6px;
+}
+
+nav .right-nav {
+    width: 201px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.welcome-login-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 108px;
+    height: 48px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    padding: 8px 16px;
+    border: 1.5px solid var(--main_color);
+    border-radius: 8px;
+    color: var(--main_color);
+    cursor: pointer;
+    text-decoration: none;
+    background-color: var(--white_color);
+}
+
+.welcome-login-btn:hover {
+    border: 1.5px solid var(--hover_color);
+    color: var(--hover_color);
+}
+
+.welcome-login-btn:active {
+    border: 1.5px solid var(--clicked_color);
+    color: var(--clicked_color);
+}
+
+.welcome-signup-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 108px;
+    height: 48px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    color: var(--white_color);
+    cursor: pointer;
+    text-decoration: none;
+    background-color: var(--main_color);
+}
+
+.welcome-signup-btn:hover {
+    background-color: var(--hover_color);
+}
+
+.welcome-signup-btn:active {
+    background-color: var(--clicked_color);
+}
+
+/* NAVBAR ENDS HERE */
+
+/* Company Service Section*/
+.company-service-1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 100%;
+    margin-top: 10%;
+    
+
+}
+.article1 {
+    text-align: center;
+}
+
+.articlesub {
+    margin-top: 5px;
+}
+
+.article2 {
+    text-align: center;
+}
+.img1 {
+    position: absolute;
+    z-index: -1;
+}
+
+.box1 {
+    display: block;
+} 
+.company-service-2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 100%;
+    margin-top: 10%;
+
+}
+.box2 {
+    display: block;
+}
+.img2 {
+    position: absolute;
+    z-index: -1;
+}
+.servicebutton1 {
+    width: 200px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 27px;
+    padding: 8px 16px;
+    border: 1.5px solid #7E7E7E;
+    border-radius: 8px;
+    color: #ffffff;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: #0000D4;
+
+}
+.servicebutton1 a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.servicebutton1 a:hover{
+    border-bottom: 4px solid #ffffff;
+    border-radius: 6px;
+
+}
+
+ .vector1 {
+    position: absolute;
+    z-index: -1;
+    
+
+} 
+
+/* Meeting The Team Section */
+
+.design-team{
+    position: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-betw;
+    height: 100%;
+    width: 100%; 
+   
+}
+
+.article3 {
+    text-align: center;
+}
+.developers-team{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly; 
+    height: 100%;
+    width: 100%;
+}
+
+/* Registered schools section */
+/* .registered-schools {
+    display: block;
+}
+
+.vector2{
+    position: absolute;
+    z-index: -1;
+} */
+.school-row-1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 100%;
+
+}
+.school-row-2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 100%;
+
+}
+
+
+/* FOOTER STARTS HERE */
+footer {
+    width: 100%;
+    height: 438px;
+    background-color: var(--main_color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 57px 124px 10px 124px;
+    color: var(--white_color);
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footer-top-header {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-logo {
+    height: 50px;
+}
+
+.footer-top-header h4 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 33px;
+    margin: 0;
+    height: 50px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.footer-links a,
+.footer-links p {
+    text-decoration: none;
+    color: var(--white_color);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+    margin: 0;
+    margin-bottom: 8px;
+}
+
+.footer-bottom {
+    display: flex;
+    height: 40px;
+}
+
+.copyright {
+    display: flex;
+    align-items: center;
+    padding-left: 6px;
+}
+
+.copyright .footer-small-text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    margin: 0;
+    margin-left: 6.5px;
+}
+
+.footer-line {
+    margin: 0;
+    margin: 0px 36px 0px 32px;
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+}
+
+.socials .footer-small-text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    margin: 0;
+    margin-right: 14.6px;
+}
+
+.socials svg {
+    margin-right: 18.67px;
+}
+
+/* FOOTER ENDS HERE */

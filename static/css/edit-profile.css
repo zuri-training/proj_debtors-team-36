@@ -1,0 +1,507 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --main_color: #0A66C2;
+    --text_color: #292929;
+    --white_color: #ffffff;
+    --hover_color: #3380cc;
+    --clicked_color: #074481;
+    --disabled_color: #a8a8a8;
+    --side_navbar_width: 332px;
+    --search_bar_color: #D2D2D2;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Manrope', sans-serif;
+    background-color: var(--white_color);
+    color: var(--text_color);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--main_color);
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--hover_color);
+}
+
+/* SIDE NAVIGATION BAR STARTS HERE */
+/* Side nav */
+/* Copy this code to implement the side nav styling */
+
+aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* width: var(--side_navbar_width); */
+    /* background-color: red; */
+    position: fixed;
+}
+
+.aside-container {
+    height: 100vh;
+    width: var(--side_navbar_width);
+    min-width: var(--side_navbar_width);
+    background-color: var(--main_color);
+    color: var(--white_color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* fixes the side bar and prevents scrolling. Set the margin-left property of the screen by its right to 332px */
+}
+
+
+.aside-top {
+    width: 100%;
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-icon {
+    width: 100%;
+    margin-bottom: 56px;
+    padding-left: 48px;
+}
+
+.top-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.top-links a {
+    text-decoration: none;
+    color: var(--white_color);
+    width: 100%;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    padding: 16px 48px;
+}
+
+.top-links a.active {
+    background-color: var(--white_color);
+    color: var(--text_color);
+}
+
+/* Changes the color of the active svg */
+.top-links a.active svg {
+    filter: invert(100%) sepia(100%) saturate(8%) hue-rotate(118deg) brightness(101%) contrast(104%);
+}
+
+.top-links a svg {
+    margin-right: 34px;
+}
+
+.aside-bottom {
+    width: 100%;
+    padding-bottom: 48px;
+}
+
+.aside-bottom a {
+    text-decoration: none;
+    color: var(--white_color);
+    width: 100%;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    padding: 16px 48px;
+}
+
+.aside-bottom a svg {
+    margin-right: 34px;
+}
+
+.hide {
+    display: none;
+}
+
+/* SIDE NAVIGATION BAR ENDS HERE */
+
+
+/* Edit page */
+main {
+    width: calc(100vw - 332px);
+    padding: 80px 120px 148px 48px;
+    overflow-y: auto;
+    margin-left: 332px;
+    /* notify if changes are made */
+}
+
+/* SEARCH BAR STARTS HERE */
+/* Search bar */
+/* Set the width of your main content to calc(100vw - 332px) to prevent overflow. Refer to my code for main tag above */
+.search {
+    display: flex;
+    width: 100%;
+    height: 56px;
+    align-items: center;
+}
+
+.small-screen {
+    display: none;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    width: 88%;
+    height: 100%;
+    padding: 16px;
+    border: 2px solid var(--search_bar_color);
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.search-text {
+    height: 40px;
+    width: 100%;
+    margin-left: 19px;
+    border: none;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.search-text:focus {
+    outline: none;
+}
+
+.search-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: var(--white_color);
+    cursor: pointer;
+}
+
+/* SEARCH BAR ENDS HERE */
+
+
+/* Page content */
+
+h1 {
+    margin: 32px 0px;
+    font-size: 24px;
+    line-height: 33px;
+    font-weight: 600;
+}
+
+.user-detail {
+    display: flex;
+    align-items: center;
+}
+
+.user-img {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    background-color: #667080;
+}
+
+.user-info {
+    margin-left: 16px;
+}
+
+.user-name {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 36px;
+    color: #242433;
+    margin: 0;
+}
+
+.user-address {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #808080;
+    margin: 0;
+}
+
+.user-btns {
+    margin: 26.58px 0px 32px 0px;
+    height: 40px;
+}
+
+.change-pic {
+    width: 158px;
+    height: 100%;
+    padding: 8px 16px;
+    background-color: var(--main_color);
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--white_color);
+    cursor: pointer;
+}
+
+.change-pic:hover {
+    background-color: var(--hover_color);
+}
+
+.change-pic:active {
+    background-color: var(--clicked_color);
+}
+
+.delete-pic {
+    width: 158px;
+    height: 100%;
+    padding: 8px 16px;
+    color: var(--main_color);
+    border-radius: 8px;
+    border: 1px solid var(--main_color);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    background-color: var(--white_color);
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.delete-pic:hover {
+    border: 1px solid var(--hover_color);
+    color: var(--hover_color);
+}
+
+.delete-pic:hover {
+    border: 1px solid var(--clicked_color);
+    color: var(--clicked_color);
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    color: #242433;
+    margin: 0;
+}
+
+.account-info {
+    margin: 32px 0px 24px 0px;
+}
+
+.user-input {
+    margin-bottom: 32px;
+}
+
+.user-input label {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.user-input input,
+.pswd {
+    margin-top: 8px;
+    width: 569px;
+    height: 56px;
+    border: 2px solid #808080;
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.user-input input:focus,
+.pswd input:focus {
+    outline: none;
+}
+
+.dropdown {
+    display: flex;
+}
+
+.user-input select {
+    margin-top: 8px;
+    width: 276.5px;
+    height: 56px;
+    border: 2px solid #808080;
+    border-radius: 8px;
+    padding: 16px;
+    margin-right: 16px;
+}
+
+.user-input option {
+    height: 50px;
+    margin: 10px 0px;
+    /* background-color: aqua; */
+}
+
+.pwd-change {
+    margin: 32.42px 0px 32px 0px;
+}
+
+.pswd {
+    display: flex;
+    align-items: center;
+}
+
+.pswd input {
+    border: none;
+    height: 50px;
+    flex-grow: 2;
+}
+
+.show-pwd {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    cursor: pointer;
+}
+
+.submit {
+    width: 569px;
+    height: 56px;
+    background-color: var(--main_color);
+    border: none;
+    border-radius: 8px;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--white_color);
+    cursor: pointer;
+}
+
+.submit:hover {
+    background-color: var(--hover_color);
+}
+
+.submit:active {
+    background-color: var(--clicked_color);
+}
+
+@media screen and (max-width: 576px) {
+
+    /* START COPY HERE */
+
+    body {
+        display: flex;
+        justify-content: center;
+    }
+
+    ::-webkit-scrollbar {
+        width: 5px;
+    }
+
+
+    .small-screen {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 56px;
+        margin-bottom: 16px;
+    }
+
+    .search-not {
+        display: none;
+    }
+
+    .search-bar {
+        width: 100%;
+        margin: 0;
+    }
+
+    .showNav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        background-color: var(--white_color);
+        cursor: pointer;
+    }
+
+    aside {
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+        background-color: rgba(0, 0, 0, 0.35);
+    }
+
+    .aside-container {
+        width: 60%;
+    }
+
+    .hideNav {
+        width: 40%;
+        display: flex;
+        align-items: flex-start;
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    .hideNav button {
+        background-color: rgba(230, 213, 213, 0.8);
+        border: none;
+        margin-top: 100px;
+        cursor: pointer;
+    }
+
+    main {
+        width: 95%;
+        margin-left: 0px;
+        /* Remove the margin left applied in your main content for the web view */
+        padding: 48px 16px 10px 16px;
+    }
+
+    /* ADD THE ABOVE STYLES TO YOUR MAIN TAG FOR SCREEN SIZING */
+    /*  STOP COPY HERE */
+
+    h1 {
+        margin: 24px 0px 16px;
+    }
+
+    .user-input input,
+    .pswd {
+        width: 100%;
+    }
+
+    .dropdown {
+        flex-direction: column;
+    }
+
+    .user-input select {
+        width: 100%;
+    }
+
+    .submit {
+        width: 100%;
+    }
+
+}

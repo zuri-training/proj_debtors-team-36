@@ -19,7 +19,7 @@ This is a platform that allows schools in a certain locality to list the directo
 ## About the Project
 
 * My_debtors is a website that allows schools in a certain locality to list the directory of people owing them so as to avoid debtors applying to other schools with pending debts. 
-* This project was created to solve/avoid the problem of students applying to another school in the locality while still having pending or uncleared debts from thier previous school.
+* This project was created to solve/avoid the problem of students applying to another school in the locality while still having pending or uncleared debts from their previous school.
 * This project is solely aimed at schools to help keep the aformentioned problem in check and also allows the students that have posted as debtors to challenge and contend the post.
 
 ## Technologies Used
@@ -39,8 +39,6 @@ This project was created with ![Visual Studio Code](https://img.shields.io/badge
 * __Database__<br/>
         ![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
 
-* __API__<br/>
-        ![DjangoREST](https://img.shields.io/badge/DJANGO-REST-ff1709?style=for-the-badge&logo=django&logoColor=white&color=ff1709&labelColor=gray)
 
 * __Project Management and Version Control__<br/>
         ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
@@ -119,6 +117,8 @@ For team_36 members, follow the following steps to collaborate:
     `git push origin branchName` - This creates the branch remotely and pushes to that branch on the Github
 10. Go to Github and create a new pull request to the main branch. It will then be reviewed and merged into the master.
 
+*If you need to make an update, repeat from no 4 (Skip no 6)*
+
 ## Contributors
 
  __Molokwu Chibuzor__(Team Lead)
@@ -144,10 +144,6 @@ __Aduragbemi Oroja__
 
 __Adelakin Isreal__
 * Github- https://github.com/Ezrahel
-* Track - Backend(Python)
-
-__Lana Alahmar__
-* Github- https://github.com/Lana-Alahmar
 * Track - Backend(Python)
 
 __Omolade Temitope__
@@ -179,12 +175,12 @@ __Taiwo Odeyemi__
 * Track - Product design
 
 __Princess Salami__
-* Github- https://github.com/Durodola
+* Github- https://github.com/DURDOLA
 * Track - Product Design
 
 __Samuel Ogusanya__
 * Github- https://github.com/PsalmogunsGRT
-* Track - Product design
+* Track - Fullstack
 
 __Bilewu Iyinoluwa__
 * Github- https://github.com/iyin0
@@ -198,8 +194,38 @@ __Rita Sylvia__
 * Github- https://github.com/ritasylvia
 * Track - Backend
 
+__Lasaki Taiwo__
+* Github- https://github.com/Tamazing
+* Track - FullStack
+
+__Henry Udeani__
+* Github- https://github.com/Udeani
+* Track- Backend
+
+__Jeremiah Nosakhare__
+* Github- https://github.com/Jeremiahnosakhare
+* Track- Product Design
+
+__Osadere Gideon__
+* Github- https://github.com/OGidos
+* Track- Product Design
+
+__John Amakoh__
+* Github- https://github.com/JohnChizzy
+* Track- Fullstack
+
+__Iniubong Abasi__
+* Github- https://github.com/IniubongJ
+* Track- Product Design
+
 ## Documentation
-A more detailed documentation on the updates and details of this project can be found here - "documentationLinkWhenReady"
+The documentaion that includes details on how the project was built from the backend, prerequisites, installation procedures, etc can be found here - "Documentationlinkwhenready"
+## Design
+The design for this project was done by the product design team on figma. Check out the design [here](https://www.figma.com/file/OnOlNH07Q0By2YOEDJIhi4?node-id=417:2)
+
+
+## Project Documentation
+A more detailed documentation on the updates,features and details of this project can be found [here](https://docs.google.com/document/d/16CPt2fXZ0yxgzU6eVFkCaoYp0vyjdBYsWjMzPmxbdeQ/edit)
 
 ## Acknowledgements
 
