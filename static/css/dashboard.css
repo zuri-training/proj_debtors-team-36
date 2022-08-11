@@ -37,12 +37,11 @@ aside {
     gap: 8px;
     position: absolute;
     width: 332px;
-    height: 1024px;
+    height: 100vh;
     left: 0px;
     top: 0px;
     background-color: var(--main-color);
 
-    justify-content: space-between;
     position: fixed;
     /* fixes the side bar and prevents scrolling. Set the margin-left property of the screen by its right to 332px */
 }
@@ -203,7 +202,7 @@ img {
     align-items: flex-start;
     padding: 0px;
     gap: 8px;
-    width: 44px;
+    width: 100%;
     height: 22px;
     flex: none;
     order: 1;
@@ -264,7 +263,7 @@ img {
     align-items: flex-start;
     padding: 0px;
     gap: 8px;
-    width: 44px;
+    width: 100%;
     height: 22px;
     flex: none;
     order: 1;
@@ -291,7 +290,7 @@ img {
     align-items: flex-start;
     padding: 0px;
     gap: 8px;
-    width: 44px;
+    width: 100%;
     height: 22px;
     flex: none;
     order: 1;
@@ -314,7 +313,6 @@ img {
     flex-grow: 0;
 }
 
-/* Edit page */
 main {
     width: 100%;
     padding: 80px 120px 148px 48px;
@@ -842,7 +840,7 @@ h4 {
     flex-grow: 0;
 }
 
-.tag {
+.btn-tag {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -859,8 +857,18 @@ h4 {
     border-radius: 8px;
 }
 
+.btn-img {
+    background-image: url(../img/user-add.svg);
+    width: 24px;
+    height: 24px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    background: #0A66C2;
+}
+
 .add-btn {
-    width: 116px;
+    width: 140px;
     height: 22px;
     font-family: 'Manrope';
     font-style: normal;
@@ -869,9 +877,11 @@ h4 {
     line-height: 22px;
     display: flex;
     align-items: center;
-    color: black;
+    color: #FEFEFE;
     flex: none;
     order: 1;
     flex-grow: 0;
+    border: none;
+    background: #0855A2;
 
 }
