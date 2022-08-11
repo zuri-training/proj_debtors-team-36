@@ -144,6 +144,59 @@ nav .right-nav {
  
 
 }
+.left-text {
+    display: flex;
+    align-items: flex-start;
+}
+
+.lightsquare {
+    position: absolute;
+    left: 30px;
+    top: 350px;
+    z-index: -1;
+}
+
+.bluesquare {
+    position: absolute;
+    left: 50px;
+    top: 400px;
+    z-index: -1;
+}
+.article3 {
+    text-align: right;
+}
+
+.article3 a {
+    text-decoration: none;
+    color: var(--white_color);
+    font-size: 18px;
+
+}
+
+.article3 button {
+    margin-top: 15px;
+    width: 210px;
+    height: 57px;
+    border-radius: 7px;
+    border: 2px solid var(--main_color);
+    background-color: var(--main_color);
+    font-family: 'Manrope', sans-serif;
+}
+
+.svgcircles {
+    position: absolute;
+    right: 0px;
+    top: 450px;
+
+}
+
+.smallcircle {
+    position: absolute;
+    top: -25px;
+    right: 70px;
+
+}
+
 
 .sub-box {
     position: relative;
@@ -198,6 +251,11 @@ nav .right-nav {
     margin-top: 136px;
 
 }  
+
+.ellipse {
+    position: absolute;
+    top: 490px;
+}
 
 /* SERVICE-BOX 3 BEGINS */
 .service-box3{
