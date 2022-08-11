@@ -117,7 +117,11 @@ For team_36 members, follow the following steps to collaborate:
     `git push origin branchName` - This creates the branch remotely and pushes to that branch on the Github
 10. Go to Github and create a new pull request to the main branch. It will then be reviewed and merged into the master.
 
+
 *If you need to make an update, repeat from no 4 (Skip no 6)*
+=======
+*If you need to make an update, repeat from no 4*
+>>>>>>> main
 
 ## Contributors
 
@@ -194,7 +198,11 @@ __Rita Sylvia__
 * Github- https://github.com/ritasylvia
 * Track - Backend
 
+
 __Lasaki Taiwo__
+=======
+__Taiwo Laskai__
+>>>>>>> main
 * Github- https://github.com/Tamazing
 * Track - FullStack
 
@@ -211,12 +219,18 @@ __Osadere Gideon__
 * Track- Product Design
 
 __John Amakoh__
+
 * Github- https://github.com/JohnChizzy
 * Track- Fullstack
 
 __Iniubong Abasi__
 * Github- https://github.com/IniubongJ
 * Track- Product Design
+=======
+* Github- https://github.com/OGidos
+* Track- Fullstack
+
+>>>>>>> main
 
 ## Documentation
 The documentaion that includes details on how the project was built from the backend, prerequisites, installation procedures, etc can be found here - "Documentationlinkwhenready"

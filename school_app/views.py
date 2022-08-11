@@ -1,4 +1,5 @@
 
+
 #from django.http import HttpResponse
 from django.shortcuts import redirect, render
 from django.contrib.auth.forms import AuthenticationForm
@@ -97,3 +98,8 @@ def debtor_email(request):
     }
     return render(request, 'debtor-email.html', {"page_contents":page_contents})
 
+=======
+from django.shortcuts import render
+
+# Create your views here.
+>>>>>>> main
