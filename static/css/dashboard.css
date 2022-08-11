@@ -582,7 +582,7 @@ a {
 }
 
 h1 {
-    position: absolute;
+    /* position: absolute; */
     width: 56px;
     height: 33px;
     left: 380px;
@@ -839,7 +839,9 @@ h4 {
     order: 0;
     flex-grow: 0;
 }
-
+.feed-btn{
+    position: relative;
+}
 .btn-tag {
     display: flex;
     flex-direction: row;
@@ -847,14 +849,16 @@ h4 {
     align-items: center;
     padding: 0px;
     gap: 4px;
-    /* position: absolute; */
+    position: absolute;
     width: 210px;
     height: 72px;
-    /* left: 1110px; */
-    top: 888px;
+    right: 0;
     background: #0A66C2;
+    /* position: fixed; */
+    right: 200;
     box-shadow: 0px 16px 32px rgba(119, 139, 165, 0.15);
     border-radius: 8px;
+    left: 700px;
 }
 
 .btn-img {
@@ -883,5 +887,5 @@ h4 {
     flex-grow: 0;
     border: none;
     background: #0855A2;
-
+    text-align: center;
 }

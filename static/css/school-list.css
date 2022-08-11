@@ -438,19 +438,10 @@ h5 {
     display: flex;
     align-items: center;
     color: #0C0C0C;
-
-
-
-    /* margin-top: 30px;
-    margin-bottom: 30px;
-    font-size: 24px;
-    font: poppins;
-    line-height: 36px;
-    font-weight: 500;
- */
 }
 .sch-tittle {
-    background: red;
+    position: absolute;
+    top: 120px;
 }
 
 .cover-div {
