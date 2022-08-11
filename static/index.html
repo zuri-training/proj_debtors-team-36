@@ -1,4 +1,4 @@
- views_urls
+views_urls
 
 
 
@@ -15,7 +15,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-views_urls
+    views_urls
 
     <script defer src="{% static './js/top-nav.js' %}"></script>
     <!-- COPY THE SCRIPT ABOVE -->
@@ -28,7 +28,7 @@ views_urls
 
     <!-- <link rel="stylesheet" href="{% static './css/index.css' %}"> -->
     <link rel="stylesheet" href="./css/index.css">
- main
+    main
     <script defer src="./js/top-nav.js"></script>
     <!-- COPY THE SCRIPT ABOVE -->
     <script defer src="./js/index.js"></script>
@@ -46,14 +46,16 @@ views_urls
             <img src="./img/top-nav-app-logo.svg" alt="">
         </div>
         <div class="middle-nav">
-        <a href="{% url 'index' %}">Home</a>
-          <a href="{% url 'about' %}">About Us</a>
-          <a href="faq.html">FAQ</a>
-          <a class="current" href="{% url 'contact' %}">Contact Us</a>
+            <a href="{% url 'index' %}">Home</a>
+            <a href="{% url 'about' %}">About Us</a>
+            <a href="faq.html">FAQ</a>
+            <a class="current" href="{% url 'contact' %}">Contact Us</a>
         </div>
         <div class="right-nav">
-            <a class="" href="{% url 'login' %}"><button onclick="location.href = 'login.html'" class="welcome-login-btn">Login</button></a>
-            <a class="" href="{% url 'signup' %}"><button onclick="location.href = 'signup.html'" class="welcome-signup-btn">Sign Up</button></a>
+            <a class="" href="{% url 'login' %}"><button onclick="location.href = 'login.html'"
+                    class="welcome-login-btn">Login</button></a>
+            <a class="" href="{% url 'signup' %}"><button onclick="location.href = 'signup.html'"
+                    class="welcome-signup-btn">Sign Up</button></a>
         </div>
         <img src="./img/showNav.svg" alt="" class="showNavDropdown" onclick="showTopNav()">
         <div id="top-dropdown" class="hide" onclick="hideTopNav()">
@@ -69,37 +71,39 @@ views_urls
 
     <!-- Include the onclick attribute in your main content tag -->
     <main onclick="hideTopNav()">
-        <div class="welcome">
-            <div class="welcome-top">
-                <article class="welcome-top-left">
-                    <p class="tired">Increase profitability, manage student debts as a school owner.</p>
-                    <p class="tired2">Let My Debtor help you keep an accurate list directory of wards in debt and
-                        debtor list of schools in your locality.</p>
-                    <div class="welcome-top-btn">
-                        <button class="get_started" onclick="location.href = 'signup.html'">Get started</button>
-                        <!-- <button onclick="showCookies()">List Your School for Free!</button> -->
-                    </div>
-                </article>
+        <div class="mobile-welcome">
+            <div class="welcome">
+                <div class="welcome-top">
+                    <article class="welcome-top-left">
+                        <p class="tired">Increase profitability, manage student debts as a school owner.</p>
+                        <p class="tired2">Let My Debtor help you keep an accurate list directory of wards in debt and
+                            debtor list of schools in your locality.</p>
+                        <div class="welcome-top-btn">
+                            <button class="get_started" onclick="location.href = 'signup.html'">Get started</button>
+                            <!-- <button onclick="showCookies()">List Your School for Free!</button> -->
+                        </div>
+                    </article>
 
-                <!-- A background image will be used instead -->
-                <div class="welcome-top-right">
-                    <img src="./img/Group 100.png" alt="" class="welcome-top-right-pics">>
+                    <!-- A background image will be used instead -->
+                    <div class="welcome-top-right">
+                        <img src="./img/Group 100.png" alt="" class="welcome-top-right-pics">>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="welcome-bottom">
-            <p class="welcome-bottom-text">My debtor currently serves over 2000+ schools in over 20+ countries</p>
-            <div class="welcome-bottom-icons">
-                <img class="welcome-bottom-icon icon1"
-                    src="./img/122-1224567_stafford-county-public-school-logo-best-logo-for 1.png" alt="">
-                <img class="welcome-bottom-icon icon2" src="./img/cropped-School-Badge 1.png" alt="">
-                <img class="welcome-bottom-icon icon3"
-                    src="./img/png-transparent-british-international-school-in-cairo-sun-of-knowledge-british-international-school-sbis-school-text-egypt-logo 1.png"
-                    alt="">
-                <img class="welcome-bottom-icon icon4"
-                    src="./img/png-transparent-british-international-school-of-kuala-lumpur-british-school-of-brasilia-british-school-of-nanjing-doha-college-school-label-logo-international 1.png"
-                    alt="">
-                <img class="welcome-bottom-icon icon5" src="./img/preloader 1.png" alt="">
+            <div class="welcome-bottom">
+                <p class="welcome-bottom-text">My debtor currently serves over 2000+ schools in over 20+ countries</p>
+                <div class="welcome-bottom-icons">
+                    <img class="welcome-bottom-icon icon1"
+                        src="./img/122-1224567_stafford-county-public-school-logo-best-logo-for 1.png" alt="">
+                    <img class="welcome-bottom-icon icon2" src="./img/cropped-School-Badge 1.png" alt="">
+                    <img class="welcome-bottom-icon icon3"
+                        src="./img/png-transparent-british-international-school-in-cairo-sun-of-knowledge-british-international-school-sbis-school-text-egypt-logo 1.png"
+                        alt="">
+                    <img class="welcome-bottom-icon icon4"
+                        src="./img/png-transparent-british-international-school-of-kuala-lumpur-british-school-of-brasilia-british-school-of-nanjing-doha-college-school-label-logo-international 1.png"
+                        alt="">
+                    <img class="welcome-bottom-icon icon5" src="./img/preloader 1.png" alt="">
+                </div>
             </div>
         </div>
 
@@ -128,7 +132,7 @@ views_urls
                     </div>
                     <div class="snippet">
                         <div class="snippet-icon">
-                            <img src="./img/easy-support.svg" alt="">
+                            <img src="./img/get-notification.svg" alt="">
                         </div>
                         <p class="snippet-head">Get Notifications</p>
                         <p class="snippet-message">Get real time notifications when a school around yours
@@ -136,7 +140,7 @@ views_urls
                     </div>
                     <div class="snippet">
                         <div class="snippet-icon">
-                            <img src="./img/get-notification.svg" alt="">
+                            <img src="./img/easy-support.svg" alt="">
                         </div>
                         <p class="snippet-head">Fast Support</p>
                         <p class="snippet-message">You ran into an issue? contact out customer support
@@ -309,7 +313,7 @@ views_urls
     <!-- FOOTER STARTS HERE -->
     <footer onclick="hideTopNav()">
         <div class="footer-top">
-            <div class="footer-top-header">
+            <div class="footer-top-header f1">
                 <div class="footer-logo">
                     <img src="./img/footer-app-logo.svg" alt="">
                 </div>
@@ -321,7 +325,7 @@ views_urls
                     <a href="accessibility-statement.html">Accessibility Statement</a>
                 </div>
             </div>
-            <div class="footer-top-header">
+            <div class="footer-top-header f2">
                 <h4>Features</h4>
                 <div class="footer-links">
                     <p>Dashboard</p>
@@ -330,13 +334,13 @@ views_urls
                     <p>Debt Summary</p>
                 </div>
             </div>
-            <div class="footer-top-header">
+            <div class="footer-top-header f1">
                 <h4>Use Cases</h4>
                 <div class="footer-links">
                     <p>School Management</p>
                 </div>
             </div>
-            <div class="footer-top-header">
+            <div class="footer-top-header f2">
                 <h4>Resources</h4>
                 <div class="footer-links">
                     <a href="help-and-support.html">Help and Support</a>

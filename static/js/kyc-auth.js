@@ -164,7 +164,7 @@ const uploadFile = () => {      //  uploads the file to the database
             status.classList.add("status-failed");
             let para = document.createElement('p')
             para.className = 'para'
-            para.innerText = 'Sorry! something went wrong while uploading\nyour documents. please try again.';
+            para.innerText = 'Sorry! something went wrong while uploading your documents. please try again.';
             let close_btn = document.createElement('button');
             close_btn.className = 'close-btn';
             close_btn.innerHTML = '<img src="./img/kyc-close.svg" />'
@@ -207,7 +207,7 @@ const uploadFile = () => {      //  uploads the file to the database
             status.innerText = 'Success!'
             let para = document.createElement('p')
             para.className = 'para'
-            para.innerText = 'Your document as been uploaded successfully,\nyou will recieve response from the school as\nsoon as your documents is verified.';
+            para.innerText = 'Your document as been uploaded successfully, you will recieve response as soon as your documents are verified.';
             let btn = document.createElement('button');
             btn.className = 'dom-btn';
             btn.innerText = 'Ok';
