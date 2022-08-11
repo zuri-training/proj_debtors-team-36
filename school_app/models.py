@@ -97,8 +97,8 @@ class Comment(models.Model):
     def __str__(self):
         return self.body[0:30]
 
-=======
+
 from django.db import models
 
 # Create your models here.
->>>>>>> main
+

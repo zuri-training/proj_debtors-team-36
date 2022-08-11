@@ -26,12 +26,12 @@ SECRET_KEY = config("SECRET_KEY", default='django-insecure-7xv%lrk^7-r%bp%e+55a8
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config("DJANGO_DEBUG", default=True, cast=bool)
-=======
+
 SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', cast=bool)
->>>>>>> main
+
 
 ALLOWED_HOSTS = []
 
@@ -55,9 +55,7 @@ INSTALLED_APPS = [
 'Apps.school_app.app.SchoolAppConfig'
 
 AUTH_USER_MODEL = 'school_app.School'
-=======
-]
->>>>>>> main
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -77,8 +75,7 @@ TEMPLATES = [
         'DIRS': [],
 
         'DIRS': [BASE_DIR/'static'],
-=======
->>>>>>> main
+
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -110,8 +107,7 @@ DATABASES = {
 
 
 
-=======
->>>>>>> main
+
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -146,8 +142,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [BASE_DIR/'static']
-=======
->>>>>>> main
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
@@ -156,5 +151,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 AUTH_USER_MODEL = "school_app.School"
-=======
->>>>>>> main
+

@@ -11,5 +11,4 @@ admin.site.register(School)
 admin.site.register(Debtor_list)
 admin.site.register(School_Post)
 admin.site.register(Comment)
-=======
->>>>>>> main
+

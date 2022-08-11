@@ -1,8 +1,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
-=======
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
->>>>>>> main
+
 
 * {
     box-sizing: border-box;
@@ -55,7 +55,7 @@ body {
 }
 
 /* TOP NAVIGATION BAR STARTS HERE*/
-=======
+
 body {
     margin: 0px;
     padding: 0px;
@@ -65,7 +65,7 @@ body {
 }
 
 /* Navbar */
->>>>>>> main
+
 nav {
     display: flex;
     align-items: center;
@@ -74,21 +74,21 @@ nav {
     height: 48px;
     padding: 40px 72px 0px 72px;
     margin-bottom: 20px;
-=======
+
     height: 43px;
     padding: 13px 72px 0px 72px;
->>>>>>> main
+
 }
 
 nav .left-nav {
     display: flex;
     align-items: center;
 
-=======
+
     font-size: 28px;
     font-weight: 600;
     color: #292929;
->>>>>>> main
+
 }
 
 nav .middle-nav {
@@ -101,7 +101,7 @@ nav .middle-nav {
     font-size: 20px;
     font-weight: 400;
     line-height: 27px;
-=======
+
     justify-content: space-between;
     align-items: center;
     gap: 40px;
@@ -109,7 +109,7 @@ nav .middle-nav {
     height: 30px;
     font-size: 20px;
     font-weight: 400;
->>>>>>> main
+
 }
 
 nav .middle-nav a {
@@ -125,13 +125,13 @@ nav .middle-nav a:active {
 
 nav a.active {
     border-bottom: 4px solid var(--main_color);
-=======
+
     color: #292929;
 }
 
 nav .middle-nav a:hover {
     border-bottom: 4px solid #292929;
->>>>>>> main
+
     border-radius: 6px;
 }
 
@@ -170,7 +170,7 @@ nav .right-nav {
 .welcome-login-btn:active {
     border: 1.5px solid var(--clicked_color);
     color: var(--clicked_color);
-=======
+
     width: 85px;
     font-size: 18px;
     font-weight: 400;
@@ -179,7 +179,7 @@ nav .right-nav {
     color: #3D3D3D;
     cursor: pointer;
     text-decoration: none;
->>>>>>> main
+
 }
 
 .welcome-signup-btn {
@@ -253,7 +253,7 @@ nav .right-nav {
 .welcome {
     height: calc(100vh - 70px);
     padding: 0px 81px;
-=======
+
     width: 100px;
     font-size: 18px;
     font-weight: 400;
@@ -271,7 +271,7 @@ nav .right-nav {
 .welcome {
     height: calc(100vh - 60px);
     padding: 0px 72px 0px 72px;
->>>>>>> main
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -340,7 +340,7 @@ nav .right-nav {
 .welcome-top-right {
     width: 40%;
     height: 90%;
-=======
+
     width: 50%;
     padding-right: 20px;
 }
@@ -370,7 +370,7 @@ nav .right-nav {
 
 .welcome-top-right {
     width: 50%;
->>>>>>> main
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -381,12 +381,12 @@ nav .right-nav {
 
     width: 499px;
     height: 704px;
-=======
+
     width: 644px;
     height: 511px;
     background-color: #EEF1F4;
     border: 3px solid #667080;
->>>>>>> main
+
 }
 
 .welcome-bottom {
@@ -394,8 +394,7 @@ nav .right-nav {
     display: flex;
 
     flex-direction: column;
-=======
->>>>>>> main
+
     justify-content: center;
     align-items: center;
     padding-bottom: 10px;
@@ -414,11 +413,11 @@ nav .right-nav {
 .welcome-bottom-icons {
     height: 100%;
     width: 60%;
-=======
+
 .welcome-bottom-icons {
     height: 100%;
     width: 50%;
->>>>>>> main
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -716,7 +715,7 @@ nav .right-nav {
     line-height: 22px;
     padding-bottom: 28px;
     width: 92%;
-=======
+
 .welcome-bottom-icon {
     width: 100px;
     height: 100px;
@@ -731,7 +730,7 @@ nav .right-nav {
     border-left: none;
     border-right: none;
     transform: rotate(-0.35deg);
->>>>>>> main
+
 }
 
 /* Welcome Continued */
@@ -747,13 +746,13 @@ nav .right-nav {
 .welcome-section {
     width: 80%;
     min-width: 70%;
-=======
+
     padding: 104px 72px 100px 72px;
 }
 
 .welcome-section {
     width: 100%;
->>>>>>> main
+
     height: 380px;
     display: flex;
     justify-content: space-between;
@@ -791,7 +790,7 @@ nav .right-nav {
 }
 
 /* What schools using the plaform are saying */
-=======
+
 .welcome-section h2 {
     font-size: 24px;
     font-weight: 500;
@@ -819,7 +818,7 @@ nav .right-nav {
 
 /* What schools using the plaform are saying */
 /* Review this */
->>>>>>> main
+
 .schools {
     display: flex;
     align-items: center;
@@ -835,7 +834,7 @@ nav .right-nav {
     color: #292929;
     margin-right: 24px;
     line-height: 27px;
-=======
+
     padding: 100px 72px 100px 72px;
 }
 
@@ -844,16 +843,16 @@ nav .right-nav {
     font-size: 24px;
     font-weight: 500;
     color: #292929;
->>>>>>> main
+
 }
 
 .school-say {
     display: flex;
 
     color: #3d3d3d;
-=======
+
     width: 68%;
->>>>>>> main
+
 }
 
 .school-card-left {
@@ -877,11 +876,11 @@ nav .right-nav {
     display: flex;
     align-items: flex-end;
     margin: 0px 34px 22px 0px;
-=======
+
     width: 450px;
     height: 250px;
     margin: 15px 30px 15px 0px;
->>>>>>> main
+
 }
 
 .left-bottom {
@@ -889,8 +888,7 @@ nav .right-nav {
     justify-content: flex-end;
 
     margin: 0px 34px 0px 0px;
-=======
->>>>>>> main
+
 }
 
 .right-top {
@@ -912,7 +910,7 @@ nav .right-nav {
     height: 174px;
     background-color: #f8fbff;
     border: 1px solid var(--main_color);
-=======
+
 }
 
 .card1 {
@@ -925,7 +923,7 @@ nav .right-nav {
     width: 360px;
     height: 190px;
     background-color: #ECEBEB;
->>>>>>> main
+
 }
 
 .card1,
@@ -953,9 +951,9 @@ nav .right-nav {
     background-color: #D9D9D9;
 
     border: none;
-=======
+
     border: 1.5px solid #696969;
->>>>>>> main
+
     border-radius: 50%;
 }
 
@@ -970,14 +968,14 @@ nav .right-nav {
     font-size: 16px;
     font-weight: 400;
     line-height: 22px;
-=======
+
     font-weight: 400;
 }
 
 .card-body h4 {
     font-size: 16px;
     font-weight: 400;
->>>>>>> main
+
 }
 
 /* Try my debtor for free */
@@ -988,9 +986,9 @@ nav .right-nav {
     align-items: center;
 
     height: 321px;
-=======
+
     height: 312px;
->>>>>>> main
+
     width: 100%;
     background-color: #F8F8F8;
     text-align: center;
@@ -1000,8 +998,7 @@ nav .right-nav {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-=======
->>>>>>> main
+
 }
 
 .try-debtor h2 {
@@ -1043,7 +1040,7 @@ nav .right-nav {
 
 .try-debtor button:active {
     background-color: var(--clicked_color);
-=======
+
     font-weight: 500;
     line-height: 51px;
     margin-top: 0;
@@ -1076,26 +1073,26 @@ nav .right-nav {
     border-left: none;
     border-right: none;
     transform: rotate(-0.16deg);
->>>>>>> main
+
 }
 
 /* FAQ */
 .faq {
 
     padding: 70px 72px;
-=======
+
     padding: 20px 80px 100px 79px;
     color: #292D32;
->>>>>>> main
+
 }
 
 .faq-top {
     width: 100%;
 
     height: 90px;
-=======
+
     height: 96px;
->>>>>>> main
+
     display: flex;
     justify-content: space-between;
 }
@@ -1115,7 +1112,7 @@ nav .right-nav {
     margin: 0;
 }
 
-=======
+
     line-height: 60px;
     margin: 0;
 }
@@ -1142,7 +1139,7 @@ nav .right-nav {
     text-decoration: none;
     color: #292929;
 }
->>>>>>> main
+
 
 .faq-bottom {
     display: flex;
@@ -1157,10 +1154,10 @@ nav .right-nav {
     width: 80%;
     display: flex;
     justify-content: space-between;
-=======
+
     justify-content: space-between;
     margin: 78px 208px;
->>>>>>> main
+
 }
 
 .faq-left,
@@ -1205,9 +1202,9 @@ nav .right-nav {
 
 
 .faq-question-head {
-=======
+
 .faq-bottom h3 {
->>>>>>> main
+
     font-size: 20px;
     font-weight: 400;
     line-height: 30px;
@@ -1218,9 +1215,9 @@ nav .right-nav {
 
 
 .faq-answer-body {
-=======
+
 .faq-bottom h4 {
->>>>>>> main
+
     font-size: 18px;
     font-weight: 400;
     color: #333333;
@@ -1241,7 +1238,7 @@ footer {
     justify-content: space-between;
     padding: 57px 124px 10px 124px;
     color: var(--white_color);
-=======
+
 /* Footer */
 footer {
     width: 100%;
@@ -1253,7 +1250,7 @@ footer {
     justify-content: space-between;
     padding: 57px 126px 10px 126px;
     color: #292D32;
->>>>>>> main
+
 }
 
 .footer-top {
@@ -1271,7 +1268,7 @@ footer {
 
 .footer-logo {
     height: 50px;
-=======
+
 }
 
 .footer-top-header h3 {
@@ -1281,7 +1278,7 @@ footer {
     color: #292929;
     margin: 0;
     margin-bottom: 15px;
->>>>>>> main
+
 }
 
 .footer-top-header h4 {
@@ -1293,11 +1290,11 @@ footer {
     height: 50px;
     display: flex;
     align-items: center;
-=======
+
     line-height: 36px;
     margin: 0;
     margin-bottom: 25px;
->>>>>>> main
+
 }
 
 .footer-links {
@@ -1314,7 +1311,7 @@ footer {
     font-size: 18px;
     font-weight: 400;
     line-height: 25px;
-=======
+
 }
 
 .footer-links a {
@@ -1323,7 +1320,7 @@ footer {
     font-size: 18px;
     font-weight: 400;
     line-height: 27px;
->>>>>>> main
+
     margin: 0;
     margin-bottom: 8px;
 }
@@ -1341,11 +1338,11 @@ footer {
 }
 
 .copyright .footer-small-text {
-=======
+
 }
 
 .copyright h5 {
->>>>>>> main
+
     font-size: 14px;
     font-weight: 400;
     line-height: 21px;
@@ -1365,9 +1362,9 @@ footer {
 
 
 .socials .footer-small-text {
-=======
+
 .socials h5 {
->>>>>>> main
+
     font-size: 14px;
     font-weight: 400;
     line-height: 21px;
@@ -1720,7 +1717,7 @@ footer {
     .socials img {
         margin-right: 10px;
     }
-=======
+
 .socials svg {
     margin-right: 18.67px;
 }
@@ -1806,5 +1803,5 @@ margin-top: -135px;
     border-radius: 5px;
     width: 60px;
     height: 30px;
->>>>>>> main
+
 }

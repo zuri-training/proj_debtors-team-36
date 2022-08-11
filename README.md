@@ -119,9 +119,9 @@ For team_36 members, follow the following steps to collaborate:
 
 
 *If you need to make an update, repeat from no 4 (Skip no 6)*
-=======
+
 *If you need to make an update, repeat from no 4*
->>>>>>> main
+
 
 ## Contributors
 
@@ -200,9 +200,9 @@ __Rita Sylvia__
 
 
 __Lasaki Taiwo__
-=======
+
 __Taiwo Laskai__
->>>>>>> main
+
 * Github- https://github.com/Tamazing
 * Track - FullStack
 
@@ -226,11 +226,11 @@ __John Amakoh__
 __Iniubong Abasi__
 * Github- https://github.com/IniubongJ
 * Track- Product Design
-=======
+
 * Github- https://github.com/OGidos
 * Track- Fullstack
 
->>>>>>> main
+
 
 ## Documentation
 The documentaion that includes details on how the project was built from the backend, prerequisites, installation procedures, etc can be found here - "Documentationlinkwhenready"

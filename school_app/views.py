@@ -68,7 +68,7 @@ def current_debtors(request):
 
 
 
-=======
+
 from django.shortcuts import render
 from . import models
 
@@ -98,8 +98,8 @@ def debtor_email(request):
     }
     return render(request, 'debtor-email.html', {"page_contents":page_contents})
 
-=======
+
 from django.shortcuts import render
 
 # Create your views here.
->>>>>>> main
+
