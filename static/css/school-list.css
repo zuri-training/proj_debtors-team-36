@@ -327,7 +327,7 @@ main {
     flex-direction: row;
     align-items: center;
     padding: 0px;
-    position: absolute;
+    /* position: absolute; */
     width: 940px;
     height: 56px;
     left: 380px;
@@ -404,7 +404,7 @@ input {
     align-items: flex-start;
     padding: 0px;
     gap: 4px;
-    position: absolute;
+    /* position: absolute; */
     width: 157px;
     height: 24px;
     left: 380px;
@@ -428,8 +428,8 @@ input {
 h5 {
     width: 140px;
     height: 33px;
-    left: 380px;
-    top: 224px;
+    /* left: 380px;
+    top: 224px; */
     font-family: 'Manrope';
     font-style: normal;
     font-weight: 600;
@@ -441,14 +441,14 @@ h5 {
 
 
 
-    margin-top: 30px;
+    /* margin-top: 30px;
     margin-bottom: 30px;
     font-size: 24px;
     font: poppins;
     line-height: 36px;
     font-weight: 500;
+ */
 }
-
 .sch-tittle {
     background: red;
 }
@@ -459,7 +459,7 @@ h5 {
     justify-content: center;
     align-items: flex-end;
     padding: 0px;
-    position: absolute;
+    /* position: absolute; */
     width: 940px;
     height: 1031px;
     left: 380px;
