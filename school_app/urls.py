@@ -5,6 +5,13 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path("", views.home, name='homepage'),
-    path("dmail", views.debtor_email, name = 'debtor-email'),
+    path('', views.index, name='index'),
+    path('contact-us', views.contact_view, name='contact'),
+    path('signup', views.signup_view, name='signup'),
+    path('login', views.login_view, name='login'),
+    path('logout', views.logout_view, name='logout_page'),
+    path('debtors', views.current_debtors, name='current_debtors'),
+    path('debtor_email', views.debtor_email, name='debtor-email'),
+    path('about', views.about_us, name='about'),
+    path('faq', views.faq, name='faq'),
 ]
