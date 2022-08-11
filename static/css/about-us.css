@@ -23,6 +23,7 @@ body {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    width: 1440px;
 }
 
 /* TOP NAVIGATION BAR STARTS HERE*/
@@ -131,132 +132,176 @@ nav .right-nav {
 /* NAVBAR ENDS HERE */
 
 /* Company Service Section*/
-.company-service-1 {
+
+/* COMPANY-SERVICE1 SECTION */
+ .company-service-1 {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     height: 100%;
     width: 100%;
     margin-top: 10%;
-    
+ 
 
 }
-.article1 {
-    text-align: center;
-}
-
-.articlesub {
-    margin-top: 5px;
-}
-
-.article2 {
-    text-align: center;
-}
-.img1 {
-    position: absolute;
-    z-index: -1;
-}
-
-.box1 {
-    display: block;
-} 
-.company-service-2 {
+.left-text {
     display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 100%;
-    width: 100%;
-    margin-top: 10%;
+    align-items: flex-start;
+}
 
-}
-.box2 {
-    display: block;
-}
-.img2 {
+.lightsquare {
     position: absolute;
+    left: 30px;
+    top: 350px;
     z-index: -1;
 }
-.servicebutton1 {
-    width: 200px;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 27px;
-    padding: 8px 16px;
-    border: 1.5px solid #7E7E7E;
-    border-radius: 8px;
-    color: #ffffff;
-    cursor: pointer;
-    text-decoration: none;
-    background-color: #0000D4;
 
-}
-.servicebutton1 a {
-    text-decoration: none;
-    color: #ffffff;
-}
-
-.servicebutton1 a:hover{
-    border-bottom: 4px solid #ffffff;
-    border-radius: 6px;
-
-}
-
- .vector1 {
+.bluesquare {
     position: absolute;
+    left: 50px;
+    top: 400px;
     z-index: -1;
-    
-
-} 
-
-/* Meeting The Team Section */
-
-.design-team{
-    position: inherit;
-    display: flex;
-    align-items: center;
-    justify-content: space-betw;
-    height: 100%;
-    width: 100%; 
-   
 }
-
 .article3 {
-    text-align: center;
-}
-.developers-team{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly; 
-    height: 100%;
-    width: 100%;
+    text-align: right;
 }
 
-/* Registered schools section */
-/* .registered-schools {
-    display: block;
+.article3 a {
+    text-decoration: none;
+    color: var(--white_color);
+    font-size: 18px;
+
 }
 
-.vector2{
+.article3 button {
+    margin-top: 15px;
+    width: 210px;
+    height: 57px;
+    border-radius: 7px;
+    border: 2px solid var(--main_color);
+    background-color: var(--main_color);
+    font-family: 'Manrope', sans-serif;
+}
+
+.svgcircles {
     position: absolute;
-    z-index: -1;
-} */
-.school-row-1 {
+    right: 0px;
+    top: 450px;
+
+}
+
+.smallcircle {
+    position: absolute;
+    top: -25px;
+    right: 70px;
+
+}
+
+
+.sub-box {
+    position: relative;
+}
+
+.pictureframe {
+    display: block;
+} 
+
+.girl-picture{
+    position: absolute;
+    top: 13%;
+    right: 13%;
+} 
+
+
+/* COMPANY-SERVICE1 ENDS */
+
+/* COMPANY-SERVICE2 STARTS */
+.company-service-2 {
+  display: block;
+}
+
+.service-box2 {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     height: 100%;
     width: 100%;
+    position: absolute;
+    top: 110%;
+
+    
+}
+
+
+ 
+
+.classroom{
+    position: relative;
 
 }
-.school-row-2 {
+
+ .classphoto{
+    position: absolute;
+    z-index: 1;
+    top: 10%;
+    left: -19%; 
+}
+
+ .moreinfo {
+    margin-top: 136px;
+
+}  
+
+.ellipse {
+    position: absolute;
+    top: 490px;
+}
+
+/* SERVICE-BOX 3 BEGINS */
+.service-box3{
+    margin-top: 85px;
+}
+
+
+.vision {
+    margin-left: 175px;
+}
+
+.mission {
+    margin-left: 500px;
+    width: 658px;
+    height: 184px; 
+    text-align: right;
+    border: 2px solid var(--hover_color);
+    border-radius: 8px;
+    padding-right: 10px;
+    margin-top: 40px;
+}
+
+.mission-longtext {
+    
+    margin-top: 10px; 
+}
+.top-part {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    height: 100%;
-    width: 100%;
-
+    justify-content: end;
+}
+h2 {
+    font-size: 35px;
+    font-weight: 600;
+    margin-right: 5px;
 }
 
+.mission-text {
+    color: var(--hover_color);
+    font-size: 35px;
+    font-weight: 600;
+    margin-right: 20px;
+}
+.stroke {
+    margin-right: 10px;
+}
 
 /* FOOTER STARTS HERE */
 footer {
@@ -352,3 +397,29 @@ footer {
 }
 
 /* FOOTER ENDS HERE */
+
+
+/* SCROLL BAR */
+
+/* Custom Scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--main_color);
+    border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--hover_color);
+  }
