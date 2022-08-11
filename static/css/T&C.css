@@ -449,7 +449,15 @@ footer {
 
     .footer-top-header {
         margin-top: 24px;
-        width: 180px;
+    }
+
+    .f1 {
+        width: auto;
+        width: 60%;
+    }
+
+    .f2 {
+        width: 40%;
     }
 
     .footer-top-header h4 {

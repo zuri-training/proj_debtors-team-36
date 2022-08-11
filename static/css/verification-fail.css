@@ -222,4 +222,8 @@ button {
         line-height: 33px;
     }
 
+    button {
+        margin-bottom: 50px;
+    }
+
 }

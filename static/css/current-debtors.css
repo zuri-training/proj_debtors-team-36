@@ -381,7 +381,8 @@ h1 {
         justify-content: space-between;
         width: 100%;
         height: 56px;
-        margin-bottom: 16px;
+        margin-top: -50px;
+        margin-bottom: 5px;
     }
 
     .search-not {
@@ -407,6 +408,7 @@ h1 {
         flex-direction: row;
         width: 100vw;
         background-color: rgba(0, 0, 0, 0.35);
+        z-index: 1;
     }
 
     .aside-container {
@@ -439,4 +441,7 @@ h1 {
         right: 16px;
     }
 
+    .view {
+        width: 100px;
+    }
 }
