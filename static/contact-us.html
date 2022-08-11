@@ -1,12 +1,15 @@
-{% load static %}
+<!-- {% load static %} -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{% static './css/contact-us.css' %}" />
-    <script defer src="{% static './js/contact-us.js' %}"></script>
+     <!-- <link rel="stylesheet" href="{% static './css/contact-us.css' %}" />
+    <script defer src="{% static './js/contact-us.js' %}"></script> -->
+    <link rel="stylesheet" href="./css/contact-us.css" />
+    <script defer src="./js/contact-us.js"></script>
+    <script defer src="./js/top-nav.js"></script>
     <title>Contact Us</title>
   </head>
   <body>
@@ -16,19 +19,39 @@
             <img src="img/new-logo.svg" alt="logo">
         </div>
         <div class="middle-nav">
+          <a href="index.html">Home</a>
+          <a href="about-us.html">About Us</a>
+          <a href="faq.html">FAQ</a>
+          <a class="cur" href="contend-debt.html">Contact Us</a>
+        </div>
+        <div class="right-nav">
+          <a href="login.html" class="welcome-login-btn">Login</a>
+
+          <!-- BAckend stuff
+          <a href="{% url 'signup' %}" >
           <a href="{% url 'index' %}">Home</a>
           <a href="{% url 'about' %}">About Us</a>
           <a href="faq.html">FAQ</a>
           <a class="current" href="{% url 'contact' %}">Contact Us</a>
         </div>
         <div class="right-nav">
-          <a href="{% url 'login' %}" class="welcome-login-btn">Login</a>
+          <a href="{% url 'login' %}" class="welcome-login-btn">Login</a>-->
 
           <a href="{% url 'signup' %}" >
             <button
             onclick="location.href = 'signup.html'"
             class="welcome-signup-btn">Sign Up</button>
           </a>
+        </div>
+            <!--For Mobile view-->
+        <img src="./img/showNav.svg" alt="" class="showNavDropdown" onclick="showTopNav()">
+        <div id="top-dropdown" class="hide" onclick="hideTopNav()">
+            <button class="dropdown-btn" onclick="location.href = 'index.html'">Home</button>
+            <button class="dropdown-btn" onclick="location.href = 'about-us.html'">About Us</button>
+            <button class="dropdown-btn" onclick="location.href = 'faq.html'">FAQ</button>
+            <button class="dropdown-btn" onclick="location.href = 'contact-us.html'">Contact Us</button>
+            <button class="dropdown-btn" onclick="location.href = 'login.html'">Login</button>
+            <button class="dropdown-btn" onclick="location.href = 'signup.html'">Sign Up</button>
         </div>
     </nav>
       <main>
@@ -112,7 +135,7 @@
         <div class="contact">
           <h1>CONTACT US</h1>
           <form onsubmit="return false" id="myForm" method="post">
-            {% csrf_token %}
+            <!-- {% csrf_token %} -->
             <h2>Hi there, how may we be of help to you?</h2>
             <!-- {{ form }} -->
             <input type="text" name="name" id="name" placeholder="Full Name" />
@@ -225,5 +248,60 @@
         );
 }
     </script>-->
+    <!-- FOOTER STARTS HERE -->
+    <footer onclick="hideTopNav()">
+      <div class="footer-top">
+          <div class="footer-top-header">
+              <div class="footer-logo">
+                  <img src="./img/footer-app-logo.svg" alt="">
+              </div>
+              <div class="footer-links">
+                  <a href="about-us.html">About</a>
+                  <a href="contact-us.html">Contact Us</a>
+                  <a href="privacy-policy.html">Privacy Policy</a>
+                  <a href="T&C.html">Terms and Conditions</a>
+                  <a href="accessibility-statement.html">Accessibility Statement</a>
+              </div>
+          </div>
+          <div class="footer-top-header">
+              <h4>Features</h4>
+              <div class="footer-links">
+                  <p>Dashboard</p>
+                  <p>Debtor List</p>
+                  <p>Contend Debt</p>
+                  <p>Debt Summary</p>
+              </div>
+          </div>
+          <div class="footer-top-header">
+              <h4>Use Cases</h4>
+              <div class="footer-links">
+                  <p>School Management</p>
+              </div>
+          </div>
+          <div class="footer-top-header">
+              <h4>Resources</h4>
+              <div class="footer-links">
+                  <a href="help-and-support.html">Help and Support</a>
+                  <p>Community</p>
+              </div>
+          </div>
+      </div>
+      <div class="footer-bottom">
+          <div class="copyright">
+              <img src="./img//copyright.svg" alt="">
+              <p class="footer-small-text">2022 Team 36 my debtor project. Zuri Team, Inc. All rights reserved.</p>
+          </div>
+          <hr class="footer-line">
+          <div class="social">
+              <p class="footer-small-text">Follow Us.</p>
+              <img src="./img/facebook.svg" alt="">
+              <img src="./img/gmail.svg" alt="">
+              <img src="./img/linkedin.svg" alt="">
+              <img src="./img/twitter.svg" alt="">
+              <img src="./img/instagram.svg" alt="">
+          </div>
+      </div>
+  </footer>
+  <!-- FOOTER ENDS HERE -->
   </body>
 </html>

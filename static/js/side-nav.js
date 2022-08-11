@@ -16,8 +16,10 @@ if (innerWidth <= 576) {
 
 const showNav = () => {
     document.getElementById("aside").className = "show"
+    console.log('show')
 }
 
 const hideNav = () => {
     document.getElementById("aside").className = "hide"
+    console.log('hidden')
 }
