@@ -7,6 +7,7 @@ import uuid
 import random
 
 
+
 class Debtors(models.Model):
     #GENDER_CHOICES = ("Male", "Female", "Other")
     class GENDER_CHOICES(models.TextChoices):
@@ -36,12 +37,12 @@ from django.contrib.auth.models import AbstractUser
 
 class School(AbstractUser):
     name = models.CharField(max_length=200, null=True)
-    email = models.EmailField(unique=True, null=True)
+    username = models.EmailField(unique=True, null=True)
     bio = models.TextField(null=True)
 
     avatar = models.ImageField(null=True, default="")
 
-    USERNAME_FIELD = 'email'
+    USERNAME_FIELD = 'username'
     REQUIRED_FIELDS = []
 
 
@@ -65,6 +66,13 @@ class School_Post(models.Model):
 #     created_on = models.DateTimeField(auto_now= True)
 #     def __str__(self):
 #         return self.title
+
+
+class School_kyc(models.Model):
+    # name = models.ForeignKey(School, on_delete=models.SET_NULL, null=False)
+    school_Id = models.FileField(upload_to='documents/')
+    cac_file = models.FileField(upload_to='documents/')
+    uploaded_at = models.DateTimeField(auto_now_add=True)
 
 
 class Debtor_list(models.Model):

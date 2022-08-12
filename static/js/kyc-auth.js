@@ -207,7 +207,7 @@ const uploadFile = () => {      //  uploads the file to the database
             status.innerText = 'Success!'
             let para = document.createElement('p')
             para.className = 'para'
-            para.innerText = 'Your document as been uploaded successfully,\nyou will recieve response from the school as\nsoon as your documents is verified.';
+            para.innerText = 'Your document as been uploaded successfully,\nyou will receive response from the school as\nsoon as your documents is verified.';
             let btn = document.createElement('button');
             btn.className = 'dom-btn';
             btn.innerText = 'Ok';
