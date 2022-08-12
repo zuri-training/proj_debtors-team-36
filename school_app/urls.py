@@ -1,6 +1,3 @@
-"""Modified views 
-    for the school app project
-"""
 from django.urls import path
 from . import views
 
@@ -18,5 +15,8 @@ urlpatterns = [
     path('accessibility', views.accessibility, name = 'accessibility'),
     path('policy', views.policy, name = 'policy'),
     path('Help and support', views.help_suppport, name = 'support'),
-
+    path('verification/', views.verify_otp, name='verify_otp'),
+    path('verification-success/', views.verification_success, name='verification_success'),
+    path('verification-fail/', views.verification_fail, name='verification_fail'),
+    path('resend-code/', views.resend_otp, name='resend_otp'),
 ]
