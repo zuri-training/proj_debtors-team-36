@@ -1,6 +1,8 @@
 # from django.http import HttpResponse
+import random
+from django.core.mail import send_mail
 from django.shortcuts import redirect, render
-from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth.forms import AuthenticationForm, OTPForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import login, logout, authenticate
 from django.views.generic.edit import CreateView
@@ -17,6 +19,12 @@ def index(request):
 def contact_view(request):
     return render(request, 'contact-us.html')
 
+# generating random 6 digits otp code
+def generateOTP() :
+    otp = ""
+    for i in range(6):
+        otp += str(random.randint(1, 9))
+    return otp
 
 def signup_view(request):
     # if request.user.is_authentecated:
@@ -24,12 +32,25 @@ def signup_view(request):
     if request.method == 'POST':
         form = School_RegForm(request.POST)
         if form.is_valid():
-            user = form.save()
+
+            # making user inactive till verification is complete
+            user = form.save(commit=False)
+            user.is_active = False
+
+            # SENDING OTP TO USER THROUGH E-MAIL
+            user.otp = generateOTP() # storing otp in otp field
+            otp = user.otp
+            subject = f"{user.username} OTP VERIFICATION FOR MyDebtors"
+            message = f"{otp}"
+            send_mail(subject, message, 'toluisjoel@gmail.com', [user.email])
+            user.save()
+
+
             # email = form.cleaned_data.get('email')
             # password = form.cleaned_data.get('password1')
             # user = authenticate(email=email, password=password)
-            login(request, user)
-            return redirect('dashboard')
+            # login(request, user)
+            return render(request, 'verify1.html', {'user': user})
         else:
             form = School_RegForm(request.POST)
             return render(request, 'signup.html', {'form': form})
@@ -37,6 +58,31 @@ def signup_view(request):
         form = School_RegForm(request.POST)
     return render(request, 'signup.html', {'form': form})
 
+
+def verify_otp(request):
+    if request.method == 'POST':
+        otp_form = OTPForm(request.POST)
+        user = School.objects.last()
+
+        if otp_form.is_valid():
+            cd_otp = otp_form.cleaned_data
+            otp = user.otp
+
+            # if otp == user.otp:
+            #     user.is_active = True
+            #     user.save()
+            #     return render(request, 'school_app/verification-sucess.html', {})
+            # else:
+            #     return render(request, 'school_app/verification-sucess.html', {})
+    else:
+        otp_form = OTPForm()
+        user = School.objects.last()
+
+    context = {
+        'otp_form': otp_form,
+        'user': user,
+        }
+    return render(request, 'verify2.html', context)
 
 def login_view(request):
     # if request.user.is_authentecated:
