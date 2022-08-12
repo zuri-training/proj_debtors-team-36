@@ -51,12 +51,12 @@
         </div>
         <img src="{% static './img/showNav.svg' %}" alt="" class="showNavDropdown" onclick="showTopNav()">
         <div id="top-dropdown" class="hide" onclick="hideTopNav()">
-            <button class="dropdown-btn" onclick="location.href = 'index.html'">Home</button>
-            <button class="dropdown-btn" onclick="location.href = 'about-us.html'">About Us</button>
-            <button class="dropdown-btn" onclick="location.href = 'faq.html'">FAQ</button>
-            <button class="dropdown-btn" onclick="location.href = 'contact-us.html'">Contact Us</button>
-            <button class="dropdown-btn" onclick="location.href = 'login.html'">Login</button>
-            <button class="dropdown-btn" onclick="location.href = 'signup.html'">Sign Up</button>
+            <button class="dropdown-btn" onclick="location.href = '{% url 'index' %}'">Home</button>
+            <button class="dropdown-btn" onclick="location.href = '{% url 'about' %}'">About Us</button>
+            <button class="dropdown-btn" onclick="location.href = '{% url 'faq' %}'">FAQ</button>
+            <button class="dropdown-btn" onclick="location.href = '{% url 'contact' %}'">Contact Us</button>
+            <button class="dropdown-btn" onclick="location.href = '{% url 'login' %}'">Login</button>
+            <button class="dropdown-btn" onclick="location.href = '{% url 'signup' %}'">Sign Up</button>
         </div>
     </nav>
     <!-- TOP NAVIGATION BAR ENDS HERE -->
@@ -226,7 +226,7 @@
         <div class="try-debtor">
             <h2>Try my debtor for free</h2>
             <p>Set up your school's account, free forever and never worry<br>about a student with unpaid debt in your school again.</p>
-            <button onclick="location.href = 'signup.html'">List Your School For Free!</button>
+            <button onclick="location.href = '{% url 'signup' %}'">List Your School For Free!</button>
         </div>
         <div class="faq" id="faq">
             <div class="faq-top">
@@ -286,11 +286,11 @@
                     <img src="{% static './img/footer-app-logo.svg' %}" alt="">
                 </div>
                 <div class="footer-links">
-                    <a href="about-us.html">About</a>
-                    <a href="contact-us.html">Contact Us</a>
-                    <a href="privacy-policy.html">Privacy Policy</a>
-                    <a href="T&C.html">Terms and Conditions</a>
-                    <a href="accessibility-statement.html">Accessibility Statement</a>
+                    <a href="{% url 'about' %}">About</a>
+                    <a href="{% url 'contact' %}">Contact Us</a>
+                    <a href="{%url 'policy' %}">Privacy Policy</a>
+                    <a href="{% url 'terms' %}">Terms and Conditions</a>
+                    <a href="{% url 'accessibility' %}">Accessibility Statement</a>
                 </div>
             </div>
             <div class="footer-top-header f2">

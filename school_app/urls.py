@@ -14,4 +14,9 @@ urlpatterns = [
     path('debtor_email', views.debtor_email, name='debtor-email'),
     path('about', views.about_us, name='about'),
     path('faq', views.faq, name='faq'),
+    path('T&C', views.terms, name = 'terms'),
+    path('accessibility', views.accessibility, name = 'accessibility'),
+    path('policy', views.policy, name = 'policy'),
+    path('Help and support', views.help_suppport, name = 'support'),
+
 ]

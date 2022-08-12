@@ -14,10 +14,6 @@ def index(request):
     return render(request, 'index.html')
 
 
-def contact_view(request):
-    return render(request, 'contact-us.html')
-
-
 def signup_view(request):
     # if request.user.is_authentecated:
     #     return redirect('home')
@@ -84,9 +80,38 @@ def debtor_email(request):
     }
     return render(request, 'debtor-email.html', {"page_contents": page_contents})
 
-
+# Temporal views for Testing stays here---
 def about_us(request):
     return render(request, 'about-us.html')
 
 def faq(request):
     return render(request, 'faq.html')
+
+def terms(request):
+    return render(request, 'T&C.html')
+
+def accessibility(request):
+    return render(request, 'accessibility-statement.html')
+
+def policy(request):
+    return render(request, 'privacy-policy.html')
+
+def help_suppport(request):
+    return render(request, 'help-and-support.html')
+
+def contact_view(request):
+    """ 
+    Needs get request to get user form and store
+    in the database
+    """
+    # if request.method == "post":
+        # name = request.POST['name']
+        # email = request.POST['email']
+        # phone = request.POST['phoneNo']
+        # subject = request.POST['subject']
+        # message = request.POST['message']
+        # post_to_db(name, email, phone, subject, message) 
+
+    return render(request, 'contact-us.html')
+
+    
