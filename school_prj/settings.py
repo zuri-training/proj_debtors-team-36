@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 from decouple import config
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -38,11 +39,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'school_app',
+    'school_app.apps.SchoolAppConfig',
     'account.apps.AccountConfig',
 
     #third party apps
     'uuid',
+    # 'django-extensions'
 ]
 'Apps.school_app.app.SchoolAppConfig'
 
@@ -63,7 +65,7 @@ ROOT_URLCONF = 'school_prj.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        # 'DIRS': [],
         'DIRS': [BASE_DIR/'static'],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -137,12 +139,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = "school_app.School"
 
 
-EMAIL_BACKEND = 'django_mailjet.backends.MailjetBackend'
-EMAIL_HOST = 'in-v3.mailjet.com'
-MAILJET_API_KEY = "b734f9dc3db42986e5c0b8331fbe27b4"
-MAILJET_API_SECRET = "6b7614db836793f2f251d562fa04a286"
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_USE_SSL = False
-EMAIL_TIMEOUT = 30
-DEFAULT_FROM_EMAIL = 'MY DEBTORS <mydebtors.zuri@gmail.com>'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+

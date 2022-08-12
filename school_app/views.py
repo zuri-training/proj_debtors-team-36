@@ -1,3 +1,5 @@
+
+import re
 # from django.http import HttpResponse
 import random
 from django.core.mail import send_mail
@@ -8,7 +10,7 @@ from django.contrib.auth import login, logout, authenticate
 from django.views.generic.edit import CreateView
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
-from .forms import School_RegForm, RoomForm, UserForm
+from .forms import School_RegForm, RoomForm, UserForm, KycForm
 from .models import Debtors, School, Debtor_list, School_Post
 
 
@@ -131,8 +133,17 @@ def current_debtors(request):
     debtors = Debtors.objects.all().order_by('name')
     return render(request, 'current-debtors.html', {'debtors': debtors})
 
+def kyc_auth(request):
+    if request.method == 'POST':
+        form = KycForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('home')
+    else:
+        form = KycForm()
+    return render(request, 'kyc-auth.html')
 
-# Create your views here.
+
 
 def debtor_email(request):
     """_summary_
