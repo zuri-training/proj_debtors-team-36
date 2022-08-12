@@ -396,13 +396,15 @@ background:white;
   }
   
   .dropdown-content a {
-    color: black;
+    color: #3380cc;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    border-top-left-radius: 5px;
+    border-top-right-radius:5px ;
   }
   
-  
+   
   .show {display: block;}
   /* buttons in table */
 
@@ -450,11 +452,11 @@ background:white;
     margin-bottom: 25px;
   }
   .responsive-table .table-header {
-    background-color: #ccccff;
+    background-color: #cee0f3;
     font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 0.03em;
-    color: blue;
+    color: #67a0d9;
   }
   .responsive-table .table-row {
     background-color: #ffffff;
