@@ -23,7 +23,7 @@ body {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    width: 1440px;
+
 }
 
 /* TOP NAVIGATION BAR STARTS HERE*/
@@ -423,3 +423,423 @@ footer {
   ::-webkit-scrollbar-thumb:hover {
     background: var(--hover_color);
   }
+@media screen and (max-width: 576px) {
+
+    body {
+        overflow-x: hidden;
+    }
+    .company-service-1 {
+        display: block;
+        width: 80%;
+        margin: 15px auto;
+        text-align: center;
+       
+    }
+
+    .left-text {
+        display: block;
+    }
+
+    .bluesquare {
+        height: 71.27055217271008px;
+width: 125.8370717793827px;
+left: -42.281005859375px;
+top: 249.93124389648438px;
+border-radius: 0px;
+
+    }
+
+    .lightsquare {
+       height: 71.27055217271008px;
+       width: 125.8370717793827px;
+       left: -41.16748046875px;
+       top: 231px;
+       border-radius: 0px;
+
+
+    }
+
+    .pictureframe svg {
+        position: absolute;
+        left: 49px;
+        top: 432.26px;
+        width: 200.86;
+        height: 180.74;
+        
+    }
+
+    .girl-picture {
+        position: absolute;
+        width: 246.3px;
+        height: 358.2px;
+        left: 125.55px;
+        top: 350px;
+    }
+    img {
+        width: 300.3px;
+        height: 412.2;
+    }
+        
+/* COMPANY SERVICE 2 MEDIA QUERIES */
+
+.company-service-2 {
+    margin-top: 700px;
+}
+.service-box2 {
+    display: block;
+}
+.big-vector svg{
+position: absolute;
+top: 800px;
+height: 1400;
+
+}
+
+.article3 {
+    position: absolute;
+    top: 0;
+
+
+}
+
+.classroom-frame svg{
+    position: absolute;
+width: 400.65px;
+height: 400px;
+left: 45.72px;
+top: 420px;
+
+}
+.classphoto{
+    position: absolute;
+width: 450px;
+height: 294.84px;
+left: 15.26px;
+top: 460.35px;
+}
+
+/* SECOND SECTION BOX */
+.moreinfo {
+background-color: red;
+}
+
+
+/* SERVICE BOX 3 */
+.service-box3 {
+    margin-top: 0;
+    position: relative;
+}
+
+.vision {
+    position: absolute;
+    top: 820px;
+    display: block;
+    width: fit-content;
+    margin-left: 0;
+}
+.mission{
+    position: absolute;
+    top: 1060px;
+
+    width: fit-content;
+margin: 10px auto;
+
+}
+
+.mission-longtext {
+    text-align: left;
+}
+/* LIST OF SCHOOLS AND BOTTOM */
+.list-of-schools svg {
+    position: absolute;
+width: 500px;
+height: 900px;
+left: -1px;
+top: 2440px;
+}
+
+     /* START COPY HERE */
+
+     ::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    nav {
+        padding: 16px;
+        padding-top: 40px;
+    }
+
+    nav .middle-nav,
+    nav .right-nav {
+        display: none;
+    }
+
+    .showNavDropdown {
+        display: block;
+        cursor: pointer;
+    }
+
+
+    /* #top-dropdown {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: 70px;
+        right: 5px;
+        width: 95%;
+    }
+
+    #top-dropdown button {
+        height: 50px;
+        cursor: pointer;
+    } */
+
+    /* END COPY HERE */
+
+    .welcome {
+        padding: 0px 16px;
+        height: auto;
+    }
+
+    .mobile-welcome {
+        height: calc(100vh - 80px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .welcome-top-right {
+        padding: 0;
+    }
+
+    .welcome-top article {
+        width: 61%;
+        margin: 74px 0px 40px;
+        padding: 0;
+    }
+
+    .welcome-top .tired {
+        font-size: 20px;
+        line-height: 27px;
+    }
+
+    .welcome-top .tired2 {
+        font-size: 14px;
+        line-height: 19px;
+        margin: 8px 0px 16px 0px;
+    }
+
+    .welcome-top button {
+        width: 136px;
+        height: 40px;
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .welcome-top-right-pics {
+        width: 100%;
+        height: 200px;
+    }
+
+    .cookies {
+        max-width: 400px;
+        width: 98%;
+        height: auto;
+    }
+
+    .cookies-body {
+        width: auto;
+    }
+
+    .svg-btn {
+        transform: scale(0.9);
+    }
+
+    .cookies-head {
+        font-size: 20px;
+        line-height: 27px;
+    }
+
+    .cookies-body {
+        margin: 8px 0px 16px;
+        /* width: 90%; */
+    }
+
+    .cookie,
+    .necessary {
+        display: none;
+    }
+
+    .btn-container {
+        width: 100%;
+    }
+
+    .btn {
+        width: 151px;
+        height: 40px;
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    .welcome-bottom-text {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+        width: 85%;
+    }
+
+    .welcome-bottom-icons {
+        width: 85%;
+    }
+
+    .icon1,
+    .icon2 {
+        width: 48px;
+        height: 48px;
+    }
+
+    .icon3 {
+        width: 35px;
+        height: 48px;
+    }
+
+    .icon4 {
+        width: 32px;
+        height: 40px;
+    }
+
+    .icon5 {
+        width: 40px;
+        height: 48px;
+    }
+
+
+    .after-welcome-container {
+        width: 95%;
+    }
+
+    .after-welcome-head {
+        width: 100%;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 22px;
+        width: 72%;
+    }
+
+    .snippet-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .snippet {
+        width: 50%;
+        padding: 8px;
+        margin-top: 10px;
+    }
+
+    .welcome-contd {
+        padding: 50px 0px;
+    }
+
+    .welcome-contd .three {
+        display: none;
+    }
+
+    .welcome-section {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 40px;
+    }
+
+    .welcome-section article {
+        width: 100%;
+    }
+
+    .welcome-sect-head {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 27px;
+    }
+
+    .welcome-sect-body {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+        width: auto;
+        text-align: justify;
+    }
+
+    .welcome-contd-pic {
+        order: 1;
+        width: 100%;
+        justify-content: center;
+        margin-top: 24px;
+    }
+
+    .welcome-contd-pic img {
+        width: 100%;
+        max-width: 500px;
+        height: 250px;
+    }
+
+
+
+    /* START COPY HERE */
+    footer {
+        height: auto;
+        flex-wrap: wrap;
+        padding: 46px 20px 20px 20px;
+        padding: 16px;
+        position: absolute;
+        top: 3000px;
+    }
+
+    .footer-top {
+        flex-wrap: wrap;
+        height: auto;
+        justify-content: space-between;
+        width: 95%;
+    }
+
+    .footer-top-header {
+        margin-top: 24px;
+    }
+
+    .f1 {
+        width: auto;
+        width: 60%;
+    }
+
+    .f2 {
+        width: 40%;
+    }
+
+    .footer-top-header h4 {
+        font-size: 20px;
+        line-height: 27px;
+    }
+
+    .footer-links a,
+    .footer-links p {
+        font-size: 14px;
+        line-height: 19px;
+    }
+
+    .footer-bottom {
+        margin-top: 24px;
+    }
+
+    .copyright,
+    .footer-line {
+        display: none;
+    }
+
+    .socials img {
+        margin-right: 10px;
+    }
+}
+    
+
