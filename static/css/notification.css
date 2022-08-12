@@ -5,7 +5,31 @@
     --text-color1: #141414;
     --text-color2: #1f1f1f;
     --text-color3: #ffffff;
+    --hover_color: #3380cc;
 }
+/* Custom Scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color1);
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--hover_color);
+}
+
 
 *{
     padding: 0;
@@ -35,6 +59,9 @@ margin-bottom: 1.5rem;
     margin-left: 1rem;
 }
 
+main .headd{
+    font-size: 1.3rem;
+}
 main .notif{
     display: flex;
     justify-content: space-between;
@@ -48,6 +75,7 @@ main .notif h5{
 
 main .notif p{
     color: var(--primary-color1);
+    cursor: pointer;
 }
 
 main #new-notif{
@@ -58,7 +86,7 @@ main .new{
     display: flex;
     width: 92.4285714%;
     margin-bottom: 1.3rem;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid rgb(201, 198, 198);
 }
 
 main .new img{
@@ -71,3 +99,31 @@ margin-bottom: 10px;
 main .new .info p{
 margin-bottom: 7.56px;
 }
+
+/*Earlier*/
+
+main .earlier{
+    display: flex;
+    width: 92.4285714%;
+    margin-bottom: 1.3rem;
+    border-bottom: 1px solid var(--primary-color1);
+    border-top: rgb(255, 249, 249) 1px solid;
+    border-left: rgb(201, 198, 198) 1px solid;
+}
+
+main .earlier img{
+    margin-right: 1.3rem;
+    height: 60.480003356933594px;
+width: 60.480003356933594px;
+margin-bottom: 10px;
+}
+
+main .earlier .info p{
+margin-bottom: 7.56px;
+}
+
+#new-notif .mark {
+    color: var(--primary-color1);
+    cursor: pointer;
+}
+

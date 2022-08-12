@@ -66,15 +66,16 @@ const showCookies = () => {
 
     const cookies_body = document.createElement("p");
     cookies_body.className = "cookies-body";
-    cookies_body.innerText = "We use cookies to improve user experince\nChoose what cookies you allow us to use.\nYou can read more about our cookies policy in our";
+    cookies_body.innerText = "We use cookies to improve user experince\nChoose what cookies you allow us to use.\nYou can read more about our cookies policy in our  ";
     // cookies_body.innerHTML = "<a class='cookies_link' href='privacy-policy.html'>Privacy Policy</a>"
-    cookies.appendChild(cookies_body);
+
 
     const cookies_link = document.createElement("a");
     cookies_link.className = "cookies_link";
     cookies_link.innerText = "Privacy Policy";
     cookies_link.setAttribute("href", "privacy-policy.html")
-    cookies.appendChild(cookies_link);
+    cookies_body.appendChild(cookies_link);
+    cookies.appendChild(cookies_body);
 
     const necessary = document.createElement("div");
     necessary.className = "necessary";

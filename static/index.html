@@ -1,12 +1,4 @@
- views_urls
-
-
-
 {% load static %}
-
-<!-- {% load static %} -->
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -15,24 +7,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-views_urls
 
     <script defer src="{% static './js/top-nav.js' %}"></script>
+    <script defer src="{%  static './js/index.js' %}"></script>
+
     <!-- COPY THE SCRIPT ABOVE -->
-    <script defer src="./js/index.js"></script>
-    <link rel="stylesheet" href="./css/index.css">
+    <!-- <script defer src="./js/index.js"></script> -->
+    <!-- <link rel="stylesheet" href="./css/index.css"> -->
 
 
     <link rel="stylesheet" href="{% static './css/index.css' %}">
 
 
     <!-- <link rel="stylesheet" href="{% static './css/index.css' %}"> -->
-    <link rel="stylesheet" href="./css/index.css">
- main
+    <!-- <link rel="stylesheet" href="./css/index.css"> main
     <script defer src="./js/top-nav.js"></script>
-    <!-- COPY THE SCRIPT ABOVE -->
+    COPY THE SCRIPT ABOVE
     <script defer src="./js/index.js"></script>
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/index.css"> -->
 
 
     <title>My Debtor</title>
@@ -43,19 +35,21 @@ views_urls
     <!-- TOP NAVIGATION BAR STARTS HERE -->
     <nav>
         <div class="left-nav">
-            <img src="./img/top-nav-app-logo.svg" alt="">
+            <img src="{% static './img/top-nav-app-logo.svg' %}" alt="">
         </div>
         <div class="middle-nav">
-        <a href="{% url 'index' %}">Home</a>
-          <a href="{% url 'about' %}">About Us</a>
-          <a href="faq.html">FAQ</a>
-          <a class="current" href="{% url 'contact' %}">Contact Us</a>
+            <a href="{% url 'index' %}">Home</a>
+            <a href="{% url 'about' %}">About Us</a>
+            <a href="{% url 'faq' %}">FAQ</a>
+            <a class="current" href="{% url 'contact' %}">Contact Us</a>
         </div>
         <div class="right-nav">
-            <a class="" href="{% url 'login' %}"><button onclick="location.href = 'login.html'" class="welcome-login-btn">Login</button></a>
-            <a class="" href="{% url 'signup' %}"><button onclick="location.href = 'signup.html'" class="welcome-signup-btn">Sign Up</button></a>
+            <a class="" href="{% url 'login' %}"><button onclick="location.href = 'login.html'"
+                    class="welcome-login-btn">Login</button></a>
+            <a class="" href="{% url 'signup' %}"><button onclick="location.href = 'signup.html'"
+                    class="welcome-signup-btn">Sign Up</button></a>
         </div>
-        <img src="./img/showNav.svg" alt="" class="showNavDropdown" onclick="showTopNav()">
+        <img src="{% static './img/showNav.svg' %}" alt="" class="showNavDropdown" onclick="showTopNav()">
         <div id="top-dropdown" class="hide" onclick="hideTopNav()">
             <button class="dropdown-btn" onclick="location.href = 'index.html'">Home</button>
             <button class="dropdown-btn" onclick="location.href = 'about-us.html'">About Us</button>
@@ -69,78 +63,68 @@ views_urls
 
     <!-- Include the onclick attribute in your main content tag -->
     <main onclick="hideTopNav()">
-        <div class="welcome">
-            <div class="welcome-top">
-                <article class="welcome-top-left">
-                    <p class="tired">Increase profitability, manage student debts as a school owner.</p>
-                    <p class="tired2">Let My Debtor help you keep an accurate list directory of wards in debt and
-                        debtor list of schools in your locality.</p>
-                    <div class="welcome-top-btn">
-                        <button class="get_started" onclick="location.href = 'signup.html'">Get started</button>
-                        <!-- <button onclick="showCookies()">List Your School for Free!</button> -->
-                    </div>
-                </article>
+        <div class="mobile-welcome">
+            <div class="welcome">
+                <div class="welcome-top">
+                    <article class="welcome-top-left">
+                        <p class="tired">Increase profitability, manage student debts as a school owner.</p>
+                        <p class="tired2">Let My Debtor help you keep an accurate list directory of wards in debt and debtor list of schools in your locality.</p>
+                        <div class="welcome-top-btn">
+                            <button class="get_started" onclick="location.href = 'signup.html'">Get started</button>
+                            <!-- <button onclick="showCookies()">List Your School for Free!</button> -->
+                        </div>
+                    </article>
 
-                <!-- A background image will be used instead -->
-                <div class="welcome-top-right">
-                    <img src="./img/Group 100.png" alt="" class="welcome-top-right-pics">>
+                    <!-- A background image will be used instead -->
+                    <div class="welcome-top-right">
+                        <img src="{% static './img/Group 100.png' %}" alt="" class="welcome-top-right-pics">>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="welcome-bottom">
-            <p class="welcome-bottom-text">My debtor currently serves over 2000+ schools in over 20+ countries</p>
-            <div class="welcome-bottom-icons">
-                <img class="welcome-bottom-icon icon1"
-                    src="./img/122-1224567_stafford-county-public-school-logo-best-logo-for 1.png" alt="">
-                <img class="welcome-bottom-icon icon2" src="./img/cropped-School-Badge 1.png" alt="">
-                <img class="welcome-bottom-icon icon3"
-                    src="./img/png-transparent-british-international-school-in-cairo-sun-of-knowledge-british-international-school-sbis-school-text-egypt-logo 1.png"
-                    alt="">
-                <img class="welcome-bottom-icon icon4"
-                    src="./img/png-transparent-british-international-school-of-kuala-lumpur-british-school-of-brasilia-british-school-of-nanjing-doha-college-school-label-logo-international 1.png"
-                    alt="">
-                <img class="welcome-bottom-icon icon5" src="./img/preloader 1.png" alt="">
+            <div class="welcome-bottom">
+                <p class="welcome-bottom-text">My debtor currently serves over 2000+ schools in over 20+ countries</p>
+                <div class="welcome-bottom-icons">
+                    <img class="welcome-bottom-icon icon1" src="{% static './img/122-1224567_stafford-county-public-school-logo-best-logo-for 1.png' %}" alt="">
+                    <img class="welcome-bottom-icon icon2" src="{% static './img/cropped-School-Badge 1.png' %}" alt="">
+                    <img class="welcome-bottom-icon icon3" src="{% static './img/png-transparent-british-international-school-in-cairo-sun-of-knowledge-british-international-school-sbis-school-text-egypt-logo 1.png' %}" alt="">
+                    <img class="welcome-bottom-icon icon4" src="{% static './img/png-transparent-british-international-school-of-kuala-lumpur-british-school-of-brasilia-british-school-of-nanjing-doha-college-school-label-logo-international 1.png' %}" alt="">
+                    <img class="welcome-bottom-icon icon5" src="{% static './img/preloader 1.png' %}" alt="">
+                </div>
             </div>
         </div>
 
         <!-- Snippet -->
         <div class="after-welcome">
             <div class="after-welcome-container">
-                <p class="after-welcome-head">We have built an incredible platform that is reliable, accurate and easy
-                    to use. Relax, let us go about the business of worrying about your debtors.</p>
+                <p class="after-welcome-head">We have built an incredible platform that is reliable, accurate and easy to use. Relax, let us go about the business of worrying about your debtors.</p>
                 <div class="snippet-container">
                     <div class="snippet">
                         <div class="snippet-icon">
-                            <img src="./img/user-friendly.svg" alt="">
+                            <img src="{% static './img/user-friendly.svg' %}" alt="">
                         </div>
                         <p class="snippet-head">User Friendly</p>
-                        <p class="snippet-message">Made with you in mind, this product is easy to navigate
-                            even as
-                            a first time user.</p>
+                        <p class="snippet-message">Made with you in mind, this product is easy to navigate even as a first time user.</p>
                     </div>
                     <div class="snippet">
                         <div class="snippet-icon">
-                            <img src="./img/dark-theme.svg" alt="">
+                            <img src="{% static './img/dark-theme.svg' %}" alt="">
                         </div>
                         <p class="snippet-head">Dark Theme</p>
-                        <p class="snippet-message">Working at night? Reduce the strai >on your eyes,
-                            easily switch to dark mode.</p>
+                        <p class="snippet-message">Working at night? Reduce the strai >on your eyes, easily switch to dark mode.</p>
                     </div>
                     <div class="snippet">
                         <div class="snippet-icon">
-                            <img src="./img/easy-support.svg" alt="">
+                            <img src="{% static './img/get-notification.svg' %}" alt="">
                         </div>
                         <p class="snippet-head">Get Notifications</p>
-                        <p class="snippet-message">Get real time notifications when a school around yours
-                            updates their debtor list.</p>
+                        <p class="snippet-message">Get real time notifications when a school around yours updates their debtor list.</p>
                     </div>
                     <div class="snippet">
                         <div class="snippet-icon">
-                            <img src="./img/get-notification.svg" alt="">
+                            <img src="{% static './img/easy-support.svg' %}" alt="">
                         </div>
                         <p class="snippet-head">Fast Support</p>
-                        <p class="snippet-message">You ran into an issue? contact out customer support
-                            available 24/7</p>
+                        <p class="snippet-message">You ran into an issue? contact out customer support available 24/7</p>
                     </div>
                 </div>
             </div>
@@ -149,40 +133,34 @@ views_urls
             <div class="welcome-section one">
                 <article>
                     <p class="welcome-sect-head">Accurate List Directory</p>
-                    <p class="welcome-sect-body">My debtor enables you keep an accurate directory list of students/wards
-                        owing the school.we also provide you with a place to manage debtor information. You can; add a
-                        new debtor, view the debt status, attach a note to the debtors details all this information is
-                        available to you at a glance.
+                    <p class="welcome-sect-body">My debtor enables you keep an accurate directory list of students/wards owing the school.we also provide you with a place to manage debtor information. You can; add a new debtor, view the debt status, attach a note to the debtors details
+                        all this information is available to you at a glance.
                     </p>
                 </article>
                 <div class="welcome-contd-pic">
-                    <img src="./img/Group 114.png" alt="">
+                    <img src="{% static './img/Group 114.png' %}" alt="">
                 </div>
             </div>
             <div class="welcome-section two">
                 <div class="welcome-contd-pic">
-                    <img src="./img/unsplash_IrRbSND5EUc.png" alt="">
+                    <img src="{% static './img/unsplash_IrRbSND5EUc.png' %}" alt="">
                 </div>
                 <article>
                     <p class="welcome-sect-head">Faster Debt Recovery</p>
-                    <p class="welcome-sect-body">Work hand in hand with schools in your locality and share updates on
-                        wards with pending debt. This ensures faster debt recovery and also reduces bad debt as parents
-                        will be encouraged to settle old
-                        debts before moving on to another school.
+                    <p class="welcome-sect-body">Work hand in hand with schools in your locality and share updates on wards with pending debt. This ensures faster debt recovery and also reduces bad debt as parents will be encouraged to settle old debts before moving on to another
+                        school.
                     </p>
                 </article>
             </div>
             <div class="welcome-section three">
                 <article>
                     <p class="welcome-sect-head">Easily resolve collection disputes</p>
-                    <p class="welcome-sect-body">Avoid the drama With our “contend debt” feature. it is easier to
-                        resolve issues that come with collecting your debt as the entire process is automated for you
-                        from alerting your debtor to resolving disputes this also helps you reach out to more customers
-                        at a time.
+                    <p class="welcome-sect-body">Avoid the drama With our “contend debt” feature. it is easier to resolve issues that come with collecting your debt as the entire process is automated for you from alerting your debtor to resolving disputes this also helps you reach
+                        out to more customers at a time.
                     </p>
                 </article>
                 <div class="welcome-contd-pic">
-                    <img src="./img/Group 115.png" alt="">
+                    <img src="{% static './img/Group 115.png' %}" alt="">
                 </div>
             </div>
         </div>
@@ -198,10 +176,7 @@ views_urls
                                 </p>
                             </div>
                             <article class="card-body">
-                                <p>“ With my debtor, <br />we can list out everyone <br />that owes us they pay up
-                                    faster when they<br />realise they could not go to other schools because <br />they
-                                    can see
-                                    thier debt history “
+                                <p>“ With my debtor, <br />we can list out everyone <br />that owes us they pay up faster when they<br />realise they could not go to other schools because <br />they can see thier debt history “
                                 </p>
                             </article>
                         </div>
@@ -241,9 +216,7 @@ views_urls
                                 <p class="school-person">Mr. Gbemi Adura<br />School Bursar</p>
                             </div>
                             <article class="card-body">
-                                <p>“ With my debtor, <br />we can list out everyone <br />that owes us they pay up
-                                    faster when they <br />realise they could not go to other schools because <br />they
-                                    can see thier debt history “</p>
+                                <p>“ With my debtor, <br />we can list out everyone <br />that owes us they pay up faster when they <br />realise they could not go to other schools because <br />they can see thier debt history “</p>
                             </article>
                         </div>
                     </div>
@@ -252,8 +225,7 @@ views_urls
         </div>
         <div class="try-debtor">
             <h2>Try my debtor for free</h2>
-            <p>Set up your school's account, free forever and never worry<br>about a student with unpaid debt in
-                your school again.</p>
+            <p>Set up your school's account, free forever and never worry<br>about a student with unpaid debt in your school again.</p>
             <button onclick="location.href = 'signup.html'">List Your School For Free!</button>
         </div>
         <div class="faq" id="faq">
@@ -268,12 +240,12 @@ views_urls
                     <div class="faq-left">
                         <button class="faq-closed">
                             <p class="faq-question-head">What is my debtor</p>
-                            <img src="./img/faq-closed.svg" alt="">
+                            <img src="{% static './img/faq-closed.svg' %}" alt="">
                         </button>
                         <button class="faq-opened">
                             <div class="faq-question">
                                 <p class="faq-question-head">Who can see and use information</p>
-                                <img src="./img/faq-open.svg" alt="">
+                                <img src="{% static './img/faq-open.svg' %}" alt="">
                             </div>
                             <div class="faq-answer">
                                 <p class="faq-answer-body">Information provided by registered schools<br>can only be
@@ -289,15 +261,15 @@ views_urls
                     <div class="faq-right">
                         <button class="faq-closed">
                             <p class="faq-question-head">Is the platform free to use?</p>
-                            <img src="./img/faq-closed.svg" alt="">
+                            <img src="{% static './img/faq-closed.svg' %}" alt="">
                         </button>
                         <button class="faq-closed">
                             <p class="faq-question-head">Who can use my Debtor?</p>
-                            <img src="./img/faq-closed.svg" alt="">
+                            <img src="{% static './img/faq-closed.svg' %}" alt="">
                         </button>
                         <button class="faq-closed">
                             <p class="faq-question-head">Who can use my Debtor?</p>
-                            <img src="./img/faq-closed.svg" alt="">
+                            <img src="{% static './img/faq-closed.svg' %}" alt="">
                         </button>
                     </div>
                 </div>
@@ -309,9 +281,9 @@ views_urls
     <!-- FOOTER STARTS HERE -->
     <footer onclick="hideTopNav()">
         <div class="footer-top">
-            <div class="footer-top-header">
+            <div class="footer-top-header f1">
                 <div class="footer-logo">
-                    <img src="./img/footer-app-logo.svg" alt="">
+                    <img src="{% static './img/footer-app-logo.svg' %}" alt="">
                 </div>
                 <div class="footer-links">
                     <a href="about-us.html">About</a>
@@ -321,7 +293,7 @@ views_urls
                     <a href="accessibility-statement.html">Accessibility Statement</a>
                 </div>
             </div>
-            <div class="footer-top-header">
+            <div class="footer-top-header f2">
                 <h4>Features</h4>
                 <div class="footer-links">
                     <p>Dashboard</p>
@@ -330,13 +302,13 @@ views_urls
                     <p>Debt Summary</p>
                 </div>
             </div>
-            <div class="footer-top-header">
+            <div class="footer-top-header f1">
                 <h4>Use Cases</h4>
                 <div class="footer-links">
                     <p>School Management</p>
                 </div>
             </div>
-            <div class="footer-top-header">
+            <div class="footer-top-header f2">
                 <h4>Resources</h4>
                 <div class="footer-links">
                     <a href="help-and-support.html">Help and Support</a>
@@ -346,17 +318,17 @@ views_urls
         </div>
         <div class="footer-bottom">
             <div class="copyright">
-                <img src="./img//copyright.svg" alt="">
+                <img src="{% static './img//copyright.svg" alt="">
                 <p class="footer-small-text">2022 Team 36 my debtor project. Zuri Team, Inc. All rights reserved.</p>
             </div>
             <hr class="footer-line">
             <div class="socials">
                 <p class="footer-small-text">Follow Us.</p>
-                <img src="./img/facebook.svg" alt="">
-                <img src="./img/gmail.svg" alt="">
-                <img src="./img/linkedin.svg" alt="">
-                <img src="./img/twitter.svg" alt="">
-                <img src="./img/instagram.svg" alt="">
+                <img src="{% static './img/facebook.svg' %}" alt="">
+                <img src="{% static './img/gmail.svg' %}" alt="">
+                <img src="{% static './img/linkedin.svg' %}" alt="">
+                <img src="{% static './img/twitter.svg' %}" alt="">
+                <img src="{% static './img/instagram.svg' %}" alt="">
             </div>
         </div>
     </footer>
