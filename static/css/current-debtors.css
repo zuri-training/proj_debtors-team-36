@@ -265,6 +265,7 @@ h1 {
 .debt-right {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
 }
 
 .owe-date {
@@ -285,6 +286,8 @@ h1 {
     font-weight: 400;
     line-height: 21px;
     color: #808080;
+    width: 100%;
+    text-align: end;
 }
 
 .description {
@@ -305,6 +308,7 @@ h1 {
     color: var(--main_color);
     font-size: 14px;
     font-weight: 400;
+    text-align: end;
     line-height: 21px;
 }
 
