@@ -58,6 +58,7 @@ def signup_view(request):
         form = School_RegForm(request.POST)
     return render(request, 'signup.html', {'form': form})
 
+# VERIFICATION VIEWS
 
 def verify_otp(request):
     if request.method == 'POST':
@@ -68,7 +69,7 @@ def verify_otp(request):
             cd_otp = otp_form.cleaned_data
             otp = user.otp
 
-            # if otp == user.otp:
+            # if cd_otp == user.otp:
             #     user.is_active = True
             #     user.save()
             #     return render(request, 'school_app/verification-sucess.html', {})
@@ -83,6 +84,26 @@ def verify_otp(request):
         'user': user,
         }
     return render(request, 'verify2.html', context)
+
+def resend_otp(request):
+    user = School.objects.last()
+
+    # SENDING OTP TO USER THROUGH E-MAIL
+    user.otp = generateOTP()
+    otp = user.otp
+    subject = f"{user.username} OTP VERIFICATION FOR MyDebtors"
+    message = f"{otp}"
+    send_mail(subject, message, 'toluisjoel@gmail.com', [user.email])
+    user.save()
+
+    return redirect('account:verify_otp')
+
+
+def verification_success(request):
+    return render(request, 'school_app/verification-sucess.html', {})
+
+def verification_fail(request):
+    return render(request, 'school_app/verification-fail.html', {})
 
 def login_view(request):
     # if request.user.is_authentecated:
