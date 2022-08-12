@@ -891,9 +891,7 @@ h4 {
     background: #0855A2;
     text-align: center;
 }
-.small-screen {
-    display: none;
-}
+
 @media screen and (max-width: 428px) {
     body {
         display: flex;
@@ -920,92 +918,5 @@ h4 {
         height: 1318px;
         background: #FEFEFE;
     }
-
-    .small-screen {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        height: 56px;
-        margin-top: -50px;
-        margin-bottom: 5px;
-    }
-
-
-    .search {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding: 0px;
-        position: absolute;
-        width: 940px;
-        height: 56px;
-        left: 380px;
-        top: 80px;
-    }
-    
-    .search-bar {
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding: 0px;
-        width: 884px;
-        height: 56px;
-        background: #FEFEFE;
-        border: 2px solid #D2D2D2;
-        border-radius: 8px;
-    }
-    
-    .search-icon-back {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        padding: 16px;
-        gap: 8px;
-        width: 56px;
-        height: 56px;
-        flex: none;
-        order: 0;
-        flex-grow: 0;
-    
-    }
-    
-    input {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        padding: 0px;
-        gap: 8px;
-        width: 141px;
-        height: 22px;
-        flex: none;
-        order: 1;
-        flex-grow: 0;
-    }
-    
-    .search-text {
-        height: 40px;
-        width: 100%;
-        margin-left: 19px;
-        border: none;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 24px;
-        opacity: 0.5;
-    }
-    
-    .search-text:focus {
-        outline: none;
-    }
-    
-    .search-icons {
-        padding: 16px;
-        gap: 16px;
-        width: 56px;
-        height: 56px;
-    }
-
-
-
 
 }
