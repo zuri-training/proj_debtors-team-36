@@ -70,13 +70,13 @@
             <textarea name="comment" id="comment"></textarea>
         </div>
         <div class="btn">
-            <button class="cancel">Cancel</button>
-            <button class="enter" onclick="uploadFile()">Upload</button>
+            <button class="cancel" onclick="fail()">Cancel</button>
+            <button class="enter" onclick="success()">Upload</button>
         </div>
         <div class="recent">
             <h2 class="recent-upload">RECENT UPLOADS</h2>
             <div class="all-uploads" id="all-uploads"></div>
-            <div class="clear-all"><button id="clear-all">Clear all</button></div>
+            <div class="clear-all"><button id="clear-all" onclick="cancelAll()">Clear all</button></div>
         </div>
     </main>
     <footer onclick="hideTopNav()">
