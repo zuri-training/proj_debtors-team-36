@@ -42,7 +42,7 @@ def signup_view(request):
             otp = user.otp
             subject = f"{user.username} OTP VERIFICATION FOR MyDebtors"
             message = f"{otp}"
-            send_mail(subject, message, 'toluisjoel@gmail.com', [user.email])
+            send_mail(subject, message, 'mydebtors.zuri@gmail.com', [user.email])
             user.save()
 
 
@@ -93,7 +93,7 @@ def resend_otp(request):
     otp = user.otp
     subject = f"{user.username} OTP VERIFICATION FOR MyDebtors"
     message = f"{otp}"
-    send_mail(subject, message, 'toluisjoel@gmail.com', [user.email])
+    send_mail(subject, message, 'mydebtors.zuri@gmail.com', [user.email])
     user.save()
 
     return redirect('account:verify_otp')
