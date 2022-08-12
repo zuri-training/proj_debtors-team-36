@@ -1,5 +1,4 @@
-
-#from django.http import HttpResponse
+# from django.http import HttpResponse
 from django.shortcuts import redirect, render
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.decorators import login_required
@@ -11,14 +10,13 @@ from .forms import School_RegForm, RoomForm, UserForm
 from .models import Debtors, School, Debtor_list, School_Post
 
 
-
-
 def index(request):
     return render(request, 'index.html')
 
 
 def contact_view(request):
-    return render(request, 'contact-us.html', {})
+    return render(request, 'contact-us.html')
+
 
 def signup_view(request):
     # if request.user.is_authentecated:
@@ -38,6 +36,7 @@ def signup_view(request):
     else:
         form = School_RegForm(request.POST)
     return render(request, 'signup.html', {'form': form})
+
 
 def login_view(request):
     # if request.user.is_authentecated:
@@ -60,25 +59,13 @@ def logout_view(request):
     logout(request)
     return redirect('signin')
 
+
 def current_debtors(request):
     debtors = Debtors.objects.all().order_by('name')
     return render(request, 'current-debtors.html', {'debtors': debtors})
 
 
-
-
-=======
-from django.shortcuts import render
-from . import models
-
-
 # Create your views here.
-
-def home(request):
-    return render(request, 'index.html')
-
-def enter_debtors(request):
-    pass
 
 def debtor_email(request):
     """_summary_
@@ -88,12 +75,18 @@ def debtor_email(request):
         if the page will come as a popup. else, they will be fetched from the models
     """
     page_contents = {
-    "school_name" : "Chrisland school",
-    "student_email" : "alexjoe2018@gmail.com",
-    "student_name" : "Alex Sonia",
-    "contend_link" : "Contend this post",
-    "duration_owned" : "two",
-    "sponsor_name": "Mr Alex Joe",
+        "school_name": "Chrisland school",
+        "student_email": "alexjoe2018@gmail.com",
+        "student_name": "Alex Sonia",
+        "contend_link": "Contend this post",
+        "duration_owned": "two",
+        "sponsor_name": "Mr Alex Joe",
     }
-    return render(request, 'debtor-email.html', {"page_contents":page_contents})
+    return render(request, 'debtor-email.html', {"page_contents": page_contents})
 
+
+def about_us(request):
+    return render(request, 'about-us.html')
+
+def faq(request):
+    return render(request, 'faq.html')

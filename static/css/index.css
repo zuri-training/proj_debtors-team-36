@@ -605,8 +605,8 @@ nav .right-nav {
 }
 
 .welcome-section {
-    width: 80%;
-    min-width: 70%;
+    width: 60%;
+    min-width: 1076px;
     height: 380px;
     display: flex;
     justify-content: space-between;
@@ -1198,9 +1198,12 @@ footer {
     }
 
     .welcome-section {
+        width: auto;
+        min-width: auto;
         height: auto;
         display: flex;
         flex-direction: column;
+        padding: 0px 10px;
         margin-bottom: 40px;
     }
 
@@ -1232,7 +1235,7 @@ footer {
     .welcome-contd-pic img {
         width: 100%;
         max-width: 500px;
-        height: 250px;
+        height: 300px;
     }
 
     .schools {
