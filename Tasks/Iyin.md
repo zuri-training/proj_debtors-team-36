@@ -1,4 +1,4 @@
-## Bilweu Isaac
+## Bilweu Isaac Iyinoluwa
  __Fullstack__
 
 ##### Below is a list of description and links to issues of tasks assigned to me and ways i contributed to the progress of the team. The solution to the tasks are commented on the issues *(NB: They're clickable)*
@@ -21,6 +21,9 @@
 * Develop the Current Debtor page <br>
     - [Current Debtor Page issue](https://github.com/zuri-training/proj_debtors-team-36/issues/54)
 
+* Develop the Contention pages <br>
+    - [Contention Pages issue](https://github.com/zuri-training/proj_debtors-team-36/issues/64)
+
 
 
 ##### These are direct links to pull request I made to the main for the tasks I did
@@ -34,6 +37,18 @@ The commits for the tasks were pushed together and I made further updates. Descr
 * [Third Pull request](https://github.com/zuri-training/proj_debtors-team-36/pull/87) <br>
 
 * [Fourth Pull request](https://github.com/zuri-training/proj_debtors-team-36/pull/105) <br>
+
+* [Fifth Pull request](https://github.com/zuri-training/proj_debtors-team-36/pull/107) <br>
+
+* [Sixth Pull request](https://github.com/zuri-training/proj_debtors-team-36/pull/137) <br>
+
+* [Seventh Pull request](https://github.com/zuri-training/proj_debtors-team-36/pull/155) <br>
+
+* [Eighth Pull request](https://github.com/zuri-training/proj_debtors-team-36/pull/160) <br>
+
+* [Nineth Pull request](https://github.com/zuri-training/proj_debtors-team-36/pull/165) <br>
+
+* [Tenth Pull request](https://github.com/zuri-training/proj_debtors-team-36/pull/173) <br>
 
 
 
