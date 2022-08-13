@@ -1,5 +1,138 @@
-<!--Contending Page on figma-->
-<!--Note that you would also be working on the "pop up to contend debt" which is right beside this page on figma.
-     This pop up can be done with JS-->
-<!--YOur code goes here
-Delete before working-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script defer src="./js/top-nav.js"></script>
+     <script defer src="./js/contend-debt.js"></script>
+     <link rel="stylesheet" href="./css/contend-debt.css">
+     <title>Contend</title>
+</head>
+
+<body>
+     <nav>
+          <div class="left-nav">
+               <img src="./img/top-nav-app-logo.svg" alt="">
+          </div>
+          <div class="middle-nav">
+               <a href="index.html">Home</a>
+               <a href="about-us.html">About Us</a>
+               <a href="faq.html">FAQ</a>
+               <a href="contact-us.html">Contact Us</a>
+          </div>
+          <div class="right-nav">
+               <button onclick="location.href = 'login.html'" class="welcome-login-btn">Login</button>
+               <button onclick="location.href = 'signup.html'" class="welcome-signup-btn">Sign Up</button>
+          </div>
+          <img src="./img/showNav.svg" alt="" class="showNavDropdown" onclick="showTopNav()">
+          <div id="top-dropdown" class="hide" onclick="hideTopNav()">
+               <button class="dropdown-btn" onclick="location.href = 'index.html'">Home</button>
+               <button class="dropdown-btn" onclick="location.href = 'about-us.html'">About Us</button>
+               <button class="dropdown-btn" onclick="location.href = 'faq.html'">FAQ</button>
+               <button class="dropdown-btn" onclick="location.href = 'contact-us.html'">Contact Us</button>
+               <button class="dropdown-btn" onclick="location.href = 'login.html'">Login</button>
+               <button class="dropdown-btn" onclick="location.href = 'signup.html'">Sign Up</button>
+          </div>
+     </nav>
+     <main onclick="hideTopNav()">
+          <div class="debtor-details">
+               <h2>Debtor Details</h2>
+               <div class="debtor-container">
+                    <div class="detail">
+                         <h3>Parent/Guardian's name:</h3><br>
+                         <p id="name"></p>
+                    </div>
+                    <div class="detail">
+                         <h3>Email Address:</h3><br>
+                         <p id="email"></p>
+                    </div>
+                    <div class="detail">
+                         <h3>Phone number:</h3><br>
+                         <p id="number"></p>
+                    </div>
+                    <div class="detail">
+                         <h3>Student name:</h3><br>
+                         <p id="ward"></p>
+                    </div>
+                    <div class="detail last">
+                         <h3>Gender:</h3><br>
+                         <p id="gender"></p>
+                    </div>
+               </div>
+          </div>
+          <div class="debtor-details">
+               <h2>Debt Owed</h2>
+               <div class="debtor-container">
+                    <div class="owed">
+                         <div class="amount-owed">
+                              <img src="./img/naira.svg" alt="">
+                              <p id="amount"></p>
+                         </div>
+                         <div class="debt-description">
+                              <h4>Debt description:</h4>
+                              <p id="description"></p>
+                         </div>
+                    </div>
+               </div>
+          </div>
+          <button class="to-contend" onclick="contend ()">Contend debt</button>
+     </main>
+     <footer onclick="hideTopNav()">
+          <div class="footer-top">
+               <div class="footer-top-header f1">
+                    <div class="footer-logo">
+                         <img src="./img/footer-app-logo.svg" alt="">
+                    </div>
+                    <div class="footer-links">
+                         <a href="about-us.html">About</a>
+                         <a href="contact-us.html">Contact Us</a>
+                         <a href="privacy-policy.html">Privacy Policy</a>
+                         <a href="T&C.html">Terms and Conditions</a>
+                         <a href="accessibility-statement.html">Accessibility Statement</a>
+                    </div>
+               </div>
+               <div class="footer-top-header f2">
+                    <h4>Features</h4>
+                    <div class="footer-links">
+                         <p>Dashboard</p>
+                         <p>Debtor List</p>
+                         <p>Contend Debt</p>
+                         <p>Debt Summary</p>
+                    </div>
+               </div>
+               <div class="footer-top-header f1">
+                    <h4>Use Cases</h4>
+                    <div class="footer-links">
+                         <p>School Management</p>
+                    </div>
+               </div>
+               <div class="footer-top-header f2">
+                    <h4>Resources</h4>
+                    <div class="footer-links">
+                         <a href="help-and-support.html">Help and Support</a>
+                         <p>Community</p>
+                    </div>
+               </div>
+          </div>
+          <div class="footer-bottom">
+               <div class="copyright">
+                    <img src="./img//copyright.svg" alt="">
+                    <p class="footer-small-text">2022 Team 36 my debtor project. Zuri Team, Inc. All rights reserved.
+                    </p>
+               </div>
+               <hr class="footer-line">
+               <div class="socials">
+                    <p class="footer-small-text">Follow Us.</p>
+                    <img src="./img/facebook.svg" alt="">
+                    <img src="./img/gmail.svg" alt="">
+                    <img src="./img/linkedin.svg" alt="">
+                    <img src="./img/twitter.svg" alt="">
+                    <img src="./img/instagram.svg" alt="">
+               </div>
+          </div>
+     </footer>
+</body>
+
+</html>

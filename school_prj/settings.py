@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 from decouple import config
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -38,11 +39,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'school_app',
+    'school_app.apps.SchoolAppConfig',
     'account.apps.AccountConfig',
 
     #third party apps
     'uuid',
+    # 'django-extensions'
 ]
 'Apps.school_app.app.SchoolAppConfig'
 
@@ -63,7 +65,7 @@ ROOT_URLCONF = 'school_prj.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        # 'DIRS': [],
         'DIRS': [BASE_DIR/'static'],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -135,3 +137,8 @@ STATICFILES_DIRS = [BASE_DIR/'static']
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = "school_app.School"
+
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+

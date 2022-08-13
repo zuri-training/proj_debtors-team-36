@@ -107,15 +107,6 @@ main {
     flex-direction: column;
 }
 
-h1 {
-    font-size: 40px;
-    font-weight: 600;
-    line-height: 55px;
-    color: var(--main_color);
-    margin-top: 68px;
-    display: none;
-}
-
 .title {
     display: flex;
     flex-direction: column;
@@ -399,7 +390,7 @@ label input:focus+span {
     background-color: var(--hover_color);
 }
 
-.dom-btn:hover {
+.dom-btn:active {
     background-color: var(--clicked_color);
 }
 
@@ -518,7 +509,8 @@ label input:focus+span {
 
     .popup {
         width: 100%;
-        height: 40%;
+        height: 55%;
+        padding: 0px 10px;
     }
 
     .color {

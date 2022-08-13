@@ -1,16 +1,17 @@
 
-#from django.http import HttpResponse
+import re
+# from django.http import HttpResponse
+import random
+from django.core.mail import send_mail
 from django.shortcuts import redirect, render
-from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth.forms import AuthenticationForm, OTPForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import login, logout, authenticate
 from django.views.generic.edit import CreateView
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
-from .forms import School_RegForm, RoomForm, UserForm
+from .forms import School_RegForm, RoomForm, UserForm, KycForm
 from .models import Debtors, School, Debtor_list, School_Post
-
-
 
 
 def index(request):
@@ -18,7 +19,14 @@ def index(request):
 
 
 def contact_view(request):
-    return render(request, 'contact-us.html', {})
+    return render(request, 'contact-us.html')
+
+# generating random 6 digits otp code
+def generateOTP() :
+    otp = ""
+    for i in range(6):
+        otp += str(random.randint(1, 9))
+    return otp
 
 def signup_view(request):
     # if request.user.is_authentecated:
@@ -26,18 +34,78 @@ def signup_view(request):
     if request.method == 'POST':
         form = School_RegForm(request.POST)
         if form.is_valid():
-            user = form.save()
+
+            # making user inactive till verification is complete
+            user = form.save(commit=False)
+            user.is_active = False
+
+            # SENDING OTP TO USER THROUGH E-MAIL
+            user.otp = generateOTP() # storing otp in otp field
+            otp = user.otp
+            subject = f"{user.username} OTP VERIFICATION FOR MyDebtors"
+            message = f"{otp}"
+            send_mail(subject, message, 'mydebtors.zuri@gmail.com', [user.email])
+            user.save()
+
+
             # email = form.cleaned_data.get('email')
             # password = form.cleaned_data.get('password1')
             # user = authenticate(email=email, password=password)
-            login(request, user)
-            return redirect('dashboard')
+            # login(request, user)
+            return render(request, 'verify1.html', {'user': user})
         else:
             form = School_RegForm(request.POST)
             return render(request, 'signup.html', {'form': form})
     else:
         form = School_RegForm(request.POST)
     return render(request, 'signup.html', {'form': form})
+
+# VERIFICATION VIEWS
+
+def verify_otp(request):
+    if request.method == 'POST':
+        otp_form = OTPForm(request.POST)
+        user = School.objects.last()
+
+        if otp_form.is_valid():
+            cd_otp = otp_form.cleaned_data
+            otp = user.otp
+
+            # if cd_otp == user.otp:
+            #     user.is_active = True
+            #     user.save()
+            #     return render(request, 'school_app/verification-sucess.html', {})
+            # else:
+            #     return render(request, 'school_app/verification-sucess.html', {})
+    else:
+        otp_form = OTPForm()
+        user = School.objects.last()
+
+    context = {
+        'otp_form': otp_form,
+        'user': user,
+        }
+    return render(request, 'verify2.html', context)
+
+def resend_otp(request):
+    user = School.objects.last()
+
+    # SENDING OTP TO USER THROUGH E-MAIL
+    user.otp = generateOTP()
+    otp = user.otp
+    subject = f"{user.username} OTP VERIFICATION FOR MyDebtors"
+    message = f"{otp}"
+    send_mail(subject, message, 'mydebtors.zuri@gmail.com', [user.email])
+    user.save()
+
+    return redirect('account:verify_otp')
+
+
+def verification_success(request):
+    return render(request, 'school_app/verification-sucess.html', {})
+
+def verification_fail(request):
+    return render(request, 'school_app/verification-fail.html', {})
 
 def login_view(request):
     # if request.user.is_authentecated:
@@ -60,24 +128,22 @@ def logout_view(request):
     logout(request)
     return redirect('signin')
 
+
 def current_debtors(request):
     debtors = Debtors.objects.all().order_by('name')
     return render(request, 'current-debtors.html', {'debtors': debtors})
 
+def kyc_auth(request):
+    if request.method == 'POST':
+        form = KycForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('home')
+    else:
+        form = KycForm()
+    return render(request, 'kyc-auth.html')
 
 
-
-from django.shortcuts import render
-from . import models
-
-
-# Create your views here.
-
-def home(request):
-    return render(request, 'index.html')
-
-def enter_debtors(request):
-    pass
 
 def debtor_email(request):
     """_summary_
@@ -87,12 +153,18 @@ def debtor_email(request):
         if the page will come as a popup. else, they will be fetched from the models
     """
     page_contents = {
-    "school_name" : "Chrisland school",
-    "student_email" : "alexjoe2018@gmail.com",
-    "student_name" : "Alex Sonia",
-    "contend_link" : "Contend this post",
-    "duration_owned" : "two",
-    "sponsor_name": "Mr Alex Joe",
+        "school_name": "Chrisland school",
+        "student_email": "alexjoe2018@gmail.com",
+        "student_name": "Alex Sonia",
+        "contend_link": "Contend this post",
+        "duration_owned": "two",
+        "sponsor_name": "Mr Alex Joe",
     }
-    return render(request, 'debtor-email.html', {"page_contents":page_contents})
+    return render(request, 'debtor-email.html', {"page_contents": page_contents})
 
+
+def about_us(request):
+    return render(request, 'about-us.html')
+
+def faq(request):
+    return render(request, 'faq.html')

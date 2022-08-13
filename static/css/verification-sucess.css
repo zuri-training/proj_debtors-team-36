@@ -227,4 +227,8 @@ button {
     .message {
         width: 100%
     }
+
+    button {
+        margin-bottom: 50px;
+    }
 }

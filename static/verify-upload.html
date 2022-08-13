@@ -1,5 +1,138 @@
-<!--Verifiable document Upload page on figma-->
-<!--Note that you will also be "document uploading page,the upload sucess and the upload failed page" 
-    which is right beside this page on figma as a pop-up-->
-<!--Your code goes here
- Delete this when you start working-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="./js/top-nav.js"></script>
+    <script defer src="./js/verify-upload.js"></script>
+    <link rel="stylesheet" href="./css/verify-upload.css">
+    <title>Contend</title>
+</head>
+
+<body>
+    <nav>
+        <div class="left-nav">
+            <img src="./img/top-nav-app-logo.svg" alt="">
+        </div>
+        <div class="middle-nav">
+            <a href="index.html">Home</a>
+            <a href="about-us.html">About Us</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contact-us.html">Contact Us</a>
+        </div>
+        <div class="right-nav">
+            <button onclick="location.href = 'login.html'" class="welcome-login-btn">Login</button>
+            <button onclick="location.href = 'signup.html'" class="welcome-signup-btn">Sign Up</button>
+        </div>
+        <img src="./img/showNav.svg" alt="" class="showNavDropdown" onclick="showTopNav()">
+        <div id="top-dropdown" class="hide" onclick="hideTopNav()">
+            <button class="dropdown-btn" onclick="location.href = 'index.html'">Home</button>
+            <button class="dropdown-btn" onclick="location.href = 'about-us.html'">About Us</button>
+            <button class="dropdown-btn" onclick="location.href = 'faq.html'">FAQ</button>
+            <button class="dropdown-btn" onclick="location.href = 'contact-us.html'">Contact Us</button>
+            <button class="dropdown-btn" onclick="location.href = 'login.html'">Login</button>
+            <button class="dropdown-btn" onclick="location.href = 'signup.html'">Sign Up</button>
+        </div>
+    </nav>
+    <main>
+        <div class="file-upload">
+            <h1>File Upload</h1>
+            <h2 class="proof">Provide proof of payment</h2>
+            <div class="title">
+                <p>The file upload form allows you to upload verifiable documents, and images to support your clain of
+                    payment.</p>
+                <p class="nb">N.B-</p>
+                <ul>
+                    <li>You can upload multiple documents.</li>
+                    <li>Files supported: PDF, JPG, PNG, GIF.</li>
+                    <li>Document must be clear and not more than 10MB.</li>
+                </ul>
+            </div>
+            <div class="upload" id="cac">
+                <div class="before-upload" id="before_cac_upload">
+                    <img src="./img/cloud-upload.svg" alt="" class="cloud-upload">
+                    <p id="cac_text" class="drag">Drag and drop your files here</p>
+                    <span class="or">or</span>
+                    <button class="browse" onclick="uplaodDoc()">Browse files</button>
+                    <p class="supported-files">Files supported: PDF, JPG, PNG, GIF</p>
+                    <p class="maximum-size">Maximum size: 10 MB</p>
+                    <p class="external">EXTERNAL DRIVES</p>
+                    <div class="drives">
+                        <img src="./img/cloud.svg" alt="">
+                        <img src="./img/drive.svg" alt="">
+                        <img src="./img/box.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <p class="comment">Leave a comment</p>
+            <textarea name="comment" id="comment"></textarea>
+        </div>
+        <div class="btn">
+            <button class="cancel" onclick="fail()">Cancel</button>
+            <button class="enter" onclick="success()">Upload</button>
+        </div>
+        <div class="recent">
+            <h2 class="recent-upload">RECENT UPLOADS</h2>
+            <div class="all-uploads" id="all-uploads"></div>
+            <div class="clear-all"><button id="clear-all" onclick="cancelAll()">Clear all</button></div>
+        </div>
+    </main>
+    <footer onclick="hideTopNav()">
+        <div class="footer-top">
+            <div class="footer-top-header f1">
+                <div class="footer-logo">
+                    <img src="./img/footer-app-logo.svg" alt="">
+                </div>
+                <div class="footer-links">
+                    <a href="about-us.html">About</a>
+                    <a href="contact-us.html">Contact Us</a>
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="T&C.html">Terms and Conditions</a>
+                    <a href="accessibility-statement.html">Accessibility Statement</a>
+                </div>
+            </div>
+            <div class="footer-top-header f2">
+                <h4>Features</h4>
+                <div class="footer-links">
+                    <p>Dashboard</p>
+                    <p>Debtor List</p>
+                    <p>Contend Debt</p>
+                    <p>Debt Summary</p>
+                </div>
+            </div>
+            <div class="footer-top-header f1">
+                <h4>Use Cases</h4>
+                <div class="footer-links">
+                    <p>School Management</p>
+                </div>
+            </div>
+            <div class="footer-top-header f2">
+                <h4>Resources</h4>
+                <div class="footer-links">
+                    <a href="help-and-support.html">Help and Support</a>
+                    <p>Community</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="copyright">
+                <img src="./img//copyright.svg" alt="">
+                <p class="footer-small-text">2022 Team 36 my debtor project. Zuri Team, Inc. All rights reserved.
+                </p>
+            </div>
+            <hr class="footer-line">
+            <div class="socials">
+                <p class="footer-small-text">Follow Us.</p>
+                <img src="./img/facebook.svg" alt="">
+                <img src="./img/gmail.svg" alt="">
+                <img src="./img/linkedin.svg" alt="">
+                <img src="./img/twitter.svg" alt="">
+                <img src="./img/instagram.svg" alt="">
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
