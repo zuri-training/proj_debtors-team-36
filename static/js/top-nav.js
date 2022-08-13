@@ -1,8 +1,10 @@
 const currentPage = window.location.pathname
-const navLinks = document.querySelectorAll('nav a').
+const navLinks = document.querySelectorAll('.middle-nav a').
     forEach(link => {
-        if (link.href.includes(`${currentPage}`)) {
+        const a = link.href.split("'")[1]
+        if (currentPage.includes(a)) {
             link.classList.add('active');
+            console.log(a)
         }
     })
 
