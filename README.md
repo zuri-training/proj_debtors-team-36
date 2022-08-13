@@ -8,7 +8,7 @@ This is a platform that allows schools in a certain locality to list the directo
 * [Background](#background)
 * [About the Project](#about-the-project)
 * [Directory Structure](#directory-structure)
-* [Installation] (#installation)
+* [Installation](#installation)
 * [Technologies Used](#technologies-used)
 * [Features](#features)
 * [Product Specification](#product-specialization)
@@ -27,9 +27,10 @@ This is a platform that allows schools in a certain locality to list the directo
 ## Directory Structure for server deployment
 
 * The backend files can be found in the __school_app__ and __school_prj__ folder
-* The Authentication backend files are in the __account__ folder
+* The __school_prj__ is the django Project directory
+* The user accounts and Authentication backend files are in the __account__ folder
 * The Front-end files(Html, css and js plus images) are in the __static__ folder
-* The templates for the backend are in the __templates__ folder
+* The backend templates for the sign up and sign in are in the __templates__ folder
 * The invididual contribution .md files for each team member are in the __tasks__ folder
 * __Monlolith Django templating__ is being used for the project
 * The __requirements.txt__ file contains the required dependencies installed for the project
