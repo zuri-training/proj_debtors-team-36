@@ -18,3 +18,4 @@ urlpatterns = [
     path('debtors', views.current_debtors, name='current_debtors'),
     path('debtor_email', views.debtor_email, name='debtor-email'),
     path('about', views.about_us, name='about'),
+]
