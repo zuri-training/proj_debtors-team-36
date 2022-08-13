@@ -67,7 +67,6 @@ def current_debtors(request):
 
 
 
-=======
 from django.shortcuts import render
 from . import models
 

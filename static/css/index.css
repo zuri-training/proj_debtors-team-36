@@ -270,8 +270,11 @@ nav .right-nav {
 }
 
 .welcome-top-right-pics {
-    width: 499px;
-    height: 704px;
+    width: 100%;
+    height: 85%;
+    max-width: 499px;
+    max-height: 704px;
+
 }
 
 .welcome-bottom {
