@@ -4,7 +4,8 @@ import re
 import random
 from django.core.mail import send_mail
 from django.shortcuts import redirect, render
-from django.contrib.auth.forms import AuthenticationForm, OTPForm
+from django.contrib.auth.forms import AuthenticationForm
+from .forms import OTPForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import login, logout, authenticate
 from django.views.generic.edit import CreateView
