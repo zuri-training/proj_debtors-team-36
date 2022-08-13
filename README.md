@@ -7,6 +7,7 @@ This is a platform that allows schools in a certain locality to list the directo
 
 * [Background](#background)
 * [About the Project](#about-the-project)
+* [Directory Structure](#Directory Structure)
 * [Technologies Used](#technologies-used)
 * [Features](#features)
 * [Product Specification](#product-specialization)
@@ -21,6 +22,14 @@ This is a platform that allows schools in a certain locality to list the directo
 * My_debtors is a website that allows schools in a certain locality to list the directory of people owing them so as to avoid debtors applying to other schools with pending debts. 
 * This project was created to solve/avoid the problem of students applying to another school in the locality while still having pending or uncleared debts from their previous school.
 * This project is solely aimed at schools to help keep the aformentioned problem in check and also allows the students that have posted as debtors to challenge and contend the post.
+
+## Directory Structure
+* The backend files can be found in the __school_app__ and __school_prj__ folder
+* The Authentication backend files are in the __account__ folder
+* The Front-end files(Html, css and js plus images) are in the __static__ folder
+* The templates for the backend are in the __templates__ folder
+* The invididual contribution .md files for each team member are in the __tasks__ folder
+* __Monlolith Django templating__ is being used for the project
 
 ## Technologies Used
 This project was created with ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white) and the following technologies were used: <br/>
