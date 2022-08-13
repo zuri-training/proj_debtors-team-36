@@ -40,22 +40,20 @@ doc_upload.addEventListener("drop", (event) => {
     }
 })
 
-const removeItem = (index) => {
-    doc.splice(1, index);
+const removeItem = (index) => {     // remove files individually
+    let filteredArr = doc.filter((el) => doc.indexOf(el) !== index);
+    doc = filteredArr;
     console.log(doc)
+    showUploads()
 }
 
 const showUploads = () => {
-
-    // uploaded.remove()
-
     const recent = document.getElementById("all-uploads")
     recent.innerHTML = ""
     doc.map((file, index) => {
-        // console.log(index)
         const uploaded = document.createElement("div")
         uploaded.className = "uploaded";
-        uploaded.setAttribute("onclick", () => console.log(index))
+        uploaded.setAttribute("key", index)
 
         const left = document.createElement("div");
         left.className = "left";
@@ -103,9 +101,7 @@ const showUploads = () => {
         del.className = "del";
         del.setAttribute("src", "./img/deleteFile.svg")
 
-        // Figure out how to delete individually
-        del.setAttribute("onclick", () => console.log(index))
-        // del.setAttribute("onclick", removeItem())
+        btn.addEventListener("click", () => removeItem(index))
         btn.appendChild(del)
         right.appendChild(btn)
         uploaded.appendChild(right)
@@ -121,7 +117,7 @@ const removePopup = () => {
 
 const cancelAll = () => {
     doc = []
-    document.getElementById("all-uploads").innerHTML = ""
+    showUploads()
 }
 
 
@@ -147,7 +143,17 @@ const fail = () => {
     back3.appendChild(svg);
     back2.appendChild(back3);
     back1.appendChild(back2);
-    icon.appendChild(back1)
+    icon.appendChild(back1);
+
+    const bubble1 = document.createElement("div");
+    bubble1.className = "bubble1 fail-bubble";
+    icon.appendChild(bubble1)
+    const bubble2 = document.createElement("div");
+    bubble2.className = "bubble2 fail-bubble";
+    icon.appendChild(bubble2)
+    const bubble3 = document.createElement("div");
+    bubble3.className = "bubble3 fail-bubble";
+    icon.appendChild(bubble3)
 
     // for other components
     let status = document.createElement('h3')
@@ -198,6 +204,16 @@ const success = () => {
     back2.appendChild(back3);
     back1.appendChild(back2);
     icon.appendChild(back1)
+
+    const bubble1 = document.createElement("div");
+    bubble1.className = "bubble1 success-bubble";
+    icon.appendChild(bubble1)
+    const bubble2 = document.createElement("div");
+    bubble2.className = "bubble2 success-bubble";
+    icon.appendChild(bubble2)
+    const bubble3 = document.createElement("div");
+    bubble3.className = "bubble3 success-bubble";
+    icon.appendChild(bubble3)
 
     // for other components
     let status = document.createElement('h3')
