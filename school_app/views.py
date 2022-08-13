@@ -47,6 +47,7 @@ def signup_view(request):
             message = f"{otp}"
             send_mail(subject, message, 'mydebtors.zuri@gmail.com', [user.email])
             user.save()
+            request.session['user_email'] = user.email
 
 
             # email = form.cleaned_data.get('email')
@@ -65,33 +66,35 @@ def signup_view(request):
 
 def verify_otp(request):
     if request.method == 'POST':
+        user_email = request.session['user_email']
+        user = School.objects.get(email__exact=user_email)
         otp_form = OTPForm(request.POST)
-        user = School.objects.last()
-
         if otp_form.is_valid():
-            cd_otp = otp_form.cleaned_data
-            otp = user.otp
+            cd = otp_form.cleaned_data
+            otp = cd['otp_1'] + cd['otp_2'] + cd['otp_3'] + cd['otp_4'] + cd['otp_5'] + cd['otp_6']
 
-            # if cd_otp == user.otp:
-            #     user.is_active = True
-            #     user.save()
-            #     return render(request, 'school_app/verification-sucess.html', {})
-            # else:
-            #     return render(request, 'school_app/verification-sucess.html', {})
+            if otp == user.otp:
+                user.is_active = True
+                user.save()
+                return render(request, 'school_app/verification-sucess.html', {})
+            return render(request, 'school_app/verification-fail.html', {})
     else:
         otp_form = OTPForm()
-        user = School.objects.last()
+        user_email = request.session['user_email']
+        user = School.objects.get(email__exact=user_email)
 
     context = {
         'otp_form': otp_form,
         'user': user,
         }
-    return render(request, 'verify2.html', context)
+    return render(request, 'school_app/verify2.html', context)
+
 
 def resend_otp(request):
-    user = School.objects.last()
+    user_email = request.session['user_email']
+    user = School.objects.get(email__exact=user_email)
 
-    # SENDING OTP TO USER THROUGH E-MAIL
+    # SENDING OTP TO USER THROUGH E-MAIL    
     user.otp = generateOTP()
     otp = user.otp
     subject = f"{user.username} OTP VERIFICATION FOR MyDebtors"
@@ -99,7 +102,7 @@ def resend_otp(request):
     send_mail(subject, message, 'mydebtors.zuri@gmail.com', [user.email])
     user.save()
 
-    return redirect('account:verify_otp')
+    return redirect('school_app:verify_otp')
 
 
 def verification_success(request):
