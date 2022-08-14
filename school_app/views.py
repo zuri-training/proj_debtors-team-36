@@ -108,11 +108,13 @@ def contact_view(request):
         print('post method')
         name = request.POST.get('name')
         print(f'post name: {name}')
+        
         # email = request.POST['email']
         # phone = request.POST['phoneNo']
         # subject = request.POST['subject']
         # message = request.POST['message']
         # post_to_db(name, email, phone, subject, message)
+        
     elif request.method == "GET":
         print('get method')
         name = request.POST.get('name')
