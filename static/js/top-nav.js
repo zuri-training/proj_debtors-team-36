@@ -1,13 +1,22 @@
 const currentPage = window.location.pathname
 const navLinks = document.querySelectorAll('.middle-nav a').
-    forEach(link => {
-        const a = link.href.split("'")[1]
-        if (currentPage.includes(a)) {
-            link.classList.add('active');
-            console.log(a)
+    forEach(() => {
+        if (currentPage === "/") {
+            document.getElementById("home").className = "active";
+        }
+        else if (currentPage.includes("/contact-us")) {
+            document.getElementById("contact-us").className = "active";
+        }
+        else if (currentPage.includes("/about")) {
+            document.getElementById("about").className = "active";
+        }
+        else if (currentPage.includes("/faq")) {
+            document.getElementById("faq").className = "active";
+        }
+        else {
+
         }
     })
-
 
 if (innerWidth <= 576) {
     document.getElementById("top-dropdown").className = "hide"
