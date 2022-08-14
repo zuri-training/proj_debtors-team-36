@@ -130,3 +130,20 @@ dmypy.json
 
 # Code editors
 .vscode
+<<<<<<< HEAD
+Scripts
+Scripts/pip.exe
+Scripts/django-admin.exe
+Scripts/pip.exe
+Scripts/pip3.10.exe
+Scripts/pip3.exe
+Scripts/sqlformat.exe
+Scripts/pip.exe
+=======
+
+# for the scripts
+Scripts
+pyvenv.cfg
+Pipfile
+
+>>>>>>> 64a20818cd4e009dea749c9453bb3cdbbe577527

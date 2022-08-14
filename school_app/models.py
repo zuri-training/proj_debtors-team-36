@@ -41,6 +41,7 @@ class School(AbstractUser):
     bio = models.TextField(null=True)
 
     avatar = models.ImageField(null=True, default="")
+    otp = models.CharField(max_length=6, blank=True)
 
     USERNAME_FIELD = 'username'
     REQUIRED_FIELDS = []

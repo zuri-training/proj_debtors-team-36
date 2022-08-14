@@ -1,14 +1,6 @@
 // Cookies
 
 const cookies_list = [
-    // {
-    //     type: "checkbox",
-    //     label: "Strictly Necessary",
-    //     name: "necessary",
-    //     value: "necessary",
-    //     for: "necessary",
-    //     body: "These cookies are used for activities strictly necessary\nto operate and deliver the service you requested."
-    // },
 
     {
         type: "checkbox",
