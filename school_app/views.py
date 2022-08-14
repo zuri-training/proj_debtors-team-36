@@ -1,5 +1,6 @@
 
 import re
+from django.http import HttpResponse
 # from django.http import HttpResponse
 import random
 from django.core.mail import send_mail
@@ -13,6 +14,7 @@ from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from .forms import School_RegForm, RoomForm, UserForm, KycForm
 from .models import Debtors, School, Debtor_list, School_Post
+
 
 
 def index(request):
@@ -142,7 +144,7 @@ def kyc_auth(request):
         form = KycForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return redirect('home')
+            return redirect('/')
     else:
         form = KycForm()
     return render(request, 'kyc-auth.html')
