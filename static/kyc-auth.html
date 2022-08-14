@@ -17,7 +17,8 @@
           <!-- <h1>KYC Authentication</h1> -->
           <div class="loading">
                <div class="one">
-                    <img src="{% static './img/verify-check.svg' %}" alt="">
+                    <img src="static/img/verify-check.svg" alt="">
+                    <!-- <img src="{% static './img/verify-check.svg' %}" alt=""> -->
                </div>
                <p class="loading-text">Verification</p>
                <div class="line"></div>
@@ -83,29 +84,27 @@
                <button class="enter" onclick="uploadFile()">Upload</button>
           </div>
      </main>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script src="{% static 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js' %}"></script>
      <script>
           var formData = new FormData();
 
-          formData.append('cac_file', cac)
           formData.append('school_Id', id)
+          formData.append('cac_file', cac)
           formData.append('csrfmiddlewaretoken', '{{ csrf_token }}')
           $.ajax({
-
-              type: 'POST',
-              url: 'kyc',
-              data: formData,
-              cache: false,
-              processData: false,
-              contentType: false,
-              enctype: 'multipart/form-data',
-              success: function (){
-                  console.log('The post has been created!')
-              },
-              error: function(xhr, errmsg, err) {
-                  console.log(xhr.status + ":" + xhr.responseText)
-              }
-
+               type: 'POST',
+               url: 'school_app/kyc',
+               data: formData,
+               cache: false,
+               processData: false,
+               contentType: false,
+               enctype: 'multipart/form-data',
+               //     success: function (){
+               //         alert('The post has been created!')
+               //     },
+               //     error: function(xhr, errmsg, err) {
+               //         console.log(xhr.status + ":" + xhr.responseText)
+               //     }
           })
      </script>
 </body>

@@ -71,8 +71,8 @@ class School_Post(models.Model):
 
 class School_kyc(models.Model):
     # name = models.ForeignKey(School, on_delete=models.SET_NULL, null=False)
-    school_Id = models.FileField(upload_to='files/')
-    cac_file = models.FileField(upload_to='files/')
+    school_Id = models.FileField(upload_to='documents/')
+    cac_file = models.FileField(upload_to='documents/')
     uploaded_at = models.DateTimeField(auto_now_add=True)
 
 

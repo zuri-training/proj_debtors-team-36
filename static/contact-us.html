@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
      <!-- <link rel="stylesheet" href="{% static './css/contact-us.css' %}" />
     <script defer src="{% static './js/contact-us.js' %}"></script> -->
-    <link rel="stylesheet" href="{% static './css/contact-us.css' %}" />
-    <script defer src="{% static './js/contact-us.js' %}"></script>
-    <script defer src="{% static './js/top-nav.js' %}"></script>
+    <link rel="stylesheet" href="./css/contact-us.css" />
+    <script defer src="./js/contact-us.js"></script>
+    <script defer src="./js/top-nav.js"></script>
     <title>Contact Us</title>
   </head>
   <body>
@@ -19,18 +19,25 @@
             <img src="img/new-logo.svg" alt="logo">
         </div>
         <div class="middle-nav">
-          <a href="{% url 'school_app:signup' %}" >
-          <a href="{% url 'school_app:index' %}">Home</a>
-          <a href="{% url 'school_app:about' %}">About Us</a>
-          <a href="{% url 'school_app:faq.' %}">FAQ</a>
-          <a class="current" href="{% url 'school_app:contact' %}">Contact Us</a>
+          <a href="index.html">Home</a>
+          <a href="about-us.html">About Us</a>
+          <a href="faq.html">FAQ</a>
+          <a class="cur" href="contend-debt.html">Contact Us</a>
         </div>
         <div class="right-nav">
-          <a href="{% url 'school_app:login' %}" class="welcome-login-btn">Login</a>
+          <a href="login.html" class="welcome-login-btn">Login</a>
 
-          
+          <!-- BAckend stuff
+          <a href="{% url 'signup' %}" >
+          <a href="{% url 'index' %}">Home</a>
+          <a href="{% url 'about' %}">About Us</a>
+          <a href="faq.html">FAQ</a>
+          <a class="current" href="{% url 'contact' %}">Contact Us</a>
+        </div>
+        <div class="right-nav">
+          <a href="{% url 'login' %}" class="welcome-login-btn">Login</a>-->
 
-          <a href="{% url 'account:signup' %}" >
+          <a href="{% url 'signup' %}" >
             <button
             onclick="location.href = 'signup.html'"
             class="welcome-signup-btn">Sign Up</button>
