@@ -18,5 +18,4 @@ urlpatterns = [
     path('accessibility', views.accessibility, name = 'accessibility'),
     path('policy', views.policy, name = 'policy'),
     path('Help and support', views.help_suppport, name = 'support'),
-
 ]

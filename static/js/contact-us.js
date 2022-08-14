@@ -43,7 +43,6 @@ function validation() {
 // POP UP
 
 function toggle() {
-
     let popup = document.getElementById("popup");
     var blur = document.getElementById("blur");
     blur.classList.toggle("active");

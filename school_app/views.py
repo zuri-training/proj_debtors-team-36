@@ -101,17 +101,22 @@ def help_suppport(request):
 
 def contact_view(request):
     """ 
-    Needs get request to get user form and store
-    in the database
+    UPDATE: the onsubmit tag in the Contact Us form was set to false, 
+    this makes the form actionless
     """
-    # if request.method == "post":
-        # name = request.POST['name']
+    if request.method == "POST":
+        print('post method')
+        name = request.POST.get('name')
+        print(f'post name: {name}')
         # email = request.POST['email']
         # phone = request.POST['phoneNo']
         # subject = request.POST['subject']
         # message = request.POST['message']
-        # post_to_db(name, email, phone, subject, message) 
-
+        # post_to_db(name, email, phone, subject, message)
+    elif request.method == "GET":
+        print('get method')
+        name = request.POST.get('name')
+        print(f'get name: {name}')
     return render(request, 'contact-us.html')
 
     

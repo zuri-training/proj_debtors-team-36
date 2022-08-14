@@ -113,7 +113,9 @@
             <!--Contact Form-->
             <div class="contact">
                 <h1>CONTACT US</h1>
-                <form onsubmit="return false" id="myForm" method="post">
+                <!-- Maybe ajax will be used to aubmit the form because 
+                  the validation does not trigger the submission-->
+                <form action="{% url 'contact' %}" onsubmit="return false" id="myForm" method="post">
                     {% csrf_token %}
                     <h2>Hi there, how may we be of help to you?</h2>
                     <!-- {{ form }} -->

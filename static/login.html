@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login</title>
   <link rel="stylesheet" href="{% static './css/login.css' %}" />
-  <link rel="stylesheet" href=" {% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css' %}" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
 </head>
 
 <body>
@@ -30,7 +30,6 @@
         </div>
         <label class="email-psw" for="password">Password</label><br />
         <div class="visibility">
-views_urls
           <!-- {{ form.password }} -->
           <input type="password" autocomplete="current-password" placeholder="****************" name="password" id="password" required /><br />
           <i class="far fa-eye" visibility id="togglePassword"></i>
@@ -58,7 +57,7 @@ views_urls
           </div>
         </div>
         <button type="submit" class="login-btn">Login</button><br />
-        <p id="login-tag">Don't have an account?<a class="login-tag" href="./signup.html">sign up</a></p>
+        <p id="login-tag">Don't have an account?<a class="login-tag" href="{% url 'signup' %}">sign up</a></p>
 
       </form>
     </div>
