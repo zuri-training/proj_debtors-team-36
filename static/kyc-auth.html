@@ -72,7 +72,8 @@
                <label for="validate">
                     <input type="checkbox" name="validate" id="validate" value="validate">
                     <span id="valid" onclick="marked()">
-                         <img src="/static/img/kyc-checkmark.svg" alt="">
+                         <!-- <img src="/static/img/kyc-checkmark.svg" alt=""> -->
+                         <img src="{% static './img/kyc-checkmark.svg' %}" alt="">
                     </span>
                     <!-- I confirm ID is valid until the expiry date and is in color. -->
                </label>
@@ -90,6 +91,7 @@
           formData.append('school_Id', id)
           formData.append('csrfmiddlewaretoken', '{{ csrf_token }}')
           $.ajax({
+
               type: 'POST',
               url: 'kyc',
               data: formData,
@@ -103,6 +105,7 @@
               error: function(xhr, errmsg, err) {
                   console.log(xhr.status + ":" + xhr.responseText)
               }
+
           })
      </script>
 </body>

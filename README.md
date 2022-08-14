@@ -35,7 +35,7 @@ This is a platform that allows schools in a certain locality to list the directo
 * __Monlolith Django templating__ is being used for the project
 * The __requirements.txt__ file contains the required dependencies installed for the project
 
-## Installation
+## Instructions for deployment
 To run server locally on windows, it is assumed that you have python 3 and git cli/desktop installed
 * Clone the repo - https://github.com/zuri-training/proj_debtors-team-36.git
 * cd to the sub folder of the repo
