@@ -108,7 +108,7 @@ const showUploads = () => {
         btn.className = "del-btn";
         const del = document.createElement("img");
         del.className = "del";
-        del.setAttribute("src", "./img/deleteFile.svg")
+        del.setAttribute("src", "./static/img/deleteFile.svg")
 
         btn.addEventListener("click", () => removeItem(index))
         btn.appendChild(del)
@@ -148,7 +148,7 @@ const fail = () => {
     let back3 = document.createElement('div');
     back3.className = 'back3 fail-back3';
     let svg = document.createElement('img');
-    svg.setAttribute('src', './img/verifiable-fail.svg');
+    svg.setAttribute('src', './static/img/verifiable-fail.svg');
     back3.appendChild(svg);
     back2.appendChild(back3);
     back1.appendChild(back2);
@@ -208,7 +208,7 @@ const success = () => {
     let back3 = document.createElement('div');
     back3.className = 'back3 success-back3';
     let svg = document.createElement('img');
-    svg.setAttribute('src', './img/verifiable-success.svg');
+    svg.setAttribute('src', './static/img/verifiable-success.svg');
     back3.appendChild(svg);
     back2.appendChild(back3);
     back1.appendChild(back2);

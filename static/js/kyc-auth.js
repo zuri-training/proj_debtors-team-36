@@ -5,15 +5,15 @@ let confirmed = false;
 
 if (window.innerWidth <= 576) {
     const doc = document.querySelector("#cac img");
-    doc.setAttribute("src", "./img/kyc-cac-mobile.svg")
+    doc.setAttribute("src", "./static/img/kyc-cac-mobile.svg")
     const id = document.querySelector("#school_id img");
-    id.setAttribute("src", "./img/kyc-id-mobile.svg")
+    id.setAttribute("src", "./static/img/kyc-id-mobile.svg")
 }
 else {
     const doc = document.querySelector("#cac img");
-    doc.setAttribute("src", "./img/kyc-cac.svg")
+    doc.setAttribute("src", "./static/img/kyc-cac.svg")
     const id = document.querySelector("#school_id img");
-    id.setAttribute("src", "./img/kyc-id.svg")
+    id.setAttribute("src", "./static/img/kyc-id.svg")
 }
 
 const importCac = () => {      // imports the file
@@ -154,7 +154,7 @@ const uploadFile = () => {      //  uploads the file to the database
 
             // For svg
             let svg = document.createElement('img');
-            svg.setAttribute('src', './img/kyc-fail.svg')
+            svg.setAttribute('src', './static/img/kyc-fail.svg')
 
 
             // for other components
@@ -167,7 +167,7 @@ const uploadFile = () => {      //  uploads the file to the database
             para.innerText = 'Sorry! something went wrong while uploading your documents. please try again.';
             let close_btn = document.createElement('button');
             close_btn.className = 'close-btn';
-            close_btn.innerHTML = '<img src="./img/kyc-close.svg" />'
+            close_btn.innerHTML = '<img src="./static/img/kyc-close.svg" />'
             close_btn.setAttribute('onclick', 'removePopup()');
             const btn_container = document.createElement('div')
             btn_container.className = "btn-container";
@@ -198,7 +198,7 @@ const uploadFile = () => {      //  uploads the file to the database
 
             // For svg
             let svg = document.createElement('img');
-            svg.setAttribute('src', './img/kyc-success.svg')
+            svg.setAttribute('src', './static/img/kyc-success.svg')
 
             // for other components
             let status = document.createElement('h3')
@@ -213,7 +213,7 @@ const uploadFile = () => {      //  uploads the file to the database
             btn.className = 'dom-btn';
             btn.innerText = 'Ok';
             btn.setAttribute('onclick', 'removePopup()')
-            btn.setAttribute('onclick', "location.href = 'index.html'")
+            btn.setAttribute('onclick', "location.href = '/'")
             const btn_container = document.createElement('div')
             btn_container.className = "btn-container";
 
