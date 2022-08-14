@@ -1,11 +1,11 @@
 let doc = [];
 // 10000000
-const uplaodDoc = () => {      // imports the file
+const browseFile = () => {      // imports the file
     let input = document.createElement('input');
     input.type = 'file';
     input.onchange = _this => {
         if (Array.from(input.files)[0].size > 10000000) {
-            console.log("file too large")
+            window.alert("file too large")
         }
         else {
             doc.push(Array.from(input.files)[0]);    // to get the file from local storage
@@ -31,7 +31,7 @@ doc_upload.addEventListener("drop", (event) => {
     event.preventDefault();
     document.getElementById("cac_text").innerText = "Drag and drop your files here"
     if (event.dataTransfer.files[0].size > 10000000) {
-        console.log("File too large")
+        window.alert("file too large")
     }
     else {
         doc.push(event.dataTransfer.files[0]);
@@ -61,6 +61,15 @@ const showUploads = () => {
         pic_container.className = "pic-container";
         const pic = document.createElement("img");
         pic.className = "pic";
+        if (file.type.match('image')) {
+            pic.src = URL.createObjectURL(file);        // show file thumbnail
+            pic.onload = function () {
+                URL.revokeObjectURL(pic.src)
+            }
+        }
+        else {
+            console.log("not image")
+        }
         pic_container.appendChild(pic)
         left.appendChild(pic_container)
 
@@ -240,4 +249,13 @@ const success = () => {
     popup.appendChild(btn_container);
     backDiv.appendChild(popup)
     document.body.appendChild(backDiv);
+}
+
+const uploadFiles = () => {     // to upload files to the database
+    if (doc.length > 0) {
+        success();
+    }
+    else {
+        fail();
+    }
 }
