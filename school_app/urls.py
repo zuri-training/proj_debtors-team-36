@@ -10,7 +10,7 @@ from . import views
 urlpatterns = [
     path("dmail", views.debtor_email, name = 'debtor-email'),
     path("kyc", views.kyc_auth, name= 'kyc-auth'),
-    path('', views.index, name='home'),
+    path('', views.index, name='index'),
     path('contact-us', views.contact_view, name='contact'),
     path('signup/', views.signup_view, name='signup'),
     path('login', views.login_view, name='login'),
