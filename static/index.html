@@ -38,15 +38,15 @@
             <img src="{% static './img/top-nav-app-logo.svg' %}" alt="">
         </div>
         <div class="middle-nav">
-            <a href="{% url 'index' %}">Home</a>
-            <a href="{% url 'about' %}">About Us</a>
-            <a href="{% url 'faq' %}">FAQ</a>
-            <a class="current" href="{% url 'contact' %}">Contact Us</a>
+            <a href="{% url 'school_app:home' %}">Home</a>
+            <a href="{% url 'school_app:about' %}">About Us</a>
+            <a href="{% url 'school_app:faq' %}">FAQ</a>
+            <a class="current" href="{% url 'school_app:contact' %}">Contact Us</a>
         </div>
         <div class="right-nav">
-            <a class="" href="{% url 'login' %}"><button onclick="location.href = 'login.html'"
+            <a class="" href="{% url 'school_app:login' %}"><button onclick="location.href = 'login.html'"
                     class="welcome-login-btn">Login</button></a>
-            <a class="" href="{% url 'signup' %}"><button onclick="location.href = 'signup.html'"
+            <a class="" href="{% url 'account:signup' %}"><button onclick="location.href = 'signup.html'"
                     class="welcome-signup-btn">Sign Up</button></a>
         </div>
         <img src="{% static './img/showNav.svg' %}" alt="" class="showNavDropdown" onclick="showTopNav()">

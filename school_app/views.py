@@ -1,6 +1,6 @@
 
 import re
-# from django.http import HttpResponse
+from django.http import HttpResponse
 from django.shortcuts import redirect, render
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.decorators import login_required
@@ -10,6 +10,7 @@ from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from .forms import School_RegForm, RoomForm, UserForm, KycForm
 from .models import Debtors, School, Debtor_list, School_Post
+
 
 
 def index(request):
@@ -71,7 +72,7 @@ def kyc_auth(request):
         form = KycForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return redirect('home')
+            return redirect('/')
     else:
         form = KycForm()
     return render(request, 'kyc-auth.html')

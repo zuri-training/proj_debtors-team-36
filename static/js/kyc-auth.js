@@ -140,95 +140,116 @@ const uploadFile = () => {      //  uploads the file to the database
     else {
         const confirm_id = document.querySelector(".valid p");
         confirm_id.className = "okay";
-        if (cac === null || id === null) {       // If upload fails
-            let backDiv = document.createElement('div');
-            backDiv.className = 'cover';
-            let popup = document.createElement('div');
-            popup.className = 'popup';
-            let color = document.createElement('div');
-            color.className = 'color';
-            let blank = document.createElement('div');
-            blank.className = 'blank';
-            let msg = document.createElement('div');
-            msg.className = 'msg';
 
-            // For svg
-            let svg = document.createElement('img');
-            svg.setAttribute('src', './img/kyc-fail.svg')
+        // var formData = new FormData();
+
+        // formData.append('cac_file', cac)
+        // formData.append('school_Id', id)
+        // formData.append('csrfmiddlewaretoken', '{{ csrf_token }}')
+        // $.ajax({
+        //     type: 'POST',
+        //     url: 'kyc',
+        //     data: formData,
+        //     cache: false,
+        //     processData: false,
+        //     contentType: false,
+        //     enctype: 'multipart/form-data',
+        //     success: function (){
+        //         console.log('The post has been created!')
+        //     },
+        //     error: function(xhr, errmsg, err) {
+        //         console.log(xhr.status + ":" + xhr.responseText)
+        //     }
+        // })
+        // if (cac === null || id === null) {       // If upload fails
+        //     let backDiv = document.createElement('div');
+        //     backDiv.className = 'cover';
+        //     let popup = document.createElement('div');
+        //     popup.className = 'popup';
+        //     let color = document.createElement('div');
+        //     color.className = 'color';
+        //     let blank = document.createElement('div');
+        //     blank.className = 'blank';
+        //     let msg = document.createElement('div');
+        //     msg.className = 'msg';
+
+        //     // For svg
+        //     let svg = document.createElement('img');
+        //     svg.setAttribute('src', './img/kyc-fail.svg')
 
 
-            // for other components
-            let status = document.createElement('h3')
-            status.className = 'status';
-            status.innerText = 'failed!'
-            status.classList.add("status-failed");
-            let para = document.createElement('p')
-            para.className = 'para'
-            para.innerText = 'Sorry! something went wrong while uploading your documents. please try again.';
-            let close_btn = document.createElement('button');
-            close_btn.className = 'close-btn';
-            close_btn.innerHTML = '<img src="./img/kyc-close.svg" />'
-            close_btn.setAttribute('onclick', 'removePopup()');
-            const btn_container = document.createElement('div')
-            btn_container.className = "btn-container";
-            btn_container.appendChild(close_btn)
+        //     // for other components
+        //     let status = document.createElement('h3')
+        //     status.className = 'status';
+        //     status.innerText = 'failed!'
+        //     status.classList.add("status-failed");
+        //     let para = document.createElement('p')
+        //     para.className = 'para'
+        //     para.innerText = 'Sorry! something went wrong while uploading your documents. please try again.';
+        //     let close_btn = document.createElement('button');
+        //     close_btn.className = 'close-btn';
+        //     close_btn.innerHTML = '<img src="./img/kyc-close.svg" />'
+        //     close_btn.setAttribute('onclick', 'removePopup()');
+        //     const btn_container = document.createElement('div')
+        //     btn_container.className = "btn-container";
+        //     btn_container.appendChild(close_btn)
 
-            // Combining all
-            popup.appendChild(color)
-            popup.appendChild(blank)
-            blank.appendChild(btn_container)
-            blank.appendChild(msg);
-            msg.appendChild(svg)
-            msg.appendChild(status);
-            msg.appendChild(para);
-            backDiv.appendChild(popup);
-            document.body.appendChild(backDiv);
-        }
-        else {  // if upload is successful
-            let backDiv = document.createElement('div');
-            backDiv.className = 'cover';
-            let popup = document.createElement('div');
-            popup.className = 'popup';
-            let color = document.createElement('div');
-            color.className = 'color';
-            let blank = document.createElement('div');
-            blank.className = 'blank';
-            let msg = document.createElement('div');
-            msg.className = 'msg';
+        //     // Combining all
+        //     popup.appendChild(color)
+        //     popup.appendChild(blank)
+        //     blank.appendChild(btn_container)
+        //     blank.appendChild(msg);
+        //     msg.appendChild(svg)
+        //     msg.appendChild(status);
+        //     msg.appendChild(para);
+        //     backDiv.appendChild(popup);
+        //     document.body.appendChild(backDiv);
+        // }
+        // else {  // if upload is successful
+        //     let backDiv = document.createElement('div');
+        //     backDiv.className = 'cover';
+        //     let popup = document.createElement('div');
+        //     popup.className = 'popup';
+        //     let color = document.createElement('div');
+        //     color.className = 'color';
+        //     let blank = document.createElement('div');
+        //     blank.className = 'blank';
+        //     let msg = document.createElement('div');
+        //     msg.className = 'msg';
 
-            // For svg
-            let svg = document.createElement('img');
-            svg.setAttribute('src', './img/kyc-success.svg')
+        //     // For svg
+        //     let svg = document.createElement('img');
+        //     svg.setAttribute('src', './img/kyc-success.svg')
 
-            // for other components
-            let status = document.createElement('h3')
-            status.className = 'status';
-            status.classList.add("status-success");
-            status.innerText = 'Success!'
-            let para = document.createElement('p')
-            para.className = 'para'
+        //     // for other components
+        //     let status = document.createElement('h3')
+        //     status.className = 'status';
+        //     status.classList.add("status-success");
+        //     status.innerText = 'Success!'
+        //     let para = document.createElement('p')
+        //     para.className = 'para'
 
-            para.innerText = 'Your document as been uploaded successfully, you will receive response as soon as your documents are verified.';
-            let btn = document.createElement('button');
-            btn.className = 'dom-btn';
-            btn.innerText = 'Ok';
-            btn.setAttribute('onclick', 'removePopup()')
-            btn.setAttribute('onclick', "location.href = 'index.html'")
-            const btn_container = document.createElement('div')
-            btn_container.className = "btn-container";
+        //     para.innerText = 'Your document as been uploaded successfully, you will receive response as soon as your documents are verified.';
+        //     let btn = document.createElement('button');
+        //     btn.className = 'dom-btn';
+        //     btn.innerText = 'Ok';
+        //     btn.setAttribute('onclick', 'removePopup()')
+        //     btn.setAttribute('onclick', "location.href = 'school_app/home'")
+        //     const btn_container = document.createElement('div')
+        //     btn_container.className = "btn-container";
 
-            // Combining all
-            popup.appendChild(color)
-            popup.appendChild(blank)
-            blank.appendChild(btn_container)
-            blank.appendChild(msg)
-            // popup.appendChild(msg);
-            msg.appendChild(svg)
-            msg.appendChild(status);
-            msg.appendChild(para);
-            msg.appendChild(btn)
-            backDiv.appendChild(popup);
-            document.body.appendChild(backDiv);
-        }
+        //     // Combining all
+        //     popup.appendChild(color)
+        //     popup.appendChild(blank)
+        //     blank.appendChild(btn_container)
+        //     blank.appendChild(msg)
+        //     // popup.appendChild(msg);
+        //     msg.appendChild(svg)
+        //     msg.appendChild(status);
+        //     msg.appendChild(para);
+        //     msg.appendChild(btn)
+        //     backDiv.appendChild(popup);
+        //     document.body.appendChild(backDiv);
+        // }
     }
 }
