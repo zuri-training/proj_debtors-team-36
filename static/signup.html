@@ -13,7 +13,7 @@
 
 <body>
     <header>
-        
+
     </header>
     <main>
         <div class="flex-container">
@@ -57,16 +57,14 @@
 
                 <form action="./verify1.html" method="post">
                     {% csrf_token %}
-                    <!-- {{ form }} -->
                     <div>
+                        <!-- {{ form }} -->
                     </div>
-                    <label for="name">Name of School</label><br><br>
-                    <!-- <input type="text" name="" id="" required><br><br> -->
-                    {{ form.name }}<br><br>
-                    
-                    <label for="email">School Email Address</label><br><br>
-                    <!-- <input type="email" name="" id="" required><br><br><br> -->
-                    {{ form.email }}<br><br>
+                    <label for="name">Name of School</label><br>
+                    <input type="text" name="" id="" required><br><br>
+
+                    <label for="email">School Email Address</label><br>
+                    <input type="email" name="" id="" required><br><br><br>
 
                     <label for="state">State</label>
                     <select onchange="toggleLGA(this);" class="state" name="state" id="states" class="form-control"
@@ -129,12 +127,11 @@
 
                     </select><br><br>
 
-                    <label for="password">Password</label><br><br>
+                    <label for="password">Password</label><br>
                     <input type="password" name="" id="" required><br><br>
-                        <!-- {{ form.password}}<br><br> -->
+
                     <label for="confirm password">Confirm Password</label><br>
                     <input type="password" name="" id="" required><br>
-                        <!-- {{ form.password}}<br><br> -->
 
                     <input type="checkbox" name="checkbox" id="" required>
                     <label for="checkbox">I accept terms and condition</label>
