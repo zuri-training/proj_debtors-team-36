@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,8 +7,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/dashboard.css">
-    <script defer src="./js/side-nav.js"></script>
+    <link rel="stylesheet" href="{% static './css/dashboard.css' %}">
+    <script defer src="{% static './js/side-nav.js' %}"></script>
     <title>Dashboard</title>
 </head>
 
@@ -48,8 +50,8 @@
         <div class="rest">
             <div class="aside-top">
                 <div class="home">
-                    <img src="./img/home-2.svg" alt="">
-                    <a href="dashboard.html" id="home"> Home</a>
+                    <img src="{% static './img/home-2.svg' %}" alt="">
+                    <a href="{% url 'dashboard' %}" id="home"> Home</a>
                 </div>
                 <div class="profile">
                     <svg class="svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -315,7 +317,7 @@
                                     <p class="user-name" id="user-name">Sixth Example College</p>
                                 </div>
                                 <div class="box2">
-                                    <img class="user-address" src="./img/Frame 44.svg" alt="">
+                                    <img class="user-address" src="{% static './img/Frame 44.svg' %}" alt="">
                                 </div>
     
                             </div>
@@ -342,7 +344,7 @@
                 <div class="btn-tag">
                     <a href="./add-new-debtor.html">
                         <button class="add-btn" type="button">
-                            <img class="btn-img" src="./img/user-add.svg" height="24" width="24" alt="Save icon" />
+                            <img class="btn-img" src="{% static './img/user-add.svg' %}" height="24" width="24" alt="Save icon" />
                             Add new debtor
                         </button>
                     </a>
@@ -360,7 +362,7 @@
                                 <p class="user-name" id="user-name">Fourth Example College</p>
                             </div>
                             <div class="box2">
-                                <img class="user-address" src="./img/Frame 44.svg" alt="">
+                                <img class="user-address" src="{% static './img/Frame 44.svg' %}" alt="">
                             </div>
 
                         </div>

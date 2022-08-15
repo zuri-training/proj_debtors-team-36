@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 from decouple import config
+#import django_heroku
+#import dj_database_url
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -22,12 +24,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config("SECRET_KEY", default='django-insecure-7xv%lrk^7-r%bp%e+55a85^p=1x!824^##mt%r4sir1p17n60%')
+SECRET_KEY = config(
+    "SECRET_KEY", default='django-insecure-7xv%lrk^7-r%bp%e+55a85^p=1x!824^##mt%r4sir1p17n60%')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config("DJANGO_DEBUG", default=True, cast=bool)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -42,11 +45,11 @@ INSTALLED_APPS = [
     'school_app.apps.SchoolAppConfig',
     'account.apps.AccountConfig',
 
-    #third party apps
+    # third party apps
     'uuid',
     # 'django-extensions'
 ]
-'Apps.school_app.app.SchoolAppConfig'
+
 
 AUTH_USER_MODEL = 'school_app.School'
 
@@ -68,7 +71,7 @@ ROOT_URLCONF = 'school_prj.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        # 'DIRS': [],
+
         'DIRS': [BASE_DIR/'static'],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -139,9 +142,5 @@ STATICFILES_DIRS = [BASE_DIR/'static']
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-AUTH_USER_MODEL = "school_app.School"
-
-
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-

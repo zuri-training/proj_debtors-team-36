@@ -133,12 +133,15 @@ def current_debtors(request):
     debtors = Debtors.objects.all().order_by('name')
     return render(request, 'current-debtors.html', {'debtors': debtors})
 
+def dashboard(request):
+    return render (request, './dashboard.html')
+
 def kyc_auth(request):
     if request.method == 'POST':
         form = KycForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return redirect('home')
+            return redirect('index')
     else:
         form = KycForm()
     return render(request, 'kyc-auth.html')

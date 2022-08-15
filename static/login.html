@@ -65,8 +65,8 @@
           <p class="welcome">Welcome back! please enter your details.</p>
         </div>
   
-          <form method="post">
-            {% csrf_token %}}
+          <form action="./dashboard.html" method="post">
+            {% csrf_token %}
             <div class="mid">
               <div class="emaill">
                 <label class="email-head" for="email">Email Address</label><br />
@@ -76,7 +76,7 @@
               <div class="pass">
                 <label class="email-psw" for="password">Password</label><br />
                 <div class="visibility">
-   views_urls 
+    
               <!-- {{ form.password }} -->
                   <input type="password" autocomplete="current-password" placeholder="**********" name="password"
                     id="password" required /><br />
@@ -95,8 +95,8 @@
               </div>
             </div>
             <div class="bottom">
-              <a href="./dashboard.html"><button type="submit" class="login-btn">Login</button><br /></a>
-              <p id="login-tag">Don't have an account?<a class="login-tag" href="./signup.html">sign up</a></p>
+              <a href="{% url 'dashboard' %}"><button type="submit" class="login-btn">Login</button><br /></a>
+              <p id="login-tag">Don't have an account?<a class="login-tag" href="{% url 'signup' %}">sign up</a></p>
             </div>
           </form>
       </div>
