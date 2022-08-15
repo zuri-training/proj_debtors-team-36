@@ -7,7 +7,7 @@ This is a platform that allows schools in a certain locality to list the directo
 
 * [Background](#background)
 * [About the Project](#about-the-project)
-* [Directory Structure](#directory-structure)
+* [Directory Structure](#directory-structure-for-server-deployement)
 * [Installation](#installation)
 * [Technologies Used](#technologies-used)
 * [Features](#features)
@@ -35,14 +35,14 @@ This is a platform that allows schools in a certain locality to list the directo
 * __Monlolith Django templating__ is being used for the project
 * The __requirements.txt__ file contains the required dependencies installed for the project
 
-## Installation
+## Instructions for deployment
 To run server locally on windows, it is assumed that you have python 3 and git cli/desktop installed
 * Clone the repo - https://github.com/zuri-training/proj_debtors-team-36.git
 * cd to the sub folder of the repo
 * To create virtual environment, run the command `python -m venv proj_debtors-team-46`
 * To activate virtual environment, run `proj_debtors-team-36\Scripts\activate`
 * Run `python -m pip install django` to install django in the virtual environment
-* Or use the command  `pip install python-decouple` to install all the dependencies
+* use the command `pip install -r requirements.txt` to install all the dependencies
 * After this, go a step into the repo folder with the command `cd proj_debtors-team-36`
 * Run `python manage.py runserver` to start the local server running
 * Visit homepage on your browser by entering __127.0.0.1.8000__ on your browser address 

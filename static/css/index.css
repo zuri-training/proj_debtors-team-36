@@ -81,8 +81,12 @@ nav .middle-nav a {
     margin-right: 32px;
 }
 
+nav .middle-nav a:hover {
+    color: var(--hover_color);
+}
+
 nav .middle-nav a:active {
-    color: var(--main_color);
+    color: var(--clicked_color);
 }
 
 nav a.active {

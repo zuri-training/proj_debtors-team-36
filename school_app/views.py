@@ -4,7 +4,8 @@ import re
 import random
 from django.core.mail import send_mail
 from django.shortcuts import redirect, render
-from django.contrib.auth.forms import AuthenticationForm, OTPForm
+from django.contrib.auth.forms import AuthenticationForm
+from .forms import OTPForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import login, logout, authenticate
 from django.views.generic.edit import CreateView
@@ -16,10 +17,6 @@ from .models import Debtors, School, Debtor_list, School_Post
 
 def index(request):
     return render(request, 'index.html')
-
-
-def contact_view(request):
-    return render(request, 'contact-us.html')
 
 # generating random 6 digits otp code
 def generateOTP() :
@@ -46,6 +43,7 @@ def signup_view(request):
             message = f"{otp}"
             send_mail(subject, message, 'mydebtors.zuri@gmail.com', [user.email])
             user.save()
+            request.session['user_email'] = user.email
 
 
             # email = form.cleaned_data.get('email')
@@ -64,33 +62,35 @@ def signup_view(request):
 
 def verify_otp(request):
     if request.method == 'POST':
+        user_email = request.session['user_email']
+        user = School.objects.get(email__exact=user_email)
         otp_form = OTPForm(request.POST)
-        user = School.objects.last()
-
         if otp_form.is_valid():
-            cd_otp = otp_form.cleaned_data
-            otp = user.otp
+            cd = otp_form.cleaned_data
+            otp = cd['otp_1'] + cd['otp_2'] + cd['otp_3'] + cd['otp_4'] + cd['otp_5'] + cd['otp_6']
 
-            # if cd_otp == user.otp:
-            #     user.is_active = True
-            #     user.save()
-            #     return render(request, 'school_app/verification-sucess.html', {})
-            # else:
-            #     return render(request, 'school_app/verification-sucess.html', {})
+            if otp == user.otp:
+                user.is_active = True
+                user.save()
+                return render(request, 'school_app/verification-sucess.html', {})
+            return render(request, 'school_app/verification-fail.html', {})
     else:
         otp_form = OTPForm()
-        user = School.objects.last()
+        user_email = request.session['user_email']
+        user = School.objects.get(email__exact=user_email)
 
     context = {
         'otp_form': otp_form,
         'user': user,
         }
-    return render(request, 'verify2.html', context)
+    return render(request, 'school_app/verify2.html', context)
+
 
 def resend_otp(request):
-    user = School.objects.last()
+    user_email = request.session['user_email']
+    user = School.objects.get(email__exact=user_email)
 
-    # SENDING OTP TO USER THROUGH E-MAIL
+    # SENDING OTP TO USER THROUGH E-MAIL    
     user.otp = generateOTP()
     otp = user.otp
     subject = f"{user.username} OTP VERIFICATION FOR MyDebtors"
@@ -98,7 +98,7 @@ def resend_otp(request):
     send_mail(subject, message, 'mydebtors.zuri@gmail.com', [user.email])
     user.save()
 
-    return redirect('account:verify_otp')
+    return redirect('school_app:verify_otp')
 
 
 def verification_success(request):
@@ -162,9 +162,45 @@ def debtor_email(request):
     }
     return render(request, 'debtor-email.html', {"page_contents": page_contents})
 
-
+# Temporal views for Testing stays here---
 def about_us(request):
     return render(request, 'about-us.html')
 
 def faq(request):
     return render(request, 'faq.html')
+
+def terms(request):
+    return render(request, 'T&C.html')
+
+def accessibility(request):
+    return render(request, 'accessibility-statement.html')
+
+def policy(request):
+    return render(request, 'privacy-policy.html')
+
+def help_suppport(request):
+    return render(request, 'help-and-support.html')
+
+def contact_view(request):
+    """ 
+    UPDATE: the onsubmit tag in the Contact Us form was set to false, 
+    this makes the form actionless
+    """
+    if request.method == "POST":
+        print('post method')
+        name = request.POST.get('name')
+        print(f'post name: {name}')
+        
+        # email = request.POST['email']
+        # phone = request.POST['phoneNo']
+        # subject = request.POST['subject']
+        # message = request.POST['message']
+        # post_to_db(name, email, phone, subject, message)
+        
+    elif request.method == "GET":
+        print('get method')
+        name = request.POST.get('name')
+        print(f'get name: {name}')
+    return render(request, 'contact-us.html')
+
+    

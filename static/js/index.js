@@ -40,7 +40,8 @@ const showCookies = () => {
     svg_btn.className = "svg-btn";
     svg_btn.setAttribute("onclick", "removePopup()");
     let svg = document.createElement("img");
-    svg.setAttribute("src", "./img/cookies.svg")
+    svg.setAttribute("src", "{% static 'static/img/cookies.svg' %}")
+    // svg.setAttribute("src", "./img/cookies.svg")
 
     svg_btn.appendChild(svg)
     // svg_back.appendChild(svg_btn)
@@ -65,7 +66,8 @@ const showCookies = () => {
     const cookies_link = document.createElement("a");
     cookies_link.className = "cookies_link";
     cookies_link.innerText = "Privacy Policy";
-    cookies_link.setAttribute("href", "privacy-policy.html")
+    // cookies_link.setAttribute("href", "privacy-policy.html")
+    cookies_link.setAttribute("href", "/privacy-policy")
     cookies_body.appendChild(cookies_link);
     cookies.appendChild(cookies_body);
 
