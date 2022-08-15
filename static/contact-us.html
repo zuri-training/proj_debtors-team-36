@@ -6,17 +6,56 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<<<<<<< HEAD
+     <!-- <link rel="stylesheet" href="{% static './css/contact-us.css' %}" />
+    <script defer src="{% static './js/contact-us.js' %}"></script> -->
+    <link rel="stylesheet" href="./css/contact-us.css" />
+    <script defer src="./js/contact-us.js"></script>
+    <script defer src="./js/top-nav.js"></script>
+=======
     <link rel="stylesheet" href="{% static './css/contact-us.css' %}" />
     <script defer src="{% static './js/contact-us.js' %}"></script>
     <script defer src="{% static './js/top-nav.js' %}"></script>
     <!-- <link rel="stylesheet" href="./css/contact-us.css" />
     <script defer src="./js/contact-us.js"></script>
     <script defer src="./js/top-nav.js"></script> -->
+>>>>>>> cee1f707b01900dcc8523dbe3dcbd979bdfba3c4
     <title>Contact Us</title>
 </head>
 
 <body>
     <div id="blur" class="container">
+<<<<<<< HEAD
+      <nav>
+        <div class="left-nav">
+            <img src="img/new-logo.svg" alt="logo">
+        </div>
+        <div class="middle-nav">
+          <a href="index.html">Home</a>
+          <a href="about-us.html">About Us</a>
+          <a href="faq.html">FAQ</a>
+          <a class="cur" href="contend-debt.html">Contact Us</a>
+        </div>
+        <div class="right-nav">
+          <a href="login.html" class="welcome-login-btn">Login</a>
+
+          <!-- BAckend stuff
+          <a href="{% url 'signup' %}" >
+          <a href="{% url 'index' %}">Home</a>
+          <a href="{% url 'about' %}">About Us</a>
+          <a href="faq.html">FAQ</a>
+          <a class="current" href="{% url 'contact' %}">Contact Us</a>
+        </div>
+        <div class="right-nav">
+          <a href="{% url 'login' %}" class="welcome-login-btn">Login</a>-->
+
+          <a href="{% url 'signup' %}" >
+            <button
+            onclick="location.href = 'signup.html'"
+            class="welcome-signup-btn">Sign Up</button>
+          </a>
+        </div>
+=======
         <nav>
             <div class="left-nav">
                 <img src="{% static './img/new-logo.svg' %}" alt="logo">
@@ -46,6 +85,7 @@
                     <button onclick="location.href = '{% url 'signup' %}'" class="welcome-signup-btn">Sign Up</button>
                 </a>
             </div>
+>>>>>>> cee1f707b01900dcc8523dbe3dcbd979bdfba3c4
             <!--For Mobile view-->
             <img src="{% static './img/showNav.svg' %}" alt="" class="showNavDropdown" onclick="showTopNav()">
             <div id="top-dropdown" class="hide" onclick="hideTopNav()">

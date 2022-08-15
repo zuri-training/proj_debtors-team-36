@@ -5,15 +5,15 @@ let confirmed = false;
 
 if (window.innerWidth <= 576) {
     const doc = document.querySelector("#cac img");
-    doc.setAttribute("src", "./img/kyc-cac-mobile.svg")
+    doc.setAttribute("src", "./static/img/kyc-cac-mobile.svg")
     const id = document.querySelector("#school_id img");
-    id.setAttribute("src", "./img/kyc-id-mobile.svg")
+    id.setAttribute("src", "./static/img/kyc-id-mobile.svg")
 }
 else {
     const doc = document.querySelector("#cac img");
-    doc.setAttribute("src", "./img/kyc-cac.svg")
+    doc.setAttribute("src", "./static/img/kyc-cac.svg")
     const id = document.querySelector("#school_id img");
-    id.setAttribute("src", "./img/kyc-id.svg")
+    id.setAttribute("src", "./static/img/kyc-id.svg")
 }
 
 const importCac = () => {      // imports the file
@@ -130,6 +130,101 @@ const marked = () => {
 
 checkbox.checked = confirmed
 
+const uploadFail = () => {
+    let backDiv = document.createElement('div');
+    backDiv.className = 'cover';
+    let popup = document.createElement('div');
+    popup.className = 'popup';
+    let color = document.createElement('div');
+    color.className = 'color';
+    let blank = document.createElement('div');
+    blank.className = 'blank';
+    let msg = document.createElement('div');
+    msg.className = 'msg';
+
+    // For svg
+    let svg = document.createElement('img');
+    svg.setAttribute('src', './static/img/kyc-fail.svg')
+    svg.setAttribute('src', './img/kyc-fail.svg')
+
+
+    // for other components
+    let status = document.createElement('h3')
+    status.className = 'status';
+    status.innerText = 'failed!'
+    status.classList.add("status-failed");
+    let para = document.createElement('p')
+    para.className = 'para'
+    para.innerText = 'Sorry! something went wrong while uploading your documents. please try again.';
+    let close_btn = document.createElement('button');
+    close_btn.className = 'close-btn';
+    close_btn.innerHTML = '<img src="./static/img/kyc-close.svg" />'
+    close_btn.innerHTML = '<img src="./img/kyc-close.svg" />'
+    close_btn.setAttribute('onclick', 'removePopup()');
+    const btn_container = document.createElement('div')
+    btn_container.className = "btn-container";
+    btn_container.appendChild(close_btn)
+
+    // Combining all
+    popup.appendChild(color)
+    popup.appendChild(blank)
+    blank.appendChild(btn_container)
+    blank.appendChild(msg);
+    msg.appendChild(svg)
+    msg.appendChild(status);
+    msg.appendChild(para);
+    backDiv.appendChild(popup);
+    document.body.appendChild(backDiv);
+}
+
+const uploadSuccess = () => {
+    let backDiv = document.createElement('div');
+    backDiv.className = 'cover';
+    let popup = document.createElement('div');
+    popup.className = 'popup';
+    let color = document.createElement('div');
+    color.className = 'color';
+    let blank = document.createElement('div');
+    blank.className = 'blank';
+    let msg = document.createElement('div');
+    msg.className = 'msg';
+
+    // For svg
+    let svg = document.createElement('img');
+    svg.setAttribute('src', './static/img/kyc-success.svg')
+    svg.setAttribute('src', './img/kyc-success.svg')
+    // for other components
+    let status = document.createElement('h3')
+    status.className = 'status';
+    status.classList.add("status-success");
+    status.innerText = 'Success!'
+    let para = document.createElement('p')
+    para.className = 'para'
+
+    para.innerText = 'Your document as been uploaded successfully, you will receive response as soon as your documents are verified.';
+    let btn = document.createElement('button');
+    btn.className = 'dom-btn';
+    btn.innerText = 'Ok';
+    btn.setAttribute('onclick', 'removePopup()')
+    btn.setAttribute('onclick', "location.href = '/'")
+    btn.setAttribute('onclick', "location.href = 'index.html'")
+    const btn_container = document.createElement('div')
+    btn_container.className = "btn-container";
+
+    // Combining all
+    popup.appendChild(color)
+    popup.appendChild(blank)
+    blank.appendChild(btn_container)
+    blank.appendChild(msg)
+    // popup.appendChild(msg);
+    msg.appendChild(svg)
+    msg.appendChild(status);
+    msg.appendChild(para);
+    msg.appendChild(btn)
+    backDiv.appendChild(popup);
+    document.body.appendChild(backDiv);
+}
+
 
 
 const uploadFile = () => {      //  uploads the file to the database
@@ -140,95 +235,34 @@ const uploadFile = () => {      //  uploads the file to the database
     else {
         const confirm_id = document.querySelector(".valid p");
         confirm_id.className = "okay";
-        if (cac === null || id === null) {       // If upload fails
-            let backDiv = document.createElement('div');
-            backDiv.className = 'cover';
-            let popup = document.createElement('div');
-            popup.className = 'popup';
-            let color = document.createElement('div');
-            color.className = 'color';
-            let blank = document.createElement('div');
-            blank.className = 'blank';
-            let msg = document.createElement('div');
-            msg.className = 'msg';
-
-            // For svg
-            let svg = document.createElement('img');
-            svg.setAttribute('src', './img/kyc-fail.svg')
-
-
-            // for other components
-            let status = document.createElement('h3')
-            status.className = 'status';
-            status.innerText = 'failed!'
-            status.classList.add("status-failed");
-            let para = document.createElement('p')
-            para.className = 'para'
-            para.innerText = 'Sorry! something went wrong while uploading your documents. please try again.';
-            let close_btn = document.createElement('button');
-            close_btn.className = 'close-btn';
-            close_btn.innerHTML = '<img src="./img/kyc-close.svg" />'
-            close_btn.setAttribute('onclick', 'removePopup()');
-            const btn_container = document.createElement('div')
-            btn_container.className = "btn-container";
-            btn_container.appendChild(close_btn)
-
-            // Combining all
-            popup.appendChild(color)
-            popup.appendChild(blank)
-            blank.appendChild(btn_container)
-            blank.appendChild(msg);
-            msg.appendChild(svg)
-            msg.appendChild(status);
-            msg.appendChild(para);
-            backDiv.appendChild(popup);
-            document.body.appendChild(backDiv);
+        if (cac === null || id === null) {       // If cac or id files are not uploaded to the web app
+            uploadFail();
         }
-        else {  // if upload is successful
-            let backDiv = document.createElement('div');
-            backDiv.className = 'cover';
-            let popup = document.createElement('div');
-            popup.className = 'popup';
-            let color = document.createElement('div');
-            color.className = 'color';
-            let blank = document.createElement('div');
-            blank.className = 'blank';
-            let msg = document.createElement('div');
-            msg.className = 'msg';
+        else {  // if cac or id files are uploaded to the web app
 
-            // For svg
-            let svg = document.createElement('img');
-            svg.setAttribute('src', './img/kyc-success.svg')
+            // IMPLEMENT YOUR POST REQUEST HERE
+            var formData = new FormData();
 
-            // for other components
-            let status = document.createElement('h3')
-            status.className = 'status';
-            status.classList.add("status-success");
-            status.innerText = 'Success!'
-            let para = document.createElement('p')
-            para.className = 'para'
-
-            para.innerText = 'Your document as been uploaded successfully, you will receive response as soon as your documents are verified.';
-            let btn = document.createElement('button');
-            btn.className = 'dom-btn';
-            btn.innerText = 'Ok';
-            btn.setAttribute('onclick', 'removePopup()')
-            btn.setAttribute('onclick', "location.href = 'index.html'")
-            const btn_container = document.createElement('div')
-            btn_container.className = "btn-container";
-
-            // Combining all
-            popup.appendChild(color)
-            popup.appendChild(blank)
-            blank.appendChild(btn_container)
-            blank.appendChild(msg)
-            // popup.appendChild(msg);
-            msg.appendChild(svg)
-            msg.appendChild(status);
-            msg.appendChild(para);
-            msg.appendChild(btn)
-            backDiv.appendChild(popup);
-            document.body.appendChild(backDiv);
+            formData.append('school_Id', id)
+            formData.append('cac_file', cac)
+            formData.append('csrfmiddlewaretoken', '{{ csrf_token }}')
+            $.ajax({
+                type: 'POST',
+                url: 'school_app/kyc',
+                data: formData,
+                cache: false,
+                processData: false,
+                contentType: false,
+                enctype: 'multipart/form-data',
+                success: function () {
+                    alert('The post has been created!');
+                    uploadSuccess();        // success popup if documents get uploaded to server
+                },
+                error: function (xhr, errmsg, err) {
+                    console.log(xhr.status + ":" + xhr.responseText)
+                    uploadFail();           // fail popup if error gets encountered
+                }
+            })
         }
     }
 }

@@ -41,17 +41,23 @@
         </div>
         <div class="right-nav">
             <button onclick="location.href = '/login'" class="welcome-login-btn">Login</button>
-            <button onclick="location.href = '/signup'" class="welcome-signup-btn">Sign Up</button>
+            <button onclick="location.href = '/login'" class="welcome-signup-btn">Sign Up</button>
         </div>
         <img src="{% static './img/showNav.svg' %}" alt="" class="showNavDropdown" onclick="showTopNav()">
         <div id="top-dropdown" class="hide" onclick="hideTopNav()">
 
-            <button class="dropdown-btn" onclick="location.href = '{% url 'index' %}'">Home</button>
+            <button class="dropdown-btn" onclick="location.href = '/'">Home</button>
+            <button class="dropdown-btn" onclick="location.href = '/about'">About Us</button>
+            <button class="dropdown-btn" onclick="location.href = '/faq'">FAQ</button>
+            <button class="dropdown-btn" onclick="location.href = '/contact-us'">Contact Us</button>
+            <button class="dropdown-btn" onclick="location.href = '/login'">Login</button>
+            <button class="dropdown-btn" onclick="location.href = '/login'">Sign Up</button>
+            <!-- <button class="dropdown-btn" onclick="location.href = '{% url 'index' %}'">Home</button>
             <button class="dropdown-btn" onclick="location.href = '{% url 'about' %}'">About Us</button>
             <button class="dropdown-btn" onclick="location.href = '{% url 'faq' %}'">FAQ</button>
             <button class="dropdown-btn" onclick="location.href = '{% url 'contact' %}'">Contact Us</button>
             <button class="dropdown-btn" onclick="location.href = '{% url 'login' %}'">Login</button>
-            <button class="dropdown-btn" onclick="location.href = '{% url 'signup' %}'">Sign Up</button>
+            <button class="dropdown-btn" onclick="location.href = '{% url 'signup' %}'">Sign Up</button> -->
 
         </div>
     </nav>
@@ -244,8 +250,9 @@
         </div>
         <div class="try-debtor">
             <h2>Try my debtor for free</h2>
-            <p>Set up your school's account, free forever and never worry<br>about a student with unpaid debt in your school again.</p>
-            <button onclick="location.href = '{% url 'signup' %}'">List Your School For Free!</button>
+            <p>Set up your school's account, free forever and never worry<br>about a student with unpaid debt in your
+                school again.</p>
+            <button onclick="location.href = '/signup'">List Your School For Free!</button>
         </div>
         <div class="faq" id="faq">
             <div class="faq-top">

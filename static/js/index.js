@@ -1,3 +1,4 @@
+const uri = "http://127.0.0.1:8000"
 // Cookies
 
 const cookies_list = [
@@ -40,8 +41,7 @@ const showCookies = () => {
     svg_btn.className = "svg-btn";
     svg_btn.setAttribute("onclick", "removePopup()");
     let svg = document.createElement("img");
-    svg.setAttribute("src", "{% static 'static/img/cookies.svg' %}")
-    // svg.setAttribute("src", "./img/cookies.svg")
+    svg.setAttribute("src", "./static/img/cookies.svg")
 
     svg_btn.appendChild(svg)
     // svg_back.appendChild(svg_btn)
