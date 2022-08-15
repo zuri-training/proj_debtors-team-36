@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,8 +7,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer src="./js/top-nav.js"></script>
-    <link rel="stylesheet" href="./css/privacy-policy.css">
+    <script defer src="{% static './js/top-nav.js' %}"></script>
+    <link rel="stylesheet" href="{% static './css/privacy-policy.css' %}">
     <title>Privacy Policy</title>
 </head>
 
@@ -46,244 +48,155 @@
             </svg>
         </div>
         <div class="middle-nav">
-            <a href="index.html">Home</a>
-            <a href="about-us.html">About Us</a>
-            <a href="faq.html">FAQ</a>
-            <a href="contact-us.html">Contact Us</a>
+            <a href="{% url 'index' %}">Home</a>
+            <a href="{% url 'about' %}">About Us</a>
+            <a href="{% url 'faq' %}">FAQ</a>
+            <a href="{% url 'contact' %}">Contact Us</a>
         </div>
-        <div class="right-nav">
-            <button onclick="location.href = 'login.html'" class="welcome-login-btn">Login</button>
-            <button onclick="location.href = 'signup.html'" class="welcome-signup-btn">Sign Up</button>
+        <div class="right-nav ">
+            <button onclick="location.href='{% url 'login' %}' " class="welcome-login-btn ">Login</button>
+            <button onclick="location.href='{% url 'signup' %}' " class="welcome-signup-btn ">Sign Up</button>
         </div>
     </nav>
     <main>
-        <div class="side-panel">
-            <div class="links" id="links"></div>
+        <div class="side-panel ">
+            <div class="links " id="links "></div>
         </div>
-        <div class="main-content">
+        <div class="main-content ">
             <h2>PRIVACY POLICY</h2>
             <p>Our Privacy Policy was last updated on <b>27/07/22</b></p>
             <h3>Introduction</h3>
             <p>
-                This Privacy Policy is designed to inform You about the Personal Data we collect, how <br>
-                we collect this data, the uses of the data, and Your rights relating to the Personal Data <br>
-                when You use this Service or purchase the Services offered on the Website. <br>
-                We are committed to protecting your Personal Data while You use this Website. <br>
-                By continuing to use our Website, You acknowledge that You have reviewed the Privacy <br>
-                Policy and agree to its terms. This also means that You have consented to the use of <br>
-                Your Personal Data and have accepted the terms. This also means that you have <br>
-                consented to the use of Your Personal Data and have accepted the applicable <br>
-                disclosures.
+                This Privacy Policy is designed to inform You about the Personal Data we collect, how <br> we collect this data, the uses of the data, and Your rights relating to the Personal Data <br> when You use this Service or purchase the Services
+                offered on the Website. <br> We are committed to protecting your Personal Data while You use this Website. <br> By continuing to use our Website, You acknowledge that You have reviewed the Privacy <br> Policy and agree to its terms. This
+                also means that You have consented to the use of <br> Your Personal Data and have accepted the terms. This also means that you have <br> consented to the use of Your Personal Data and have accepted the applicable <br> disclosures.
             </p>
             <h3>The Personal Data We Collect From You</h3>
             <p>
-                We collect various information to enable us provide good Service to all our users. <br>
-                Depending on how our Service will be used, the different types of Personal Data we <br>
-                collect are as follows: 
-            </p>
-            <p> 
-                A. For registered users: During the process of Your registration we may collect the <br>
-                following information: <br>
-                Name of school; <br>
-                School email address: <br>
-                Location; <br>
-                Level of institution; <br>
-                We may also require other information in relation to: 
+                We collect various information to enable us provide good Service to all our users. <br> Depending on how our Service will be used, the different types of Personal Data we <br> collect are as follows:
             </p>
             <p>
-                (I) Your interaction with our representatives; <br>
-                (II) receiving general emails from us. <br>
-                (III) commenting on our Content or other User Content on our Website. <br>
-                (IV) the following forms of activities: <br>
-                (V) The information you upload/update on our website. <br>
+                A. For registered users: During the process of Your registration we may collect the <br> following information: <br> Name of school; <br> School email address: <br> Location; <br> Level of institution; <br> We may also require other information
+                in relation to:
             </p>
             <p>
-                B. For unregistered users: We will collect passive information from all registered and <br>
-                unregistered users. These information include cookies, IP address information, <br>
-                location information and certain browser information. 
+                (I) Your interaction with our representatives; <br> (II) receiving general emails from us. <br> (III) commenting on our Content or other User Content on our Website. <br> (IV) the following forms of activities: <br> (V) The information
+                you upload/update on our website. <br>
             </p>
             <p>
-                C. Sales and billing information: We may collect Your credit and/or debit card <br>
-                information, which includes Your card number, password, etc, Your billing address, Your <br>
-                contact address and other information required for Your purchases. 
+                B. For unregistered users: We will collect passive information from all registered and <br> unregistered users. These information include cookies, IP address information, <br> location information and certain browser information.
             </p>
             <p>
-                D. Other information: In addition to the Personal Data already described above, we may <br>
-                collect the following Personal Data from You: <br>
-                - Phone number <br>
-                - School registration number
+                C. Sales and billing information: We may collect Your credit and/or debit card <br> information, which includes Your card number, password, etc, Your billing address, Your <br> contact address and other information required for Your purchases.
+            </p>
+            <p>
+                D. Other information: In addition to the Personal Data already described above, we may <br> collect the following Personal Data from You: <br> - Phone number <br> - School registration number
             </p>
             <h3>The Personal Data We Collect As You Use Our Service</h3>
             <p>
-                We use the following to collect Personal Data from You: 
+                We use the following to collect Personal Data from You:
             </p>
             <p>
-                Cookies: We use the data collected by the cookies to offer You the best experience on <br>
-                our Website. Cookies are information stored on Your browser when You visit our <br>
-                Website or use a social network with Your PC, Smartphone or Tablets. They contain <br>
-                various data which includes the name of the server from which it comes, the numeric <br>
-                identifier, etc. The types of cookies we use are as follows: 
+                Cookies: We use the data collected by the cookies to offer You the best experience on <br> our Website. Cookies are information stored on Your browser when You visit our <br> Website or use a social network with Your PC, Smartphone or
+                Tablets. They contain <br> various data which includes the name of the server from which it comes, the numeric <br> identifier, etc. The types of cookies we use are as follows:
             </p>
             <p>
-                (I) Technical cookies: These cookies are essential for the correct functioning of our <br>
-                Website and they are required to provide the Service required to our users. 
+                (I) Technical cookies: These cookies are essential for the correct functioning of our <br> Website and they are required to provide the Service required to our users.
             </p>
             <p>
-                (II) Third party cookies: While using our Service, You may receive cookies from <br>
-                websites managed by other organizations. Third party analytical cookies may also be <br>
-                installed. Third party analytical cookies are used to detect information on user <br>
-                behaviour on our Website.This is placed in order to monitor the performance and <br>
-                improve the usability of this Website. 
+                (II) Third party cookies: While using our Service, You may receive cookies from <br> websites managed by other organizations. Third party analytical cookies may also be <br> installed. Third party analytical cookies are used to detect
+                information on user <br> behaviour on our Website.This is placed in order to monitor the performance and <br> improve the usability of this Website.
             </p>
             <p>
-                (III) Support in configuring your browser: You can manage these cookies through the <br>
-                settings of Your browser on Your device. However, deleting cookies from Your browser <br>
-                may remove the preferences You have set for this Website. 
+                (III) Support in configuring your browser: You can manage these cookies through the <br> settings of Your browser on Your device. However, deleting cookies from Your browser <br> may remove the preferences You have set for this Website.
             </p>
             <p>
-                Log Data: We also use log files which store automatic information collected when <br>
-                users visit this Website. The log data which may be collected are as follows: <br>
-                (I) the domain and host from which You access the Website; <br>
-                (II) name of the Internet Service Provider (ISP): <br>
-                (III) date and time of visit; <br>
-                (IV) Your computer operating system and browser software; <br>
-                (V) web pages visited, the duration, and frequency of visits; <br>
-                (VI) Your Internet Protocol (IP) address. 
+                Log Data: We also use log files which store automatic information collected when <br> users visit this Website. The log data which may be collected are as follows: <br> (I) the domain and host from which You access the Website; <br> (II)
+                name of the Internet Service Provider (ISP): <br> (III) date and time of visit; <br> (IV) Your computer operating system and browser software; <br> (V) web pages visited, the duration, and frequency of visits; <br> (VI) Your Internet Protocol
+                (IP) address.
             </p>
             <h3>Third Parties</h3>
             <p>
-                We collect and use Your Personal Data for the following reasons: 
+                We collect and use Your Personal Data for the following reasons:
             </p>
             <p>
-                (I) to provide our Service and to maintain and make improvements to the Service we <br>
-                provide to You; <br>
-                (II) to develop new Services on the Website; <br>
-                (III) to provide personalized Service to You, including making recommendations and <br>
-                providing personalized content; <br>
-                (IV) to provide customer service to You; <br>
-                (V) to provide analytics to understand how our Service is used; 
+                (I) to provide our Service and to maintain and make improvements to the Service we <br> provide to You; <br> (II) to develop new Services on the Website; <br> (III) to provide personalized Service to You, including making recommendations
+                and <br> providing personalized content; <br> (IV) to provide customer service to You; <br> (V) to provide analytics to understand how our Service is used;
             </p>
             <p>
-                In addition to the purposes stated above, we also use Your Personal Data for the <br>
-                following: <br>
-                (I) to ensure that non-school actors do not gain access to database. <br>
-                (II) to track activity on website. 
+                In addition to the purposes stated above, we also use Your Personal Data for the <br> following: <br> (I) to ensure that non-school actors do not gain access to database. <br> (II) to track activity on website.
             </p>
             <h3>Purpose Of Processing Data</h3>
             <p>
-                We collect and use Your Personal Data for the following reasons; <br>
-                (I) to provide our Service and to maintain and make improvements to the Service we <br>
-                provide to You; <br>
-                (II) to develop new Services on the Website; <br>
-                (III) to provide personalized Services to You, including making recommendations and <br>
-                providing personalized content; <br>
-                (IV) to provide customer service to You; <br>
-                (V) to provide analytics to understand how our Services is used; 
+                We collect and use Your Personal Data for the following reasons; <br> (I) to provide our Service and to maintain and make improvements to the Service we <br> provide to You; <br> (II) to develop new Services on the Website; <br> (III)
+                to provide personalized Services to You, including making recommendations and <br> providing personalized content; <br> (IV) to provide customer service to You; <br> (V) to provide analytics to understand how our Services is used;
             </p>
             <p>
-                In addition to the purposes stated above, we also use Your Personal Data for the <br>
-                following; <br>
-                (I) to ensure that non-school actors do not gain access to database. <br>
-                (II) to track activity on website. 
+                In addition to the purposes stated above, we also use Your Personal Data for the <br> following; <br> (I) to ensure that non-school actors do not gain access to database. <br> (II) to track activity on website.
             </p>
             <h3>Storage Of Personal Data</h3>
             <p>
-                We take the security of the Personal Data we collect very seriously, and we take <br>
-                reasonable measures to reduce the risk of accidental destruction, loss or <br>
-                unauthorized access to such information. However, please note that no system <br>
-                involving the transmission of information via electronic storage systems or the <br>
-                internet is completely secure. 
+                We take the security of the Personal Data we collect very seriously, and we take <br> reasonable measures to reduce the risk of accidental destruction, loss or <br> unauthorized access to such information. However, please note that no
+                system <br> involving the transmission of information via electronic storage systems or the <br> internet is completely secure.
             </p>
             <p>
-                We use the following systems to store Your information: <br>
-                Your information are safely hosted and secured by our team of engineers. 
+                We use the following systems to store Your information: <br> Your information are safely hosted and secured by our team of engineers.
             </p>
             <p>
-                The Personal Data and any other information we have about You may be stored for the <br>
-                following period: For as long as the School License is valid. 
+                The Personal Data and any other information we have about You may be stored for the <br> following period: For as long as the School License is valid.
             </p>
             <h3>Protection Of Personal Data</h3>
             <p>
-                Our Service is built with strong security features that continuously protects Your <br>
-                Personal Data. Our security features help us detect and block security threats. If we <br>
-                detect any security risk, we may inform You and guide You through steps to stay <br>
-                protected. 
+                Our Service is built with strong security features that continuously protects Your <br> Personal Data. Our security features help us detect and block security threats. If we <br> detect any security risk, we may inform You and guide You
+                through steps to stay <br> protected.
             </p>
             <p>
-                We use the following security features to protect Your Personal Data from any security <br>
-                breach or harm: <br>
-                SQL injection scan and CSS (Cross siteing) vulnerability. 
+                We use the following security features to protect Your Personal Data from any security <br> breach or harm: <br> SQL injection scan and CSS (Cross siteing) vulnerability.
             </p>
             <h3>Disclosure Of Personal Data</h3>
             <p>
-                When You share Your Personal Data <br>
-                Our Service enables You to share information with other users. However, You have <br>
-                control over how You share this information. When You upload any content on our <br>
-                Website, Your content becomes accessible to other users. 
+                When You share Your Personal Data <br> Our Service enables You to share information with other users. However, You have <br> control over how You share this information. When You upload any content on our <br> Website, Your content becomes
+                accessible to other users.
             </p>
             <p>
-                When we share Your Personal Data <br>
-                We do not disclose Your Personal Data except for any of the following reasons: <br>
-                (I) if You have granted us the permission to do so: We will disclose Your Personal Data <br>
-                where we have received Your unequivocal consent and permission to do so. However, <br>
-                such consent may be withdrawn at anytime; <br>
-                (II) for the purposes of processing Your Personal Data: We may disclose Your Personal <br>
-                Data to our affiliates and other trusted businesses or persons for the purpose of <br>
-                processing Your Personal Data for us, based on our instruction and in compliance with <br>
-                our Privacy Policy; <br>
-                (III) For any other other reason that may be necessary for the operation of our <br>
-                Website. 
+                When we share Your Personal Data <br> We do not disclose Your Personal Data except for any of the following reasons: <br> (I) if You have granted us the permission to do so: We will disclose Your Personal Data <br> where we have received
+                Your unequivocal consent and permission to do so. However, <br> such consent may be withdrawn at anytime; <br> (II) for the purposes of processing Your Personal Data: We may disclose Your Personal <br> Data to our affiliates and other
+                trusted businesses or persons for the purpose of <br> processing Your Personal Data for us, based on our instruction and in compliance with <br> our Privacy Policy; <br> (III) For any other other reason that may be necessary for the operation
+                of our <br> Website.
             </p>
             <h3>User Content</h3>
             <p>
-                We may allow users to post their content or information on this. These contents <br>
-                include audio, video, updates, articles, images, or other materials users choose to <br>
-                display on the. Please note that any material which You may post is made accessible to <br>
-                the entire public and will not be regulated by this Privacy Policy. 
+                We may allow users to post their content or information on this. These contents <br> include audio, video, updates, articles, images, or other materials users choose to <br> display on the. Please note that any material which You may post
+                is made accessible to <br> the entire public and will not be regulated by this Privacy Policy.
             </p>
             <h3>Links To Third Party Sites/Services</h3>
             <p>
-                The website may contain links to other websites which we believe may offer useful <br>
-                information. This linked websites are not under our control and this Privacy Policy does <br>
-                not apply to these websites. We suggest that You contact those websites directly for <br>
-                information on their privacy policy, security, data collection and distribution policies. 
+                The website may contain links to other websites which we believe may offer useful <br> information. This linked websites are not under our control and this Privacy Policy does <br> not apply to these websites. We suggest that You contact
+                those websites directly for <br> information on their privacy policy, security, data collection and distribution policies.
             </p>
             <h3>Accessing, Modifying And Deleting Your Personal Data</h3>
             <p>
-                You may also request that we delete any information belonging to You that we have <br>
-                stored. You can review and modify Your information ay using the following steps: <br>
-                To view the personal data we collect from You, You can go to Your settings on Your user <br>
-                account and click "Privacy Policy". There you will see "Personal Data we collected from <br>
-                You", click on it. 
+                You may also request that we delete any information belonging to You that we have <br> stored. You can review and modify Your information ay using the following steps: <br> To view the personal data we collect from You, You can go to Your
+                settings on Your user <br> account and click "Privacy Policy ". There you will see "Personal Data we collected from <br> You", click on it.
             </p>
             <p>
-                If You wish to delete any information belonging to You, You may do so by using the <br>
-                following steps: <br>
-                To delete your personal data, You will have to send us a mail, once we confirm and <br>
-                verify the request, we can have them removed. 
+                If You wish to delete any information belonging to You, You may do so by using the <br> following steps: <br> To delete your personal data, You will have to send us a mail, once we confirm and <br> verify the request, we can have them
+                removed.
             </p>
             <h3>Your Rights</h3>
             <p>
-                Your rights in relation to Your Personal Data are as follows: 
+                Your rights in relation to Your Personal Data are as follows:
             </p>
             <p>
-                (I) the right to have access to Your Personal Data; <br>
-                (II) the right to be informed about the processing of Your Personal Data; <br>
-                (III) the right to rectify any inaccurate Personal Data or any information about You; <br>
-                (IV) the right to review, modify or erase Your Personal Data and any other information <br>
-                we have about You; <br>
-                (V) the right to restrict the processing of Your Personal Data; <br>
-                (VI) the right to block Personal Data processing in violation of any law; <br>
-                (VII) the right to be informed about any rectification or erasure of Personal Data or <br>
-                restriction of any processing carried out; <br>
-                (VIII) the right to the portability of Your Personal Data; and <br>
-                (IX) the right to lodge a complaint to a supervisory authority within Nigeria. 
+                (I) the right to have access to Your Personal Data; <br> (II) the right to be informed about the processing of Your Personal Data; <br> (III) the right to rectify any inaccurate Personal Data or any information about You; <br> (IV) the
+                right to review, modify or erase Your Personal Data and any other information <br> we have about You; <br> (V) the right to restrict the processing of Your Personal Data; <br> (VI) the right to block Personal Data processing in violation
+                of any law; <br> (VII) the right to be informed about any rectification or erasure of Personal Data or <br> restriction of any processing carried out; <br> (VIII) the right to the portability of Your Personal Data; and <br> (IX) the right
+                to lodge a complaint to a supervisory authority within Nigeria.
             </p>
             <h3>Contact Information</h3>
             <p>
-                If You have any questions regarding this Privacy Policy or the Personal Data we collect, <br>
-                or if You wish to make any comments or complaints about anything related to this <br>
-                Privacy Policy, please contact us at the following email address: <a href = "mailto: Zuri.I4G@gmail.com">Zuri.I4G@gmail.com.</a>
+                If You have any questions regarding this Privacy Policy or the Personal Data we collect, <br> or if You wish to make any comments or complaints about anything related to this <br> Privacy Policy, please contact us at the following email
+                address: <a href="mailto: Zuri.I4G@gmail.com">Zuri.I4G@gmail.com.</a>
             </p>
         </div>
     </main>
@@ -324,11 +237,11 @@
                     </svg>
                 </div>
                 <div class="footer-links">
-                    <a href="about-us.html">About</a>
-                    <a href="contact-us.html">Contact Us</a>
-                    <a href="privacy-policy.html">Privacy Policy</a>
-                    <a href="T&C.html">Terms and Conditions</a>
-                    <a href="accessibility-statement.html">Accessibility Statement</a>
+                    <a href="{% url 'about' %}">About</a>
+                    <a href="{% url 'contact' %}">Contact Us</a>
+                    <a href="{% url 'policy' %}">Privacy Policy</a>
+                    <a href="{% url 'terms' %}">Terms and Conditions</a>
+                    <a href="{% url 'accessibility' %}">Accessibility Statement</a>
                 </div>
             </div>
             <div class="footer-top-header">
@@ -349,7 +262,7 @@
             <div class="footer-top-header">
                 <h4>Resources</h4>
                 <div class="footer-links">
-                    <a href="help-and-support.html">Help and Support</a>
+                    <a href="{% url 'support' %}">Help and Support</a>
                     <p>Community</p>
                 </div>
             </div>

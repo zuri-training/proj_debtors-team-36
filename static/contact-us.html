@@ -1,19 +1,31 @@
-<!-- {% load static %} -->
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<<<<<<< HEAD
      <!-- <link rel="stylesheet" href="{% static './css/contact-us.css' %}" />
     <script defer src="{% static './js/contact-us.js' %}"></script> -->
     <link rel="stylesheet" href="./css/contact-us.css" />
     <script defer src="./js/contact-us.js"></script>
     <script defer src="./js/top-nav.js"></script>
+=======
+    <link rel="stylesheet" href="{% static './css/contact-us.css' %}" />
+    <script defer src="{% static './js/contact-us.js' %}"></script>
+    <script defer src="{% static './js/top-nav.js' %}"></script>
+    <!-- <link rel="stylesheet" href="./css/contact-us.css" />
+    <script defer src="./js/contact-us.js"></script>
+    <script defer src="./js/top-nav.js"></script> -->
+>>>>>>> cee1f707b01900dcc8523dbe3dcbd979bdfba3c4
     <title>Contact Us</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <div id="blur" class="container">
+<<<<<<< HEAD
       <nav>
         <div class="left-nav">
             <img src="img/new-logo.svg" alt="logo">
@@ -43,28 +55,53 @@
             class="welcome-signup-btn">Sign Up</button>
           </a>
         </div>
-            <!--For Mobile view-->
-        <img src="./img/showNav.svg" alt="" class="showNavDropdown" onclick="showTopNav()">
-        <div id="top-dropdown" class="hide" onclick="hideTopNav()">
-            <button class="dropdown-btn" onclick="location.href = 'index.html'">Home</button>
-            <button class="dropdown-btn" onclick="location.href = 'about-us.html'">About Us</button>
-            <button class="dropdown-btn" onclick="location.href = 'faq.html'">FAQ</button>
-            <button class="dropdown-btn" onclick="location.href = 'contact-us.html'">Contact Us</button>
-            <button class="dropdown-btn" onclick="location.href = 'login.html'">Login</button>
-            <button class="dropdown-btn" onclick="location.href = 'signup.html'">Sign Up</button>
+=======
+        <nav>
+            <div class="left-nav">
+                <img src="{% static './img/new-logo.svg' %}" alt="logo">
+            </div>
+            <div class="middle-nav">
+                <a href="{% url 'index' %}">Home</a>
+                <a href="{% url 'about' %}">About Us</a>
+                <a href="{% url 'faq' %}">FAQ</a>
+                <a class="cur" href="{% url 'contact' %}">Contact Us</a>
+                <!-- <a class="cur" href="contend-debt.html">Contact Us</a> -->
+
+            </div>
+            <div class="right-nav">
+                <a href="{% url 'login' %}" class="welcome-login-btn">Login</a>
+
+                <!-- BAckend stuff
+          <a href="{% url 'signup' %}" >
+          <a href="{% url 'index' %}">Home</a>
+          <a href="{% url 'about' %}">About Us</a>
+          <a href="faq.html">FAQ</a>
+          <a class="current" href="{% url 'contact' %}">Contact Us</a>
         </div>
-    </nav>
-      <main>
-        <!--Social Handles-->
-        <div class="socials">
-          <!--FAcebook-->
-          <svg
-            width="32"
-            height="32"
-            viewBox="0 0 32 32"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
+        <div class="right-nav">
+          <a href="{% url 'login' %}" class="welcome-login-btn">Login</a>-->
+
+                <a href="{% url 'signup' %}">
+                    <button onclick="location.href = '{% url 'signup' %}'" class="welcome-signup-btn">Sign Up</button>
+                </a>
+            </div>
+>>>>>>> cee1f707b01900dcc8523dbe3dcbd979bdfba3c4
+            <!--For Mobile view-->
+            <img src="{% static './img/showNav.svg' %}" alt="" class="showNavDropdown" onclick="showTopNav()">
+            <div id="top-dropdown" class="hide" onclick="hideTopNav()">
+                <button class="dropdown-btn" onclick="location.href = '{% url 'index' %}'">Home</button>
+                <button class="dropdown-btn" onclick="location.href = '{% url 'about' %}'">About Us</button>
+                <button class="dropdown-btn" onclick="location.href = '{% url 'faq' %}'">FAQ</button>
+                <button class="dropdown-btn" onclick="location.href = '{% url 'contact' %}'">Contact Us</button>
+                <button class="dropdown-btn" onclick="location.href = '{% url 'login' %}'">Login</button>
+                <button class="dropdown-btn" onclick="location.href = '{% url 'signup' %}'">Sign Up</button>
+            </div>
+        </nav>
+        <main>
+            <!--Social Handles-->
+            <div class="socials">
+                <!--FAcebook-->
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M32 16C32 7.1635 24.8365 0 16 0C7.1635 0 0 7.16337 0 16C0 23.986 5.851 30.6054 13.5 31.8056V20.625H9.4375V16H13.5V12.475C13.5 8.465 15.8888 6.25 19.5434 6.25C21.294 6.25 23.125 6.5625 23.125 6.5625V10.5H21.1075C19.1198 10.5 18.5 11.7334 18.5 12.9987V16H22.9375L22.2281 20.625H18.5V31.8056C26.149 30.6054 32 23.9861 32 16Z"
               fill="#1877F2"
@@ -75,14 +112,8 @@
             />
           </svg>
 
-          <!---LInkedin-->
-          <svg
-            width="32"
-            height="32"
-            viewBox="0 0 32 32"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
+                <!---LInkedin-->
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_1440_5243)">
               <path
                 d="M27.2655 27.2659H22.5241V19.8405C22.5241 18.0699 22.4925 15.7905 20.0581 15.7905C17.5886 15.7905 17.2108 17.7198 17.2108 19.7116V27.2654H12.4695V11.9959H17.0211V14.0826H17.0849C17.5404 13.3038 18.1986 12.663 18.9895 12.2287C19.7803 11.7943 20.6742 11.5826 21.5759 11.616C26.3815 11.616 27.2675 14.777 27.2675 18.8893L27.2655 27.2659ZM7.1195 9.90877C5.59988 9.90902 4.36775 8.67727 4.3675 7.15764C4.36725 5.63802 5.59888 4.40589 7.1185 4.40564C8.63812 4.40527 9.87025 5.63702 9.8705 7.15664C9.87063 7.8864 9.58087 8.58632 9.06497 9.10244C8.54906 9.61856 7.84925 9.9086 7.1195 9.90877ZM9.49025 27.266H4.74388V11.9959H9.49012V27.2659L9.49025 27.266ZM29.6293 0.00226795H2.36137C1.07262 -0.012232 0.01575 1.02014 0 2.30889V29.6905C0.01525 30.9799 1.072 32.0133 2.36125 31.9998H29.6293C30.9213 32.0158 31.9821 30.9824 32 29.6905V2.30677C31.9816 1.01552 30.9206 -0.0167321 29.6293 0.000142951"
@@ -95,27 +126,15 @@
               </clipPath>
             </defs>
           </svg>
-          <!--Twitter-->
-          <svg
-            width="32"
-            height="27"
-            viewBox="0 0 32 27"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
+                <!--Twitter-->
+                <svg width="32" height="27" viewBox="0 0 32 27" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M32 3.18122C30.8017 3.71207 29.5307 4.06051 28.2292 4.21497C29.5849 3.40247 30.6257 2.11585 31.1159 0.582847C29.8272 1.34758 28.4173 1.88638 26.947 2.17597C25.7494 0.900097 24.0432 0.102722 22.1549 0.102722C18.5291 0.102722 15.5895 3.04222 15.5895 6.66772C15.5895 7.18235 15.6476 7.68335 15.7595 8.16397C10.3032 7.8901 5.46575 5.27647 2.22762 1.30447C1.66262 2.2741 1.33888 3.40197 1.33888 4.60497C1.33888 6.88272 2.498 8.8921 4.2595 10.0695C3.21694 10.0368 2.19731 9.75523 1.28575 9.24822C1.28537 9.27572 1.28537 9.30322 1.28537 9.33085C1.28537 12.5117 3.54837 15.1652 6.55162 15.7683C5.58486 16.0313 4.57079 16.0698 3.58687 15.8808C4.42225 18.4891 6.84688 20.3871 9.71963 20.4402C7.47275 22.201 4.64188 23.2506 1.56613 23.2506C1.03613 23.2506 0.513625 23.2195 0 23.1588C2.90538 25.0216 6.35625 26.1085 10.0638 26.1085C22.1396 26.1085 28.743 16.1046 28.743 7.4291C28.743 7.14435 28.7368 6.86122 28.724 6.57972C30.0093 5.65058 31.1186 4.49974 32 3.18122Z"
               fill="#55ACEE"
             />
           </svg>
-          <!--Instagram-->
-          <svg
-            width="33"
-            height="32"
-            viewBox="0 0 33 32"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
+                <!--Instagram-->
+                <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M16.4988 9.836C14.8637 9.836 13.2955 10.4856 12.1393 11.6418C10.9831 12.798 10.3335 14.3662 10.3335 16.0013C10.3335 17.6365 10.9831 19.2047 12.1393 20.3609C13.2955 21.5171 14.8637 22.1667 16.4988 22.1667C18.134 22.1667 19.7022 21.5171 20.8584 20.3609C22.0146 19.2047 22.6642 17.6365 22.6642 16.0013C22.6642 14.3662 22.0146 12.798 20.8584 11.6418C19.7022 10.4856 18.134 9.836 16.4988 9.836ZM16.4988 20.0053C15.4365 20.0053 14.4178 19.5833 13.6666 18.8322C12.9155 18.081 12.4935 17.0623 12.4935 16C12.4935 14.9377 12.9155 13.9189 13.6666 13.1678C14.4178 12.4167 15.4365 11.9947 16.4988 11.9947C17.5611 11.9947 18.5799 12.4167 19.331 13.1678C20.0822 13.9189 20.5042 14.9377 20.5042 16C20.5042 17.0623 20.0822 18.081 19.331 18.8322C18.5799 19.5833 17.5611 20.0053 16.4988 20.0053Z"
               fill="#292D32"
@@ -129,43 +148,29 @@
               fill="#292D32"
             />
           </svg>
-        </div>
+            </div>
 
-        <!--Contact Form-->
-        <div class="contact">
-          <h1>CONTACT US</h1>
-          <form onsubmit="return false" id="myForm" method="post">
-            <!-- {% csrf_token %} -->
-            <h2>Hi there, how may we be of help to you?</h2>
-            <!-- {{ form }} -->
-            <input type="text" name="name" id="name" placeholder="Full Name" />
-            <br />
-            <small class="error"></small>
-            <input type="email" name="email" id="email" placeholder="Email" />
-            <br />
-            <small class="error"></small>
-            <input
-              type="tel"
-              name="tel"
-              id="phoneNo"
-              placeholder="Phone"
-            /><br />
-            <small class="error"></small>
-            <input
-              type="text"
-              name="subject"
-              id="subject"
-              placeholder="Subject"
-            />
-            <br />
-            <small class="error"></small>
-            <textarea
-              name="message"
-              id="message"
-              cols="30"
-              rows="10"
-              placeholder="Message"
-            ></textarea
+            <!--Contact Form-->
+            <div class="contact">
+                <h1>CONTACT US</h1>
+                <!-- Maybe ajax will be used to aubmit the form because 
+                  the validation does not trigger the submission-->
+                <form action="{% url 'contact' %}" onsubmit="return false" id="myForm" method="post">
+                    {% csrf_token %}
+                    <h2>Hi there, how may we be of help to you?</h2>
+                    <!-- {{ form }} -->
+                    <input type="text" name="name" id="name" placeholder="Full Name" />
+                    <br />
+                    <small class="error"></small>
+                    <input type="email" name="email" id="email" placeholder="Email" />
+                    <br />
+                    <small class="error"></small>
+                    <input type="tel" name="tel" id="phoneNo" placeholder="Phone" /><br />
+                    <small class="error"></small>
+                    <input type="text" name="subject" id="subject" placeholder="Subject" />
+                    <br />
+                    <small class="error"></small>
+                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea
             ><br />
             <small class="error"></small>
             <button type="submit" onclick=" return validation() && toggle();">
@@ -175,7 +180,7 @@
         </div>
         <!--Placeholder-->
         <div class="image">
-          <img src="./img/contact.svg" alt="contact">
+          <img src="{% static './img/contact.svg' %}" alt="contact">
           <div class="icons">
   
             <svg
@@ -218,13 +223,13 @@
     </div>
     <!--POp up-->
     <div class="popup" id="popup">
-      <img src="./img/contactPopup.svg" alt="popup">
+      <img src="{% static './img/contactPopup.svg' %}" alt="popup">
       <p>Thank you for contacting us, we'll get back to you shortly.</p>
       <div class="buttons">
-        <button onclick="location.href = 'contact-us.html'" class="goBack-btn">
+        <button onclick="location.href = '{% url 'contact' %}'" class="goBack-btn">
           Okay, go back
         </button>
-        <button onclick="location.href = 'faq.html'" class="faq-btn">
+        <button onclick="location.href = '{% url 'faq' %}'" class="faq-btn">
           Go to FAQ
         </button>
       </div>
@@ -253,14 +258,14 @@
       <div class="footer-top">
           <div class="footer-top-header">
               <div class="footer-logo">
-                  <img src="./img/footer-app-logo.svg" alt="">
+                  <img src="{% static './img/footer-app-logo.svg' %}" alt="">
               </div>
               <div class="footer-links">
-                  <a href="about-us.html">About</a>
-                  <a href="contact-us.html">Contact Us</a>
-                  <a href="privacy-policy.html">Privacy Policy</a>
-                  <a href="T&C.html">Terms and Conditions</a>
-                  <a href="accessibility-statement.html">Accessibility Statement</a>
+                  <a href="{% url 'about' %}">About</a>
+                  <a href="{% url 'contact' %}">Contact Us</a>
+                  <a href="{% url 'policy' %}">Privacy Policy</a>
+                  <a href="{% url 'terms' %}">Terms and Conditions</a>
+                  <a href="{% url 'accessibility' %}">Accessibility Statement</a>
               </div>
           </div>
           <div class="footer-top-header">
@@ -281,24 +286,24 @@
           <div class="footer-top-header">
               <h4>Resources</h4>
               <div class="footer-links">
-                  <a href="help-and-support.html">Help and Support</a>
+                  <a href="{% url 'support' %}">Help and Support</a>
                   <p>Community</p>
               </div>
           </div>
       </div>
       <div class="footer-bottom">
           <div class="copyright">
-              <img src="./img//copyright.svg" alt="">
+              <img src="{% static './img//copyright.svg' %}" alt="">
               <p class="footer-small-text">2022 Team 36 my debtor project. Zuri Team, Inc. All rights reserved.</p>
           </div>
           <hr class="footer-line">
           <div class="social">
               <p class="footer-small-text">Follow Us.</p>
-              <img src="./img/facebook.svg" alt="">
-              <img src="./img/gmail.svg" alt="">
-              <img src="./img/linkedin.svg" alt="">
-              <img src="./img/twitter.svg" alt="">
-              <img src="./img/instagram.svg" alt="">
+              <img src="{% static './img/facebook.svg' %}" alt="">
+              <img src="{% static './img/gmail.svg' %}" alt="">
+              <img src="{% static './img/linkedin.svg' %}" alt="">
+              <img src="{% static './img/twitter.svg' %}" alt="">
+              <img src="{% static './img/instagram.svg' %}" alt="">
           </div>
       </div>
   </footer>

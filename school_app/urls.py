@@ -20,4 +20,9 @@ urlpatterns = [
     path('about', views.about_us, name='about'),
     path('verification/', views.verify_otp, name='verify_otp'),
     path('resend-code/', views.resend_otp, name='resend_otp'),
+    path('faq', views.faq, name='faq'),
+    path('T&C', views.terms, name = 'terms'),
+    path('accessibility', views.accessibility, name = 'accessibility'),
+    path('policy', views.policy, name = 'policy'),
+    path('Help and support', views.help_suppport, name = 'support'),
 ]

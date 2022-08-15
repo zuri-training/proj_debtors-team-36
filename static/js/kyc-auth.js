@@ -154,7 +154,11 @@ const uploadFile = () => {      //  uploads the file to the database
 
             // For svg
             let svg = document.createElement('img');
+<<<<<<< HEAD
             svg.setAttribute('src', './static/img/kyc-fail.svg')
+=======
+            svg.setAttribute('src', './img/kyc-fail.svg')
+>>>>>>> cee1f707b01900dcc8523dbe3dcbd979bdfba3c4
 
 
             // for other components
@@ -167,7 +171,11 @@ const uploadFile = () => {      //  uploads the file to the database
             para.innerText = 'Sorry! something went wrong while uploading your documents. please try again.';
             let close_btn = document.createElement('button');
             close_btn.className = 'close-btn';
+<<<<<<< HEAD
             close_btn.innerHTML = '<img src="./static/img/kyc-close.svg" />'
+=======
+            close_btn.innerHTML = '<img src="./img/kyc-close.svg" />'
+>>>>>>> cee1f707b01900dcc8523dbe3dcbd979bdfba3c4
             close_btn.setAttribute('onclick', 'removePopup()');
             const btn_container = document.createElement('div')
             btn_container.className = "btn-container";
@@ -198,7 +206,11 @@ const uploadFile = () => {      //  uploads the file to the database
 
             // For svg
             let svg = document.createElement('img');
+<<<<<<< HEAD
             svg.setAttribute('src', './static/img/kyc-success.svg')
+=======
+            svg.setAttribute('src', './img/kyc-success.svg')
+>>>>>>> cee1f707b01900dcc8523dbe3dcbd979bdfba3c4
 
             // for other components
             let status = document.createElement('h3')
@@ -213,7 +225,11 @@ const uploadFile = () => {      //  uploads the file to the database
             btn.className = 'dom-btn';
             btn.innerText = 'Ok';
             btn.setAttribute('onclick', 'removePopup()')
+<<<<<<< HEAD
             btn.setAttribute('onclick', "location.href = '/'")
+=======
+            btn.setAttribute('onclick', "location.href = 'index.html'")
+>>>>>>> cee1f707b01900dcc8523dbe3dcbd979bdfba3c4
             const btn_container = document.createElement('div')
             btn_container.className = "btn-container";
 
