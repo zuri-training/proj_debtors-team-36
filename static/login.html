@@ -66,20 +66,19 @@
         </div>
   
           <form method="post">
-            {% csrf_token %}}
+            {% csrf_token %}
             <div class="mid">
               <div class="emaill">
-                <label class="email-head" for="email">Email Address</label><br />
-                  <!-- {{ form.username }} -->
-                <input type="text" placeholder="Myschoolemail.edu.ng" name="email" id="email" required /><br />
+                <label class="email-head" for="email">Email Address</label><br /><br />
+                  {{ form.username }} <br /><br />
+                <!-- <input type="text" placeholder="Myschoolemail.edu.ng" name="email" id="email" required /><br /> -->
               </div>
               <div class="pass">
-                <label class="email-psw" for="password">Password</label><br />
+                <label class="email-psw" for="password">Password</label><br /><br />
+                {{ form.password }}<br /><br />
+                
                 <div class="visibility">
-   views_urls 
-              <!-- {{ form.password }} -->
-                  <input type="password" autocomplete="current-password" placeholder="**********" name="password"
-                    id="password" required /><br />
+                <!-- <input type="password" autocomplete="current-password" placeholder="**********" name="password" id="password" required /><br /> -->
                   <i class="far fa-eye" id="togglePassword"></i>
                 </div>
               </div>
@@ -95,8 +94,8 @@
               </div>
             </div>
             <div class="bottom">
-              <a href="./dashboard.html"><button type="submit" class="login-btn">Login</button><br /></a>
-              <p id="login-tag">Don't have an account?<a class="login-tag" href="./signup.html">sign up</a></p>
+              <a href="{% static './dashboard.html' %}"><button type="submit" class="login-btn">Login</button><br /></a>
+              <p id="login-tag">Don't have an account?<a class="login-tag" href="{% static './signup.html' %}">sign up</a></p>
             </div>
           </form>
       </div>
