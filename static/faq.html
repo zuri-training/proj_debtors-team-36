@@ -1,14 +1,20 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/faq.css">
-    <script defer src="./js/top-nav.js"></script>
-    <script defer src="./js/faq.js"></script>
+
+    <link rel="stylesheet" href="{% static './css/faq.css' %}">
+    <script defer src="{% static './js/top-nav.js' %}"></script>
+    <script defer src="{% static './js/faq.js' %}"></script>
+
     <title>FAQ</title>
 </head>
+
 <body>
     <nav>
         <div class="left-nav">
@@ -17,43 +23,41 @@
             </div>
         </div>
         <div class="middle-nav">
-            <a href="index.html">Home</a>
-            <a href="about-us.html">About Us</a>
-            <a href="faq.html">FAQ</a>
-            <a href="contact-us.html">Contact Us</a>
+            <a href="{% url 'index' %}">Home</a>
+            <a href="{% url 'about' %}">About Us</a>
+            <a href="{% url 'faq' %}">FAQ</a>
+            <a href="{% url 'contact' %}">Contact Us</a>
         </div>
         <div class="right-nav">
-            <a href="login.html" class="welcome-login-btn">Login</a>
-            <button onclick="location.href = 'signup.html'" class="welcome-signup-btn">Sign Up</button>
+            <a href="{% url 'login' %}" class="welcome-login-btn">Login</a>
+            <button onclick="location.href = '{% url 'signup' %}'" class="welcome-signup-btn">Sign Up</button>
         </div>
     </nav>
-    
-   
-        <div class="faq" id="faq">
-            <div class="faq-top">
-                <div class="faq-header">
-                    
-                    <h2>
-                        <p class="faq-small">FAQS</p>
-                        Frequently Asked Questions
-                        <p>You have any questions? We are here to help.</p>
-                    </h2>
-                    
-                </div>
-                
-                   
-                
+
+
+    <div class="faq" id="faq">
+        <div class="faq-top">
+            <div class="faq-header">
+
+                <h2>
+                    <p class="faq-small">FAQS</p>
+                    Frequently Asked Questions
+                    <p>You have any questions? We are here to help.</p>
+                </h2>
+
             </div>
-                
+        </div>
+
             <div class="container">
                 
                 <!-- <form class="nosubmit form1">
-                    <div class="svg-search">  
+                    <div class="svg-search">
                     <svg style="border-radius: 5px 0 0 5px; margin-top:6px; cursor:pointer;" width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect width="56" height="56" fill="#0000D5"/>
                         <path d="M27.5 37C32.7467 37 37 32.7467 37 27.5C37 22.2533 32.7467 18 27.5 18C22.2533 18 18 22.2533 18 27.5C18 32.7467 22.2533 37 27.5 37Z" stroke="#FEFEFE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M38 38L36 36" stroke="#FEFEFE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
+
                     </div>
                         
                   <input class="nosubmit" type="search" placeholder="Ask a question" >
@@ -124,9 +128,8 @@
     </div>
   </div>
 <br>
-                  
-            
-     
+          
+          
     </main>
     <p class="end-statement"><b> Still have questions?</b> Please chat with our friendly team.</p>
     <!-- FOOTER STARTS HERE -->
@@ -245,4 +248,5 @@
         </div>
     </footer>
 </body>
+
 </html>
