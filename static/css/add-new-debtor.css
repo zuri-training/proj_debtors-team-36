@@ -28,6 +28,7 @@ body {
     overflow-x: hidden;
     width: 1440px;
     height: 1440px;
+
     
 }
 
@@ -45,6 +46,7 @@ aside {
     flex-direction: column;
     justify-content: space-between;
     position: fixed;
+    overflow-x: hidden;
     /* fixes the side bar and prevents scrolling. Set the margin-left property of the screen by its right to 332px */
 }
 
@@ -177,6 +179,7 @@ main {
 .undersearch {
   display: flex;
   margin-top: 15px;
+
 }
 
 

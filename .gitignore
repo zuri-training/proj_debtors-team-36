@@ -130,3 +130,9 @@ dmypy.json
 
 # Code editors
 .vscode
+
+# for the scripts
+Scripts
+pyvenv.cfg
+Pipfile
+

@@ -427,7 +427,8 @@ h2 {
         justify-content: space-between;
         width: 100%;
         height: 56px;
-        margin-bottom: 16px;
+        margin-top: -50px;
+        margin-bottom: 5px;
     }
 
     .search-not {
@@ -453,6 +454,7 @@ h2 {
         flex-direction: row;
         width: 100vw;
         background-color: rgba(0, 0, 0, 0.35);
+        z-index: 1;
     }
 
     .aside-container {
@@ -487,6 +489,11 @@ h2 {
         margin: 24px 0px 16px;
     }
 
+    .change-pic,
+    .delete-pic {
+        width: 45%;
+    }
+
     .user-input input,
     .pswd {
         width: 100%;
@@ -498,6 +505,7 @@ h2 {
 
     .user-input select {
         width: 100%;
+        margin-bottom: 20px;
     }
 
     .submit {
