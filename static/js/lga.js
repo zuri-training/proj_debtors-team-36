@@ -34,6 +34,14 @@
           "muahia South",
           "Umu Nneochi"
         ],
+        Abuja: [
+           "Abaji",
+           "Abuja Municipal",
+           "Bwari",
+          "Gwagwalada",
+           "Kuje",
+           "Kwali",
+        ],
         Adamawa: [
           "Demsa",
           "Fufure",

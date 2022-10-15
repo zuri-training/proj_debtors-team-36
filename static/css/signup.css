@@ -10,7 +10,34 @@
     --font-color: #fefefe
   }
 
-  body {
+  /* Custom Scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--main_color);
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--hover_color);
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+body {
     user-select: none;
 }
 
@@ -32,6 +59,7 @@ div h2{
     margin-bottom: 5px;
     color: #0855A2;
     margin-top: 20px;
+    font-weight: 300px;
 }
 
 .right{
@@ -71,7 +99,8 @@ background-color:  #0855A2;
 }
 
 select{
-    border-radius: 5px;
+    border-radius: 8px;
+    border: 1px solid #9E9E9E;
     padding: 10px;
     width: 30%; 
     padding: 15px;
@@ -82,7 +111,8 @@ input[type="email"],
 input[type="submit"],
 input[type="password"],
 input[type="text"]{
-    border-radius: 5px;
+    border-radius: 8px;
+    border: 1px solid #9E9E9E;
     width: 80%;
     padding: 10px;
     color: #0855A2;
@@ -96,4 +126,8 @@ input[type="submit"]{
    width: 50%;
    border-radius: 8px;
    padding: 15px;
+}
+
+input:focus{
+    border: 3px solid rgb(57, 189, 233);
 }
